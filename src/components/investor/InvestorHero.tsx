@@ -35,7 +35,7 @@ export default function InvestorHero() {
           </motion.div>
 
           <motion.h1
-            className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[0.95] tracking-[-0.02em]"
+            className="text-4xl md:text-5xl lg:text-7xl font-serif text-white leading-[0.95] tracking-[-0.02em]"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -46,7 +46,7 @@ export default function InvestorHero() {
           </motion.h1>
 
           <motion.p
-            className="text-white/55 text-xl leading-[1.7] mt-10 font-semibold"
+            className="text-white/70 text-base sm:text-xl leading-[1.7] mt-10 font-medium"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}

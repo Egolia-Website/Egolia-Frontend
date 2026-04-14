@@ -66,7 +66,7 @@ export default function OurPlatform() {
                 <h3 className="text-navy text-2xl md:text-3xl font-semibold mb-3">
                   {platform.name}
                 </h3>
-                <p className="text-navy/75 text-lg leading-[1.7] max-w-2xl font-semibold">
+                <p className="text-navy/70 text-lg leading-[1.7] max-w-2xl font-medium">
                   {platform.description}
                 </p>
               </div>
@@ -85,7 +85,7 @@ export default function OurPlatform() {
 
         {/* Bottom description */}
         <motion.p
-          className="text-center text-navy/75 text-lg italic mt-16 max-w-2xl mx-auto leading-[1.7] font-semibold"
+          className="text-center text-navy/70 text-lg italic mt-16 max-w-2xl mx-auto leading-[1.7] font-medium"
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

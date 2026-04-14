@@ -12,7 +12,7 @@ export default function Hero() {
           {/* Left content */}
           <div>
             <motion.h1
-              className="text-[3.2rem] sm:text-[4.2rem] md:text-[5rem] lg:text-[6rem] font-bold leading-[1] tracking-[-0.03em]"
+              className="text-[3.2rem] sm:text-[4.2rem] md:text-[5rem] lg:text-[6rem] font-serif leading-[1] tracking-[-0.03em]"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
@@ -23,7 +23,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.p
-              className="text-navy/75 text-xl md:text-2xl leading-[1.7] mt-10 max-w-xl font-semibold"
+              className="text-navy/70 text-xl md:text-2xl leading-[1.7] mt-10 max-w-xl font-medium"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -53,7 +53,7 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.2 }}
           >
             {/* Orange vertical bar left */}
-            <div className="absolute -left-5 top-8 bottom-8 w-[3px] bg-orange" />
+            <div className="hidden md:block absolute -left-5 top-8 bottom-8 w-[3px] bg-orange" />
 
             <div className="relative w-full aspect-[4/3] overflow-hidden">
               <Image
@@ -67,7 +67,7 @@ export default function Hero() {
             </div>
 
             {/* Orange accent corner bottom-right */}
-            <div className="absolute -bottom-3 -right-3 w-20 h-20">
+            <div className="hidden md:block absolute -bottom-3 -right-3 w-20 h-20">
               <div className="absolute bottom-0 right-0 w-full h-[3px] bg-orange" />
               <div className="absolute bottom-0 right-0 h-full w-[3px] bg-orange" />
             </div>

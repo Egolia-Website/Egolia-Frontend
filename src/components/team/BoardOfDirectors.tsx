@@ -7,16 +7,16 @@ import { motion } from "framer-motion";
 import MemberModal, { type TeamMemberDetail } from "./MemberModal";
 
 const boardRow1: TeamMemberDetail[] = [
-  { name: "Micheal Spencley", role: "BOD", fullTitle: "Board Of Directors", image: "https://randomuser.me/api/portraits/men/32.jpg", bio: "Micheal Brings Over 15 Years Of Experience In Corporate Governance And Strategic Investment Oversight.", experience: ["Senior Executive In Real Estate And Financial Services.", "Served On Multiple Public And Private Company Boards."] },
-  { name: "Chris Willaims", role: "BOD", fullTitle: "Board Of Directors", image: "https://randomuser.me/api/portraits/women/44.jpg", bio: "Chris Provides Strategic Counsel On Investment Decisions And Corporate Development Initiatives.", experience: ["Extensive Background In Mergers, Acquisitions, And Capital Markets.", "Advisor To Leading Investment Firms Across North America."] },
-  { name: "Larry Hayes", role: "BOD", fullTitle: "Board Of Directors", image: "https://randomuser.me/api/portraits/women/68.jpg", bio: "Larry Oversees Risk Management And Regulatory Compliance Across Egolia's Operations.", experience: ["Former Chief Risk Officer At A Major Financial Institution.", "Expert In Regulatory Frameworks And Compliance Strategy."] },
-  { name: "Nell Wolfson", role: "BOD", fullTitle: "Board Of Directors", image: "https://randomuser.me/api/portraits/women/65.jpg", bio: "Nell Focuses On Sustainable Growth Strategies And Environmental, Social, And Governance Standards.", experience: ["Pioneer In ESG-Focused Investment Strategies.", "Led Sustainability Initiatives At Global Development Firms."] },
+  { name: "Samuel Babarinde", role: "Chairman", fullTitle: "Chairman Of The Board", image: "/images/Board Member/sam.png", bio: "15+ years real estate development experience across Ontario and Michigan. Founder of AvranceCorp, TradeREA, and Egolia Group.", experience: ["Grew real estate portfolio to 7,000+ units and $5B+ pipeline.", "Leads technology and infrastructure strategy integrating compliance and asset governance."] },
+  { name: "Ravi Thakur", role: "Vice Chairman", fullTitle: "Vice Chairman Of The Board", image: "/images/Board Member/ravi.png", bio: "30+ years of leadership across real estate development, project management, and investment strategy.", experience: ["Vice Chairman and partner at AvranceCorp Developments.", "Specializes in structuring large-scale development opportunities and cultivating capital relationships."] },
+  { name: "Michael Spencley", role: "Board Member", fullTitle: "Board Of Directors", image: "/images/Board Member/michael spencley.png", bio: "30+ years of CEO experience across turnaround and start-up environments, driving transformational growth and operational excellence.", experience: ["Extensive board-level experience with both private and public companies.", "Deep expertise in strategy development, financial management, and corporate governance."] },
+  { name: "Tihomir Bajic", role: "Board Member", fullTitle: "Board Of Directors", image: "/images/Board Member/tihomir.png", bio: "Repeat entrepreneur and investor. Co-founded the Long-Term Stock Exchange (LTSE) alongside Eric Ries.", experience: ["Led the buildout of the complete technology stack powering an SEC-regulated national securities exchange.", "Managing Partner of the X& family of funds, focusing on early-stage deep tech investments."] },
 ];
 
 const boardRow2: TeamMemberDetail[] = [
-  { name: "Tihomir Bajic", role: "BOD", fullTitle: "Board Of Directors", image: "https://randomuser.me/api/portraits/women/90.jpg", bio: "Tihomir Contributes Deep Expertise In International Markets And Cross-Border Investment.", experience: ["20+ Years In International Business Development.", "Managed Investment Portfolios Across Emerging Markets."] },
-  { name: "Samuel Babarinde", role: "Chairman", fullTitle: "Chairman Of The Board", image: "https://randomuser.me/api/portraits/women/91.jpg", bio: "Samuel Leads The Board With A Focus On Long-Term Vision And Disciplined Value Creation.", experience: ["Founding Member Of Egolia Group.", "Decades Of Experience In Strategic Leadership And Capital Allocation."] },
-  { name: "Ravi Thakur", role: "Vice Chairman", fullTitle: "Vice Chairman Of The Board", image: "https://randomuser.me/api/portraits/women/85.jpg", bio: "Ravi Supports Board Strategy With Expertise In Finance And Operational Excellence.", experience: ["Former CFO At A Leading Real Estate Development Firm.", "Expert In Financial Planning And Institutional Investment."] },
+  { name: "Larry D. Hayes", role: "Board Member", fullTitle: "Board Of Directors", image: "/images/Board Member/larry.png", bio: "25+ years leadership across credit unions, CUSOs, and fintech organizations.", experience: ["Served as CEO, COO, President, and Executive Consultant.", "Expert in financial turnaround, strategic planning, governance, and digital transformation."] },
+  { name: "Christopher Williams", role: "Board Member", fullTitle: "Board Of Directors", image: "/images/Board Member/christopher.png", bio: "Nearly 40 years experience across multifamily, student, and military housing investment.", experience: ["Led strategies for residential portfolios valued at $15B+ comprising 100,000+ units.", "Partner at ApexOne Investment Partners; former President of Balfour Beatty Investments."] },
+  { name: "Neil Wolfson", role: "Board Member", fullTitle: "Board Of Directors", image: "/images/Board Member/neil.png", bio: "Deep expertise in fintech, asset management, and family office operations with proven track record in building and scaling financial institutions.", experience: ["Former President and CIO of SF Capital Group overseeing a billion-dollar family office.", "CFA charter holder with MBA in Finance from NYU Stern; 100+ appearances on CNBC and Bloomberg."] },
 ];
 
 function SocialIcons() {
@@ -38,7 +38,7 @@ function SocialIcons() {
 function BoardCard({ member, i, tall = false, onClick }: { member: TeamMemberDetail; i: number; tall?: boolean; onClick: () => void }) {
   return (
     <motion.div
-      className={`relative overflow-hidden rounded-2xl group cursor-pointer ${tall ? "aspect-[2/3]" : "aspect-[3/4]"}`}
+      className={`relative overflow-hidden rounded-2xl group cursor-pointer border border-gray-200 ${tall ? "aspect-[2/3]" : "aspect-[3/4]"}`}
       initial={{ opacity: 0, y: 25 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -49,14 +49,14 @@ function BoardCard({ member, i, tall = false, onClick }: { member: TeamMemberDet
         src={member.image}
         alt={member.name}
         fill
-        className="object-cover group-hover:scale-105 transition-transform duration-700"
+        className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
         sizes="25vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 p-5">
-        <h3 className="text-white text-lg font-bold">{member.name}</h3>
-        <p className="text-orange text-sm font-bold">{member.role}</p>
-        <div className="mt-3">
+      <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-5">
+        <h3 className="text-white text-sm sm:text-lg font-bold">{member.name}</h3>
+        <p className="text-orange text-xs sm:text-sm font-bold">{member.role}</p>
+        <div className="mt-2 sm:mt-3 hidden sm:block">
           <SocialIcons />
         </div>
       </div>
@@ -89,13 +89,13 @@ export default function BoardOfDirectors() {
             transition={{ duration: 0.6, delay: 0.1 }}
           />
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-5">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 mb-6 sm:mb-10">
             {boardRow1.map((member, i) => (
               <BoardCard key={member.name} member={member} i={i} onClick={() => setSelected(member)} />
             ))}
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-5 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 max-w-4xl mx-auto">
             {boardRow2.map((member, i) => (
               <BoardCard key={member.name} member={member} i={i} tall onClick={() => setSelected(member)} />
             ))}

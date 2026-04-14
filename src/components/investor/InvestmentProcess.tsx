@@ -59,7 +59,7 @@ export default function InvestmentProcess() {
         />
 
         <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-6 leading-tight"
+          className="text-center text-3xl md:text-4xl lg:text-5xl font-serif text-navy mb-6 leading-tight"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -69,7 +69,7 @@ export default function InvestmentProcess() {
         </motion.h2>
 
         <motion.p
-          className="text-center text-navy/75 text-xl leading-[1.7] max-w-2xl mx-auto mb-24 font-semibold"
+          className="text-center text-navy/70 text-xl leading-[1.7] max-w-2xl mx-auto mb-24 font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -109,7 +109,7 @@ export default function InvestmentProcess() {
                 <div className="border-t-[3px] border-t-orange bg-white border-x border-b border-navy/8 p-10 hover:shadow-[0_12px_40px_rgba(15,28,63,0.08)] hover:-translate-y-1 transition-all duration-500">
                   <div className="text-orange mb-6 flex justify-center">{step.icon}</div>
                   <h3 className="text-navy text-xl font-bold mb-4">{step.title}</h3>
-                  <p className="text-navy/75 text-base leading-[1.7] font-semibold">{step.description}</p>
+                  <p className="text-navy/70 text-base leading-[1.7] font-medium">{step.description}</p>
                 </div>
               </motion.div>
             ))}

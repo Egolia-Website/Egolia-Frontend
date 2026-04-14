@@ -12,7 +12,7 @@ const companies = [
     link: "https://avrancecorp.com/",
   },
   {
-    image: "/images/traderea.jpg",
+    image: "/images/traderea.png",
     name: "TradeREA",
     description: "A digital investment platform providing access to real estate opportunities through innovative solutions.",
     link: "https://traderea.com/",
@@ -36,7 +36,7 @@ export default function ExploreCompanies() {
     <section className="bg-white py-24 md:py-32">
       <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
         <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-6"
+          className="text-center text-3xl md:text-4xl lg:text-5xl font-serif text-navy mb-6"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -46,7 +46,7 @@ export default function ExploreCompanies() {
         </motion.h2>
 
         <motion.p
-          className="text-center text-navy/75 text-xl leading-[1.7] max-w-2xl mx-auto mb-16 font-semibold"
+          className="text-center text-navy/70 text-xl leading-[1.7] max-w-2xl mx-auto mb-16 font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -60,19 +60,19 @@ export default function ExploreCompanies() {
           {companies.map((company, i) => (
             <motion.div
               key={company.name}
-              className="group overflow-hidden rounded-2xl"
+              className="group overflow-hidden"
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
             >
               {/* Image */}
-              <div className="relative w-full aspect-[16/9] overflow-hidden">
+              <div className="relative w-full aspect-[16/10] overflow-hidden">
                 <Image
                   src={company.image}
                   alt={company.name}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
@@ -81,7 +81,7 @@ export default function ExploreCompanies() {
               {/* Content */}
               <div className="pt-5">
                 <h3 className="text-navy text-xl font-bold mb-2">{company.name}</h3>
-                <p className="text-navy/75 text-base leading-[1.7] mb-4 font-semibold">{company.description}</p>
+                <p className="text-navy/70 text-base leading-[1.7] mb-4 font-medium">{company.description}</p>
                 <Link
                   href={company.link}
                   target={company.link.startsWith("http") ? "_blank" : undefined}

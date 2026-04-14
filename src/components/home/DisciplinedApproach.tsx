@@ -12,7 +12,7 @@ export default function DisciplinedApproach() {
           {/* Left content */}
           <div>
             <motion.p
-              className="text-white/55 text-lg mb-5 italic"
+              className="text-white/70 text-lg mb-5 italic"
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -22,7 +22,7 @@ export default function DisciplinedApproach() {
             </motion.p>
 
             <motion.h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.1]"
+              className="text-3xl md:text-4xl lg:text-5xl font-serif text-white leading-[1.1]"
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -32,7 +32,7 @@ export default function DisciplinedApproach() {
             </motion.h2>
 
             <motion.p
-              className="text-white/55 mt-8 text-xl leading-[1.7] max-w-lg font-semibold"
+              className="text-white/70 mt-8 text-base sm:text-xl leading-[1.7] max-w-lg font-medium"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -65,7 +65,7 @@ export default function DisciplinedApproach() {
             transition={{ duration: 1, delay: 0.2 }}
           >
             {/* Orange vertical bar left */}
-            <div className="absolute -left-5 top-8 bottom-8 w-[3px] bg-orange" />
+            <div className="absolute -left-5 top-8 bottom-8 w-[3px] bg-orange hidden lg:block" />
 
             <div className="relative w-full aspect-[3/2] overflow-hidden">
               <Image
@@ -78,7 +78,7 @@ export default function DisciplinedApproach() {
             </div>
 
             {/* Orange accent corner bottom-right */}
-            <div className="absolute -bottom-3 -right-3 w-20 h-20">
+            <div className="absolute -bottom-3 -right-3 w-20 h-20 hidden md:block">
               <div className="absolute bottom-0 right-0 w-full h-[3px] bg-orange" />
               <div className="absolute bottom-0 right-0 h-full w-[3px] bg-orange" />
             </div>

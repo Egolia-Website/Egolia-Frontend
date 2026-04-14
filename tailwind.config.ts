@@ -30,7 +30,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["Inter", "Arial", "Helvetica", "sans-serif"],
+        sans: ["var(--font-inter)", "Inter", "Arial", "Helvetica", "sans-serif"],
+        serif: ["var(--font-serif)", "DM Serif Display", "Georgia", "serif"],
       },
     },
   },

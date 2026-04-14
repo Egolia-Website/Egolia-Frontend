@@ -20,9 +20,9 @@ export default function AboutHero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-12 w-full pb-32 md:pb-40 pt-32">
+      <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-12 w-full pb-20 sm:pb-32 md:pb-40 pt-20 sm:pt-32">
         <motion.p
-          className="text-white/55 text-lg italic mb-4"
+          className="text-white/70 text-lg italic mb-4"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -31,7 +31,7 @@ export default function AboutHero() {
         </motion.p>
 
         <motion.h1
-          className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1] tracking-[-0.02em] max-w-2xl"
+          className="text-4xl md:text-5xl lg:text-7xl font-serif leading-[1] tracking-[-0.02em] max-w-2xl"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
@@ -41,7 +41,7 @@ export default function AboutHero() {
         </motion.h1>
 
         <motion.p
-          className="text-white/55 text-xl leading-[1.7] mt-10 max-w-lg font-semibold"
+          className="text-white/70 text-base sm:text-xl leading-[1.7] mt-6 sm:mt-10 max-w-lg font-medium"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}

@@ -48,7 +48,7 @@ export default function DisciplinedInvesting() {
         </motion.p>
 
         <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-6"
+          className="text-center text-3xl md:text-4xl lg:text-5xl font-serif text-navy mb-6"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -66,7 +66,7 @@ export default function DisciplinedInvesting() {
         />
 
         <motion.p
-          className="text-center text-navy/75 max-w-2xl mx-auto text-xl leading-[1.7] mb-20 font-semibold"
+          className="text-center text-navy/70 max-w-2xl mx-auto text-base sm:text-xl leading-[1.7] mb-20 font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -90,7 +90,7 @@ export default function DisciplinedInvesting() {
                 {item.icon}
               </div>
               <h3 className="text-navy text-2xl font-semibold mb-4">{item.title}</h3>
-              <p className="text-navy/75 text-lg leading-[1.7] font-semibold">{item.description}</p>
+              <p className="text-navy/70 text-lg leading-[1.7] font-medium">{item.description}</p>
             </motion.div>
           ))}
         </div>

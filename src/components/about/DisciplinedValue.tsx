@@ -28,7 +28,7 @@ export default function DisciplinedValue() {
           {/* Left: heading + description */}
           <div>
             <motion.h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.1] mb-8"
+              className="text-3xl md:text-4xl lg:text-5xl font-serif text-white leading-[1.1] mb-8"
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -46,7 +46,7 @@ export default function DisciplinedValue() {
             />
 
             <motion.p
-              className="text-white/55 text-xl leading-[1.7] font-semibold"
+              className="text-white/70 text-base sm:text-xl leading-[1.7] font-medium"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -85,7 +85,7 @@ export default function DisciplinedValue() {
                     {item.title}
                   </span>
                 </div>
-                <p className="text-white/55 text-base leading-[1.7] pl-8 font-semibold">
+                <p className="text-white/70 text-base leading-[1.7] pl-8 font-medium">
                   {item.description}
                 </p>
               </motion.div>

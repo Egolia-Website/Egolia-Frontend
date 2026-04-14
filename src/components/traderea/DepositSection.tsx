@@ -35,7 +35,7 @@ export default function DepositSection() {
           {/* Left - Deposit methods */}
           <div>
             <motion.h2
-              className="text-3xl md:text-4xl font-bold text-navy mb-4"
+              className="text-3xl md:text-4xl font-serif text-navy mb-4"
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -45,7 +45,7 @@ export default function DepositSection() {
             </motion.h2>
 
             <motion.p
-              className="text-navy/75 text-xl leading-[1.7] mb-12 font-semibold"
+              className="text-navy/70 text-xl leading-[1.7] mb-12 font-medium"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -71,7 +71,7 @@ export default function DepositSection() {
                       </div>
                       <div>
                         <h3 className="text-navy text-lg font-bold">{method.title}</h3>
-                        <p className="text-navy/75 text-base font-semibold">{method.subtitle}</p>
+                        <p className="text-navy/70 text-base font-semibold">{method.subtitle}</p>
                       </div>
                     </div>
                     <svg className="w-5 h-5 text-navy/30 group-hover:text-orange transition-colors" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -115,11 +115,11 @@ export default function DepositSection() {
 
               <div className="bg-white border border-navy/10 p-4 space-y-3">
                 <div className="flex justify-between text-base">
-                  <span className="text-navy/60">Deposit Amount</span>
+                  <span className="text-navy/70">Deposit Amount</span>
                   <span className="text-navy font-semibold">$200.00</span>
                 </div>
                 <div className="flex justify-between text-base">
-                  <span className="text-navy/60">Fee</span>
+                  <span className="text-navy/70">Fee</span>
                   <span className="text-green-600 font-semibold">Free</span>
                 </div>
                 <div className="border-t border-navy/10 pt-3 flex justify-between text-base">
@@ -136,7 +136,7 @@ export default function DepositSection() {
                   { label: "Routing", value: "122105278" },
                 ].map((item) => (
                   <div key={item.label} className="flex justify-between text-base">
-                    <span className="text-navy/60">{item.label}</span>
+                    <span className="text-navy/70">{item.label}</span>
                     <span className="text-navy font-semibold">{item.value}</span>
                   </div>
                 ))}

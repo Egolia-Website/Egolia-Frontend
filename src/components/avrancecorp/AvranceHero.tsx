@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 
 export default function AvranceHero() {
   return (
-    <section className="relative min-h-[calc(100vh-84px)] flex items-end overflow-hidden">
+    <section className="relative min-h-[calc(100vh-84px)] flex items-center overflow-hidden">
       {/* Full-screen background */}
       <div className="absolute inset-0">
         <Image
-          src="/images/apartment-building.jpg"
+          src="/images/avrancecorp.jpg"
           alt="Modern apartment building"
           fill
           className="object-cover"
@@ -20,27 +20,8 @@ export default function AvranceHero() {
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
-      {/* Decorative vertical line */}
-      <motion.div
-        className="absolute left-6 lg:left-12 top-0 bottom-0 w-[1px] bg-white/10"
-        initial={{ scaleY: 0 }}
-        animate={{ scaleY: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        style={{ transformOrigin: "top" }}
-      />
-
-      {/* Side label */}
-      <motion.span
-        className="absolute left-6 lg:left-12 top-1/2 -translate-y-1/2 -rotate-90 text-white/20 text-xs tracking-[0.25em] uppercase font-semibold origin-center whitespace-nowrap hidden lg:block"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
-      >
-        AvranceCorp Developments
-      </motion.span>
-
-      {/* Content pinned bottom-left */}
-      <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-12 w-full pb-20 md:pb-28 pt-40">
+      {/* Content centered */}
+      <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-12 w-full py-20 md:py-28 flex items-center min-h-[calc(100vh-84px)]">
         <motion.div
           className="max-w-3xl"
           initial="hidden"
@@ -63,7 +44,7 @@ export default function AvranceHero() {
 
           {/* Heading */}
           <motion.h1
-            className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight"
+            className="text-4xl md:text-5xl lg:text-7xl font-serif text-white leading-[1.05] tracking-tight"
             variants={{
               hidden: { opacity: 0, y: 40 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.9 } },
@@ -77,7 +58,7 @@ export default function AvranceHero() {
 
           {/* Description */}
           <motion.p
-            className="text-white/55 text-lg md:text-xl leading-[1.8] mt-8 max-w-xl font-semibold"
+            className="text-white/70 text-lg md:text-xl leading-[1.8] mt-8 max-w-xl font-medium"
             variants={{
               hidden: { opacity: 0, y: 25 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },

@@ -11,7 +11,7 @@ export default function MetadataHero() {
           {/* Left content */}
           <div>
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-[5.5rem] font-bold text-navy leading-[0.95] tracking-[-0.03em] mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[5.5rem] font-serif text-navy leading-[0.95] tracking-[-0.03em] mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -31,7 +31,7 @@ export default function MetadataHero() {
             </motion.p>
 
             <motion.p
-              className="text-navy/80 font-semibold text-xl leading-[1.7] max-w-md"
+              className="text-navy/70 font-medium text-base sm:text-xl leading-[1.7] max-w-md"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -42,12 +42,15 @@ export default function MetadataHero() {
 
           {/* Right image */}
           <motion.div
-            className="relative"
+            className="relative overflow-visible"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <div className="relative w-full aspect-square overflow-hidden">
+            {/* Orange vertical bar left */}
+            <div className="hidden md:block absolute -left-5 top-8 bottom-8 w-[3px] bg-orange" />
+
+            <div className="relative w-full aspect-[4/3] overflow-hidden">
               <Image
                 src="/images/data-abstract.jpg"
                 alt="Data visualization"
@@ -56,6 +59,12 @@ export default function MetadataHero() {
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
+            </div>
+
+            {/* Orange accent corner bottom-right */}
+            <div className="hidden md:block absolute -bottom-3 -right-3 w-20 h-20">
+              <div className="absolute bottom-0 right-0 w-full h-[3px] bg-orange" />
+              <div className="absolute bottom-0 right-0 h-full w-[3px] bg-orange" />
             </div>
           </motion.div>
         </div>

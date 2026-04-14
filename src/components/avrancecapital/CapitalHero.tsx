@@ -37,7 +37,7 @@ export default function CapitalHero() {
         </motion.div>
 
         <motion.h1
-          className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.05] tracking-[-0.02em] mb-6"
+          className="text-4xl md:text-5xl lg:text-7xl font-serif text-white leading-[1.05] tracking-[-0.02em] mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
@@ -46,7 +46,7 @@ export default function CapitalHero() {
         </motion.h1>
 
         <motion.p
-          className="text-white/55 text-xl leading-[1.7] max-w-2xl mx-auto mb-16 font-semibold"
+          className="text-white/70 text-base sm:text-xl leading-[1.7] max-w-2xl mx-auto mb-16 font-medium"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -94,7 +94,7 @@ export default function CapitalHero() {
             >
               <div className="text-gold mb-5 flex justify-center">{item.icon}</div>
               <h3 className="text-white text-lg font-bold mb-3">{item.title}</h3>
-              <p className="text-white/55 text-base leading-[1.7] font-semibold">{item.description}</p>
+              <p className="text-white/70 text-base leading-[1.7] font-medium">{item.description}</p>
             </motion.div>
           ))}
         </div>

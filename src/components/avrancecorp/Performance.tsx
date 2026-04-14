@@ -34,7 +34,7 @@ export default function Performance() {
           />
 
           <motion.h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy leading-[1.1]"
+            className="text-3xl md:text-4xl lg:text-5xl font-serif text-navy leading-[1.1]"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -70,7 +70,7 @@ export default function Performance() {
               <div className="text-4xl md:text-5xl font-light text-navy italic mb-4 tracking-tight">
                 {stat.value}
               </div>
-              <p className="text-navy/75 text-sm md:text-base tracking-wide font-semibold">
+              <p className="text-navy/70 text-sm md:text-base tracking-wide font-semibold">
                 {stat.label}
               </p>
             </motion.div>

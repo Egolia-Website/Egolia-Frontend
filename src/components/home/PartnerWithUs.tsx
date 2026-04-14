@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function PartnerWithUs() {
   return (
-    <section className="bg-navy py-28 md:py-36">
+    <section className="bg-navy py-20 md:py-36">
       <div className="max-w-[1320px] mx-auto px-6 lg:px-12 text-center">
         <motion.p
           className="text-white/40 text-lg italic mb-6"
@@ -18,7 +18,7 @@ export default function PartnerWithUs() {
         </motion.p>
 
         <motion.h2
-          className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-10"
+          className="text-4xl md:text-5xl lg:text-7xl font-serif text-white mb-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -36,7 +36,7 @@ export default function PartnerWithUs() {
         />
 
         <motion.p
-          className="text-white/55 max-w-2xl mx-auto text-xl leading-[1.7] mb-12 font-semibold"
+          className="text-white/70 max-w-2xl mx-auto text-base sm:text-xl leading-[1.7] mb-12 font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

@@ -43,7 +43,7 @@ export default function Navbar() {
             alt="Egolia Group"
             width={180}
             height={50}
-            className="object-contain mix-blend-multiply"
+            className="object-contain mix-blend-multiply w-[130px] sm:w-[160px] lg:w-[180px] h-auto"
             priority
           />
         </Link>

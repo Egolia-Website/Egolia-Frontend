@@ -55,7 +55,7 @@ export default function AboutAvrance() {
 
             {/* Heading */}
             <motion.h2
-              className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-navy leading-[1.1] mb-8"
+              className="text-3xl md:text-4xl lg:text-[2.75rem] font-serif text-navy leading-[1.1] mb-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -67,7 +67,7 @@ export default function AboutAvrance() {
 
             {/* Description */}
             <motion.p
-              className="text-navy/75 text-xl leading-[1.85] mb-10 font-semibold"
+              className="text-navy/70 text-xl leading-[1.85] mb-10 font-medium"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -111,7 +111,7 @@ export default function AboutAvrance() {
                   <h3 className="text-navy text-lg font-bold mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-navy/75 text-sm leading-[1.75] font-semibold">
+                  <p className="text-navy/70 text-sm leading-[1.75] font-medium">
                     {feature.description}
                   </p>
                 </motion.div>

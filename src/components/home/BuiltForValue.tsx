@@ -35,7 +35,7 @@ export default function BuiltForValue() {
         {/* Top - heading left aligned */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-20">
           <motion.h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.1] max-w-xl"
+            className="text-3xl md:text-4xl lg:text-5xl font-serif text-white leading-[1.1] max-w-xl"
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -45,7 +45,7 @@ export default function BuiltForValue() {
           </motion.h2>
 
           <motion.p
-            className="text-white/55 text-xl leading-[1.7] max-w-lg font-semibold"
+            className="text-white/70 text-base sm:text-xl leading-[1.7] max-w-lg font-medium"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -72,7 +72,7 @@ export default function BuiltForValue() {
               <div className="text-3xl md:text-4xl font-light text-white italic mb-2">
                 {stat.value}
               </div>
-              <p className="text-white/55 text-base font-semibold">{stat.label}</p>
+              <p className="text-white/70 text-base font-semibold">{stat.label}</p>
             </motion.div>
           ))}
         </div>

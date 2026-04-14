@@ -64,7 +64,7 @@ export default function WhyEgolia() {
         />
 
         <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-20"
+          className="text-center text-3xl md:text-4xl lg:text-5xl font-serif text-navy mb-20"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -85,7 +85,7 @@ export default function WhyEgolia() {
             >
               <div className="text-orange mb-5 group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
               <h3 className="text-navy text-xl font-bold mb-3">{item.title}</h3>
-              <p className="text-navy/75 text-lg leading-[1.7] font-semibold">{item.description}</p>
+              <p className="text-navy/70 text-lg leading-[1.7] font-medium">{item.description}</p>
             </motion.div>
           ))}
         </div>

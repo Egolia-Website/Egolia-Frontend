@@ -51,24 +51,24 @@ export default function MemberModal({ member, onClose }: MemberModalProps) {
               </svg>
             </button>
 
-            <div className="p-8 md:p-10">
+            <div className="p-5 sm:p-8 md:p-10">
               {/* Top: Image + Name */}
               <div className="flex flex-col sm:flex-row gap-8 items-start">
-                <div className="relative w-36 h-36 sm:w-40 sm:h-40 flex-shrink-0 overflow-hidden">
+                <div className="relative w-36 h-44 sm:w-40 sm:h-52 flex-shrink-0 overflow-hidden rounded-lg">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                     sizes="160px"
                   />
                 </div>
 
                 <div>
-                  <h2 className="text-white text-2xl md:text-3xl font-bold">{member.name}</h2>
-                  <p className="text-white/70 text-base font-semibold mt-1">{member.fullTitle}</p>
+                  <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-bold">{member.name}</h2>
+                  <p className="text-white/70 text-sm sm:text-base font-semibold mt-1">{member.fullTitle}</p>
 
-                  <p className="text-white/70 text-base leading-[1.7] mt-6 italic">
+                  <p className="text-white/70 text-sm sm:text-base leading-[1.7] mt-4 sm:mt-6 italic">
                     {member.bio}
                   </p>
                 </div>
@@ -88,7 +88,7 @@ export default function MemberModal({ member, onClose }: MemberModalProps) {
               </div>
 
               {/* Bottom: Name + Social */}
-              <div className="mt-10 pt-6 border-t border-white/10 flex items-center justify-between">
+              <div className="mt-8 sm:mt-10 pt-6 border-t border-white/10 flex items-center justify-between">
                 <div>
                   <p className="text-white text-lg font-bold">{member.name}</p>
                   <p className="text-orange text-sm font-bold">{member.role}</p>

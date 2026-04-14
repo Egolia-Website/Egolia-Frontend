@@ -52,7 +52,7 @@ export default function PartneringGrowth() {
             </motion.p>
 
             <motion.h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.1] mb-8"
+              className="text-3xl md:text-4xl lg:text-5xl font-serif text-white leading-[1.1] mb-8"
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -64,7 +64,7 @@ export default function PartneringGrowth() {
             </motion.h2>
 
             <motion.p
-              className="text-white/55 text-xl leading-[1.7] mb-12 max-w-md font-semibold"
+              className="text-white/70 text-base sm:text-xl leading-[1.7] mb-12 max-w-md font-medium"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -88,7 +88,7 @@ export default function PartneringGrowth() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold text-base mb-1">{feature.title}</h3>
-                    <p className="text-white/55 text-base leading-[1.6] font-semibold">{feature.description}</p>
+                    <p className="text-white/70 text-base leading-[1.6] font-medium">{feature.description}</p>
                   </div>
                 </motion.div>
               ))}

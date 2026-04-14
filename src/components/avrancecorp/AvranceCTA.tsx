@@ -21,7 +21,7 @@ export default function AvranceCTA() {
         />
 
         <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.1] mb-6"
+          className="text-3xl md:text-4xl lg:text-5xl font-serif text-white leading-[1.1] mb-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -41,7 +41,7 @@ export default function AvranceCTA() {
         />
 
         <motion.p
-          className="text-white/55 text-xl leading-[1.8] max-w-2xl mx-auto mb-12 font-semibold"
+          className="text-white/70 text-xl leading-[1.8] max-w-2xl mx-auto mb-12 font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -59,7 +59,7 @@ export default function AvranceCTA() {
         >
           <Link
             href="/contact"
-            className="inline-block text-white text-lg font-semibold border-b-2 border-orange pb-1 hover:text-orange transition-colors duration-300 tracking-wide"
+            className="inline-block px-12 py-4 bg-orange text-white text-base font-bold hover:bg-orange/90 transition-colors duration-300"
           >
             Get in Touch
           </Link>

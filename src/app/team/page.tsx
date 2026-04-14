@@ -4,71 +4,49 @@ import TeamHero from "@/components/team/TeamHero";
 import BoardOfDirectors from "@/components/team/BoardOfDirectors";
 import TeamSection from "@/components/team/TeamSection";
 
-const operationsTeam = [
+const executiveTeam = [
   {
-    name: "Zane Sorell",
-    role: "CEO",
+    name: "Michael Spencley",
+    role: "Chief Executive Officer",
     fullTitle: "Chief Executive Officer",
-    bio: "Zane Leads Egolia Group's Overall Strategy, Investments, And Operations.",
-    image: "https://randomuser.me/api/portraits/men/75.jpg",
+    bio: "30+ years of CEO experience driving transformational growth and operational excellence.",
+    image: "/images/Board Member/michael spencley.png",
     experience: [
-      "Over 10 Years Of Experience In Real Estate Investment And Development.",
-      "Leading High-Value Residential And Commercial Projects Across Multiple Markets.",
+      "Results-oriented leader with proven track record in turnaround and start-up environments.",
+      "Deep expertise in strategy development, financial management, and profit optimization.",
     ],
   },
   {
-    name: "Maya Mathy",
-    role: "Founder",
-    fullTitle: "Founder & Strategic Advisor",
-    bio: "Maya Founded Egolia Group With A Vision To Build Long-Term Value Through Disciplined Investing.",
-    image: "https://randomuser.me/api/portraits/women/75.jpg",
+    name: "Jason R. Macintosh",
+    role: "Chief Financial Officer",
+    fullTitle: "Chief Financial Officer",
+    bio: "25+ years of leadership across public and private companies in capital markets and financial management.",
+    image: "/images/Board Member/jason macintosh.png",
     experience: [
-      "15+ Years In Strategic Investment And Business Development.",
-      "Pioneer In Vertically Integrated Investment Platforms.",
+      "Served as CFO, Corporate Secretary, and Interim CEO for TSX and TSXV-listed companies.",
+      "Expert in capital markets, governance, M&A, financing, and risk management.",
     ],
   },
   {
-    name: "Alexis Jensen",
-    role: "CTO",
-    fullTitle: "Chief Technology Officer",
-    bio: "Alexis Drives Technology Innovation Across All Egolia Group Companies.",
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    name: "Elaine Galley",
+    role: "Chief Operating Officer",
+    fullTitle: "Chief Operating Officer",
+    bio: "20+ years driving brand growth and market positioning in Canada's competitive real estate sector.",
+    image: "/images/Board Member/elaine.png",
     experience: [
-      "Expert In Financial Technology And Digital Platform Architecture.",
-      "Led Technology Transformation At Multiple Investment Firms.",
+      "Former Marketing Director for leading Canadian real estate company.",
+      "Expert in brand strategy, digital transformation, sales enablement, and stakeholder engagement.",
     ],
   },
   {
-    name: "Keira Battye",
-    role: "Product Designer",
-    fullTitle: "Head Of Product Design",
-    bio: "Keira Shapes The User Experience Across Egolia's Digital Products.",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    name: "Rounak S. Langhe",
+    role: "Chief Investment Officer",
+    fullTitle: "Chief Investment Officer",
+    bio: "14 years of experience in portfolio construction, risk management, and client relationship management.",
+    image: "/images/Board Member/rounak.png",
     experience: [
-      "8+ Years In Product Design For Fintech And Real Estate Platforms.",
-      "Award-Winning Designer With Focus On Accessible Financial Tools.",
-    ],
-  },
-  {
-    name: "Dominic Game",
-    role: "3D Artist",
-    fullTitle: "Lead 3D Visualization Artist",
-    bio: "Dominic Creates Immersive Visual Experiences For Egolia's Development Projects.",
-    image: "https://randomuser.me/api/portraits/men/44.jpg",
-    experience: [
-      "Specialized In Architectural Visualization And Real Estate Marketing.",
-      "Worked With Leading Development Firms Across North America.",
-    ],
-  },
-  {
-    name: "James Vial",
-    role: "Head of Front-End",
-    fullTitle: "Head Of Front-End Engineering",
-    bio: "James Leads Front-End Development For All Egolia Digital Products.",
-    image: "https://randomuser.me/api/portraits/men/46.jpg",
-    experience: [
-      "10+ Years Building Scalable Web Applications In Finance.",
-      "Expert In React, Next.js, And Modern Front-End Architecture.",
+      "CIO and Portfolio Manager at Durham Asset Management, Inc.",
+      "CFA charter holder with MBA from University of Iowa; maintained first-quartile performance.",
     ],
   },
 ];
@@ -149,7 +127,7 @@ export default function Team() {
       <main className="pt-[84px]">
         <TeamHero />
         <BoardOfDirectors />
-        <TeamSection title="Operations" members={operationsTeam} />
+        <TeamSection title="Executive Leadership" members={executiveTeam} />
         <TeamSection title="Tech" members={techTeam} />
       </main>
       <Footer />

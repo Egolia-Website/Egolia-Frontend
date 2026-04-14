@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function OverviewCTA() {
   return (
-    <section className="bg-navy-dark py-28 md:py-36">
+    <section className="bg-navy-dark py-24 sm:py-28 md:py-36">
       <div className="max-w-[1320px] mx-auto px-6 lg:px-12 text-center">
         <motion.div
           className="w-3 h-3 bg-orange mx-auto mb-10 rotate-45"
@@ -16,7 +16,7 @@ export default function OverviewCTA() {
         />
 
         <motion.h2
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-10"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-8 sm:mb-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -26,7 +26,7 @@ export default function OverviewCTA() {
         </motion.h2>
 
         <motion.div
-          className="w-16 h-[2px] bg-orange mx-auto mb-10"
+          className="w-16 h-[2px] bg-orange mx-auto mb-8 sm:mb-10"
           initial={{ width: 0 }}
           whileInView={{ width: 64 }}
           viewport={{ once: true }}
@@ -34,7 +34,7 @@ export default function OverviewCTA() {
         />
 
         <motion.p
-          className="text-white/60 max-w-xl mx-auto text-xl leading-[1.7] mb-14 font-semibold"
+          className="text-white/70 max-w-xl mx-auto text-base sm:text-xl leading-[1.7] mb-10 sm:mb-14 font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -44,7 +44,7 @@ export default function OverviewCTA() {
         </motion.p>
 
         <motion.div
-          className="flex items-center justify-center gap-10"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -52,19 +52,19 @@ export default function OverviewCTA() {
         >
           <Link
             href="/investor"
-            className="text-white text-lg font-medium border-b-2 border-white/30 pb-1 hover:border-orange hover:text-orange transition-all duration-300"
+            className="w-full sm:w-auto px-10 py-4 bg-orange text-white text-base font-bold hover:bg-orange/90 transition-colors duration-300 text-center"
           >
             For Investors
           </Link>
           <Link
             href="/platform"
-            className="text-white text-lg font-medium border-b-2 border-white/30 pb-1 hover:border-orange hover:text-orange transition-all duration-300"
+            className="w-full sm:w-auto px-10 py-4 border-2 border-white/25 text-white text-base font-bold hover:border-orange hover:text-orange transition-all duration-300 text-center"
           >
             Our Platform
           </Link>
           <Link
             href="/contact"
-            className="text-orange text-lg font-medium border-b-2 border-orange pb-1 hover:text-orange-light transition-colors duration-300"
+            className="w-full sm:w-auto px-10 py-4 border-2 border-white/25 text-white text-base font-bold hover:border-orange hover:text-orange transition-all duration-300 text-center"
           >
             Contact Us
           </Link>

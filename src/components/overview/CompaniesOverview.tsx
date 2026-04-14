@@ -49,7 +49,7 @@ export default function CompaniesOverview() {
         </motion.p>
 
         <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+          className="text-center text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-6"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -59,7 +59,7 @@ export default function CompaniesOverview() {
         </motion.h2>
 
         <motion.p
-          className="text-center text-white/60 text-xl leading-[1.7] max-w-2xl mx-auto mb-20 font-semibold"
+          className="text-center text-white/70 text-xl leading-[1.7] max-w-2xl mx-auto mb-20 font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -93,7 +93,7 @@ export default function CompaniesOverview() {
                 )}
               </div>
 
-              <p className="text-white/55 text-base leading-[1.7] mb-6 font-semibold">{company.description}</p>
+              <p className="text-white/70 text-base leading-[1.7] mb-6 font-medium">{company.description}</p>
 
               <Link
                 href={company.href}

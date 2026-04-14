@@ -54,7 +54,7 @@ export default function Advantage() {
             transition={{ duration: 0.7 }}
           >
             <p className="text-orange text-xs font-bold tracking-[0.2em] uppercase mb-4">The TradeREA Advantage</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy leading-[1.1]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-navy leading-[1.1]">
               Redefining Real Estate
               <br />
               <span className="italic font-light">Access</span>
@@ -62,7 +62,7 @@ export default function Advantage() {
           </motion.div>
 
           <motion.p
-            className="text-navy/75 text-xl leading-[1.7] max-w-lg font-semibold"
+            className="text-navy/70 text-xl leading-[1.7] max-w-lg font-medium"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -87,7 +87,7 @@ export default function Advantage() {
                 {item.icon}
               </div>
               <h3 className="text-navy text-lg font-bold mb-3">{item.title}</h3>
-              <p className="text-navy/75 text-base leading-[1.7] font-semibold">{item.description}</p>
+              <p className="text-navy/70 text-base leading-[1.7] font-medium">{item.description}</p>
             </motion.div>
           ))}
         </div>

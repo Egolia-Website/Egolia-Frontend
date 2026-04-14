@@ -56,7 +56,7 @@ export default function WhyInvest() {
         </motion.p>
 
         <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-24 italic leading-tight"
+          className="text-center text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-24 italic leading-tight"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -81,7 +81,7 @@ export default function WhyInvest() {
                 {item.icon}
               </div>
               <h3 className="text-white text-xl font-bold mb-4">{item.title}</h3>
-              <p className="text-white/55 text-base leading-[1.7] font-semibold">{item.description}</p>
+              <p className="text-white/70 text-base leading-[1.7] font-medium">{item.description}</p>
             </motion.div>
           ))}
         </div>

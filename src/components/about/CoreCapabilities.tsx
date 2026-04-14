@@ -114,7 +114,7 @@ export default function CoreCapabilities() {
         />
 
         <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-20"
+          className="text-center text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-20"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -140,7 +140,7 @@ export default function CoreCapabilities() {
               <h3 className="text-white text-lg font-semibold mb-4">
                 {item.title}
               </h3>
-              <p className="text-white/55 text-base leading-[1.7] font-semibold">
+              <p className="text-white/70 text-base leading-[1.7] font-medium">
                 {item.description}
               </p>
             </motion.div>

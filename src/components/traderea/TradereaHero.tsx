@@ -22,7 +22,7 @@ export default function TradereaHero() {
             </motion.div>
 
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-[5.5rem] font-bold text-navy leading-[0.95] tracking-[-0.03em] mb-8"
+              className="text-4xl md:text-5xl lg:text-[5.5rem] font-serif text-navy leading-[0.95] tracking-[-0.03em] mb-8"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
@@ -33,7 +33,7 @@ export default function TradereaHero() {
             </motion.h1>
 
             <motion.p
-              className="text-navy/75 text-xl leading-[1.7] max-w-md mb-8 font-semibold"
+              className="text-navy/70 text-base sm:text-xl leading-[1.7] max-w-md mb-8 font-medium"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -64,7 +64,7 @@ export default function TradereaHero() {
           >
             <div className="relative w-full aspect-[4/3] overflow-hidden">
               <Image
-                src="/images/trading-screen.jpg"
+                src="/images/tradingimage.jpeg"
                 alt="Trading charts and data"
                 fill
                 className="object-cover"

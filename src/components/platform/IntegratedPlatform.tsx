@@ -41,7 +41,7 @@ export default function IntegratedPlatform() {
       <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
         {/* Heading */}
         <motion.p
-          className="text-center text-white/55 text-base mb-4"
+          className="text-center text-white/70 text-base mb-4"
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -59,7 +59,7 @@ export default function IntegratedPlatform() {
         />
 
         <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+          className="text-center text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-6"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -69,7 +69,7 @@ export default function IntegratedPlatform() {
         </motion.h2>
 
         <motion.p
-          className="text-center text-white/55 text-xl italic leading-[1.7] max-w-2xl mx-auto mb-14 font-semibold"
+          className="text-center text-white/70 text-xl italic leading-[1.7] max-w-2xl mx-auto mb-14 font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -112,7 +112,7 @@ export default function IntegratedPlatform() {
                 {item.icon}
               </div>
               <h3 className="text-white text-lg font-semibold mb-3">{item.title}</h3>
-              <p className="text-white/55 text-base leading-[1.7] font-semibold">{item.description}</p>
+              <p className="text-white/70 text-base leading-[1.7] font-medium">{item.description}</p>
             </motion.div>
           ))}
         </div>

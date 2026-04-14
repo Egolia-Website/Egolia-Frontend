@@ -31,7 +31,7 @@ export default function IntelligenceCapabilities() {
     <section className="bg-gray-light py-24 md:py-32">
       <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
         <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-6"
+          className="text-center text-3xl md:text-4xl lg:text-5xl font-serif text-navy mb-6"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -41,7 +41,7 @@ export default function IntelligenceCapabilities() {
         </motion.h2>
 
         <motion.p
-          className="text-center text-navy/80 font-semibold text-xl leading-[1.7] max-w-2xl mx-auto mb-20"
+          className="text-center text-navy/70 font-medium text-xl leading-[1.7] max-w-2xl mx-auto mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -72,7 +72,7 @@ export default function IntelligenceCapabilities() {
 
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <h3 className="text-white text-2xl font-bold mb-2">{item.title}</h3>
-                <p className="text-white/70 font-semibold text-base leading-[1.6]">{item.description}</p>
+                <p className="text-white/70 font-medium text-base leading-[1.6]">{item.description}</p>
               </div>
             </motion.div>
           ))}

@@ -58,7 +58,7 @@ export default function IntelligenceProcess() {
         />
 
         <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-navy italic mb-6"
+          className="text-center text-3xl md:text-4xl lg:text-5xl font-serif text-navy italic mb-6"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -70,7 +70,7 @@ export default function IntelligenceProcess() {
         </motion.h2>
 
         <motion.p
-          className="text-center text-navy/80 font-semibold text-xl leading-[1.7] max-w-2xl mx-auto mb-20"
+          className="text-center text-navy/70 font-medium text-xl leading-[1.7] max-w-2xl mx-auto mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -107,7 +107,7 @@ export default function IntelligenceProcess() {
                 <div className="border border-navy/10 p-8 hover:shadow-[0_12px_40px_rgba(15,28,63,0.08)] hover:-translate-y-1 transition-all duration-500">
                   <div className="text-navy mb-5 flex justify-center">{step.icon}</div>
                   <h3 className="text-navy text-xl font-bold mb-4">{step.title}</h3>
-                  <p className="text-navy/80 font-semibold text-base leading-[1.7]">{step.description}</p>
+                  <p className="text-navy/70 font-medium text-base leading-[1.7]">{step.description}</p>
                 </div>
               </motion.div>
             ))}

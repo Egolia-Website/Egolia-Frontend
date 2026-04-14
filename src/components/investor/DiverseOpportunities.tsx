@@ -49,7 +49,7 @@ export default function DiverseOpportunities() {
         />
 
         <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-6 leading-tight"
+          className="text-center text-3xl md:text-4xl lg:text-5xl font-serif text-navy mb-6 leading-tight"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -59,7 +59,7 @@ export default function DiverseOpportunities() {
         </motion.h2>
 
         <motion.p
-          className="text-center text-navy/75 text-xl leading-[1.7] max-w-2xl mx-auto mb-20 font-semibold"
+          className="text-center text-navy/70 text-xl leading-[1.7] max-w-2xl mx-auto mb-20 font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -91,7 +91,7 @@ export default function DiverseOpportunities() {
               <div className="absolute bottom-0 left-0 right-0 p-7">
                 <div className="w-10 h-[2px] bg-orange mb-4" />
                 <h3 className="text-white text-xl font-bold mb-3">{sector.title}</h3>
-                <p className="text-white/60 text-base leading-[1.6] font-semibold">{sector.description}</p>
+                <p className="text-white/70 text-base leading-[1.6] font-medium">{sector.description}</p>
               </div>
             </motion.div>
           ))}

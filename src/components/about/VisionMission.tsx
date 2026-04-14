@@ -42,7 +42,7 @@ export default function VisionMission() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
           {/* Vision */}
           <motion.div
-            className="bg-white p-10 md:p-14"
+            className="bg-white p-6 sm:p-10 md:p-14"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -72,7 +72,7 @@ export default function VisionMission() {
             <h3 className="text-navy text-2xl font-bold uppercase tracking-wide mb-6">
               Vision
             </h3>
-            <p className="text-navy/75 text-xl leading-[1.7] font-semibold">
+            <p className="text-navy/70 text-base sm:text-xl leading-[1.7] font-medium">
               To Redefine How Individuals And Institutions Access And Benefit
               From High-Quality Investment Opportunities.
             </p>
@@ -80,7 +80,7 @@ export default function VisionMission() {
 
           {/* Mission */}
           <motion.div
-            className="bg-white p-10 md:p-14"
+            className="bg-white p-6 sm:p-10 md:p-14"
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -105,7 +105,7 @@ export default function VisionMission() {
             <h3 className="text-navy text-2xl font-bold uppercase tracking-wide mb-6">
               Mission
             </h3>
-            <p className="text-navy/75 text-xl leading-[1.7] font-semibold">
+            <p className="text-navy/70 text-base sm:text-xl leading-[1.7] font-medium">
               To Deliver Innovative, Accessible, And Performance-Driven
               Investment Solutions Backed By Strategic Development And
               Disciplined Execution.

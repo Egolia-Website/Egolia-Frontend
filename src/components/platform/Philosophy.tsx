@@ -25,7 +25,7 @@ export default function Philosophy() {
         />
 
         <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-white italic leading-[1.15] mb-8"
+          className="text-3xl md:text-4xl lg:text-5xl font-serif text-white italic leading-[1.15] mb-8"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -37,7 +37,7 @@ export default function Philosophy() {
         </motion.h2>
 
         <motion.p
-          className="text-white/55 text-xl leading-[1.7] max-w-2xl mx-auto font-semibold"
+          className="text-white/70 text-xl leading-[1.7] max-w-2xl mx-auto font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

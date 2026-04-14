@@ -8,7 +8,7 @@ export default function GetInTouch() {
     <section className="bg-white py-24 md:py-32">
       <div className="max-w-[1320px] mx-auto px-6 lg:px-12 text-center">
         <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-8"
+          className="text-3xl md:text-4xl lg:text-5xl font-serif text-navy mb-8"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -18,7 +18,7 @@ export default function GetInTouch() {
         </motion.h2>
 
         <motion.p
-          className="text-navy/75 text-xl leading-[1.7] max-w-2xl mx-auto mb-10 italic font-semibold"
+          className="text-navy/70 text-xl leading-[1.7] max-w-2xl mx-auto mb-10 italic font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
