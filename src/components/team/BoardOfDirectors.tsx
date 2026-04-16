@@ -34,7 +34,7 @@ const boardRow1: TeamMemberDetail[] = [
   {
     name: "Michael Spencley",
     role: "Director",
-    fullTitle: "Director, Board Of Directors",
+    fullTitle: "Board Of Director",
     image: "/images/Board Member/Michael Spencley Head Shot.jpg",
     bio: "Senior executive with more than 30 years of CEO experience providing fiscal, strategic, and operational leadership across small, medium, and large organizations, including both turnaround and start-up environments.",
     experience: [
@@ -46,7 +46,7 @@ const boardRow1: TeamMemberDetail[] = [
   {
     name: "Tihomir Bajic",
     role: "Director",
-    fullTitle: "Director, Board Of Directors",
+    fullTitle: "Board Of Director",
     image: "/images/Board Member/tihomir.png",
     bio: "Repeat entrepreneur and investor. Co-founded the Long-Term Stock Exchange (LTSE) alongside Eric Ries.",
     experience: [
@@ -61,7 +61,7 @@ const boardRow2: TeamMemberDetail[] = [
   {
     name: "Larry D. Hayes",
     role: "Director",
-    fullTitle: "Director, Board Of Directors",
+    fullTitle: "Board Of Director",
     image: "/images/Board Member/lary D. Hayes.JPG",
     bio: "Senior executive with more than 25 years of leadership experience across credit unions, CUSOs, and fintech organizations.",
     experience: [
@@ -73,7 +73,7 @@ const boardRow2: TeamMemberDetail[] = [
   {
     name: "Christopher Williams",
     role: "Director",
-    fullTitle: "Director, Board Of Directors",
+    fullTitle: "Board Of Director",
     image: "/images/Board Member/Williams Chris_01388.JPG",
     bio: "Senior real estate investment executive and board leader with nearly 40 years of experience across multifamily, student, and military housing.",
     experience: [
@@ -85,7 +85,7 @@ const boardRow2: TeamMemberDetail[] = [
   {
     name: "Neil Wolfson",
     role: "Director",
-    fullTitle: "Director, Board Of Directors",
+    fullTitle: "Board Of Director",
     image: "/images/Board Member/neil wolfson headshot 3.jpg",
     bio: "Senior investment executive and board leader with deep experience across fintech, asset management, governance, and family office investing.",
     experience: [

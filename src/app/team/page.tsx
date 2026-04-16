@@ -6,18 +6,6 @@ import TeamSection from "@/components/team/TeamSection";
 
 const executiveTeam = [
   {
-    name: "Michael Spencley",
-    role: "Chief Executive Officer",
-    fullTitle: "Chief Executive Officer",
-    bio: "Senior executive with more than 30 years of CEO experience providing fiscal, strategic, and operational leadership across small, medium, and large organizations.",
-    image: "/images/Board Member/Michael Spencley Head Shot.jpg",
-    experience: [
-      "Recognized as a dynamic, results-oriented leader with a strong track record of improving performance in fast-paced and complex business settings, consistently translating complex challenges into clear, actionable solutions.",
-      "Leadership style combines accountability, team development, and execution, enabling management teams to achieve high performance and implement best practices across the organization.",
-      "Expertise includes strategy, finance, budgeting, profit management, sales and marketing leadership, corporate development, strategic alliances, governance, contract negotiations, regulatory relations, and performance improvement.",
-    ],
-  },
-  {
     name: "Jason R. Macintosh",
     role: "Chief Financial Officer",
     fullTitle: "Chief Financial Officer",
