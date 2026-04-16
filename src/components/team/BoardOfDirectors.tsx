@@ -7,16 +7,93 @@ import { motion } from "framer-motion";
 import MemberModal, { type TeamMemberDetail } from "./MemberModal";
 
 const boardRow1: TeamMemberDetail[] = [
-  { name: "Samuel Babarinde", role: "Chairman", fullTitle: "Chairman Of The Board", image: "/images/Board Member/sam.png", bio: "15+ years real estate development experience across Ontario and Michigan. Founder of AvranceCorp, TradeREA, and Egolia Group.", experience: ["Grew real estate portfolio to 7,000+ units and $5B+ pipeline.", "Leads technology and infrastructure strategy integrating compliance and asset governance."] },
-  { name: "Ravi Thakur", role: "Vice Chairman", fullTitle: "Vice Chairman Of The Board", image: "/images/Board Member/ravi.png", bio: "30+ years of leadership across real estate development, project management, and investment strategy.", experience: ["Vice Chairman and partner at AvranceCorp Developments.", "Specializes in structuring large-scale development opportunities and cultivating capital relationships."] },
-  { name: "Michael Spencley", role: "Board Member", fullTitle: "Board Of Directors", image: "/images/Board Member/michael spencley.png", bio: "30+ years of CEO experience across turnaround and start-up environments, driving transformational growth and operational excellence.", experience: ["Extensive board-level experience with both private and public companies.", "Deep expertise in strategy development, financial management, and corporate governance."] },
-  { name: "Tihomir Bajic", role: "Board Member", fullTitle: "Board Of Directors", image: "/images/Board Member/tihomir.png", bio: "Repeat entrepreneur and investor. Co-founded the Long-Term Stock Exchange (LTSE) alongside Eric Ries.", experience: ["Led the buildout of the complete technology stack powering an SEC-regulated national securities exchange.", "Managing Partner of the X& family of funds, focusing on early-stage deep tech investments."] },
+  {
+    name: "Samuel Babarinde",
+    role: "Founder & Chairman",
+    fullTitle: "Founder & Chairman Of The Board",
+    image: "/images/Board Member/samuel.png",
+    bio: "Real estate executive and entrepreneur with more than 15 years of development experience across Ontario and Michigan. As Chairman of Egolia Group, he leads the organization's technology and infrastructure strategy.",
+    experience: [
+      "Since founding the company in 2016, he has overseen the growth of a development portfolio comprising more than 7,000 units and a pipeline valued at over $5 billion.",
+      "Leads the organization's technology and infrastructure strategy, with a focus on building institutional-grade systems that integrate compliance, asset governance, and digital market infrastructure for real-world assets.",
+      "Recognized for combining development expertise with a forward-looking approach to financial and digital infrastructure, positioning the organization for long-term growth and market leadership.",
+    ],
+  },
+  {
+    name: "Ravi Thakur",
+    role: "Founder & Vice Chairman",
+    fullTitle: "Founder & Vice Chairman, Acting CEO",
+    image: "/images/Board Member/raviheadshot512.512.png",
+    bio: "Senior executive with more than 30 years of leadership experience across real estate development, project management, business development, and investment strategy.",
+    experience: [
+      "As Vice Chairman and Acting CEO of Egolia Group, and a partner at AvranceCorp Developments, he brings expertise in structuring large-scale development opportunities and cultivating strategic capital relationships.",
+      "Advances projects across residential, mixed-use, and investment asset classes with a strong cross-sector network spanning private equity, banking, brokerage, development, and international investors.",
+      "Trusted advisor to partners, investors, and executive teams navigating complex transactions and expansion initiatives, recognized for his ability to align execution, capital, and growth strategy.",
+    ],
+  },
+  {
+    name: "Michael Spencley",
+    role: "Director",
+    fullTitle: "Director, Board Of Directors",
+    image: "/images/Board Member/Michael Spencley Head Shot.jpg",
+    bio: "Senior executive with more than 30 years of CEO experience providing fiscal, strategic, and operational leadership across small, medium, and large organizations, including both turnaround and start-up environments.",
+    experience: [
+      "Dynamic, results-oriented leader who has consistently translated complex challenges into clear, actionable solutions that drive organizational improvement and long-term value creation.",
+      "Leadership style combines accountability, team development, and execution, enabling management teams to achieve high performance and implement best practices across the organization.",
+      "Board-level experience with both private and public companies. Expertise includes strategy, finance, budgeting, profit management, sales and marketing leadership, corporate development, strategic alliances, governance, contract negotiations, regulatory relations, and performance improvement.",
+    ],
+  },
+  {
+    name: "Tihomir Bajic",
+    role: "Director",
+    fullTitle: "Director, Board Of Directors",
+    image: "/images/Board Member/tihomir.png",
+    bio: "Repeat entrepreneur and investor. Co-founded the Long-Term Stock Exchange (LTSE) alongside Eric Ries.",
+    experience: [
+      "Led the buildout of the complete technology stack powering an SEC-regulated national securities exchange from the ground up.",
+      "Early engineer and later CTO across multiple ventures that went public or were acquired by publicly traded companies, with deep expertise in regulated financial market infrastructure.",
+      "Managing Partner of the X& family of funds, focusing on early-stage deep tech investments and bringing hands-on experience in enterprise-scale platforms and compliance-heavy technology systems.",
+    ],
+  },
 ];
 
 const boardRow2: TeamMemberDetail[] = [
-  { name: "Larry D. Hayes", role: "Board Member", fullTitle: "Board Of Directors", image: "/images/Board Member/larry.png", bio: "25+ years leadership across credit unions, CUSOs, and fintech organizations.", experience: ["Served as CEO, COO, President, and Executive Consultant.", "Expert in financial turnaround, strategic planning, governance, and digital transformation."] },
-  { name: "Christopher Williams", role: "Board Member", fullTitle: "Board Of Directors", image: "/images/Board Member/christopher.png", bio: "Nearly 40 years experience across multifamily, student, and military housing investment.", experience: ["Led strategies for residential portfolios valued at $15B+ comprising 100,000+ units.", "Partner at ApexOne Investment Partners; former President of Balfour Beatty Investments."] },
-  { name: "Neil Wolfson", role: "Board Member", fullTitle: "Board Of Directors", image: "/images/Board Member/neil.png", bio: "Deep expertise in fintech, asset management, and family office operations with proven track record in building and scaling financial institutions.", experience: ["Former President and CIO of SF Capital Group overseeing a billion-dollar family office.", "CFA charter holder with MBA in Finance from NYU Stern; 100+ appearances on CNBC and Bloomberg."] },
+  {
+    name: "Larry D. Hayes",
+    role: "Director",
+    fullTitle: "Director, Board Of Directors",
+    image: "/images/Board Member/lary D. Hayes.JPG",
+    bio: "Senior executive with more than 25 years of leadership experience across credit unions, CUSOs, and fintech organizations.",
+    experience: [
+      "Served as CEO, COO, President, and Executive Consultant, bringing expertise in financial turnaround, strategic planning, governance, ALM, digital transformation, and member experience.",
+      "Strong track record in restoring profitability, strengthening balance sheets, modernizing operations, and guiding institutions through periods of change and growth.",
+      "Recognized for his ability to combine financial discipline with strategic clarity and people-focused leadership. Trusted advisor to boards, executives, and financial organizations navigating transformation.",
+    ],
+  },
+  {
+    name: "Christopher Williams",
+    role: "Director",
+    fullTitle: "Director, Board Of Directors",
+    image: "/images/Board Member/Williams Chris_01388.JPG",
+    bio: "Senior real estate investment executive and board leader with nearly 40 years of experience across multifamily, student, and military housing.",
+    experience: [
+      "Led large-scale investment, operating, and infrastructure strategies for residential portfolios valued at more than $15 billion and comprising over 100,000 units nationwide.",
+      "Partner at ApexOne Investment Partners focusing on investment strategy, capital formation, acquisitions, and portfolio management. Former President of Balfour Beatty Investments' residential business overseeing military, student, and multifamily communities.",
+      "Recognized for leadership in public-private partnerships, infrastructure investment, and governance. Trusted advisor to boards, institutional partners, and government stakeholders.",
+    ],
+  },
+  {
+    name: "Neil Wolfson",
+    role: "Director",
+    fullTitle: "Director, Board Of Directors",
+    image: "/images/Board Member/neil wolfson headshot 3.jpg",
+    bio: "Senior investment executive and board leader with deep experience across fintech, asset management, governance, and family office investing.",
+    experience: [
+      "Served on boards and committees of numerous public and private fintech companies including OnDeck, ExcelFin, SALT Blockchain, IOU Financial, Audibly, Nextivity, UPTIQ, and Finitive, guiding organizations through growth, strategic transactions, and successful exits.",
+      "Former President and CIO of SF Capital Group overseeing a billion-dollar multi-generational family office. Former CIO and President of Wilmington Trust Investment Management ($40B AUM), and President, CEO, and Chairman of the Wilmington Funds ($10B). Began career as Partner at KPMG LLP.",
+      "CFA charterholder with MBA in Finance from NYU Stern. Adjunct Professor at Rutgers Graduate Business School. Widely recognized market commentator with 100+ appearances on CNBC and Bloomberg Television.",
+    ],
+  },
 ];
 
 function SocialIcons() {
