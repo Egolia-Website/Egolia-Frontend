@@ -31,7 +31,7 @@ export default function IntelligenceCapabilities() {
     <section className="bg-gray-light py-24 md:py-32">
       <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
         <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-serif text-navy mb-6"
+          className="text-center text-3xl md:text-4xl lg:text-5xl font-sans text-navy mb-6"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

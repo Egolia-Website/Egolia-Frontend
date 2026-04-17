@@ -54,10 +54,10 @@ export default function Advantage() {
             transition={{ duration: 0.7 }}
           >
             <p className="text-orange text-xs font-bold tracking-[0.2em] uppercase mb-4">The TradeREA Advantage</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-navy leading-[1.1]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans text-navy leading-[1.1]">
               Redefining Real Estate
               <br />
-              <span className="italic font-light">Access</span>
+              <span className="font-light">Access</span>
             </h2>
           </motion.div>
 

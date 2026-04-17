@@ -59,7 +59,7 @@ export default function IntegratedPlatform() {
         />
 
         <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-6"
+          className="text-center text-3xl md:text-4xl lg:text-5xl font-sans text-white mb-6"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -69,7 +69,7 @@ export default function IntegratedPlatform() {
         </motion.h2>
 
         <motion.p
-          className="text-center text-white/70 text-xl italic leading-[1.7] max-w-2xl mx-auto mb-14 font-medium"
+          className="text-center text-white/70 text-xl leading-[1.7] max-w-2xl mx-auto mb-14 font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

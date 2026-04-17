@@ -27,14 +27,14 @@ export default function OverviewHero() {
         />
 
         <motion.h1
-          className="text-4xl md:text-5xl lg:text-7xl font-serif text-white leading-[1] tracking-[-0.02em] mb-8"
+          className="text-4xl md:text-5xl lg:text-7xl font-sans text-white leading-[1] tracking-[-0.02em] mb-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
         >
           One Platform.
           <br />
-          <span className="text-orange italic">Multiple Opportunities.</span>
+          <span className="text-orange">Multiple Opportunities.</span>
         </motion.h1>
 
         <motion.p

@@ -18,7 +18,7 @@ export default function PartnerCTA() {
         </motion.p>
 
         <motion.h2
-          className="text-4xl md:text-5xl lg:text-7xl font-serif text-white mb-10"
+          className="text-4xl md:text-5xl lg:text-7xl font-sans text-white mb-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

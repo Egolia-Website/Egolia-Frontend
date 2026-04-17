@@ -68,7 +68,7 @@ export default function MemberModal({ member, onClose }: MemberModalProps) {
                   <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-bold">{member.name}</h2>
                   <p className="text-white/70 text-sm sm:text-base font-semibold mt-1">{member.fullTitle}</p>
 
-                  <p className="text-white/70 text-sm sm:text-base leading-[1.7] mt-4 sm:mt-6 italic">
+                  <p className="text-white/70 text-sm sm:text-base leading-[1.7] mt-4 sm:mt-6">
                     {member.bio}
                   </p>
                 </div>

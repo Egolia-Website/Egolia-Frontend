@@ -27,7 +27,7 @@ export default function IntelligencePlatform() {
 
       <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-12">
         <motion.p
-          className="text-white/40 text-base italic mb-4"
+          className="text-white/40 text-base mb-4"
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -37,7 +37,7 @@ export default function IntelligencePlatform() {
         </motion.p>
 
         <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-serif text-white leading-[1.1] mb-8 max-w-2xl"
+          className="text-3xl md:text-4xl lg:text-5xl font-sans text-white leading-[1.1] mb-8 max-w-2xl"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -69,7 +69,7 @@ export default function IntelligencePlatform() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
             >
-              <h3 className="text-white text-xl font-bold italic mb-4">{item.title}</h3>
+              <h3 className="text-white text-xl font-bold mb-4">{item.title}</h3>
               <p className="text-white/70 font-medium text-base leading-[1.7]">{item.description}</p>
             </motion.div>
           ))}

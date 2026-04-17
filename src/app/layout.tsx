@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
-import { Inter, DM_Serif_Display } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const dmSerif = DM_Serif_Display({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-serif",
+const googleSans = localFont({
+  src: [
+    { path: "./fonts/GoogleSans-Variable.ttf", style: "normal" },
+    { path: "./fonts/GoogleSans-Italic-Variable.ttf", style: "italic" },
+  ],
+  variable: "--font-body",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${dmSerif.variable} font-sans antialiased`}>
+      <body
+        className={`${googleSans.variable} font-sans antialiased`}
+      >
         {children}
       </body>
     </html>

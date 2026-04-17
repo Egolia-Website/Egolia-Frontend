@@ -34,7 +34,7 @@ export default function Performance() {
           />
 
           <motion.h2
-            className="text-3xl md:text-4xl lg:text-5xl font-serif text-navy leading-[1.1]"
+            className="text-3xl md:text-4xl lg:text-5xl font-sans text-navy leading-[1.1]"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -42,7 +42,7 @@ export default function Performance() {
           >
             Built On Experience
             <br />
-            <span className="italic font-light">And Execution</span>
+            <span className="font-light">And Execution</span>
           </motion.h2>
         </div>
 
@@ -67,7 +67,7 @@ export default function Performance() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 + i * 0.12 }}
               />
-              <div className="text-4xl md:text-5xl font-light text-navy italic mb-4 tracking-tight">
+              <div className="text-4xl md:text-5xl font-light text-navy mb-4 tracking-tight">
                 {stat.value}
               </div>
               <p className="text-navy/70 text-sm md:text-base tracking-wide font-semibold">

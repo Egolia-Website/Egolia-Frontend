@@ -11,7 +11,7 @@ export default function MetadataHero() {
           {/* Left content */}
           <div>
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[5.5rem] font-serif text-navy leading-[0.95] tracking-[-0.03em] mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[5.5rem] font-sans text-navy leading-[0.95] tracking-[-0.03em] mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}

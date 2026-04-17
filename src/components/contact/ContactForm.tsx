@@ -21,7 +21,7 @@ export default function ContactForm() {
             transition={{ duration: 0.7 }}
           >
             <div className="relative z-10">
-              <h1 className="text-3xl md:text-4xl font-serif text-white mb-4">
+              <h1 className="text-3xl md:text-4xl font-sans text-white mb-4">
                 Contact Information
               </h1>
               <p className="text-white/70 text-xl leading-[1.7] mb-12 font-medium">

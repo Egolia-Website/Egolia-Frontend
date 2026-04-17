@@ -22,14 +22,14 @@ export default function TradereaHero() {
             </motion.div>
 
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-[5.5rem] font-serif text-navy leading-[0.95] tracking-[-0.03em] mb-8"
+              className="text-4xl md:text-5xl lg:text-[5.5rem] font-sans text-navy leading-[0.95] tracking-[-0.03em] mb-8"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
               Trade Real Estate
               <br />
-              <span className="text-orange italic">Like Stocks</span>
+              <span className="text-orange">Like Stocks</span>
             </motion.h1>
 
             <motion.p

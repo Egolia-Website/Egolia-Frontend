@@ -37,7 +37,7 @@ export default function CapitalHero() {
         </motion.div>
 
         <motion.h1
-          className="text-4xl md:text-5xl lg:text-7xl font-serif text-white leading-[1.05] tracking-[-0.02em] mb-6"
+          className="text-4xl md:text-5xl lg:text-7xl font-sans text-white leading-[1.05] tracking-[-0.02em] mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}

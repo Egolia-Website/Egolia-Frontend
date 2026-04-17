@@ -149,7 +149,7 @@ export default function BoardOfDirectors() {
       <section className="bg-white py-24 md:py-32">
         <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
           <motion.h2
-            className="text-center text-3xl md:text-4xl font-light text-navy italic mb-4"
+            className="text-center text-3xl md:text-4xl font-light text-navy mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

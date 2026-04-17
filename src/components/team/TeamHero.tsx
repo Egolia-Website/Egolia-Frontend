@@ -14,14 +14,14 @@ export default function TeamHero() {
         />
 
         <motion.h1
-          className="text-4xl md:text-5xl lg:text-7xl font-serif text-white leading-[1] tracking-[-0.02em]"
+          className="text-4xl md:text-5xl lg:text-7xl font-sans text-white leading-[1] tracking-[-0.02em]"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
         >
           The People Behind
           <br />
-          <span className="text-orange italic">Egolia Group</span>
+          <span className="text-orange">Egolia Group</span>
         </motion.h1>
 
         <motion.p

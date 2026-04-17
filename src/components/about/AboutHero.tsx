@@ -22,7 +22,7 @@ export default function AboutHero() {
       {/* Content */}
       <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-12 w-full pb-20 sm:pb-32 md:pb-40 pt-20 sm:pt-32">
         <motion.p
-          className="text-white/70 text-lg italic mb-4"
+          className="text-white/70 text-lg mb-4"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -31,13 +31,13 @@ export default function AboutHero() {
         </motion.p>
 
         <motion.h1
-          className="text-4xl md:text-5xl lg:text-7xl font-serif leading-[1] tracking-[-0.02em] max-w-2xl"
+          className="text-4xl md:text-5xl lg:text-7xl font-sans leading-[1] tracking-[-0.02em] max-w-2xl"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
         >
           <span className="text-white block">Building Enduring</span>
-          <span className="text-orange block italic mt-2">Future</span>
+          <span className="text-orange block mt-2">Future</span>
         </motion.h1>
 
         <motion.p

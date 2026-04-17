@@ -64,7 +64,7 @@ export default function WhyEgolia() {
         />
 
         <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-serif text-navy mb-20"
+          className="text-center text-3xl md:text-4xl lg:text-5xl font-sans text-navy mb-20"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

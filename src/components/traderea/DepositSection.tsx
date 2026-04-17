@@ -35,7 +35,7 @@ export default function DepositSection() {
           {/* Left - Deposit methods */}
           <div>
             <motion.h2
-              className="text-3xl md:text-4xl font-serif text-navy mb-4"
+              className="text-3xl md:text-4xl font-sans text-navy mb-4"
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

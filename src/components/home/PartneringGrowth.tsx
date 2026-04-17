@@ -6,112 +6,132 @@ import { motion } from "framer-motion";
 const features = [
   {
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M2 12h4l3-9 4 18 3-9h4" />
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
       </svg>
     ),
-    title: "Long-Term Investment Strategy",
-    description: "We Focus On Sustainable Growth And Resilient Returns Across Market Cycles.",
+    title: "Creativity",
+    description: "We think beyond conventional frameworks to unlock opportunities others miss.",
   },
   {
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
       </svg>
     ),
-    title: "Access To Integrated Opportunities",
-    description: "Gain Exposure To A Diversified Platform Spanning Development, Capital, And Innovation.",
+    title: "Innovative Thinking",
+    description: "Technology and data intelligence drive every decision across our platform.",
   },
   {
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    title: "Disciplined Execution",
-    description: "Our Approach Combines Deep Expertise, Rigorous Analysis, And Operational Excellence.",
+    title: "Rapid Solutions",
+    description: "Operational excellence allows us to move quickly while maintaining quality.",
+  },
+  {
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+      </svg>
+    ),
+    title: "Top-Notch Support",
+    description: "Our teams are dedicated to the highest standards of service for all partners.",
   },
 ];
 
 export default function PartneringGrowth() {
   return (
-    <section className="bg-navy-dark">
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-12 py-24 md:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-0 items-center">
-          {/* Left content */}
-          <div className="bg-navy p-10 md:p-16">
-            <motion.p
-              className="text-white/40 text-lg mb-5 italic"
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
+    <section className="bg-[#FAFAF7] py-28 md:py-36">
+      <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+          {/* Left: premium rounded image mosaic */}
+          <motion.div
+            className="grid grid-cols-2 gap-4"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            {/* Large top image */}
+            <div className="col-span-2 relative rounded-2xl overflow-hidden aspect-[16/8] shadow-[0_8px_32px_rgba(15,28,63,0.12)]">
+              <Image
+                src="/images/hero-city.jpg"
+                alt="Egolia platform"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-navy/20 to-transparent" />
+            </div>
+            {/* Two smaller images */}
+            <div className="relative rounded-2xl overflow-hidden aspect-square shadow-[0_4px_20px_rgba(15,28,63,0.10)]">
+              <Image
+                src="/images/glass-building.jpg"
+                alt="Investment"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                sizes="25vw"
+              />
+            </div>
+            <div className="relative rounded-2xl overflow-hidden aspect-square shadow-[0_4px_20px_rgba(15,28,63,0.10)]">
+              <Image
+                src="/images/avrancecorp.jpg"
+                alt="Development"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                sizes="25vw"
+              />
+            </div>
+          </motion.div>
+
+          {/* Right: heading + 2×2 feature mini-cards */}
+          <div>
+            <motion.span
+              className="inline-block text-orange text-[11px] font-bold tracking-[0.22em] uppercase mb-5"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              For Investor
-            </motion.p>
-
+              What Makes Us Different?
+            </motion.span>
             <motion.h2
-              className="text-3xl md:text-4xl lg:text-5xl font-serif text-white leading-[1.1] mb-8"
+              className="text-4xl md:text-5xl font-sans text-navy mb-10 leading-[1.1]"
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.1 }}
+              transition={{ duration: 0.7 }}
             >
-              Partnering For
-              <br />
-              Long-Term Growth
+              We bring{" "}
+              <span className="text-orange">solutions</span>{" "}
+              to build the future of real estate investment.
             </motion.h2>
 
-            <motion.p
-              className="text-white/70 text-base sm:text-xl leading-[1.7] mb-12 max-w-md font-medium"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-            >
-              Egolia Partners With Investors To Deliver Long-Term Value Through Disciplined Strategies, Strategic Capital Allocation, And Access To Integrated Opportunities.
-            </motion.p>
-
-            <div className="space-y-6">
+            {/* 2×2 feature mini-cards */}
+            <div className="grid grid-cols-2 gap-4">
               {features.map((feature, i) => (
                 <motion.div
                   key={feature.title}
-                  className="flex gap-5 group"
-                  initial={{ opacity: 0, x: -15 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  className="bg-white rounded-xl p-6 shadow-[0_2px_16px_rgba(15,28,63,0.06)] hover:shadow-[0_8px_32px_rgba(15,28,63,0.10)] hover:-translate-y-0.5 transition-all duration-400 group"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
+                  transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
                 >
-                  <div className="flex-shrink-0 w-12 h-12 border border-gold/30 flex items-center justify-center text-gold group-hover:border-gold/60 transition-colors duration-300">
+                  <div className="w-9 h-9 rounded-lg bg-orange/10 text-orange flex items-center justify-center mb-4 group-hover:bg-orange group-hover:text-white transition-all duration-300">
                     {feature.icon}
                   </div>
-                  <div>
-                    <h3 className="text-white font-semibold text-base mb-1">{feature.title}</h3>
-                    <p className="text-white/70 text-base leading-[1.6] font-medium">{feature.description}</p>
-                  </div>
+                  <h3 className="text-navy font-bold text-sm mb-2">{feature.title}</h3>
+                  <p className="text-navy/50 text-xs leading-[1.75]">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
 
-          {/* Right image */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.2 }}
-          >
-            <div className="relative w-full aspect-[1/1] overflow-hidden">
-              <Image
-                src="/images/partnering.jpg"
-                alt="Investors in modern office"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

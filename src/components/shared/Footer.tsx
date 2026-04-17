@@ -23,7 +23,7 @@ export default function Footer() {
               height={55}
               className="object-contain mix-blend-multiply"
             />
-            <p className="text-navy/70 text-base mt-6 leading-[1.7] italic font-medium">
+            <p className="text-navy/70 text-base mt-6 leading-[1.7] font-medium">
               Building Long-Term Value Through Strategic Capital, Innovation, And Disciplined Growth.
             </p>
           </div>

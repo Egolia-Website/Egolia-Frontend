@@ -54,7 +54,7 @@ export default function InvestmentApproach() {
           />
 
           <motion.h2
-            className="text-3xl md:text-4xl lg:text-5xl font-serif text-white leading-[1.1] mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-sans text-white leading-[1.1] mb-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -62,7 +62,7 @@ export default function InvestmentApproach() {
           >
             A Structured
             <br />
-            <span className="italic font-light">Investment Process</span>
+            <span className="font-light">Investment Process</span>
           </motion.h2>
 
           <motion.p

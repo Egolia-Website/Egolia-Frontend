@@ -8,7 +8,7 @@ export default function PlatformCTA() {
     <section className="bg-navy-dark py-20 sm:py-28 md:py-36">
       <div className="max-w-[1320px] mx-auto px-6 lg:px-12 text-center">
         <motion.h2
-          className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-10"
+          className="text-4xl md:text-5xl lg:text-6xl font-sans text-white mb-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

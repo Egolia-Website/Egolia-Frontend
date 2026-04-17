@@ -55,14 +55,14 @@ export default function AboutAvrance() {
 
             {/* Heading */}
             <motion.h2
-              className="text-3xl md:text-4xl lg:text-[2.75rem] font-serif text-navy leading-[1.1] mb-8"
+              className="text-3xl md:text-4xl lg:text-[2.75rem] font-sans text-navy leading-[1.1] mb-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.15 }}
             >
               A Development Platform Built On Precision And{" "}
-              <span className="italic font-light">Long-Term Value</span>
+              <span className="font-light">Long-Term Value</span>
             </motion.h2>
 
             {/* Description */}

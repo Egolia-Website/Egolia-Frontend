@@ -21,7 +21,7 @@ export default function PlatformHero() {
 
       <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-12 w-full text-center py-20">
         <motion.h1
-          className="text-4xl md:text-5xl lg:text-7xl font-serif text-white leading-[1.05] tracking-[-0.02em]"
+          className="text-4xl md:text-5xl lg:text-7xl font-sans text-white leading-[1.05] tracking-[-0.02em]"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}

@@ -22,6 +22,7 @@ export const colors = {
 } as const;
 
 export const navLinks = [
+  { label: "Home", href: "/" },
   { label: "Overview", href: "/overview" },
   {
     label: "Who We Are",

@@ -21,10 +21,10 @@ export default function AtAGlance() {
             transition={{ duration: 0.7 }}
           >
             <p className="text-orange text-sm font-bold tracking-[0.15em] uppercase mb-4">Egolia At A Glance</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-navy leading-[1.1]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans text-navy leading-[1.1]">
               Building Long-Term Value Through
               <br />
-              <span className="italic font-light">Disciplined Strategy</span>
+              <span className="font-light">Disciplined Strategy</span>
             </h2>
           </motion.div>
 

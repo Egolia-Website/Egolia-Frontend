@@ -56,7 +56,7 @@ export default function WhyInvest() {
         </motion.p>
 
         <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-24 italic leading-tight"
+          className="text-center text-3xl md:text-4xl lg:text-5xl font-sans text-white mb-24 leading-tight"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

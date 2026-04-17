@@ -54,7 +54,7 @@ export default function HowItWorks() {
         </motion.p>
 
         <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-6"
+          className="text-center text-3xl md:text-4xl lg:text-5xl font-sans text-white mb-6"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

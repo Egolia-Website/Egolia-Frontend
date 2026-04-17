@@ -44,7 +44,7 @@ export default function AvranceHero() {
 
           {/* Heading */}
           <motion.h1
-            className="text-4xl md:text-5xl lg:text-7xl font-serif text-white leading-[1.05] tracking-tight"
+            className="text-4xl md:text-5xl lg:text-7xl font-sans text-white leading-[1.05] tracking-tight"
             variants={{
               hidden: { opacity: 0, y: 40 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.9 } },
@@ -53,7 +53,7 @@ export default function AvranceHero() {
             Building Communities
             <br />
             That Create{" "}
-            <span className="italic font-light">Long-Term Value</span>
+            <span className="font-light">Long-Term Value</span>
           </motion.h1>
 
           {/* Description */}
