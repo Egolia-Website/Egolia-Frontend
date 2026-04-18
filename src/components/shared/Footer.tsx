@@ -1,97 +1,156 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-
-const navigationLinks = [
-  { label: "Overview", href: "/overview" },
-  { label: "Our Firm", href: "/about" },
-  { label: "Platform", href: "/platform" },
-  { label: "For Investors", href: "/investor" },
-  { label: "Contact", href: "/contact" },
-];
+import { useState } from "react";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+
   return (
-    <footer className="bg-white">
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-12 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
-          {/* Logo & description */}
-          <div>
-            <Image
-              src="/images/egolia-logo.png"
-              alt="Egolia Group"
-              width={180}
-              height={55}
-              className="object-contain mix-blend-multiply"
-            />
-            <p className="text-navy/70 text-base mt-6 leading-[1.7] font-medium">
-              Building Long-Term Value Through Strategic Capital, Innovation, And Disciplined Growth.
-            </p>
-          </div>
+    <footer className="bg-[#f5f5f7] border-t border-[#0F1C3F]/[0.06]">
 
-          {/* Navigation */}
-          <div>
-            <h4 className="text-navy text-xl font-semibold mb-6">Navigation</h4>
-            <ul className="space-y-3">
-              {navigationLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-navy/70 text-base hover:text-orange transition-colors duration-300"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+      {/* ── Main footer grid ── */}
+      <div className="max-w-[1280px] mx-auto px-8 lg:px-14 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
-          {/* Contact */}
-          <div>
-            <h4 className="text-navy text-xl font-semibold mb-6">Contact</h4>
-            <div className="space-y-3 text-navy/70 text-base">
-              <p>Info@Avrancecorp.Com</p>
-              <p>Toronto, Ontario</p>
-            </div>
+        {/* Col 1 — Brand */}
+        <div>
+          <Image
+            src="/images/egolia-logo.png"
+            alt="Egolia Group"
+            width={160}
+            height={50}
+            className="object-contain mix-blend-multiply mb-5 w-[140px]"
+          />
+          <p className="text-[#6e6e73] text-[14px] leading-[1.75] mb-7">
+            &copy; {new Date().getFullYear()} Egolia Group.<br />
+            Building long-term value.
+          </p>
 
-            <Link
-              href="https://linkedin.com"
-              target="_blank"
-              className="inline-block mt-5 text-navy text-base font-medium border-b-2 border-orange pb-0.5 hover:text-orange transition-colors duration-300"
-            >
-              LinkedIn
-            </Link>
-
-            {/* Social icons */}
-            <div className="flex gap-5 mt-8">
-              <Link href="#" className="text-navy/50 hover:text-orange transition-colors duration-300" aria-label="Facebook">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-                </svg>
+          {/* Social icons */}
+          <div className="flex items-center gap-4">
+            {[
+              {
+                label: "Twitter",
+                href: "#",
+                svg: (
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                  </svg>
+                ),
+              },
+              {
+                label: "LinkedIn",
+                href: "#",
+                svg: (
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                ),
+              },
+              {
+                label: "Instagram",
+                href: "#",
+                svg: (
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                  </svg>
+                ),
+              },
+            ].map((s) => (
+              <Link
+                key={s.label}
+                href={s.href}
+                aria-label={s.label}
+                className="text-[#0F1C3F]/35 hover:text-orange transition-colors duration-200"
+              >
+                {s.svg}
               </Link>
-              <Link href="#" className="text-navy/50 hover:text-orange transition-colors duration-300" aria-label="Twitter">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
-                </svg>
-              </Link>
-              <Link href="#" className="text-navy/50 hover:text-orange transition-colors duration-300" aria-label="Instagram">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                </svg>
-              </Link>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="border-t border-navy/10 mt-14 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-navy/40 text-sm">
-            &copy; {new Date().getFullYear()} Egolia Group. All rights reserved.
+        {/* Col 2 — Get in Touch */}
+        <div>
+          <p className="text-[#0F1C3F] font-semibold text-[15px] mb-6">Get in Touch</p>
+          <div className="space-y-2 text-[#6e6e73] text-[14px] leading-[1.75] mb-5">
+            <p>Toronto, Ontario,</p>
+            <p>Canada</p>
+          </div>
+          <a
+            href="mailto:info@avrancecorp.com"
+            className="block text-[#6e6e73] text-[14px] hover:text-orange transition-colors duration-200 mb-1"
+          >
+            info@avrancecorp.com
+          </a>
+        </div>
+
+        {/* Col 3 — Platform */}
+        <div>
+          <p className="text-[#0F1C3F] font-semibold text-[15px] mb-6">Our Platform</p>
+          <ul className="space-y-3.5">
+            {[
+              { label: "AvranceCorp", href: "/platform/avrancecorp" },
+              { label: "Avrance Capital", href: "/platform/avrancecapital" },
+              { label: "Metadata & Research", href: "/platform/metadata" },
+              { label: "TradeREA", href: "/platform/traderea" },
+            ].map((link) => (
+              <li key={link.label}>
+                <Link
+                  href={link.href}
+                  className="text-[#6e6e73] text-[14px] hover:text-orange transition-colors duration-200"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Col 4 — Newsletter */}
+        <div>
+          <p className="text-[#0F1C3F] font-semibold text-[15px] mb-3">Our Newsletter</p>
+          <p className="text-[#6e6e73] text-[14px] leading-[1.75] mb-6">
+            Subscribe to our newsletter to get our latest insights and updates delivered to you.
           </p>
-          <div className="w-12 h-[2px] bg-orange" />
+          <div className="flex items-center gap-0 border border-[#0F1C3F]/15 rounded-lg overflow-hidden focus-within:border-orange transition-colors duration-200">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email Address"
+              className="flex-1 px-4 py-3 text-[14px] text-[#0F1C3F] placeholder-[#6e6e73]/60 bg-white outline-none"
+            />
+            <button
+              className="bg-[#0F1C3F] hover:bg-[#1A2B5C] text-white text-[13px] font-semibold px-5 py-3 transition-colors duration-300"
+            >
+              Join
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      {/* ── Bottom bar ── */}
+      <div className="max-w-[1280px] mx-auto px-8 lg:px-14 py-5 border-t border-[#0F1C3F]/[0.07] flex flex-col md:flex-row items-center justify-between gap-3">
+        <p className="text-[#6e6e73] text-[13px]">
+          &copy; {new Date().getFullYear()} Egolia Group. All rights reserved.
+        </p>
+        <div className="flex items-center gap-1.5">
+          <div className="w-8 h-[1.5px] rounded-full" style={{ background: "linear-gradient(to right, #E8792B, #0F1C3F)" }} />
+        </div>
+        <div className="flex gap-6">
+          {["Privacy Policy", "Terms of Use"].map((item) => (
+            <Link key={item} href="#" className="text-[#6e6e73] text-[13px] hover:text-orange transition-colors duration-200">
+              {item}
+            </Link>
+          ))}
         </div>
       </div>
+
     </footer>
   );
 }
