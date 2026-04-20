@@ -4,20 +4,14 @@ import { motion } from "framer-motion";
 
 export default function TeamHero() {
   return (
-    <section className="bg-navy py-28 md:py-36">
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-12 text-center">
-        <motion.div
-          className="w-14 h-[3px] bg-orange mx-auto mb-8"
-          initial={{ width: 0 }}
-          animate={{ width: 56 }}
-          transition={{ duration: 0.6 }}
-        />
+    <section className="bg-white pt-14 pb-0 text-center">
+      <div className="max-w-[800px] mx-auto px-6">
 
         <motion.h1
-          className="text-4xl md:text-5xl lg:text-7xl font-sans text-white leading-[1] tracking-[-0.02em]"
-          initial={{ opacity: 0, y: 30 }}
+          className="text-[#1d1d1f] text-4xl md:text-5xl font-bold tracking-[-0.02em] leading-[1.15] mb-5"
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
+          transition={{ duration: 0.7 }}
         >
           The People Behind
           <br />
@@ -25,13 +19,14 @@ export default function TeamHero() {
         </motion.h1>
 
         <motion.p
-          className="text-white/70 text-xl leading-[1.7] mt-10 max-w-2xl mx-auto font-medium"
-          initial={{ opacity: 0, y: 20 }}
+          className="text-[#6e6e73] text-[15px] leading-[1.75] max-w-md mx-auto"
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
         >
-          A Team Of Experienced Professionals Driving Egolia Group&apos;s Vision Across Real Estate, Finance, And Strategic Development.
+          A team of experienced professionals dedicated to building long-term value across real estate, capital markets, and digital infrastructure.
         </motion.p>
+
       </div>
     </section>
   );

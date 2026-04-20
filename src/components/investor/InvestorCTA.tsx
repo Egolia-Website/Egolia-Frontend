@@ -1,70 +1,68 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function InvestorCTA() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
+
   return (
-    <section className="bg-navy-dark py-20 sm:py-32 md:py-40">
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-12 text-center">
+    <section ref={ref} className="bg-white py-24 md:py-32 px-6 text-center">
+
+      <div className="max-w-[600px] mx-auto">
+
         <motion.p
-          className="text-orange text-sm font-semibold tracking-[0.2em] uppercase mb-6"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          className="text-[11px] font-semibold tracking-[0.45em] uppercase text-orange mb-5"
+          initial={{ opacity: 0, y: 10 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
           Get Started
         </motion.p>
 
-        <motion.h2
-          className="text-4xl md:text-5xl lg:text-6xl font-sans text-white mb-10 leading-tight"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-        >
-          Start Your Investment Journey
-        </motion.h2>
-
-        <motion.div
-          className="w-16 h-[2px] bg-orange mx-auto mb-10"
-          initial={{ width: 0 }}
-          whileInView={{ width: 64 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        />
+        <div className="overflow-hidden mb-5">
+          <motion.h2
+            className="text-[#1d1d1f] text-3xl md:text-4xl lg:text-5xl font-bold tracking-[-0.025em] leading-[1.08]"
+            initial={{ y: "100%", opacity: 0 }}
+            animate={isInView ? { y: "0%", opacity: 1 } : {}}
+            transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          >
+            Begin Your{" "}
+            <span className="text-orange">Investment Journey</span>
+          </motion.h2>
+        </div>
 
         <motion.p
-          className="text-white/70 max-w-xl mx-auto text-xl leading-[1.7] mb-14 font-medium"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.35 }}
+          className="text-[#3a3a3f] text-[15px] sm:text-[17px] leading-[1.75] mb-10"
+          initial={{ opacity: 0, y: 16, filter: "blur(4px)" }}
+          animate={isInView ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
+          transition={{ duration: 0.7, delay: 0.25, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          Connect with our team to explore current and upcoming investment opportunities.
+          Connect with our team to explore current and upcoming opportunities tailored for long-term value creation.
         </motion.p>
 
         <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.45 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
+          initial={{ opacity: 0, y: 12 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.35 }}
         >
           <Link
-            href="/overview"
-            className="w-full sm:w-auto px-10 py-4 bg-orange text-white text-base font-bold hover:bg-orange/90 transition-colors duration-300 text-center"
+            href="/platform"
+            className="w-full sm:w-auto bg-[#0F1C3F] hover:bg-[#1A2B5C] text-white text-[14px] font-semibold px-8 py-4 rounded-lg transition-colors duration-300 tracking-wide text-center"
           >
             Explore Opportunities
           </Link>
           <Link
             href="/contact"
-            className="w-full sm:w-auto px-10 py-4 border-2 border-white/25 text-white text-base font-bold hover:border-orange hover:text-orange transition-all duration-300 text-center"
+            className="w-full sm:w-auto text-[#1d1d1f] text-[14px] font-semibold px-8 py-4 rounded-lg border border-[#1d1d1f]/15 hover:border-orange hover:text-orange transition-all duration-300 tracking-wide text-center"
           >
             Contact Us
           </Link>
         </motion.div>
+
       </div>
     </section>
   );

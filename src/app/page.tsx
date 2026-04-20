@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import { motion, useScroll, useTransform, useInView, animate } from "framer-motion";
+import { motion, useInView, animate } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/shared/Navbar";
@@ -86,7 +86,7 @@ export default function Home() {
           className="relative w-full h-[52vw] min-h-[220px] max-h-[360px]"
         >
           <Image
-            src="/images/hero4.png"
+            src="/images/home/hero-toronto.png"
             alt="Egolia — Building Long-Term Value"
             fill
             className="object-cover object-center"
@@ -98,21 +98,11 @@ export default function Home() {
 
         {/* Content below */}
         <div className="px-6 pt-6 pb-14 bg-white">
-          <motion.div
-            initial={{ opacity: 0, x: -16 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2, duration: 0.7 }}
-            className="flex gap-1.5 mb-5"
-          >
-            <div className="w-[4px] h-5 rounded-full rotate-[-20deg]" style={{ background: "linear-gradient(to bottom, #E8792B, #0F1C3F)" }} />
-            <div className="w-[4px] h-5 rounded-full rotate-[-20deg]" style={{ background: "linear-gradient(to bottom, #E8792B, #0F1C3F)" }} />
-          </motion.div>
-
           <div className="mb-2">
             {[
-              { text: "Let's build", color: "text-[#0F1C3F]" },
+              { text: "Let's build", color: "text-[#1d1d1f]" },
               { text: "long-term", color: "text-orange" },
-              { text: "value together.", color: "text-[#0F1C3F]" },
+              { text: "value together.", color: "text-[#1d1d1f]" },
             ].map((line, i) => (
               <div key={i} className="overflow-hidden">
                 <motion.h1
@@ -127,19 +117,11 @@ export default function Home() {
             ))}
           </div>
 
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 1, delay: 0.7 }}
-            className="h-[2px] w-12 rounded-full mt-4 mb-6 origin-left"
-            style={{ background: "linear-gradient(90deg, #E8792B, #0F1C3F)" }}
-          />
-
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.75, duration: 0.8 }}
-            className="text-[#6e6e73] text-[15px] leading-[1.8] mb-8"
+            transition={{ delay: 0.65, duration: 0.8 }}
+            className="text-[#6e6e73] text-[15px] leading-[1.8] mt-4 mb-8"
           >
             Egolia is a disciplined investment group deploying capital across real estate, fintech, and private markets, built for lasting impact and generational value.
           </motion.p>
@@ -150,10 +132,10 @@ export default function Home() {
             transition={{ delay: 0.9, duration: 0.7 }}
             className="flex items-center gap-3"
           >
-            <Link href="/contact" className="bg-[#0F1C3F] hover:bg-[#1A2B5C] text-white text-[13px] font-semibold tracking-wide px-6 py-3.5 rounded-lg transition-colors duration-300">
+            <Link href="/contact" className="bg-orange hover:bg-[#d4691e] text-white text-[13px] font-semibold tracking-wide px-6 py-3.5 rounded-lg transition-colors duration-300">
               Get In Touch
             </Link>
-            <Link href="/investor" className="bg-transparent border border-orange text-orange text-[13px] font-semibold tracking-wide px-6 py-3.5 rounded-lg transition-all duration-300">
+            <Link href="/investor" className="bg-transparent border border-[#0F1C3F] text-[#0F1C3F] text-[13px] font-semibold tracking-wide px-6 py-3.5 rounded-lg transition-all duration-300">
               Partner With Us
             </Link>
           </motion.div>
@@ -166,40 +148,32 @@ export default function Home() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-          className="absolute inset-0"
+          className="absolute top-[84px] inset-x-0 bottom-0"
         >
           <Image
-            src="/images/hero4.png"
+            src="/images/home/hero-toronto.png"
             alt="Egolia — Building Long-Term Value"
             fill
-            className="object-contain object-right"
+            className="object-cover object-top"
+            quality={100}
             priority
           />
         </motion.div>
 
+        {/* Base fade */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: "linear-gradient(to right, rgba(244,245,247,0.97) 40%, rgba(244,245,247,0.7) 54%, rgba(244,245,247,0.1) 67%, transparent 77%)",
+            background: "linear-gradient(to right, rgba(8,14,35,0.97) 25%, rgba(8,14,35,0.82) 38%, rgba(8,14,35,0.4) 54%, rgba(8,14,35,0.1) 68%, transparent 82%)",
           }}
         />
 
-        <div className="relative z-10 flex flex-col justify-center h-full px-20 xl:px-24 max-w-[55%] -mt-[25px]">
-          <motion.div
-            initial={{ opacity: 0, x: -16 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.15, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="flex gap-1.5 mb-8"
-          >
-            <div className="w-[4px] h-6 rounded-full rotate-[-20deg]" style={{ background: "linear-gradient(to bottom, #E8792B, #0F1C3F)" }} />
-            <div className="w-[4px] h-6 rounded-full rotate-[-20deg]" style={{ background: "linear-gradient(to bottom, #E8792B, #0F1C3F)" }} />
-          </motion.div>
-
+        <div className="relative z-10 flex flex-col justify-center h-full px-20 xl:px-24 max-w-[55%] mt-4">
           <div className="mb-2 space-y-0">
             {[
-              { text: "Let's build", color: "text-[#0F1C3F]" },
+              { text: "Let's build", color: "text-white" },
               { text: "long-term", color: "text-orange" },
-              { text: "value together.", color: "text-[#0F1C3F]" },
+              { text: "value together.", color: "text-white" },
             ].map((line, i) => (
               <div key={i} className="overflow-hidden">
                 <motion.h1
@@ -214,19 +188,11 @@ export default function Home() {
             ))}
           </div>
 
-          <motion.div
-            initial={{ scaleX: 0, opacity: 0 }}
-            animate={{ scaleX: 1, opacity: 1 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.7 }}
-            className="h-[2px] w-16 rounded-full mt-4 mb-8 origin-left"
-            style={{ background: "linear-gradient(90deg, #E8792B, #0F1C3F)" }}
-          />
-
           <motion.p
             initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{ delay: 0.75, duration: 0.9 }}
-            className="text-[#6e6e73] text-[18px] leading-[1.8] max-w-[460px] mb-12"
+            transition={{ delay: 0.65, duration: 0.9 }}
+            className="text-white/80 text-[18px] leading-[1.8] max-w-[460px] mt-6 mb-12"
           >
             Egolia is a disciplined investment group deploying capital
             across real estate, fintech, and private markets, built
@@ -239,10 +205,10 @@ export default function Home() {
             transition={{ delay: 0.9, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="flex items-center gap-4"
           >
-            <Link href="/contact" className="bg-[#0F1C3F] hover:bg-[#1A2B5C] text-white text-[14px] font-semibold tracking-wide px-9 py-4 rounded-lg border border-transparent transition-colors duration-300">
+            <Link href="/contact" className="bg-orange hover:bg-[#d4691e] text-white text-[14px] font-semibold tracking-wide px-9 py-4 rounded-lg transition-colors duration-300">
               Get In Touch
             </Link>
-            <Link href="/investor" className="bg-transparent border border-orange text-orange hover:bg-orange hover:text-white text-[14px] font-semibold tracking-wide px-9 py-4 rounded-lg transition-all duration-300">
+            <Link href="/investor" className="bg-transparent border border-white/30 text-white hover:border-white hover:bg-white/10 text-[14px] font-semibold tracking-wide px-9 py-4 rounded-lg transition-all duration-300">
               Partner With Us
             </Link>
           </motion.div>
@@ -255,7 +221,7 @@ export default function Home() {
       <section className="relative bg-white py-24 sm:py-32 lg:py-44 px-6 overflow-hidden">
 
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none" aria-hidden>
-          <span className="text-[20vw] font-black text-[#0F1C3F]/[0.03] leading-none tracking-tighter whitespace-nowrap">
+          <span className="text-[20vw] font-black text-[#1d1d1f]/[0.03] leading-none tracking-tighter whitespace-nowrap">
             EGOLIA
           </span>
         </div>
@@ -275,7 +241,7 @@ export default function Home() {
                 whileInView={{ y: "0%" }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.1 + i * 0.12 }}
-                className={`block text-[clamp(2.2rem,6vw,4.5rem)] font-bold leading-[1.08] tracking-[-0.03em] ${i === 1 ? "text-orange" : "text-[#0F1C3F]"}`}
+                className={`block text-[clamp(2.2rem,6vw,4.5rem)] font-bold leading-[1.08] tracking-[-0.03em] ${i === 1 ? "text-orange" : "text-[#1d1d1f]"}`}
               >
                 {line}
               </motion.h2>
@@ -295,155 +261,124 @@ export default function Home() {
       ══════════════════════════════════════ */}
       <section className="bg-[#f5f5f7] py-20 sm:py-28 lg:py-36 px-6 lg:px-14">
         <div className="max-w-[1200px] mx-auto">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
 
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 sm:gap-8 mb-14 sm:mb-20">
-            <div className="lg:max-w-[560px]">
+            {/* LEFT — Fancy animated collage */}
+            <div className="w-full lg:w-[48%] shrink-0">
+              <div className="flex flex-col gap-3">
+
+                {/* Row 1 — main image, cinematic reveal */}
+                <div className="relative w-full rounded-2xl overflow-hidden aspect-[16/9]">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 1.08, filter: "blur(8px)" }}
+                    whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+                    className="absolute inset-0"
+                  >
+                    <Image src="/images/home/investors-main.png" alt="Egolia" fill className="object-cover" />
+                  </motion.div>
+                  {/* Sheen overlay that sweeps across */}
+                  <motion.div
+                    initial={{ x: "-100%" }}
+                    whileInView={{ x: "200%" }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                    className="absolute inset-0 pointer-events-none"
+                    style={{ background: "linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.18) 50%, transparent 60%)" }}
+                  />
+                </div>
+
+                {/* Row 2 — two images sliding in from sides */}
+                <div className="flex gap-3">
+                  <div className="relative rounded-2xl overflow-hidden aspect-[4/3] w-[55%]">
+                    <motion.div
+                      initial={{ opacity: 0, x: -30, filter: "blur(6px)" }}
+                      whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                      className="absolute inset-0"
+                    >
+                      <Image src="/images/home/wasaga.png" alt="Egolia" fill className="object-cover" />
+                    </motion.div>
+                  </div>
+                  <div className="relative rounded-2xl overflow-hidden aspect-[4/3] w-[45%]">
+                    <motion.div
+                      initial={{ opacity: 0, x: 30, filter: "blur(6px)" }}
+                      whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.9, delay: 0.32, ease: [0.16, 1, 0.3, 1] }}
+                      className="absolute inset-0"
+                    >
+                      <Image src="/images/home/investors-right.png" alt="Egolia" fill className="object-cover" />
+                    </motion.div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            {/* RIGHT — Label + heading + 2x2 pillars */}
+            <div className="w-full lg:w-[52%]">
               <FadeUp>
                 <p className="text-[11px] font-semibold tracking-[0.45em] uppercase text-[#6e6e73] mb-5">
                   For Investors
                 </p>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em]">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1d1d1f] leading-[1.08] tracking-[-0.025em] mb-10">
                   A Disciplined Approach To{" "}
                   <span className="text-orange">Long-Term Growth</span>
                 </h2>
               </FadeUp>
+
+              {/* 2×2 pillars — no icons, just bold title + desc */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8">
+                {[
+                  {
+                    title: "Discipline",
+                    desc: "Structured decision-making backed by rigorous analysis.",
+                  },
+                  {
+                    title: "Long-Term Focus",
+                    desc: "Sustainable growth over short-term gains.",
+                  },
+                  {
+                    title: "Strategic Execution",
+                    desc: "Capital, expertise, and innovation aligned for consistent performance.",
+                  },
+                  {
+                    title: "Operational Excellence",
+                    desc: "Active management across every portfolio company we own.",
+                  },
+                ].map((pillar, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ duration: 0.6, delay: 0.1 + i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  >
+                    <h3 className="text-[#1d1d1f] font-bold text-[17px] leading-snug mb-2">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-[#6e6e73] text-[14px] leading-[1.7]">
+                      {pillar.desc}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+
+              <FadeUp delay={0.3} className="mt-10">
+                <Link
+                  href="/investor"
+                  className="inline-flex items-center gap-2 bg-[#0F1C3F] hover:bg-[#1A2B5C] text-white text-[14px] font-semibold px-8 py-4 rounded-lg transition-colors duration-300 tracking-wide"
+                >
+                  Investor Relations
+                </Link>
+              </FadeUp>
+
             </div>
-            <FadeUp delay={0.15} className="lg:max-w-[440px]">
-              <p className="text-[#6e6e73] text-[15px] sm:text-[16px] leading-[1.75]">
-                We take a long-term, structured approach to investing, combining strategic capital, deep expertise, and operational discipline to create durable value.
-              </p>
-            </FadeUp>
+
           </div>
-
-          {/* Desktop: horizontal line + 3 columns */}
-          <div className="hidden md:grid md:grid-cols-3 gap-0 relative">
-            <motion.div
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute top-0 left-0 right-0 h-[1px] origin-left"
-              style={{ background: "linear-gradient(90deg, #E8792B, #0F1C3F)" }}
-            />
-            {[
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                  </svg>
-                ),
-                title: "Discipline",
-                desc: "Structured decision-making backed by rigorous analysis.",
-              },
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                  </svg>
-                ),
-                title: "Long-Term Focus",
-                desc: "Sustainable growth over short-term gains.",
-              },
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                ),
-                title: "Strategic Execution",
-                desc: "Capital, expertise, and innovation aligned for consistent performance.",
-              },
-            ].map((pillar, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.7, delay: 0.2 + i * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className="group relative pt-10 pb-2 px-6 first:pl-0 last:pr-0"
-              >
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.4 + i * 0.15, ease: [0.16, 1, 0.3, 1] }}
-                  className="absolute top-[-5px] left-6 first:left-0 w-[10px] h-[10px] rounded-full"
-                  style={{ background: "linear-gradient(135deg, #E8792B, #0F1C3F)" }}
-                />
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 text-white" style={{ background: "linear-gradient(135deg, #E8792B, #0F1C3F)" }}>
-                  {pillar.icon}
-                </div>
-                <h3 className="text-[#0F1C3F] font-bold text-[20px] leading-snug mb-3">{pillar.title}</h3>
-                <p className="text-[#6e6e73] text-[15px] leading-[1.7]">{pillar.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Mobile: vertical timeline line connecting all 3 */}
-          <div className="flex flex-col md:hidden relative">
-
-            {/* Vertical line — spans full height of all cards */}
-            <motion.div
-              initial={{ scaleY: 0 }}
-              whileInView={{ scaleY: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute left-[4px] top-0 bottom-0 w-[2px] origin-top"
-              style={{ background: "linear-gradient(to bottom, #E8792B, #0F1C3F)" }}
-            />
-
-            {[
-              {
-                icon: (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                  </svg>
-                ),
-                title: "Discipline",
-                desc: "Structured decision-making backed by rigorous analysis.",
-              },
-              {
-                icon: (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                  </svg>
-                ),
-                title: "Long-Term Focus",
-                desc: "Sustainable growth over short-term gains.",
-              },
-              {
-                icon: (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                ),
-                title: "Strategic Execution",
-                desc: "Capital, expertise, and innovation aligned for consistent performance.",
-              },
-            ].map((pillar, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -16 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.6, delay: i * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className="relative pl-8 pb-10 last:pb-0"
-              >
-                {/* Dot on the line */}
-                <div
-                  className="absolute left-0 top-1 w-[10px] h-[10px] rounded-full"
-                  style={{ background: "linear-gradient(135deg, #E8792B, #0F1C3F)" }}
-                />
-
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4 text-white" style={{ background: "linear-gradient(135deg, #E8792B, #0F1C3F)" }}>
-                  {pillar.icon}
-                </div>
-                <h3 className="text-[#0F1C3F] font-bold text-[18px] leading-snug mb-2">{pillar.title}</h3>
-                <p className="text-[#6e6e73] text-[14px] leading-[1.7]">{pillar.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-
         </div>
       </section>
 
@@ -456,7 +391,7 @@ export default function Home() {
             <p className="text-[11px] font-semibold tracking-[0.45em] uppercase text-[#6e6e73] mb-5">
               Our Platform
             </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0F1C3F] leading-[1.1] tracking-[-0.025em] max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1d1d1f] leading-[1.1] tracking-[-0.025em] max-w-2xl mx-auto">
               Four companies.{" "}
               <span className="text-orange">One unified vision.</span>
             </h2>
@@ -466,8 +401,8 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[7px] px-[7px]">
           {[
             {
-              image: "/images/avrCr.png",
-              logo: "/images/avr.png",
+              image: "/images/home/platform-avrancecorp.png",
+              logo: "/images/home/logo-avrancecorp.png",
               logoAlt: "AvranceCorp",
               title: "Real estate redefined for the long term.",
               desc: "Strategic investment across residential and commercial markets.",
@@ -477,8 +412,8 @@ export default function Home() {
               useBlend: false,
             },
             {
-              image: "/images/avrCap.png",
-              logo: "/images/avrCapital.png",
+              image: "/images/home/platform-avrance-capital.png",
+              logo: "/images/home/logo-avrance-capital.png",
               logoAlt: "Avrance Capital",
               title: "Private capital, deployed with precision.",
               desc: "Institutional-grade credit and equity strategies for durable businesses.",
@@ -488,8 +423,8 @@ export default function Home() {
               useBlend: false,
             },
             {
-              image: "/images/metadaImage.png",
-              logo: "/images/metaLogo.png",
+              image: "/images/home/platform-metadata.png",
+              logo: "/images/home/logo-metadata.png",
               logoAlt: "Metadata & Research",
               title: "Intelligence that drives every decision.",
               desc: "Proprietary data and research powering Egolia's investment edge.",
@@ -500,8 +435,8 @@ export default function Home() {
               useBlend: true,
             },
             {
-              image: "/images/trd.png",
-              logo: "/images/new logo trade rea website.png",
+              image: "/images/home/platform-traderea.png",
+              logo: "/images/home/logo-traderea.png",
               logoAlt: "TradeREA",
               title: "Trade real estate like it's always been possible.",
               desc: "The next-generation platform democratising real estate investment.",
@@ -577,7 +512,7 @@ export default function Home() {
 
           <FadeUp className="relative w-full lg:w-[50%] min-h-[280px] sm:min-h-[400px] lg:min-h-0">
             <Image
-              src="/images/our Firm.png"
+              src="/images/home/our-firm.png"
               alt="Our Firm"
               fill
               className="object-cover"
@@ -595,7 +530,7 @@ export default function Home() {
             </FadeUp>
 
             <FadeUp delay={0.1}>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-[#1d1d1f] leading-[1.08] tracking-[-0.025em] mb-6">
                 Built on{" "}
                 <span className="text-orange">conviction.</span>
                 <br />
@@ -616,15 +551,7 @@ export default function Home() {
                   { value: "4", label: "Operating Companies" },
                 ].map((stat, i) => (
                   <div key={i}>
-                    <p
-                      className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 tracking-tight"
-                      style={{
-                        background: "linear-gradient(135deg, #E8792B, #0F1C3F)",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                        backgroundClip: "text",
-                      }}
-                    >
+                    <p className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 tracking-tight text-[#1d1d1f]">
                       {stat.value}
                     </p>
                     <p className="text-[#6e6e73] text-[12px] sm:text-[13px] font-medium tracking-wide">
@@ -662,7 +589,7 @@ export default function Home() {
             <p className="text-[11px] font-semibold tracking-[0.45em] uppercase text-[#6e6e73] mb-5">
               By The Numbers
             </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-[#1d1d1f] leading-[1.08] tracking-[-0.025em] max-w-2xl mx-auto">
               Built For{" "}
               <span className="text-orange">Long-Term</span> Value
             </h2>
@@ -701,15 +628,7 @@ export default function Home() {
                 />
                 <div className="absolute top-0 left-6 right-6 h-[1px] bg-gradient-to-r from-transparent via-orange/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                <p
-                  className="relative z-10 text-4xl sm:text-5xl md:text-6xl font-bold mb-2 sm:mb-3 tracking-tight"
-                  style={{
-                    background: "linear-gradient(135deg, #E8792B 0%, #0F1C3F 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                  }}
-                >
+                <p className="relative z-10 text-4xl sm:text-5xl md:text-6xl font-bold mb-2 sm:mb-3 tracking-tight text-[#1d1d1f]">
                   <AnimatedNumber target={stat.target} prefix={stat.prefix} suffix={stat.suffix} />
                 </p>
                 <p className="relative z-10 text-[#6e6e73] text-[11px] sm:text-[13px] font-medium tracking-wide leading-[1.4] group-hover:text-[#1d1d1f] transition-colors duration-300">
@@ -802,7 +721,7 @@ export default function Home() {
               whileInView={{ y: "0%" }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] max-w-3xl mx-auto"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-[#1d1d1f] leading-[1.08] tracking-[-0.025em] max-w-3xl mx-auto"
             >
               Let's Build{" "}
               <span className="text-orange">Enduring Value</span>{" "}

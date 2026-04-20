@@ -23,7 +23,6 @@ export const colors = {
 
 export const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Overview", href: "/overview" },
   {
     label: "Who We Are",
     href: "/about",
@@ -33,18 +32,7 @@ export const navLinks = [
       { label: "Our Team", href: "/team" },
     ],
   },
-  {
-    label: "Platform",
-    href: "/platform",
-    hasDropdown: true,
-    children: [
-      { label: "Our Companies", href: "/platform" },
-      { label: "AvranceCorp", href: "/platform/avrancecorp", logo: "/images/avr.png" },
-      { label: "TradeREA", href: "/platform/traderea", logo: "/images/TradeREA-Light-Logo.png" },
-      { label: "AvranceCapital", href: "/platform/avrancecapital", logo: "/images/avrCapital.png" },
-      { label: "Metadata & Research", href: "/platform/metadata" },
-    ],
-  },
+  { label: "Divisions", href: "/platform" },
   { label: "Investor", href: "/investor" },
   { label: "Contact", href: "/contact" },
 ];

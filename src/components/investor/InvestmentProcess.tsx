@@ -1,121 +1,296 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const steps = [
   {
     number: "1",
     icon: (
-      <svg className="w-9 h-9" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.2} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
       </svg>
     ),
     title: "Acquisition",
-    description: "We identify high-potential opportunities through market research, strategic sourcing, and rigorous evaluation.",
+    description:
+      "We identify high-conviction opportunities through proprietary sourcing, in-depth market intelligence, and rigorous underwriting.",
   },
   {
     number: "2",
     icon: (
-      <svg className="w-9 h-9" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM13.5 10.5h-6" />
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.2} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h12M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1.5 4.5m9-4.5l1.5 4.5m0 0H7.5" />
       </svg>
     ),
     title: "Development & Execution",
-    description: "We design, develop, and execute projects with precision, ensuring quality, efficiency, and long-term viability.",
+    description:
+      "We deliver projects with precision — balancing design excellence, operational efficiency, and long-term durability.",
   },
   {
     number: "3",
     icon: (
-      <svg className="w-9 h-9" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.2} viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
       </svg>
     ),
     title: "Asset Management",
-    description: "We actively manage assets to optimize performance, enhance value, and deliver consistent long-term returns.",
+    description:
+      "We actively manage and optimize assets to enhance performance, unlock value, and deliver consistent long-term returns.",
   },
 ];
 
 export default function InvestmentProcess() {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-80px" });
+
   return (
-    <section className="bg-white py-28 md:py-36">
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
-        {/* Heading block */}
-        <motion.p
-          className="text-center text-orange text-sm font-semibold tracking-[0.2em] uppercase mb-4"
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          Our Approach
-        </motion.p>
+    <section ref={sectionRef}>
 
+      {/* ── MOBILE layout ── */}
+      <div className="md:hidden">
+
+        {/* Image banner with bottom fade */}
         <motion.div
-          className="w-14 h-[2px] bg-orange mx-auto mb-8"
-          initial={{ width: 0 }}
-          whileInView={{ width: 56 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        />
-
-        <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-sans text-navy mb-6 leading-tight"
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.15 }}
+          className="relative w-full h-[220px] sm:h-[280px] overflow-hidden"
+          initial={{ opacity: 0, scale: 1.06 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
         >
-          A Structured Investment Process
-        </motion.h2>
-
-        <motion.p
-          className="text-center text-navy/70 text-xl leading-[1.7] max-w-2xl mx-auto mb-24 font-medium"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          Our investment strategy is built on disciplined research, strategic execution, and long-term value creation across every stage of the lifecycle.
-        </motion.p>
-
-        {/* Timeline section */}
-        <div className="relative">
-          {/* Horizontal connecting orange line */}
-          <motion.div
-            className="hidden md:block absolute top-[28px] left-[16.67%] right-[16.67%] h-[2px] bg-orange/40"
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            style={{ transformOrigin: "left" }}
+          <Image
+            src="/images/our-approach.png"
+            alt="Our Approach"
+            fill
+            className="object-cover object-center"
           />
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{ background: "linear-gradient(to bottom, transparent 20%, rgba(255,255,255,0.8) 65%, white 90%)" }}
+          />
+        </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        {/* Content */}
+        <div className="bg-white px-5 sm:px-8 pt-6 pb-14">
+
+          {/* Eyebrow */}
+          <motion.p
+            className="text-[11px] font-semibold tracking-[0.45em] uppercase text-orange mb-4"
+            initial={{ opacity: 0, y: 10 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            Our Approach
+          </motion.p>
+
+          {/* Heading */}
+          <div className="overflow-hidden mb-4">
+            <motion.h2
+              className="text-[#1d1d1f] text-3xl sm:text-4xl font-bold tracking-[-0.025em] leading-[1.08]"
+              initial={{ y: "100%", opacity: 0 }}
+              animate={isInView ? { y: "0%", opacity: 1 } : {}}
+              transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            >
+              A Structured{" "}
+              <span className="text-orange">Investment Framework</span>
+            </motion.h2>
+          </div>
+
+          {/* Subtext */}
+          <motion.p
+            className="text-[#3a3a3f] text-[15px] leading-[1.75] mb-10"
+            initial={{ opacity: 0, y: 12 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.35 }}
+          >
+            Our approach is built on deep market insight, disciplined execution, and a commitment to creating sustainable value at every stage of the investment lifecycle.
+          </motion.p>
+
+          {/* Vertical timeline steps */}
+          <div className="relative">
+            {/* Vertical connecting line */}
+            <motion.div
+              className="absolute left-[17px] top-[36px] bottom-[36px] w-[2px] bg-gradient-to-b from-[#0F1C3F]/30 via-orange/40 to-[#0F1C3F]/30 origin-top"
+              initial={{ scaleY: 0 }}
+              animate={isInView ? { scaleY: 1 } : {}}
+              transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            />
+
             {steps.map((step, i) => (
               <motion.div
                 key={step.title}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.35 + i * 0.15 }}
+                className="relative flex gap-5 mb-8 last:mb-0"
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.55, delay: 0.45 + i * 0.15, ease: [0.16, 1, 0.3, 1] }}
               >
-                {/* Numbered orange circle */}
-                <div className="w-14 h-14 bg-orange text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-10 relative z-10">
+                {/* Number badge */}
+                <motion.div
+                  className="w-9 h-9 rounded-full bg-[#0F1C3F] text-white text-[13px] font-bold flex items-center justify-center shrink-0 z-10"
+                  initial={{ scale: 0 }}
+                  animate={isInView ? { scale: 1 } : {}}
+                  transition={{ type: "spring", stiffness: 300, damping: 18, delay: 0.55 + i * 0.15 }}
+                >
                   {step.number}
-                </div>
+                </motion.div>
 
-                {/* Card with top orange border */}
-                <div className="border-t-[3px] border-t-orange bg-white border-x border-b border-navy/8 p-10 hover:shadow-[0_12px_40px_rgba(15,28,63,0.08)] hover:-translate-y-1 transition-all duration-500">
-                  <div className="text-orange mb-6 flex justify-center">{step.icon}</div>
-                  <h3 className="text-navy text-xl font-bold mb-4">{step.title}</h3>
-                  <p className="text-navy/70 text-base leading-[1.7] font-medium">{step.description}</p>
+                {/* Content */}
+                <div className="pt-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    {/* Icon circle */}
+                    <div className="w-10 h-10 rounded-full bg-[#0F1C3F]/8 text-[#0F1C3F] flex items-center justify-center shrink-0">
+                      {step.icon}
+                    </div>
+                    <h3 className="text-[#1d1d1f] text-[16px] font-bold leading-snug">
+                      {step.title}
+                    </h3>
+                  </div>
+                  <p className="text-[#3a3a3f] text-[14px] leading-[1.7] pl-[52px]">
+                    {step.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </div>
+
+      {/* ── DESKTOP layout ── */}
+      <div className="hidden md:block relative min-h-[680px] overflow-hidden">
+
+        {/* Background image — cinematic reveal */}
+        <motion.div
+          className="absolute inset-0"
+          initial={{ scale: 1.06, filter: "blur(6px)" }}
+          animate={isInView ? { scale: 1, filter: "blur(0px)" } : {}}
+          transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <Image
+            src="/images/our-approach.png"
+            alt="Our Approach"
+            fill
+            className="object-cover object-right"
+          />
+        </motion.div>
+
+        {/* Directional gradient overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(255,255,255,0.97) 30%, rgba(255,255,255,0.88) 50%, rgba(255,255,255,0.45) 68%, transparent 85%)",
+          }}
+        />
+
+        {/* Orange glow */}
+        <motion.div
+          className="absolute bottom-0 left-0 w-[360px] h-[260px] pointer-events-none"
+          style={{ background: "radial-gradient(ellipse at bottom left, rgba(232,121,43,0.08) 0%, transparent 70%)" }}
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 1.2, delay: 0.6 }}
+        />
+
+        {/* Content */}
+        <div className="relative z-10 py-28 px-8 lg:px-16">
+          <div className="max-w-[1200px] mx-auto">
+
+            <motion.p
+              className="text-[11px] font-semibold tracking-[0.45em] uppercase text-orange mb-5"
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            >
+              Our Approach
+            </motion.p>
+
+            <div className="overflow-hidden mb-5 max-w-[560px]">
+              <motion.h2
+                className="text-[#1d1d1f] text-4xl md:text-5xl font-bold tracking-[-0.025em] leading-[1.08]"
+                initial={{ y: "100%", opacity: 0 }}
+                animate={isInView ? { y: "0%", opacity: 1 } : {}}
+                transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+              >
+                A Structured{" "}
+                <span className="text-orange">Investment Framework</span>
+              </motion.h2>
+            </div>
+
+            <motion.p
+              className="text-[#3a3a3f] text-[15px] lg:text-[17px] leading-[1.75] max-w-[520px] mb-16"
+              initial={{ opacity: 0, y: 16, filter: "blur(4px)" }}
+              animate={isInView ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
+              transition={{ duration: 0.7, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+            >
+              Our approach is built on deep market insight, disciplined execution, and a commitment to creating sustainable value at every stage of the investment lifecycle.
+            </motion.p>
+
+            {/* Steps — horizontal grid */}
+            <div className="relative grid grid-cols-3 gap-10 max-w-[820px]">
+
+              {/* Horizontal connecting line */}
+              <motion.div
+                className="absolute top-[17px] left-[16.66%] right-[16.66%] h-[2px] bg-gradient-to-r from-[#0F1C3F]/30 via-orange/50 to-[#0F1C3F]/30 z-0 origin-left"
+                initial={{ scaleX: 0 }}
+                animate={isInView ? { scaleX: 1 } : {}}
+                transition={{ duration: 1, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
+              />
+
+              {steps.map((step, i) => (
+                <motion.div
+                  key={step.title}
+                  className="relative z-10 text-center group"
+                  initial={{ opacity: 0, y: 32 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.65, delay: 0.45 + i * 0.15, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  <motion.div
+                    className="w-9 h-9 rounded-full bg-[#0F1C3F] text-white text-[13px] font-bold flex items-center justify-center mx-auto mb-5"
+                    initial={{ scale: 0, rotate: -15 }}
+                    animate={isInView ? { scale: 1, rotate: 0 } : {}}
+                    transition={{ type: "spring", stiffness: 300, damping: 18, delay: 0.55 + i * 0.15 }}
+                  >
+                    {step.number}
+                  </motion.div>
+
+                  <motion.div
+                    className="w-16 h-16 rounded-full bg-white text-[#0F1C3F] flex items-center justify-center mx-auto mb-5 shadow-[0_2px_16px_rgba(0,0,0,0.07)] cursor-default"
+                    initial={{ scale: 0.7, opacity: 0 }}
+                    animate={isInView ? { scale: 1, opacity: 1 } : {}}
+                    transition={{ duration: 0.5, delay: 0.65 + i * 0.15, ease: [0.16, 1, 0.3, 1] }}
+                    whileHover={{
+                      scale: 1.12,
+                      boxShadow: "0 0 0 6px rgba(232,121,43,0.12), 0 4px 24px rgba(0,0,0,0.1)",
+                      transition: { duration: 0.25 },
+                    }}
+                  >
+                    {step.icon}
+                  </motion.div>
+
+                  <motion.h3
+                    className="text-[#1d1d1f] text-[17px] font-bold mb-2"
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : {}}
+                    transition={{ duration: 0.5, delay: 0.75 + i * 0.15 }}
+                  >
+                    {step.title}
+                  </motion.h3>
+
+                  <motion.p
+                    className="text-[#3a3a3f] text-[14px] leading-[1.7] max-w-[240px] mx-auto"
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.5, delay: 0.82 + i * 0.15 }}
+                  >
+                    {step.description}
+                  </motion.p>
+                </motion.div>
+              ))}
+            </div>
+
+          </div>
+        </div>
+      </div>
+
     </section>
   );
 }
