@@ -1,13 +1,41 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+
+type Errors = { name?: string; email?: string; message?: string };
 
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState<Errors>({});
+  const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+
+  function validate(): Errors {
+    const e: Errors = {};
+    if (!name.trim()) e.name = "Name is required";
+    if (!email.trim()) e.email = "Email is required";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) e.email = "Enter a valid email";
+    if (!message.trim()) e.message = "Message is required";
+    return e;
+  }
+
+  function handleSubmit(ev: React.FormEvent) {
+    ev.preventDefault();
+    const e = validate();
+    setErrors(e);
+    if (Object.keys(e).length > 0) return;
+    setSending(true);
+    setTimeout(() => {
+      setSending(false);
+      setSubmitted(true);
+      setName(""); setEmail(""); setPhone(""); setMessage("");
+      setTimeout(() => setSubmitted(false), 4000);
+    }, 1200);
+  }
 
   return (
     <section className="bg-[#f5f5f7]">
@@ -103,7 +131,7 @@ export default function ContactForm() {
             <p className="text-[#6e6e73] text-[14px] mb-8">Fill out the form and we'll be in touch shortly.</p>
           </motion.div>
 
-          <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-5">
             {[
               {
                 id: "name", label: "Name", type: "text", value: name, onChange: setName, placeholder: "Full Name",
@@ -134,9 +162,12 @@ export default function ContactForm() {
                     value={field.value}
                     onChange={(e) => field.onChange(e.target.value)}
                     placeholder={field.placeholder}
-                    className="w-full bg-[#f5f5f7] border border-[#1d1d1f]/[0.07] rounded-xl text-[#1d1d1f] pl-11 pr-4 py-3.5 text-[15px] focus:border-orange focus:bg-white focus:outline-none focus:shadow-[0_0_0_3px_rgba(232,121,43,0.08)] transition-all duration-200 placeholder:text-[#6e6e73]/35"
+                    className={`w-full bg-[#f5f5f7] border rounded-xl text-[#1d1d1f] pl-11 pr-4 py-3.5 text-[15px] focus:border-orange focus:bg-white focus:outline-none focus:shadow-[0_0_0_3px_rgba(232,121,43,0.08)] transition-all duration-200 placeholder:text-[#6e6e73]/35 ${errors[field.id as keyof Errors] ? "border-red-400" : "border-[#1d1d1f]/[0.07]"}`}
                   />
                 </div>
+                {errors[field.id as keyof Errors] && (
+                  <p className="text-red-500 text-[12px] mt-1.5 pl-1">{errors[field.id as keyof Errors]}</p>
+                )}
               </motion.div>
             ))}
 
@@ -158,9 +189,12 @@ export default function ContactForm() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Write your message here"
-                  className="w-full bg-[#f5f5f7] border border-[#1d1d1f]/[0.07] rounded-xl text-[#1d1d1f] pl-11 pr-4 py-3.5 text-[15px] focus:border-orange focus:bg-white focus:outline-none focus:shadow-[0_0_0_3px_rgba(232,121,43,0.08)] transition-all duration-200 resize-none placeholder:text-[#6e6e73]/35"
+                  className={`w-full bg-[#f5f5f7] border rounded-xl text-[#1d1d1f] pl-11 pr-4 py-3.5 text-[15px] focus:border-orange focus:bg-white focus:outline-none focus:shadow-[0_0_0_3px_rgba(232,121,43,0.08)] transition-all duration-200 resize-none placeholder:text-[#6e6e73]/35 ${errors.message ? "border-red-400" : "border-[#1d1d1f]/[0.07]"}`}
                 />
               </div>
+              {errors.message && (
+                <p className="text-red-500 text-[12px] mt-1.5 pl-1">{errors.message}</p>
+              )}
             </motion.div>
 
             <motion.button
@@ -170,10 +204,28 @@ export default function ContactForm() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               type="submit"
-              className="w-full bg-[#0F1C3F] hover:bg-[#1A2B5C] text-white text-[14px] font-semibold py-4 rounded-lg transition-colors duration-300 tracking-wide"
+              className="w-full bg-[#0F1C3F] hover:bg-[#1A2B5C] text-white text-[14px] font-semibold py-4 rounded-lg transition-colors duration-300 tracking-wide disabled:opacity-60 disabled:cursor-not-allowed"
+              disabled={sending}
             >
-              Send Message
+              {sending ? "Sending…" : "Send Message"}
             </motion.button>
+
+            {/* Success toast */}
+            <AnimatePresence>
+              {submitted && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -6 }}
+                  className="flex items-center gap-2 bg-green-50 border border-green-200 text-green-700 text-[13px] font-medium px-4 py-3 rounded-xl"
+                >
+                  <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Message sent! We&apos;ll get back to you shortly.
+                </motion.div>
+              )}
+            </AnimatePresence>
           </form>
         </motion.div>
 
@@ -202,7 +254,7 @@ export default function ContactForm() {
               ),
               city: "North York, Canada", tag: "Head Office",
               address: "Unit 1-2, 4205 Keele Street\nNorth York, ON, M3J 3T8",
-              phone: "+1 (416) 555-0192",
+              phone: "+1 (416) 650-0192",
             },
             {
               icon: (
@@ -213,7 +265,7 @@ export default function ContactForm() {
               ),
               city: "Mississauga, Canada",
               address: "2810 Matheson Blvd E\nMississauga, ON, L4W 4X7",
-              phone: "+1 (416) 555-0192",
+              phone: "+1 (416) 650-0192",
             },
             {
               icon: (
@@ -256,7 +308,7 @@ export default function ContactForm() {
                         </svg>
                         {office.address}
                       </a>
-                      <a href="#" className="flex items-center gap-2 text-[#6e6e73] text-[14px] hover:text-orange transition-colors duration-300">
+                      <a href="https://x.com/EgoliaGroup" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#6e6e73] text-[14px] hover:text-orange transition-colors duration-300">
                         <svg className="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L2.06 2.25h6.638l4.262 5.632 5.284-5.632Zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                         </svg>

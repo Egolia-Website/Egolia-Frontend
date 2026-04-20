@@ -60,7 +60,7 @@ export default function WhyInvest() {
 
           {/* Eyebrow */}
           <motion.p
-            className="text-[11px] font-semibold tracking-[0.45em] uppercase text-orange mb-5"
+            className="text-[11px] font-semibold tracking-[0.45em] uppercase text-[#6e6e73] mb-5"
             initial={{ opacity: 0, x: -16 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
@@ -69,7 +69,7 @@ export default function WhyInvest() {
           </motion.p>
 
           {/* Heading — clip reveal */}
-          <div className="overflow-hidden mb-12">
+          <div className="overflow-hidden mb-8">
             <motion.h2
               className="text-[#1d1d1f] text-3xl sm:text-4xl md:text-5xl font-bold tracking-[-0.025em] leading-[1.08]"
               initial={{ y: "100%", opacity: 0 }}
@@ -93,7 +93,7 @@ export default function WhyInvest() {
               >
                 {/* Icon */}
                 <motion.div
-                  className="w-12 h-12 rounded-full bg-[#0F1C3F]/10 text-[#0F1C3F] flex items-center justify-center shrink-0 cursor-default"
+                  className="w-12 h-12 rounded-full bg-white text-[#0F1C3F] flex items-center justify-center shrink-0 cursor-default shadow-[0_2px_12px_rgba(15,28,63,0.10)]"
                   whileHover={{
                     scale: 1.1,
                     backgroundColor: "rgba(232,121,43,0.12)",

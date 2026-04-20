@@ -74,7 +74,7 @@ export default function InvestmentProcess() {
 
           {/* Eyebrow */}
           <motion.p
-            className="text-[11px] font-semibold tracking-[0.45em] uppercase text-orange mb-4"
+            className="text-[11px] font-semibold tracking-[0.45em] uppercase text-[#6e6e73] mb-4"
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -195,7 +195,7 @@ export default function InvestmentProcess() {
           <div className="max-w-[1200px] mx-auto">
 
             <motion.p
-              className="text-[11px] font-semibold tracking-[0.45em] uppercase text-orange mb-5"
+              className="text-[11px] font-semibold tracking-[0.45em] uppercase text-[#6e6e73] mb-5"
               initial={{ opacity: 0, x: -20 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}

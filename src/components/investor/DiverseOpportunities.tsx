@@ -61,12 +61,12 @@ export default function DiverseOpportunities() {
           {/* Left — eyebrow + heading */}
           <div>
             <motion.p
-              className="text-[11px] font-semibold tracking-[0.45em] uppercase text-orange mb-5"
+              className="text-[11px] font-semibold tracking-[0.45em] uppercase text-[#6e6e73] mb-5"
               initial={{ opacity: 0, y: 10 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5 }}
             >
-              Investment Opportunities
+              Where We Invest
             </motion.p>
 
             <div className="overflow-hidden">
@@ -76,8 +76,8 @@ export default function DiverseOpportunities() {
                 animate={isInView ? { y: "0%", opacity: 1 } : {}}
                 transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               >
-                Diverse Opportunities{" "}
-                <span className="text-orange">Across Strategic Sectors</span>
+                Diverse Opportunities Across{" "}
+                <span className="text-orange">Strategic Sectors</span>
               </motion.h2>
             </div>
           </div>
