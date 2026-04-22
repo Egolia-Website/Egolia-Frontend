@@ -9,11 +9,11 @@ import TeamSection from "@/components/team/TeamSection";
 
 const executiveTeam = [
   {
-    name: "Wole Ogunleye",
-    role: "Chief Executive Officer",
-    fullTitle: "Chief Executive Officer",
+    name: "Wole Olapoju",
+    role: "Chief Technology Officer",
+    fullTitle: "Chief Technology Officer",
     bio: "Visionary leader driving Egolia Group's strategic direction and long-term growth across real estate, capital markets, and digital infrastructure.",
-    image: "https://ui-avatars.com/api/?name=Wole+Ogunleye&background=0F1C3F&color=fff&size=400&font-size=0.35",
+    image: "https://ui-avatars.com/api/?name=Wole+Olapoju&background=0F1C3F&color=fff&size=400&font-size=0.35",
     experience: [
       "Senior executive with a proven track record in leading high-growth organizations across multiple sectors.",
       "Deep expertise in capital allocation, organizational strategy, and cross-sector partnership development.",
@@ -99,11 +99,11 @@ const advisoryTeam = [
 
 const nonExecutiveTeam = [
   {
-    name: "Shahriar Rahman",
-    role: "Non-Executive Director",
-    fullTitle: "Non-Executive Director",
+    name: "Tahran Chowdhury",
+    role: "Product Designer",
+    fullTitle: "Product Designer",
     bio: "Technology strategist and digital infrastructure lead contributing to Egolia Group's platform architecture and operational systems.",
-    image: "https://ui-avatars.com/api/?name=Shahriar+Rahman&background=0F1C3F&color=fff&size=400&font-size=0.35",
+    image: "https://ui-avatars.com/api/?name=Tahran+Chowdhury&background=0F1C3F&color=fff&size=400&font-size=0.35",
     experience: [
       "Leads technology development and digital product initiatives for Egolia Group's platform ecosystem.",
       "Expert in full-stack engineering, financial systems integration, and scalable web infrastructure.",

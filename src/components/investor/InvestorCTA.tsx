@@ -4,11 +4,6 @@ import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const stats = [
-  { value: "$2B+", label: "Assets Under Management" },
-  { value: "4", label: "Operating Companies" },
-  { value: "3M+", label: "Platform Users" },
-];
 
 export default function InvestorCTA() {
   const ref = useRef(null);
@@ -65,32 +60,6 @@ export default function InvestorCTA() {
           Connect with our team to explore current and upcoming opportunities tailored for long-term value creation.
         </motion.p>
 
-        {/* Stats row */}
-        <motion.div
-          className="flex items-center justify-center gap-8 sm:gap-14 mb-10"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-        >
-          {stats.map((stat, i) => (
-            <div key={i} className="text-center">
-              <p className="text-2xl sm:text-3xl font-bold text-[#0F1C3F] tracking-tight leading-none mb-1">
-                {stat.value}
-              </p>
-              <p className="text-[11px] sm:text-[12px] text-[#6e6e73] font-medium tracking-wide leading-snug">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </motion.div>
-
-        {/* Divider */}
-        <motion.div
-          className="w-14 h-[1px] bg-[#1d1d1f]/10 mx-auto mb-10"
-          initial={{ scaleX: 0 }}
-          animate={isInView ? { scaleX: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        />
 
         {/* Buttons */}
         <motion.div

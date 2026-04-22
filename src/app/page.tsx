@@ -259,7 +259,7 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-6 lg:px-14">
           <FadeUp className="text-center mb-12 sm:mb-16">
             <p className="text-[11px] font-semibold tracking-[0.45em] uppercase text-[#6e6e73] mb-5">
-              Our Companies
+              Our Platform
             </p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1d1d1f] leading-[1.1] tracking-[-0.025em] max-w-2xl mx-auto">
               Four companies.{" "}
@@ -440,8 +440,8 @@ export default function Home() {
                   Why Invest With Us
                 </p>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1d1d1f] leading-[1.08] tracking-[-0.025em] mb-10">
-                  Built to Perform.{" "}
-                  <span className="text-orange">Designed to Last.</span>
+                  Where Capital{" "}
+                  <span className="text-orange">Meets Conviction.</span>
                 </h2>
               </FadeUp>
 
@@ -457,7 +457,7 @@ export default function Home() {
                   },
                   {
                     title: "Operators, Not Just Allocators",
-                    desc: "Our team works inside portfolio companies, driving performance from within rather than from the sidelines.",
+                    desc: "Our team works inside each company, driving performance from within rather than from the sidelines.",
                   },
                   {
                     title: "Every Detail Is Intentional",
@@ -695,8 +695,8 @@ export default function Home() {
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-[#1d1d1f] leading-[1.08] tracking-[-0.025em] max-w-3xl mx-auto"
             >
-              Great Outcomes Begin With{" "}
-              <span className="text-orange">The Right Partnership</span>
+              Ready to Build Something{" "}
+              <span className="text-orange">That Lasts?</span>
             </motion.h2>
           </div>
 

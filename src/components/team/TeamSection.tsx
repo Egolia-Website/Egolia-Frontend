@@ -60,12 +60,12 @@ export default function TeamSection({ title, members }: TeamSectionProps) {
                 </div>
 
                 {/* Name */}
-                <p className="text-[#1d1d1f] text-[15px] font-semibold leading-snug">
+                <p className="text-[#1d1d1f] text-[16px] md:text-[17px] font-bold leading-snug">
                   {member.name}
                 </p>
 
                 {/* Role */}
-                <p className="text-[#6e6e73] text-[13px] mt-0.5 leading-snug">
+                <p className="text-[#6e6e73] text-[13px] md:text-[14px] mt-1 leading-snug font-medium">
                   {member.role}
                 </p>
 
