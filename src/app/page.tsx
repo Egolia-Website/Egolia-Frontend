@@ -315,7 +315,7 @@ export default function Home() {
               logoHeight: 48,
               useBlend: true,
             },
-          ].map((card, i) => (
+          ].map((card: { image: string; logo: string; logoAlt: string; title: string; desc: string; href: string; logoWidth: number; logoHeight: number; bigLogo?: boolean; useBlend: boolean }, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 40 }}
@@ -342,13 +342,13 @@ export default function Home() {
 
               <div className="relative z-10 px-5 pb-5 sm:px-8 sm:pb-8 lg:px-10 lg:pb-10 flex items-end justify-between gap-4">
                 <div className="min-w-0">
-                  <div className={`flex items-center mb-3 sm:mb-4 ${(card as any).bigLogo ? "h-12 sm:h-16" : "h-7 sm:h-8"}`}>
+                  <div className={`flex items-center mb-3 sm:mb-4 ${card.bigLogo ? "h-12 sm:h-16" : "h-7 sm:h-8"}`}>
                     <Image
                       src={card.logo}
                       alt={card.logoAlt}
                       width={card.logoWidth}
                       height={card.logoHeight}
-                      className={`object-contain object-left w-auto ${(card as any).bigLogo ? "max-h-12 sm:max-h-16" : "max-h-7 sm:max-h-8"}`}
+                      className={`object-contain object-left w-auto ${card.bigLogo ? "max-h-12 sm:max-h-16" : "max-h-7 sm:max-h-8"}`}
                       style={
                         card.useBlend
                           ? { filter: "brightness(20) saturate(0)", mixBlendMode: "screen" }
@@ -531,7 +531,7 @@ export default function Home() {
 
             <FadeUp delay={0.2}>
               <p className="text-[#6e6e73] text-[15px] sm:text-[17px] leading-[1.75] max-w-[480px] mb-10">
-                We move with institutional precision and founder-level urgency. Our four companies aren't separate bets — they're designed to reinforce each other. What Metadata learns, AvranceCorp acts on. What TradeREA distributes, Avrance Capital structures. Every piece makes the whole stronger.
+                We move with institutional precision and founder-level urgency. Our four companies aren&apos;t separate bets &mdash; they&apos;re designed to reinforce each other. What Metadata learns, AvranceCorp acts on. What TradeREA distributes, Avrance Capital structures. Every piece makes the whole stronger.
               </p>
             </FadeUp>
 
@@ -707,7 +707,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-[#6e6e73] text-[15px] sm:text-[17px] leading-[1.75] max-w-2xl mx-auto mb-10 sm:mb-12"
           >
-            Whether you're an investor, a potential partner, or simply curious about what we're building — we'd love to start the conversation. The best opportunities begin with a single introduction.
+            Whether you&apos;re an investor, a potential partner, or simply curious about what we&apos;re building &mdash; we&apos;d love to start the conversation. The best opportunities begin with a single introduction.
           </motion.p>
 
           <motion.div

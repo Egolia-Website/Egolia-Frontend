@@ -128,7 +128,7 @@ export default function ContactForm() {
           >
             <p className="text-[11px] font-semibold tracking-[0.45em] uppercase text-[#6e6e73] mb-3">Contact</p>
             <h2 className="text-[26px] font-bold text-[#1d1d1f] tracking-tight leading-[1.1] mb-1">Get In Touch</h2>
-            <p className="text-[#6e6e73] text-[14px] mb-8">Fill out the form and we'll be in touch shortly.</p>
+            <p className="text-[#6e6e73] text-[14px] mb-8">Fill out the form and we&apos;ll be in touch shortly.</p>
           </motion.div>
 
           <form onSubmit={handleSubmit} className="space-y-5">
