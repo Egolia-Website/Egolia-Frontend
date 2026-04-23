@@ -66,7 +66,7 @@ export default function PlatformCTA() {
           transition={{ duration: 0.5, delay: 0.35 }}
         >
           <Link
-            href="/overview"
+            href="/platform"
             className="group inline-flex items-center justify-center gap-3 w-full sm:w-auto px-7 py-3.5 rounded-lg bg-[#0F1C3F] text-white text-[14px] font-bold hover:bg-[#1A2B5C] transition-colors duration-300 text-center shadow-[0_16px_36px_rgba(15,28,63,0.16)]"
           >
             View Our Platform

@@ -71,7 +71,7 @@ export default function InvestmentProcess() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Egolia's advantage is the ability to carry opportunities through multiple layers of value creation instead of stopping at a single transaction.
+            Egolia&apos;s advantage is the ability to carry opportunities through multiple layers of value creation instead of stopping at a single transaction.
           </motion.p>
         </div>
 
@@ -87,10 +87,10 @@ export default function InvestmentProcess() {
               transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
             >
               <div className="flex items-center justify-between mb-5">
-                <div className="w-12 h-12 rounded-xl bg-[#0F1C3F] flex items-center justify-center text-white group-hover:bg-orange transition-colors duration-300">
+                <div className="w-12 h-12 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center text-orange group-hover:bg-orange group-hover:text-white transition-all duration-300 shadow-[0_4px_16px_rgba(232,121,43,0.15)]">
                   {step.icon}
                 </div>
-                <span className="text-[2rem] font-bold text-[#e8e8ed] leading-none select-none group-hover:text-orange/20 transition-colors duration-500">
+                <span className="text-[2rem] font-bold text-[#0F1C3F]/15 leading-none select-none group-hover:text-orange/25 transition-colors duration-500">
                   {step.number}
                 </span>
               </div>

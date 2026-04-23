@@ -1,28 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Home, TrendingUp, Building2, MapPin, BarChart3, Cpu, Link2, Layers } from "lucide-react";
 
 const metrics = [
-  { value: "7,000+", label: "Units under development across the broader AvranceCorp pipeline" },
-  { value: "$5B+", label: "Approximate development pipeline revenue referenced across projects" },
-  { value: "4", label: "Core operating companies inside the Egolia platform" },
-  { value: "Toronto", label: "Launch base for management, strategy, and investor engagement" },
+  { icon: Home, value: "7,000+", label: "Units under development across the broader AvranceCorp pipeline" },
+  { icon: TrendingUp, value: "$5B+", label: "Approximate development pipeline revenue referenced across projects" },
+  { icon: Building2, value: "4", label: "Core operating companies inside the Egolia platform" },
+  { icon: MapPin, value: "Toronto", label: "Launch base for management, strategy, and investor engagement" },
 ];
 
 const tableRows = [
   {
+    icon: BarChart3,
     focus: "Asset Pipeline",
     detail: "Active development opportunities provide the operating backbone for the group's long-term value creation strategy.",
   },
   {
+    icon: Layers,
     focus: "Capital Strategy",
     detail: "Egolia is aligning project-level capital formation with a broader platform roadmap, including institutional and strategic investor relationships.",
   },
   {
+    icon: Cpu,
     focus: "Technology Commercialization",
     detail: "TradeREA expands the thesis from asset ownership into infrastructure, access, and future fee-driven platform economics.",
   },
   {
+    icon: Link2,
     focus: "Integrated Execution",
     detail: "The platform is designed so development, financing, research, and distribution can reinforce one another over time.",
   },
@@ -48,21 +53,24 @@ export default function DiverseOpportunities() {
               Scale Supported By Active Operating Experience.
             </h2>
             <p className="text-[#6e6e73] text-[17px] leading-[1.8] mb-8">
-              Egolia's investor proposition is strengthened by an underlying development and operating platform rather than a purely theoretical technology narrative.
+              Egolia&apos;s investor proposition is strengthened by an underlying development and operating platform rather than a purely theoretical technology narrative.
             </p>
 
             <div className="grid grid-cols-2 gap-4">
               {metrics.map((m, i) => (
                 <motion.div
                   key={m.value}
-                  className="bg-[#f5f5f7] rounded-xl p-5 border border-[#e8e8ed]"
+                  className="group bg-[#f5f5f7] rounded-xl p-5 border border-[#e8e8ed] hover:border-orange/30 transition-colors duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.1 + i * 0.08 }}
                 >
-                  <div className="text-[2rem] font-bold text-[#0F1C3F] leading-none mb-2">{m.value}</div>
-                  <p className="text-[#6e6e73] text-[14px] leading-[1.6]">{m.label}</p>
+                  <div className="w-9 h-9 rounded-xl bg-orange/10 border-2 border-orange flex items-center justify-center mb-3 shadow-[0_2px_10px_rgba(232,121,43,0.15)]">
+                    <m.icon className="w-4 h-4 text-orange" strokeWidth={2} />
+                  </div>
+                  <div className="text-[2rem] font-bold text-[#0F1C3F] leading-none mb-2 group-hover:text-orange transition-colors duration-300">{m.value}</div>
+                  <p className="text-[#6e6e73] text-[13px] leading-[1.6]">{m.label}</p>
                 </motion.div>
               ))}
             </div>
@@ -96,10 +104,12 @@ export default function DiverseOpportunities() {
                   transition={{ duration: 0.4, delay: 0.15 + i * 0.08 }}
                 >
                   <div className="flex items-start gap-3 mb-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-orange mt-2 shrink-0" />
-                    <span className="text-[#1d1d1f] text-[15px] font-bold">{row.focus}</span>
+                    <div className="w-8 h-8 rounded-lg bg-orange/10 border-2 border-orange flex items-center justify-center shrink-0 shadow-[0_2px_10px_rgba(232,121,43,0.12)]">
+                      <row.icon className="w-3.5 h-3.5 text-orange" strokeWidth={2} />
+                    </div>
+                    <span className="text-[#1d1d1f] text-[15px] font-bold mt-1">{row.focus}</span>
                   </div>
-                  <p className="text-[#6e6e73] text-[15px] leading-[1.75] pl-4">{row.detail}</p>
+                  <p className="text-[#6e6e73] text-[15px] leading-[1.75] pl-11">{row.detail}</p>
                 </motion.div>
               ))}
             </div>

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Zap, PieChart, Globe, Shield } from "lucide-react";
 
@@ -72,10 +71,11 @@ export default function Advantage() {
           {advantages.map((item, i) => (
             <motion.div
               key={item.title}
-              className={`group relative p-8 overflow-hidden transition-all duration-300 hover:bg-[#0F1C3F]
-                ${i < 3 ? "border-r border-[#e8e8ed] lg:border-r" : ""}
-                ${i < 2 ? "sm:border-b sm:border-[#e8e8ed] lg:border-b-0" : ""}
-              `}
+              className={[
+                "group relative p-8 overflow-hidden transition-all duration-300 hover:bg-[#0F1C3F]",
+                i < 3 ? "border-r border-[#e8e8ed] lg:border-r" : "",
+                i < 2 ? "sm:border-b sm:border-[#e8e8ed] lg:border-b-0" : "",
+              ].join(" ")}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

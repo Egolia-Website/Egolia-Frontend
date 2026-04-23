@@ -55,7 +55,7 @@ export default function InstitutionalFramework() {
           >
             <p className="text-orange text-[11px] font-bold tracking-[0.2em] uppercase mb-2">Institutional Framework</p>
             <h3 className="text-[#1d1d1f] text-[22px] font-bold mb-8 leading-snug">
-              Egolia's growth strategy is built around disciplined execution, appropriate structuring, and a phased approach to market infrastructure.
+              Egolia&apos;s growth strategy is built around disciplined execution, appropriate structuring, and a phased approach to market infrastructure.
             </h3>
 
             <div className="divide-y divide-[#e8e8ed]">
@@ -88,7 +88,7 @@ export default function InstitutionalFramework() {
             {/* Quote */}
             <div className="border-l-4 border-orange pl-6 mb-8">
               <blockquote className="text-[#1d1d1f] text-[20px] font-semibold leading-[1.55] italic mb-3">
-                "We are building Egolia to be more than a holding company. We are building a platform where ownership, intelligence, capital, and infrastructure compound together."
+                &ldquo;We are building Egolia to be more than a holding company. We are building a platform where ownership, intelligence, capital, and infrastructure compound together.&rdquo;
               </blockquote>
               <p className="text-[#6e6e73] text-[13px]">Egolia Group investor positioning statement</p>
             </div>

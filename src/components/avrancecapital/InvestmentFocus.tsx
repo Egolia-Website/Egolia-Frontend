@@ -1,26 +1,30 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
+import { Handshake, LayoutGrid, Globe, Building2 } from "lucide-react";
 
 const sectors = [
   {
-    image: "/images/commercial.jpg",
+    icon: Handshake,
+    number: "01",
     title: "Strategic Partnerships",
     description: "Collaborations with experienced operators and developers to unlock long-term value.",
   },
   {
-    image: "/images/glass-building.jpg",
+    icon: LayoutGrid,
+    number: "02",
     title: "Structured Investments",
     description: "Strategically designed investment vehicles focused on stability and risk-adjusted returns.",
   },
   {
-    image: "/images/residential.jpg",
+    icon: Globe,
+    number: "03",
     title: "Private Markets",
     description: "Access to high-growth opportunities across private equity and emerging sectors.",
   },
   {
-    image: "/images/emerging.jpg",
+    icon: Building2,
+    number: "04",
     title: "Real Estate",
     description: "Institutional-quality investments across residential, commercial, and mixed-use assets in key markets.",
   },
@@ -31,62 +35,67 @@ export default function InvestmentFocus() {
     <section className="bg-white py-24 md:py-32">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-14">
 
-        <div className="text-center mb-16">
+        {/* Header — left aligned */}
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+          <div>
+            <motion.p
+              className="text-orange text-[13px] font-bold tracking-[0.3em] uppercase mb-5"
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              Investment Focus
+            </motion.p>
+            <motion.h2
+              className="text-[2.4rem] sm:text-[3rem] lg:text-[3.6rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em]"
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+            >
+              Targeted Opportunities<br />
+              <span className="text-orange">Across Core Asset Classes.</span>
+            </motion.h2>
+          </div>
           <motion.p
-            className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-5"
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            Investment Focus
-          </motion.p>
-          <motion.h2
-            className="text-[2.4rem] sm:text-[3.2rem] lg:text-[4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] mb-5"
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-          >
-            Targeted Opportunities Across
-            <br />
-            <span className="text-orange">Core Asset Classes</span>
-          </motion.h2>
-          <motion.p
-            className="text-[#6e6e73] text-[17px] leading-[1.8] max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            className="text-[#6e6e73] text-[16px] leading-[1.8] max-w-xs lg:text-right"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            We allocate capital across select sectors with strong fundamentals, disciplined underwriting, and long-term growth potential.
+            We allocate capital across select sectors with strong fundamentals and disciplined underwriting.
           </motion.p>
         </div>
 
-        {/* 4 tall image cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {/* Horizontal row list */}
+        <div className="border-t border-[#e8e8ed]">
           {sectors.map((sector, i) => (
             <motion.div
               key={sector.title}
-              className="group relative overflow-hidden rounded-2xl aspect-[3/4]"
-              initial={{ opacity: 0, y: 30 }}
+              className="group flex items-center gap-6 sm:gap-10 py-7 border-b border-[#e8e8ed] hover:bg-[#fafafa] transition-colors duration-300 px-3 -mx-3 rounded-xl"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
             >
-              <Image
-                src={sector.image}
-                alt={sector.title}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
-                sizes="(max-width: 768px) 100vw, 25vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F1C3F]/90 via-[#0F1C3F]/30 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <div className="w-6 h-[2px] bg-orange mb-3" />
-                <h3 className="text-white text-[17px] font-bold mb-2 leading-snug">{sector.title}</h3>
-                <p className="text-white/70 text-[13px] leading-[1.7]">{sector.description}</p>
+              {/* Faded number */}
+              <span className="text-[2.5rem] font-bold text-[#0F1C3F]/10 leading-none w-12 shrink-0 group-hover:text-orange/20 transition-colors duration-300 hidden sm:block">
+                {sector.number}
+              </span>
+
+              {/* Icon */}
+              <div className="w-12 h-12 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center shrink-0 shadow-[0_4px_16px_rgba(232,121,43,0.15)] group-hover:bg-orange transition-all duration-300">
+                <sector.icon className="w-5 h-5 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={2} />
               </div>
+
+              {/* Content */}
+              <div className="flex-1 min-w-0">
+                <h3 className="text-[#1d1d1f] text-[18px] font-bold leading-snug mb-1">{sector.title}</h3>
+                <p className="text-[#6e6e73] text-[14px] leading-[1.7]">{sector.description}</p>
+              </div>
+
             </motion.div>
           ))}
         </div>

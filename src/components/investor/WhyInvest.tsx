@@ -1,24 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Wrench, Link2, FlaskConical, Zap } from "lucide-react";
 
 const reasons = [
   {
+    icon: Wrench,
     number: "01",
     title: "Operators, not passive allocators.",
     description: "We work inside the businesses and projects we back. That creates tighter feedback loops, stronger control, and better decision-making across the platform.",
   },
   {
+    icon: Link2,
     number: "02",
     title: "Integrated capital formation.",
     description: "By aligning project flow with financing strategy, we reduce fragmentation between the asset, the structure, and the investor proposition.",
   },
   {
+    icon: FlaskConical,
     number: "03",
     title: "Research-led execution.",
     description: "Our investment direction is supported by in-house data, analysis, and market intelligence rather than outsourced conviction.",
   },
   {
+    icon: Zap,
     number: "04",
     title: "Infrastructure with long-term upside.",
     description: "TradeREA extends the platform beyond project-level returns by introducing technology, access, and future transaction-based revenue potential.",
@@ -70,13 +75,18 @@ export default function WhyInvest() {
           {reasons.map((item, i) => (
             <motion.div
               key={item.number}
-              className="bg-[#f5f5f7] border border-[#e8e8ed] rounded-2xl p-8 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
+              className="group bg-[#f5f5f7] border border-[#e8e8ed] rounded-2xl p-8 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
             >
-              <span className="text-orange text-[13px] font-bold tracking-[0.15em] mb-5 block">{item.number}</span>
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center shadow-[0_4px_16px_rgba(232,121,43,0.18)] group-hover:bg-orange transition-all duration-300">
+                  <item.icon className="w-5 h-5 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={2} />
+                </div>
+                <span className="text-[#0F1C3F]/15 text-[2.5rem] font-bold leading-none select-none group-hover:text-orange/20 transition-colors duration-300">{item.number}</span>
+              </div>
               <h3 className="text-[#1d1d1f] text-[22px] sm:text-[24px] font-bold leading-snug mb-4">{item.title}</h3>
               <p className="text-[#6e6e73] text-[15px] leading-[1.8]">{item.description}</p>
             </motion.div>

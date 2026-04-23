@@ -82,7 +82,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.45 }}
             >
               <Link
-                href="/overview"
+                href="/investor"
                 className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-orange text-white font-bold text-sm rounded-full tracking-wide hover:bg-orange-light transition-all duration-300 shadow-[0_8px_32px_rgba(232,121,43,0.35)]"
               >
                 Explore Our Platform

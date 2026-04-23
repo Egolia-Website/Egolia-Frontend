@@ -224,7 +224,7 @@ export default function Home() {
 
         <div className="relative z-10 max-w-[860px] mx-auto text-center">
           <FadeUp>
-            <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-orange mb-8">
+            <p className="text-[13px] font-bold tracking-[0.3em] uppercase text-orange mb-8">
               Our Philosophy
             </p>
           </FadeUp>
@@ -257,7 +257,7 @@ export default function Home() {
       <section className="bg-[#f5f5f7] pt-20 sm:pt-28 pb-10">
         <div className="max-w-[1200px] mx-auto px-6 lg:px-14">
           <FadeUp className="text-center mb-12 sm:mb-16">
-            <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-orange mb-5">
+            <p className="text-[13px] font-bold tracking-[0.3em] uppercase text-orange mb-5">
               Our Platform
             </p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1d1d1f] leading-[1.1] tracking-[-0.025em] max-w-2xl mx-auto">
@@ -438,7 +438,7 @@ export default function Home() {
             {/* RIGHT — Label + heading + pillars */}
             <div className="w-full lg:w-[52%]">
               <FadeUp>
-                <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-orange mb-5">
+                <p className="text-[13px] font-bold tracking-[0.3em] uppercase text-orange mb-5">
                   For Investors
                 </p>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1d1d1f] leading-[1.08] tracking-[-0.025em] mb-5">
@@ -530,7 +530,7 @@ export default function Home() {
           <div className="lg:w-[50%] flex flex-col justify-center px-6 sm:px-12 lg:px-20 xl:px-24 py-14 sm:py-20 lg:py-0">
 
             <FadeUp>
-              <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-orange mb-6">
+              <p className="text-[13px] font-bold tracking-[0.3em] uppercase text-orange mb-6">
                 Our Firm
               </p>
             </FadeUp>
@@ -573,7 +573,7 @@ export default function Home() {
         <div className="relative z-10 max-w-[1200px] mx-auto">
 
           <FadeUp className="text-center mb-6 sm:mb-8">
-            <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-orange mb-5">
+            <p className="text-[13px] font-bold tracking-[0.3em] uppercase text-orange mb-5">
               The Track Record
             </p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-[#1d1d1f] leading-[1.08] tracking-[-0.025em] max-w-2xl mx-auto">
@@ -696,7 +696,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-[11px] font-bold tracking-[0.3em] uppercase text-orange mb-5"
+            className="text-[13px] font-bold tracking-[0.3em] uppercase text-orange mb-5"
           >
             Partner With Us
           </motion.p>

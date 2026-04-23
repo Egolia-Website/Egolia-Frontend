@@ -10,17 +10,26 @@ export default function CapitalHero() {
     <section className="relative min-h-[calc(100vh-84px)] flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/home/pirvateCapitalHero.png"
+          src="/images/home/private-capital.png"
           alt="Avrance Capital"
           fill
-          className="object-cover object-center"
+          className="object-cover object-center sm:hidden"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/35" />
+        <Image
+          src="/images/home/pirvateCapitalHero.png"
+          alt="Avrance Capital"
+          fill
+          className="object-cover object-center hidden sm:block"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/92 via-black/78 to-black/50" />
+        <div className="absolute inset-0 bg-black/75" />
       </div>
 
-      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14 w-full py-24">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14 w-full py-16 pb-32">
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
