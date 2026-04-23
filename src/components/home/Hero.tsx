@@ -21,12 +21,12 @@ export default function Hero() {
           src="/images/hero-city.jpg"
           alt="Egolia"
           fill
-          className="object-cover opacity-[0.22]"
+          className="object-cover opacity-[0.45] sm:opacity-[0.22]"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#070E1C] via-[#070E1C]/70 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#070E1C] via-transparent to-[#070E1C]/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#070E1C] sm:from-[#070E1C] via-[#070E1C]/50 sm:via-[#070E1C]/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#070E1C] via-transparent to-[#070E1C]/30 sm:to-[#070E1C]/50" />
       </div>
 
       {/* Ambient glow orbs */}
@@ -85,7 +85,7 @@ export default function Hero() {
                 href="/overview"
                 className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-orange text-white font-bold text-sm rounded-full tracking-wide hover:bg-orange-light transition-all duration-300 shadow-[0_8px_32px_rgba(232,121,43,0.35)]"
               >
-                Explore Opportunities
+                Explore Our Platform
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>

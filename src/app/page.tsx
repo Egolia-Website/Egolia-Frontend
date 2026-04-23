@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
+import { TrendingUp, Layers, Target, PieChart } from "lucide-react";
 
 function FadeUp({
   children,
@@ -91,15 +92,15 @@ export default function Home() {
             className="object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(to bottom, transparent 50%, white 100%)" }} />
+          <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(to bottom, transparent 80%, rgba(255,255,255,0.25) 100%)" }} />
         </motion.div>
 
         <div className="px-6 pt-6 pb-14 bg-white">
           <div className="mb-2">
             {[
-              { text: "Let's build", color: "text-[#1d1d1f]" },
-              { text: "long-term", color: "text-orange" },
-              { text: "value together.", color: "text-[#1d1d1f]" },
+              { text: "Building", color: "text-[#1d1d1f]" },
+              { text: "Long-Term", color: "text-orange" },
+              { text: "Value.", color: "text-[#1d1d1f]" },
             ].map((line, i) => (
               <div key={i} className="overflow-hidden">
                 <motion.h1
@@ -120,7 +121,7 @@ export default function Home() {
             transition={{ delay: 0.65, duration: 0.8 }}
             className="text-[#6e6e73] text-[15px] leading-[1.8] mt-4 mb-8"
           >
-            We build companies and invest in assets that reshape how people live, invest, and grow — across real estate, technology, and private markets.
+            Egolia is an investment company focused on building long-term value through strategic capital investment and disciplined growth.
           </motion.p>
 
           <motion.div
@@ -129,11 +130,11 @@ export default function Home() {
             transition={{ delay: 0.9, duration: 0.7 }}
             className="flex items-center gap-3"
           >
-            <Link href="/contact" className="bg-orange hover:bg-[#d4691e] text-white text-[13px] font-semibold tracking-wide px-6 py-3.5 rounded-lg transition-colors duration-300">
-              Get In Touch
+            <Link href="/investor" className="bg-orange hover:bg-[#d4691e] text-white text-[13px] font-semibold tracking-wide px-6 py-3.5 rounded-lg transition-colors duration-300">
+              Explore Investments
             </Link>
-            <Link href="/platform" className="bg-transparent border border-[#0F1C3F] text-[#0F1C3F] text-[13px] font-semibold tracking-wide px-6 py-3.5 rounded-lg transition-all duration-300">
-              Explore Our Platform
+            <Link href="/about" className="bg-transparent border border-[#0F1C3F] text-[#0F1C3F] text-[13px] font-semibold tracking-wide px-6 py-3.5 rounded-lg transition-all duration-300">
+              Our Firm
             </Link>
           </motion.div>
         </div>
@@ -167,9 +168,9 @@ export default function Home() {
         <div className="relative z-10 flex flex-col justify-center h-full px-20 xl:px-24 max-w-[55%] mt-4">
           <div className="mb-2 space-y-0">
             {[
-              { text: "Let's build", color: "text-white" },
-              { text: "long-term", color: "text-orange" },
-              { text: "value together.", color: "text-white" },
+              { text: "Building", color: "text-white" },
+              { text: "Long-Term", color: "text-orange" },
+              { text: "Value.", color: "text-white" },
             ].map((line, i) => (
               <div key={i} className="overflow-hidden">
                 <motion.h1
@@ -190,9 +191,7 @@ export default function Home() {
             transition={{ delay: 0.65, duration: 0.9 }}
             className="text-white/80 text-[18px] leading-[1.8] max-w-[460px] mt-6 mb-12"
           >
-            We build companies and invest in assets that reshape how
-            people live, invest, and grow — across real estate,
-            technology, and private markets.
+            Egolia is an investment company focused on building long-term value through strategic capital investment and disciplined growth.
           </motion.p>
 
           <motion.div
@@ -201,11 +200,11 @@ export default function Home() {
             transition={{ delay: 0.9, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="flex items-center gap-4"
           >
-            <Link href="/contact" className="bg-orange hover:bg-[#d4691e] text-white text-[14px] font-semibold tracking-wide px-9 py-4 rounded-lg transition-colors duration-300">
-              Get In Touch
+            <Link href="/investor" className="bg-orange hover:bg-[#d4691e] text-white text-[14px] font-semibold tracking-wide px-9 py-4 rounded-lg transition-colors duration-300">
+              Explore Investments
             </Link>
-            <Link href="/platform" className="bg-transparent border border-white/30 text-white hover:border-white hover:bg-white/10 text-[14px] font-semibold tracking-wide px-9 py-4 rounded-lg transition-all duration-300">
-              Explore Our Platform
+            <Link href="/about" className="bg-transparent border border-white/30 text-white hover:border-white hover:bg-white/10 text-[14px] font-semibold tracking-wide px-9 py-4 rounded-lg transition-all duration-300">
+              Our Firm
             </Link>
           </motion.div>
         </div>
@@ -225,12 +224,12 @@ export default function Home() {
 
         <div className="relative z-10 max-w-[860px] mx-auto text-center">
           <FadeUp>
-            <p className="text-[11px] font-semibold tracking-[0.45em] uppercase text-[#6e6e73] mb-8">
-              How We Think
+            <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-orange mb-8">
+              Our Philosophy
             </p>
           </FadeUp>
 
-          {["We don't follow markets.", "We build them."].map((line, i) => (
+          {["A Disciplined Approach", "To Investing."].map((line, i) => (
             <div key={i} className="overflow-hidden">
               <motion.h2
                 initial={{ y: "100%" }}
@@ -246,7 +245,7 @@ export default function Home() {
 
           <FadeUp delay={0.4} className="mt-8 sm:mt-10">
             <p className="text-[#6e6e73] text-[16px] sm:text-[18px] lg:text-[19px] leading-[1.8] max-w-2xl mx-auto">
-              While others react to market movements, we position ahead of them. Every opportunity we pursue is backed by original research, deep conviction, and the patience to let great investments compound into something extraordinary.
+              We take a long-term, disciplined approach to investing — focusing on strategic capital allocation, operational excellence, and innovation to create sustainable value across our platform.
             </p>
           </FadeUp>
         </div>
@@ -258,31 +257,45 @@ export default function Home() {
       <section className="bg-[#f5f5f7] pt-20 sm:pt-28 pb-10">
         <div className="max-w-[1200px] mx-auto px-6 lg:px-14">
           <FadeUp className="text-center mb-12 sm:mb-16">
-            <p className="text-[11px] font-semibold tracking-[0.45em] uppercase text-[#6e6e73] mb-5">
+            <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-orange mb-5">
               Our Platform
             </p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1d1d1f] leading-[1.1] tracking-[-0.025em] max-w-2xl mx-auto">
               Four companies.{" "}
               <span className="text-orange">One unified vision.</span>
             </h2>
+            <p className="text-[#6e6e73] text-[16px] sm:text-[17px] leading-[1.8] max-w-xl mx-auto mt-5">
+              Egolia operates across a unified platform of business investing, operational excellence, and development solutions.
+            </p>
           </FadeUp>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[7px] px-[7px]">
           {[
             {
-              image: "/images/home/platform-avrancecorp.png",
+              image: "/images/toronto.png",
               logo: "/images/home/logo-avrancecorp.png",
               logoAlt: "AvranceCorp",
-              title: "Real estate redefined for the long term.",
-              desc: "Strategic investment across residential and commercial markets.",
+              title: "Real estate development focused on building lasting communities.",
+              desc: "Real estate development focused on building high-quality residential and mixed-use assets through capital and execution.",
               href: "/platform/avrancecorp",
               logoWidth: 130,
               logoHeight: 36,
               useBlend: false,
             },
             {
-              image: "/images/home/platform-avrance-capital.png",
+              image: "/images/home/platform-traderea.png",
+              logo: "/images/home/logo-traderea.png",
+              logoAlt: "TradeREA",
+              title: "A digital marketplace for modern real estate trading.",
+              desc: "A digital marketplace platform focused on trading and investment opportunities powered by advanced technology.",
+              href: "/platform/traderea",
+              logoWidth: 180,
+              logoHeight: 48,
+              useBlend: true,
+            },
+            {
+              image: "/images/home/private-capital.png",
               logo: "/images/home/logo-avrance-capital.png",
               logoAlt: "Avrance Capital",
               title: "Private capital, deployed with precision.",
@@ -302,17 +315,6 @@ export default function Home() {
               logoWidth: 240,
               logoHeight: 60,
               bigLogo: true,
-              useBlend: true,
-            },
-            {
-              image: "/images/home/platform-traderea.png",
-              logo: "/images/home/logo-traderea.png",
-              logoAlt: "TradeREA",
-              title: "Trade real estate like it's always been possible.",
-              desc: "The next-generation platform democratising real estate investment.",
-              href: "/platform/traderea",
-              logoWidth: 180,
-              logoHeight: 48,
               useBlend: true,
             },
           ].map((card: { image: string; logo: string; logoAlt: string; title: string; desc: string; href: string; logoWidth: number; logoHeight: number; bigLogo?: boolean; useBlend: boolean }, i) => (
@@ -366,7 +368,7 @@ export default function Home() {
                 </div>
 
                 <span className="bg-white text-[#1d1d1f] text-[11px] sm:text-[12px] font-semibold tracking-wide px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-lg shrink-0 group-hover:bg-white/90 transition-colors duration-300">
-                  Explore
+                  View Details
                 </span>
               </div>
             </motion.div>
@@ -433,35 +435,42 @@ export default function Home() {
               </div>
             </div>
 
-            {/* RIGHT — Label + heading + 2x2 pillars */}
+            {/* RIGHT — Label + heading + pillars */}
             <div className="w-full lg:w-[52%]">
               <FadeUp>
-                <p className="text-[11px] font-semibold tracking-[0.45em] uppercase text-[#6e6e73] mb-5">
-                  Why Invest With Us
+                <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-orange mb-5">
+                  For Investors
                 </p>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1d1d1f] leading-[1.08] tracking-[-0.025em] mb-10">
-                  Where Capital{" "}
-                  <span className="text-orange">Meets Conviction.</span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1d1d1f] leading-[1.08] tracking-[-0.025em] mb-5">
+                  Partnering For{" "}
+                  <span className="text-orange">Long-Term Growth.</span>
                 </h2>
+                <p className="text-[#6e6e73] text-[15px] sm:text-[17px] leading-[1.75] max-w-[480px] mb-10">
+                  Egolia partners with investors to deliver long-term value through disciplined strategies, strategic capital allocation, and access to integrated execution across its platform.
+                </p>
               </FadeUp>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-7">
                 {[
                   {
-                    title: "Conviction Over Consensus",
-                    desc: "We only move when the research is deep, the thesis is clear, and the risk is understood.",
+                    icon: TrendingUp,
+                    title: "Long-Term Investment Strategy",
+                    desc: "Focus on sustainable growth across market cycles through disciplined capital allocation.",
                   },
                   {
-                    title: "Built to Compound",
-                    desc: "Our portfolio isn't designed to flip — it's structured to grow stronger with every passing year.",
+                    icon: Layers,
+                    title: "Access To Integrated Opportunities",
+                    desc: "Multi-sector and diversified platform exposure across Egolia's operating companies.",
                   },
                   {
-                    title: "Operators, Not Just Allocators",
-                    desc: "Our team works inside each company, driving performance from within rather than from the sidelines.",
+                    icon: Target,
+                    title: "Disciplined Execution",
+                    desc: "Operational excellence and structured investment approach across every initiative.",
                   },
                   {
-                    title: "Every Detail Is Intentional",
-                    desc: "From acquisition to asset management, we control each stage — because details are what separate good outcomes from great ones.",
+                    icon: PieChart,
+                    title: "Strategic Capital Allocation",
+                    desc: "Disciplined capital deployment across Egolia's integrated investment platform.",
                   },
                 ].map((pillar, i) => (
                   <motion.div
@@ -470,13 +479,19 @@ export default function Home() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-40px" }}
                     transition={{ duration: 0.6, delay: 0.1 + i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    className="group flex items-start gap-4"
                   >
-                    <h3 className="text-[#1d1d1f] font-bold text-[17px] leading-snug mb-2">
-                      {pillar.title}
-                    </h3>
-                    <p className="text-[#6e6e73] text-[14px] leading-[1.7]">
-                      {pillar.desc}
-                    </p>
+                    <div className="shrink-0 w-12 h-12 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center group-hover:bg-orange group-hover:border-orange transition-all duration-300 mt-0.5 shadow-[0_4px_16px_rgba(232,121,43,0.15)]">
+                      <pillar.icon className="w-5 h-5 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={2} />
+                    </div>
+                    <div>
+                      <h3 className="text-[#1d1d1f] font-bold text-[16px] leading-snug mb-1.5">
+                        {pillar.title}
+                      </h3>
+                      <p className="text-[#6e6e73] text-[14px] leading-[1.7]">
+                        {pillar.desc}
+                      </p>
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -515,23 +530,22 @@ export default function Home() {
           <div className="lg:w-[50%] flex flex-col justify-center px-6 sm:px-12 lg:px-20 xl:px-24 py-14 sm:py-20 lg:py-0">
 
             <FadeUp>
-              <p className="text-[11px] font-semibold tracking-[0.45em] uppercase text-[#6e6e73] mb-6">
-                Who We Are
+              <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-orange mb-6">
+                Our Firm
               </p>
             </FadeUp>
 
             <FadeUp delay={0.1}>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-bold text-[#1d1d1f] leading-[1.08] tracking-[-0.025em] mb-6">
-                Built on{" "}
-                <span className="text-orange">conviction.</span>
+                A Disciplined Approach
                 <br />
-                Defined by results.
+                <span className="text-orange">To Investment.</span>
               </h2>
             </FadeUp>
 
             <FadeUp delay={0.2}>
               <p className="text-[#6e6e73] text-[15px] sm:text-[17px] leading-[1.75] max-w-[480px] mb-10">
-                We move with institutional precision and founder-level urgency. Our four companies aren&apos;t separate bets &mdash; they&apos;re designed to reinforce each other. What Metadata learns, AvranceCorp acts on. What TradeREA distributes, Avrance Capital structures. Every piece makes the whole stronger.
+                Egolia is an investment company focused on long-term value creation through strategic capital investment and disciplined execution across its platforms.
               </p>
             </FadeUp>
 
@@ -540,7 +554,7 @@ export default function Home() {
                 href="/about"
                 className="inline-flex items-center gap-2 bg-[#0F1C3F] hover:bg-[#1A2B5C] text-white text-[13px] sm:text-[14px] font-semibold px-7 sm:px-8 py-3.5 sm:py-4 rounded-lg transition-colors duration-300 tracking-wide self-start"
               >
-                Learn About Egolia
+                Our Firm
               </Link>
             </FadeUp>
           </div>
@@ -559,7 +573,7 @@ export default function Home() {
         <div className="relative z-10 max-w-[1200px] mx-auto">
 
           <FadeUp className="text-center mb-6 sm:mb-8">
-            <p className="text-[11px] font-semibold tracking-[0.45em] uppercase text-[#6e6e73] mb-5">
+            <p className="text-[11px] font-bold tracking-[0.3em] uppercase text-orange mb-5">
               The Track Record
             </p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-[#1d1d1f] leading-[1.08] tracking-[-0.025em] max-w-2xl mx-auto">
@@ -682,9 +696,9 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-[11px] font-semibold tracking-[0.45em] uppercase text-[#6e6e73] mb-5"
+            className="text-[11px] font-bold tracking-[0.3em] uppercase text-orange mb-5"
           >
-            Get Started
+            Partner With Us
           </motion.p>
 
           <div className="overflow-hidden mb-6">
@@ -695,8 +709,8 @@ export default function Home() {
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-[#1d1d1f] leading-[1.08] tracking-[-0.025em] max-w-3xl mx-auto"
             >
-              Ready to Build Something{" "}
-              <span className="text-orange">That Lasts?</span>
+              Let&apos;s Build Long-Term{" "}
+              <span className="text-orange">Value Together.</span>
             </motion.h2>
           </div>
 
@@ -707,7 +721,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-[#6e6e73] text-[15px] sm:text-[17px] leading-[1.75] max-w-2xl mx-auto mb-10 sm:mb-12"
           >
-            Whether you&apos;re an investor, a potential partner, or simply curious about what we&apos;re building &mdash; we&apos;d love to start the conversation. The best opportunities begin with a single introduction.
+            We take a long-term, disciplined approach to investing — focusing on strategic capital allocation, operational excellence, and innovation to create sustainable value across our platform.
           </motion.p>
 
           <motion.div

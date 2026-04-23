@@ -123,7 +123,7 @@ export default function DisciplinedApproach() {
               href="/about"
               className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-navy text-white font-bold text-sm rounded-full hover:bg-navy-light transition-colors duration-300"
             >
-              Learn More
+              Our Philosophy
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>

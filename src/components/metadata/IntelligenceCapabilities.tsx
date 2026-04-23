@@ -1,26 +1,26 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
+import { Globe, Server, BarChart2, Compass } from "lucide-react";
 
 const capabilities = [
   {
-    image: "/images/world-map.jpg",
+    icon: <Globe className="w-7 h-7" strokeWidth={1.4} />,
     title: "Market Intelligence",
     description: "In-depth analysis of macroeconomic trends, real estate dynamics, and regional performance indicators.",
   },
   {
-    image: "/images/data-library.jpg",
+    icon: <Server className="w-7 h-7" strokeWidth={1.4} />,
     title: "Data Infrastructure",
     description: "Scalable systems that structure and process complex datasets into reliable, decision-ready intelligence.",
   },
   {
-    image: "/images/metadata.jpg",
+    icon: <BarChart2 className="w-7 h-7" strokeWidth={1.4} />,
     title: "Quantitative Analytics",
     description: "Advanced models designed to evaluate performance, risk exposure, and investment potential.",
   },
   {
-    image: "/images/network-dark.jpg",
+    icon: <Compass className="w-7 h-7" strokeWidth={1.4} />,
     title: "Strategic Insights",
     description: "Translating data into clear, actionable intelligence to support consistent capital allocation.",
   },
@@ -28,55 +28,61 @@ const capabilities = [
 
 export default function IntelligenceCapabilities() {
   return (
-    <section className="bg-gray-light py-24 md:py-32">
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
-        <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-sans text-navy mb-6"
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
-          Intelligence Capabilities
-        </motion.h2>
+    <section className="bg-[#f5f5f7] py-24 md:py-32">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-14">
 
-        <motion.p
-          className="text-center text-navy/70 font-medium text-xl leading-[1.7] max-w-2xl mx-auto mb-20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          A Comprehensive Suite Of Data-Driven Tools And Research Frameworks Designed To Support Informed Investment Decisions.
-        </motion.p>
+        <div className="text-center mb-16">
+          <motion.p
+            className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-5"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            Capabilities
+          </motion.p>
+          <motion.h2
+            className="text-[2.4rem] sm:text-[3.2rem] lg:text-[4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] mb-5"
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+          >
+            Intelligence
+            <br />
+            <span className="text-orange">Capabilities</span>
+          </motion.h2>
+          <motion.p
+            className="text-[#6e6e73] text-[17px] leading-[1.8] max-w-xl mx-auto"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            A comprehensive suite of data-driven tools and research frameworks designed to support informed investment decisions.
+          </motion.p>
+        </div>
 
-        {/* 2x2 grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {capabilities.map((item, i) => (
             <motion.div
               key={item.title}
-              className="group relative overflow-hidden aspect-[16/10]"
-              initial={{ opacity: 0, y: 25 }}
+              className="group bg-white border border-[#e8e8ed] rounded-2xl p-7 shadow-sm hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
+              transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
             >
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-
-              <div className="absolute bottom-0 left-0 right-0 p-8">
-                <h3 className="text-white text-2xl font-bold mb-2">{item.title}</h3>
-                <p className="text-white/70 font-medium text-base leading-[1.6]">{item.description}</p>
+              <div className="w-14 h-14 rounded-xl bg-[#0F1C3F] flex items-center justify-center text-white mb-6 group-hover:bg-orange transition-colors duration-300">
+                {item.icon}
               </div>
+              <h3 className="text-[#1d1d1f] text-[17px] font-bold leading-snug mb-3">{item.title}</h3>
+              <div className="w-6 h-[2px] bg-orange mb-4" />
+              <p className="text-[#6e6e73] text-[14px] leading-[1.75]">{item.description}</p>
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );

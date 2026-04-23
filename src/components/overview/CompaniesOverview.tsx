@@ -100,7 +100,7 @@ export default function CompaniesOverview() {
                 target={company.href.startsWith("http") ? "_blank" : undefined}
                 className="text-white text-sm font-semibold border-b border-white/30 pb-0.5 hover:border-orange hover:text-orange transition-all duration-300"
               >
-                Learn More
+                View Details
               </Link>
             </motion.div>
           ))}

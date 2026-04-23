@@ -57,7 +57,7 @@ export default function OverviewCTA() {
             For Investors
           </Link>
           <Link
-            href="/platform"
+            href="/investor"
             className="w-full sm:w-auto px-10 py-4 border-2 border-white/25 text-white text-base font-bold hover:border-orange hover:text-orange transition-all duration-300 text-center"
           >
             Our Platform

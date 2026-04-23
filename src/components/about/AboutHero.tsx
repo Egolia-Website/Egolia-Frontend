@@ -1,28 +1,32 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 export default function AboutHero() {
   return (
-    <section className="relative min-h-[calc(100vh-84px)] flex items-end overflow-hidden">
-      {/* Background image */}
+    <section className="relative min-h-[calc(100vh-84px)] flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Toronto_skyline%2C_2024_%2852592814618%29.jpg/3840px-Toronto_skyline%2C_2024_%2852592814618%29.jpg"
           alt="Toronto skyline"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-12 w-full pb-20 sm:pb-32 md:pb-40 pt-20 sm:pt-32">
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14 w-full py-24">
+
         <motion.p
-          className="text-white/70 text-lg mb-4"
+          className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-8"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -30,25 +34,71 @@ export default function AboutHero() {
           Who We Are
         </motion.p>
 
-        <motion.h1
-          className="text-4xl md:text-5xl lg:text-7xl font-sans leading-[1] tracking-[-0.02em] max-w-2xl"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-        >
-          <span className="text-white block">Building Enduring</span>
-          <span className="text-orange block mt-2">Future</span>
-        </motion.h1>
+        <div className="mb-8 max-w-[700px]">
+          {[
+            { text: "Building Enduring", color: "text-white" },
+            { text: "Future.", color: "text-orange" },
+          ].map((line, i) => (
+            <div key={i} className="overflow-hidden">
+              <motion.h1
+                initial={{ y: "110%", opacity: 0 }}
+                animate={{ y: "0%", opacity: 1 }}
+                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 + i * 0.1 }}
+                className={`block text-[clamp(3.2rem,6vw,5.5rem)] font-bold leading-[1.08] tracking-[-0.03em] ${line.color}`}
+              >
+                {line.text}
+              </motion.h1>
+            </div>
+          ))}
+        </div>
 
         <motion.p
-          className="text-white/70 text-base sm:text-xl leading-[1.7] mt-6 sm:mt-10 max-w-lg font-medium"
+          className="text-white/75 text-[17px] sm:text-[18px] leading-[1.8] max-w-[500px] mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.45 }}
         >
-          Egolia Group Is A Vertically Integrated Investment And Development Firm Focused On Delivering Long-Term Value Across Real Estate, Finance, And Emerging Markets.
+          Egolia Group is a vertically integrated investment and development firm focused on delivering long-term value across real estate, finance, and emerging markets.
         </motion.p>
+
+        <motion.div
+          className="flex items-center gap-8"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          <Link
+            href="/contact"
+            className="group inline-flex items-center gap-3 rounded-lg bg-orange hover:bg-[#d4691e] px-8 py-4 text-[15px] font-bold text-white transition-colors duration-300"
+          >
+            Partner With Us
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.8} />
+          </Link>
+          <Link
+            href="/investor"
+            className="text-white/70 hover:text-white text-[15px] font-semibold transition-colors duration-300 flex items-center gap-2"
+          >
+            Our Platform
+            <ArrowRight className="w-4 h-4" strokeWidth={1.8} />
+          </Link>
+        </motion.div>
+
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2, duration: 0.6 }}
+      >
+        <span className="text-white/40 text-[11px] tracking-[0.2em] uppercase font-medium">Scroll</span>
+        <motion.div
+          className="w-[1px] h-8 bg-gradient-to-b from-white/40 to-transparent"
+          animate={{ scaleY: [0, 1, 0], originY: 0 }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </motion.div>
     </section>
   );
 }

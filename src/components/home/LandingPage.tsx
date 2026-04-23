@@ -487,7 +487,7 @@ export default function LandingPage() {
                 href="/investor"
                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[var(--color-primary-dark)] transition hover:bg-[var(--color-section-bg)]"
               >
-                Explore Opportunities
+                Learn More
               </Link>
             </div>
           </div>

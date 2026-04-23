@@ -1,120 +1,157 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { Building2, TrendingUp, Search, Gem, Users, Target, BarChart3 } from "lucide-react";
 
-const pillars = [
+const flowItems = [
   {
-    icon: (
-      <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth={1.2} viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
-    title: "Integrated Execution",
-    description: "Seamless Collaboration Across Development, Investment, And Research.",
+    icon: <Building2 className="w-8 h-8" strokeWidth={1.3} />,
+    label: "Development",
+    bg: "bg-[#0F1C3F]",
+    labelColor: "text-[#0F1C3F]",
   },
   {
-    icon: (
-      <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth={1.2} viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5" />
-      </svg>
-    ),
-    title: "Strategic Alignment",
-    description: "A Unified Vision Guiding Every Company And Initiative.",
+    icon: <TrendingUp className="w-8 h-8" strokeWidth={1.3} />,
+    label: "Investment",
+    bg: "bg-[#0F1C3F]",
+    labelColor: "text-[#0F1C3F]",
   },
   {
-    icon: (
-      <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth={1.2} viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
-      </svg>
-    ),
-    title: "Long-Term Value",
-    description: "Focused On Sustainable Growth And Consistent Performance.",
+    icon: <Search className="w-8 h-8" strokeWidth={1.3} />,
+    label: "Research",
+    bg: "bg-[#6e6e73]",
+    labelColor: "text-[#0F1C3F]",
+  },
+  {
+    icon: <Gem className="w-8 h-8" strokeWidth={1.3} />,
+    label: "Value Creation",
+    bg: "bg-[#E8792B]",
+    labelColor: "text-[#E8792B]",
   },
 ];
 
-const flow = ["Development", "Investment", "Research", "Value Creation"];
+const pillars = [
+  {
+    icon: <Users className="w-6 h-6" strokeWidth={1.4} />,
+    bg: "bg-[#0F1C3F]",
+    title: "Integrated Execution",
+    desc: "Seamless collaboration across development, investment, and research.",
+  },
+  {
+    icon: <Target className="w-6 h-6" strokeWidth={1.4} />,
+    bg: "bg-[#0F1C3F]",
+    title: "Strategic Alignment",
+    desc: "A unified vision guiding every company and initiative.",
+  },
+  {
+    icon: <BarChart3 className="w-6 h-6" strokeWidth={1.4} />,
+    bg: "bg-[#E8792B]",
+    title: "Long-Term Value",
+    desc: "Focused on sustainable growth and consistent performance.",
+  },
+];
 
 export default function IntegratedPlatform() {
   return (
-    <section className="bg-navy py-24 md:py-32">
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
-        {/* Heading */}
-        <motion.p
-          className="text-center text-white/70 text-base mb-4"
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          What We Do
-        </motion.p>
+    <section className="relative py-20 sm:py-28 overflow-hidden">
+      <Image
+        src="/division/whatwedo.png"
+        alt="What We Do"
+        fill
+        className="object-cover object-center"
+      />
 
-        <motion.div
-          className="w-12 h-[2px] bg-orange mx-auto mb-8"
-          initial={{ width: 0 }}
-          whileInView={{ width: 48 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        />
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
-        <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-sans text-white mb-6"
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.15 }}
-        >
-          Built As One Integrated Platform
-        </motion.h2>
+          {/* LEFT — heading + description */}
+          <motion.div
+            className="w-full lg:w-[35%] shrink-0"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="mb-4">
+              <span className="text-[#E8792B] text-[14px] font-bold tracking-[0.3em] uppercase">What We Do</span>
+            </div>
+            <h2 className="text-[2rem] sm:text-[2.4rem] lg:text-[2.8rem] font-bold leading-[1.1] tracking-[-0.02em] text-[#0F1C3F] mb-5">
+              Built As One<br />Integrated Platform
+            </h2>
+            <p className="text-[#1d1d1f] text-[15px] leading-[1.85] font-medium">
+              Each company within Egolia Group operates independently while contributing to a unified strategy focused on long-term value creation, disciplined execution, and sustainable growth.
+            </p>
+          </motion.div>
 
-        <motion.p
-          className="text-center text-white/70 text-xl leading-[1.7] max-w-2xl mx-auto mb-14 font-medium"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          Each Company Within Egolia Group Operates Independently While Contributing To A Unified Strategy Focused On Long-Term Value Creation, Disciplined Execution, And Sustainable Growth.
-        </motion.p>
+          {/* RIGHT — flow circles top + 3 cards bottom */}
+          <div className="w-full lg:w-[65%] flex flex-col gap-10">
 
-        {/* Flow Arrows */}
-        <motion.div
-          className="flex items-center justify-center gap-3 mb-16 flex-wrap"
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.25 }}
-        >
-          {flow.map((item, i) => (
-            <span key={item} className="flex items-center gap-3">
-              <span className="text-white text-lg font-light">{item}</span>
-              {i < flow.length - 1 && (
-                <span className="text-orange text-lg">&#8594;</span>
-              )}
-            </span>
-          ))}
-        </motion.div>
+            {/* Flow circles with arrows */}
+            <div className="relative flex items-start justify-between gap-2">
+              {/* Absolute arrow lines between circles */}
+              {[0, 1, 2].map((i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scaleX: 0 }}
+                  whileInView={{ opacity: 1, scaleX: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
+                  className="absolute top-[35px] flex items-center"
+                  style={{
+                    left: `calc(${(i + 1) * 25}% - 18px)`,
+                    transformOrigin: "left",
+                  }}
+                >
+                  <div className="w-10 h-[1.5px] bg-[#E8792B]/50" />
+                  <svg className="w-2.5 h-2.5 text-[#E8792B] -ml-[1px]" fill="currentColor" viewBox="0 0 6 6">
+                    <path d="M0 0l6 3-6 3V0z" />
+                  </svg>
+                </motion.div>
+              ))}
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {pillars.map((item, i) => (
-            <motion.div
-              key={item.title}
-              className="bg-white/5 border-t-[3px] border-orange p-8 text-center group cursor-default"
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
-              whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.3)" }}
-            >
-              <div className="text-orange mb-5 flex justify-center group-hover:scale-110 transition-transform duration-300">
-                {item.icon}
-              </div>
-              <h3 className="text-white text-lg font-semibold mb-3">{item.title}</h3>
-              <p className="text-white/70 text-base leading-[1.7] font-medium">{item.description}</p>
-            </motion.div>
-          ))}
+              {flowItems.map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.15 + i * 0.1 }}
+                  className="flex flex-col items-center gap-3 z-10 w-[25%]"
+                >
+                  <div className={`w-[72px] h-[72px] rounded-full flex items-center justify-center text-white shadow-lg ring-4 ring-white/80 ${item.bg}`}>
+                    {item.icon}
+                  </div>
+                  <span className={`text-[14px] font-bold text-center ${item.labelColor}`}>
+                    {item.label}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* 3 pillar cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {pillars.map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
+                  className="bg-white/90 backdrop-blur-sm border border-[#e8e8ed] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  {/* Rounded square icon */}
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-md ${item.bg}`}>
+                    {item.icon}
+                  </div>
+                  <h3 className="text-[#0F1C3F] font-bold text-[15px] mb-2">{item.title}</h3>
+                  <div className="w-6 h-[2px] bg-[#E8792B] mb-3" />
+                  <p className="text-[#3a3a3c] text-[13px] leading-[1.7] font-medium">{item.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+
+          </div>
         </div>
       </div>
     </section>

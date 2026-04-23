@@ -3,92 +3,100 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 export default function AvranceHero() {
   return (
     <section className="relative min-h-[calc(100vh-84px)] flex items-center overflow-hidden">
-      {/* Full-screen background */}
       <div className="absolute inset-0">
         <Image
-          src="/images/avrancecorp.jpg"
-          alt="Modern apartment building"
+          src="/images/toronto.png"
+          alt="AvranceCorp real estate development"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
       </div>
 
-      {/* Content centered */}
-      <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-12 w-full py-20 md:py-28 flex items-center min-h-[calc(100vh-84px)]">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14 w-full py-24">
+
         <motion.div
-          className="max-w-3xl"
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.15 } },
-          }}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-8"
         >
-          {/* Eyebrow */}
-          <motion.p
-            className="text-orange text-sm font-semibold tracking-[0.15em] uppercase mb-6"
-            variants={{
-              hidden: { opacity: 0, x: -30 },
-              visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
-            }}
-          >
-            Real Estate Development
-          </motion.p>
+          <Image
+            src="/images/home/logo-avrancecorp.png"
+            alt="AvranceCorp"
+            width={180}
+            height={50}
+            className="object-contain object-left h-10 w-auto"
+            style={{ filter: "brightness(0) invert(1)" }}
+          />
+        </motion.div>
 
-          {/* Heading */}
-          <motion.h1
-            className="text-4xl md:text-5xl lg:text-7xl font-sans text-white leading-[1.05] tracking-tight"
-            variants={{
-              hidden: { opacity: 0, y: 40 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.9 } },
-            }}
-          >
-            Building Communities
-            <br />
-            That Create{" "}
-            <span className="font-light">Long-Term Value</span>
-          </motion.h1>
+        <motion.p
+          className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-6"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Real Estate Development
+        </motion.p>
 
-          {/* Description */}
-          <motion.p
-            className="text-white/70 text-lg md:text-xl leading-[1.8] mt-8 max-w-xl font-medium"
-            variants={{
-              hidden: { opacity: 0, y: 25 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
-            }}
-          >
-            Residential And Mixed-Use Developments Across North America,
-            Designed For Investors And Modern Living.
-          </motion.p>
+        <div className="mb-6 overflow-hidden">
+          {[
+            { text: "Building Communities", color: "text-white" },
+            { text: "That Endure.", color: "text-orange" },
+          ].map((line, i) => (
+            <div key={i} className="overflow-hidden">
+              <motion.h1
+                initial={{ y: "110%", opacity: 0 }}
+                animate={{ y: "0%", opacity: 1 }}
+                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 + i * 0.1 }}
+                className={`block text-[clamp(2.8rem,5vw,4.8rem)] font-bold leading-[1.08] tracking-[-0.03em] ${line.color}`}
+              >
+                {line.text}
+              </motion.h1>
+            </div>
+          ))}
+        </div>
 
-          {/* Divider + Link */}
-          <motion.div
-            className="mt-10 flex items-center gap-8"
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-            }}
+        <motion.p
+          className="text-white/80 text-[17px] sm:text-[18px] leading-[1.8] max-w-[520px] mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.45 }}
+        >
+          Residential and mixed-use developments across North America, designed for investors and modern living.
+        </motion.p>
+
+        <motion.div
+          className="flex flex-col sm:flex-row gap-4"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          <Link
+            href="/contact"
+            className="group inline-flex items-center justify-center gap-3 rounded-lg bg-orange hover:bg-[#d4691e] px-8 py-4 text-[15px] font-bold text-white transition-colors duration-300"
           >
-            <div className="w-20 h-[1px] bg-white/40" />
-            <Link
-              href="/contact"
-              className="text-white text-lg font-semibold hover:text-orange transition-colors duration-300 tracking-wide"
-            >
-              Partner With Us
-            </Link>
-          </motion.div>
+            Partner With Us
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.8} />
+          </Link>
+          <Link
+            href="/investor"
+            className="group inline-flex items-center justify-center gap-3 rounded-lg border border-white/30 hover:border-orange hover:text-orange px-8 py-4 text-[15px] font-bold text-white transition-all duration-300"
+          >
+            Explore Investments
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.8} />
+          </Link>
         </motion.div>
       </div>
 
-      {/* Bottom decorative gradient bar */}
-      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-orange via-orange/40 to-transparent" />
     </section>
   );
 }

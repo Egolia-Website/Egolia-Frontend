@@ -1,69 +1,70 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 export default function AvranceCTA() {
   return (
-    <section className="bg-[#2A2A2A] py-24 md:py-36 relative overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-orange/[0.02] rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-white/5" />
-
-      <div className="relative max-w-[1320px] mx-auto px-6 lg:px-12 text-center">
-        {/* Small decorative mark */}
-        <motion.div
-          className="w-3 h-3 bg-orange mx-auto mb-10 rotate-45"
-          initial={{ scale: 0, rotate: 0 }}
-          whileInView={{ scale: 1, rotate: 45 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, type: "spring", stiffness: 200 }}
-        />
-
-        <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-sans text-white leading-[1.1] mb-6"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          Partner With Us On
-          <br />
-          <span className="font-light">Future Developments</span>
-        </motion.h2>
-
-        <motion.div
-          className="w-14 h-[2px] bg-orange mx-auto mb-8"
-          initial={{ width: 0 }}
-          whileInView={{ width: 56 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-        />
+    <section className="relative py-20 sm:py-28 overflow-hidden">
+      <Image src="/division/explore1.png" alt="" fill className="object-cover object-center" />
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14 text-center">
 
         <motion.p
-          className="text-white/70 text-xl leading-[1.8] max-w-2xl mx-auto mb-12 font-medium"
+          className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-5"
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          Get In Touch
+        </motion.p>
+
+        <motion.h2
+          className="text-[2.2rem] sm:text-[3rem] lg:text-[3.6rem] font-bold text-[#1d1d1f] leading-[1.08] tracking-[-0.025em] mb-6 max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+        >
+          Partner With{" "}
+          <span className="text-orange">AvranceCorp</span>
+        </motion.h2>
+
+        <motion.p
+          className="text-[#6e6e73] max-w-xl mx-auto text-[16px] sm:text-[17px] leading-[1.8] mb-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.15 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Explore Development Opportunities Or Connect With Our Team To Learn
-          More About AvranceCorp&apos;s Projects And Strategic Initiatives.
+          Whether you are an investor, developer, or strategic partner, AvranceCorp offers opportunities to grow and build lasting value together.
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.25 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
         >
           <Link
-            href="/contact"
-            className="inline-block px-12 py-4 bg-orange text-white text-base font-bold hover:bg-orange/90 transition-colors duration-300"
+            href="/investor"
+            className="group inline-flex w-full items-center justify-center gap-3 rounded-lg bg-orange hover:bg-[#d4691e] px-8 py-4 text-[15px] font-bold text-white transition-colors duration-300 sm:w-auto"
           >
-            Get in Touch
+            Explore Investments
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.8} />
+          </Link>
+          <Link
+            href="/contact"
+            className="group inline-flex w-full items-center justify-center gap-3 rounded-lg border border-[#1d1d1f]/15 hover:border-orange hover:text-orange px-8 py-4 text-[15px] font-bold text-[#1d1d1f] transition-all duration-300 sm:w-auto"
+          >
+            Contact Us
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.8} />
           </Link>
         </motion.div>
+
       </div>
     </section>
   );

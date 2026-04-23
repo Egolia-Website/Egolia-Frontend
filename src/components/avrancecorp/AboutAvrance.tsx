@@ -2,145 +2,102 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Building2, BarChart3, Shield, TrendingUp } from "lucide-react";
 
 const features = [
   {
-    title: "Discipline",
-    description:
-      "Rigorous Analysis And Structured Decision-Making Applied To Every Opportunity.",
+    icon: <Building2 className="w-5 h-5" strokeWidth={1.6} />,
+    title: "Disciplined Development",
+    description: "Rigorous analysis and structured decision-making applied to every project opportunity.",
   },
   {
-    title: "Market Insight",
-    description:
-      "Deep Market Intelligence To Identify And Position Assets For Success.",
+    icon: <BarChart3 className="w-5 h-5" strokeWidth={1.6} />,
+    title: "Market Intelligence",
+    description: "Deep market insight to identify and position assets for long-term success.",
   },
   {
+    icon: <Shield className="w-5 h-5" strokeWidth={1.6} />,
     title: "Value Creation",
-    description:
-      "High-Quality Assets Designed For Sustainable Returns And Impact.",
+    description: "High-quality assets designed for sustainable returns and lasting community impact.",
   },
   {
+    icon: <TrendingUp className="w-5 h-5" strokeWidth={1.6} />,
     title: "Strategic Growth",
-    description:
-      "Scalable Development Strategies Built For Long-Term Portfolio Expansion.",
+    description: "Scalable development strategies built for consistent portfolio expansion.",
   },
 ];
 
 export default function AboutAvrance() {
   return (
-    <section className="bg-white py-24 md:py-36">
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-start">
-          {/* Left content */}
-          <div>
-            {/* Subtitle */}
+    <section className="relative py-24 md:py-32">
+      <Image src="/division/philo.png" alt="" fill className="object-cover object-center" />
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+
+          {/* LEFT — sticky heading block */}
+          <div className="w-full lg:w-[42%] lg:sticky lg:top-28 self-start">
             <motion.p
-              className="text-orange text-xs font-bold tracking-[0.2em] uppercase mb-5"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              className="text-orange text-[13px] font-bold tracking-[0.3em] uppercase mb-5"
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
               About AvranceCorp
             </motion.p>
-
-            {/* Orange divider */}
-            <motion.div
-              className="w-14 h-[2px] bg-orange mb-8"
-              initial={{ width: 0 }}
-              whileInView={{ width: 56 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-            />
-
-            {/* Heading */}
             <motion.h2
-              className="text-3xl md:text-4xl lg:text-[2.75rem] font-sans text-navy leading-[1.1] mb-8"
-              initial={{ opacity: 0, y: 30 }}
+              className="text-[2.4rem] sm:text-[3rem] lg:text-[3.4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] mb-6"
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.15 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
             >
-              A Development Platform Built On Precision And{" "}
-              <span className="font-light">Long-Term Value</span>
+              A Development<br />Platform Built<br />
+              <span className="text-orange">On Precision.</span>
             </motion.h2>
-
-            {/* Description */}
+            <motion.div
+              className="w-12 h-[2px] bg-orange mb-7"
+              initial={{ width: 0 }}
+              whileInView={{ width: 48 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            />
             <motion.p
-              className="text-navy/70 text-xl leading-[1.85] mb-10 font-medium"
+              className="text-[#6e6e73] text-[16px] sm:text-[17px] leading-[1.85]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              AvranceCorp Developments Is A Real Estate Development Platform
-              Focused On Delivering High-Quality Residential And Commercial
-              Projects. With A Disciplined Approach To Planning, Execution, And
-              Capital Allocation, The Company Creates Assets Designed For
-              Long-Term Performance And Sustainable Growth. Every Decision Is
-              Guided By Precision, Market Intelligence, And A Commitment To
-              Building Communities That Endure.
-            </motion.p>
-
-            {/* Logo text divider */}
-            <motion.div
-              className="flex items-center gap-4 mb-10"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <div className="h-[1px] flex-1 bg-navy/10" />
-              <span className="text-navy/30 text-sm font-bold tracking-[0.15em] uppercase whitespace-nowrap">
-                AvranceCorp
-              </span>
-              <div className="h-[1px] flex-1 bg-navy/10" />
-            </motion.div>
-
-            {/* 2x2 feature grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8">
-              {features.map((feature, i) => (
-                <motion.div
-                  key={feature.title}
-                  className="relative pl-5 border-l-2 border-orange/30"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.35 + i * 0.08 }}
-                >
-                  <h3 className="text-navy text-lg font-bold mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-navy/70 text-sm leading-[1.75] font-medium">
-                    {feature.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
+              AvranceCorp is a real estate development platform focused on delivering high-quality residential and commercial projects. With a disciplined approach to planning, execution, and capital allocation, we create assets designed for long-term performance and sustainable growth.
+            </motion.p>
           </div>
 
-          {/* Right image */}
-          <motion.div
-            className="relative lg:sticky lg:top-24"
-            initial={{ opacity: 0, scale: 0.97 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.2 }}
-          >
-            <div className="relative w-full aspect-[3/4] overflow-hidden">
-              <Image
-                src="/images/glass-building.jpg"
-                alt="Modern glass building"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              {/* Overlay gradient at bottom */}
-              <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-black/30 to-transparent" />
-            </div>
-            {/* Decorative orange corner accent */}
-            <div className="absolute -bottom-3 -right-3 w-24 h-24 border-r-2 border-b-2 border-orange/40 hidden lg:block" />
-          </motion.div>
+          {/* RIGHT — feature rows */}
+          <div className="w-full lg:w-[58%] flex flex-col divide-y divide-[#e8e8ed] border-t border-[#e8e8ed]">
+            {features.map((feature, i) => (
+              <motion.div
+                key={feature.title}
+                className="group flex items-start gap-6 py-8 hover:bg-[#fafafa] transition-colors duration-300 px-2 -mx-2 rounded-xl"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+              >
+                <div className="w-11 h-11 rounded-xl bg-orange/10 border-2 border-orange flex items-center justify-center text-orange shrink-0 group-hover:bg-orange group-hover:text-white transition-all duration-300 mt-0.5">
+                  {feature.icon}
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-[#1d1d1f] text-[17px] font-bold leading-snug mb-2">{feature.title}</h3>
+                  <p className="text-[#6e6e73] text-[14px] leading-[1.75]">{feature.description}</p>
+                </div>
+                <span className="text-[#0F1C3F]/25 text-[2rem] font-bold leading-none shrink-0 group-hover:text-orange/50 transition-colors duration-300 mt-1 hidden sm:block">
+                  0{i + 1}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+
         </div>
       </div>
     </section>

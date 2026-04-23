@@ -1,97 +1,96 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const checkpoints = [
   {
+    number: "01",
     title: "Strategic Market Selection",
-    description:
-      "Identifying high-potential markets through rigorous data analysis and on-the-ground intelligence.",
+    description: "Identifying high-potential markets through rigorous data analysis and on-the-ground intelligence.",
   },
   {
+    number: "02",
     title: "Risk-Managed Execution",
-    description:
-      "Implementing proven frameworks to mitigate downside risk while maximizing upside potential.",
+    description: "Implementing proven frameworks to mitigate downside risk while maximizing upside potential.",
   },
   {
+    number: "03",
     title: "Long-Term Value Creation",
-    description:
-      "Building assets and portfolios designed to deliver sustainable, compounding returns over time.",
+    description: "Building assets and portfolios designed to deliver sustainable, compounding returns over time.",
   },
 ];
 
 export default function DisciplinedValue() {
   return (
-    <section className="bg-[#060E1F] py-24 md:py-32">
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Left: heading + description */}
-          <div>
-            <motion.h2
-              className="text-3xl md:text-4xl lg:text-5xl font-sans text-white leading-[1.1] mb-8"
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
-              A Disciplined Approach To Long-Term Value
-            </motion.h2>
+    <section className="relative overflow-hidden">
+      <Image src="/division/philo.png" alt="" fill className="object-cover object-center" />
 
-            <motion.div
-              className="w-16 h-[2px] bg-orange mb-8"
-              initial={{ width: 0 }}
-              whileInView={{ width: 64 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            />
+      <div className="relative z-10">
+
+        {/* Top band — dark navy with heading */}
+        <div className="bg-[#0F1C3F]/90 px-8 sm:px-16 lg:px-24 py-20 md:py-28">
+          <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+            <div>
+              <motion.p
+                className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-5"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                Our Approach
+              </motion.p>
+              <motion.h2
+                className="text-[2.6rem] sm:text-[3.4rem] lg:text-[4.5rem] font-bold text-white leading-[1.04] tracking-[-0.03em]"
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+              >
+                A Disciplined Approach
+                <br />
+                <span className="text-orange">To Long-Term Value</span>
+              </motion.h2>
+            </div>
 
             <motion.p
-              className="text-white/70 text-base sm:text-xl leading-[1.7] font-medium"
+              className="text-white/60 text-[16px] sm:text-[17px] leading-[1.85] max-w-sm lg:pb-2"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.15 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
             >
-              At Egolia Group, We Combine Strategic Insight With Disciplined Execution To Deliver Sustainable Growth. Our Integrated Approach Allows Us To Identify Opportunities, Manage Risk Effectively, And Create Lasting Value Across Every Stage Of The Investment Lifecycle.
+              At Egolia Group, we combine strategic insight with disciplined execution to deliver sustainable growth across every stage of the investment lifecycle.
             </motion.p>
           </div>
+        </div>
 
-          {/* Right: 3 checklist items with left orange border */}
-          <div className="space-y-6">
-            {checkpoints.map((item, i) => (
-              <motion.div
-                key={item.title}
-                className="border-l-[3px] border-orange pl-6 py-3"
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 + i * 0.12 }}
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <svg
-                    className="w-5 h-5 text-orange flex-shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2.5}
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span className="text-white text-xl font-semibold tracking-wide">
-                    {item.title}
+        {/* Bottom band — 3 step cards side by side */}
+        <div className="bg-white/90 backdrop-blur-sm px-8 sm:px-16 lg:px-24 py-0">
+          <div className="max-w-[1200px] mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-[#e8e8ed]">
+              {checkpoints.map((item, i) => (
+                <motion.div
+                  key={item.title}
+                  className="group py-14 px-8 sm:px-10 hover:bg-orange/5 transition-colors duration-300 cursor-default"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+                >
+                  <span className="block text-[4.5rem] font-black text-[#0F1C3F]/[0.07] leading-none mb-4 group-hover:text-orange/20 transition-colors duration-300 select-none">
+                    {item.number}
                   </span>
-                </div>
-                <p className="text-white/70 text-base leading-[1.7] pl-8 font-medium">
-                  {item.description}
-                </p>
-              </motion.div>
-            ))}
+                  <h3 className="text-[#0F1C3F] text-[18px] font-bold tracking-[-0.01em] mb-3 leading-snug">{item.title}</h3>
+                  <div className="w-6 h-[2px] bg-orange mb-4" />
+                  <p className="text-[#6e6e73] text-[14px] sm:text-[15px] leading-[1.8]">{item.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
+
       </div>
     </section>
   );

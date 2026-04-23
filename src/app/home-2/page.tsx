@@ -99,11 +99,11 @@ export default function Home2() {
             className="flex flex-col sm:flex-row gap-3"
           >
             <Link
-              href="/platform"
+              href="/investor"
               className="inline-flex items-center justify-center gap-2 text-white text-[14px] font-semibold px-8 py-4 rounded-lg transition-all duration-300"
               style={{ backgroundColor: NAVY }}
             >
-              Explore Opportunities
+              Learn More
               <ArrowRight className="w-4 h-4" strokeWidth={2} />
             </Link>
             <Link

@@ -1,13 +1,41 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { Lightbulb, Zap, BarChart3 } from "lucide-react";
+
+const pillars = [
+  {
+    icon: <Lightbulb className="w-6 h-6" strokeWidth={1.4} />,
+    label: "Backed By Insight",
+  },
+  {
+    icon: <Zap className="w-6 h-6" strokeWidth={1.4} />,
+    label: "Driven By Execution",
+  },
+  {
+    icon: <BarChart3 className="w-6 h-6" strokeWidth={1.4} />,
+    label: "Consistent Performance",
+  },
+];
 
 export default function Philosophy() {
   return (
-    <section className="bg-navy-dark py-24 md:py-32">
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-12 text-center">
+    <section className="relative py-28 sm:py-36 overflow-hidden">
+      {/* Background image */}
+      <Image
+        src="/division/philo.png"
+        alt="Our Philosophy"
+        fill
+        className="object-cover object-center"
+      />
+
+
+      <div className="relative z-10 max-w-[900px] mx-auto px-6 lg:px-12 text-center">
+
+        {/* Eyebrow */}
         <motion.p
-          className="text-orange text-base font-semibold tracking-[0.08em] mb-4"
+          className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-6"
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -16,35 +44,58 @@ export default function Philosophy() {
           Philosophy
         </motion.p>
 
-        <motion.div
-          className="w-12 h-[2px] bg-orange mx-auto mb-8"
-          initial={{ width: 0 }}
-          whileInView={{ width: 48 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        />
-
+        {/* Heading */}
         <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-sans text-white leading-[1.15] mb-8"
+          className="text-[2.4rem] sm:text-[3.2rem] lg:text-[4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] mb-6"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.15 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
         >
           Backed By Insight.
           <br />
-          Driven By Execution.
+          <span className="text-orange">Driven By Execution.</span>
         </motion.h2>
 
+        {/* Orange divider */}
+        <motion.div
+          className="w-12 h-[2px] bg-orange mx-auto mb-8"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        />
+
+        {/* Description */}
         <motion.p
-          className="text-white/70 text-xl leading-[1.7] max-w-2xl mx-auto font-medium"
+          className="text-[#4a5568] text-[17px] sm:text-[18px] leading-[1.8] max-w-2xl mx-auto mb-14 font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.25 }}
         >
-          Egolia Group Combines Market Research, Strategic Planning, And Disciplined Execution To Deliver Consistent Performance Across Its Companies.
+          Egolia Group combines market research, strategic planning, and disciplined execution to deliver consistent performance across its companies.
         </motion.p>
+
+        {/* 3 icon pills */}
+        <motion.div
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+        >
+          {pillars.map((item, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-3 bg-white/60 backdrop-blur-sm border border-[#e8e8ed] rounded-full px-6 py-3 text-[#0F1C3F] text-[14px] font-semibold"
+            >
+              <span className="text-orange">{item.icon}</span>
+              {item.label}
+            </div>
+          ))}
+        </motion.div>
+
       </div>
     </section>
   );

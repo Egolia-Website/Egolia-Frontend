@@ -43,6 +43,18 @@ const boardMembers: TeamMemberDetail[] = [
     ],
   },
   {
+    name: "Sergio DiNicola",
+    role: "Director",
+    fullTitle: "Board Of Director",
+    image: "/images/Board Member/sergio.png",
+    bio: "Experienced executive and board member bringing strategic leadership and deep industry expertise to the Egolia Group.",
+    experience: [
+      "Brings a strong track record of executive leadership and governance experience across multiple industries and organizational stages.",
+      "Recognized for strategic clarity, operational discipline, and the ability to guide organizations through periods of growth and transformation.",
+      "Trusted board advisor with expertise in capital strategy, corporate development, and building long-term institutional value.",
+    ],
+  },
+  {
     name: "Tihomir Bajic",
     role: "Director",
     fullTitle: "Board Of Director",
@@ -165,17 +177,17 @@ export default function BoardOfDirectors() {
             transition={{ duration: 0.4, delay: 0.1 }}
           />
 
-          {/* Row 1 — 3 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mb-5">
-            {boardMembers.slice(0, 3).map((member, i) => (
+          {/* Row 1 — 4 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mb-5">
+            {boardMembers.slice(0, 4).map((member, i) => (
               <BoardCard key={member.name} member={member} i={i} onClick={() => setSelected(member)} />
             ))}
           </div>
 
           {/* Row 2 — 4 */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
-            {boardMembers.slice(3).map((member, i) => (
-              <BoardCard key={member.name} member={member} i={i + 3} onClick={() => setSelected(member)} />
+            {boardMembers.slice(4).map((member, i) => (
+              <BoardCard key={member.name} member={member} i={i + 4} onClick={() => setSelected(member)} />
             ))}
           </div>
 

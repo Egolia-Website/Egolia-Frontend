@@ -30,7 +30,7 @@ export default function InvestorHero() {
           >
             Invest With{" "}
             <br />
-            Conviction
+            <span className="text-orange">Confidence</span>
           </motion.h1>
 
           <motion.p
@@ -48,10 +48,10 @@ export default function InvestorHero() {
             transition={{ duration: 0.5, delay: 0.25 }}
           >
             <Link
-              href="/platform"
+              href="/contact"
               className="inline-flex items-center gap-3 bg-[#0F1C3F] text-white text-[14px] font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg hover:bg-[#1A2B5C] transition-colors duration-300"
             >
-              Explore Opportunities
+              Get In Touch
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>

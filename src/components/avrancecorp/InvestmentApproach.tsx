@@ -1,42 +1,47 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
+import { Search, ClipboardList, Zap, TrendingUp } from "lucide-react";
 
 const steps = [
   {
     number: "01",
+    icon: <Search className="w-7 h-7" strokeWidth={1.4} />,
     title: "Identify",
-    description:
-      "We Identify High-Potential Opportunities Through Deep Market Research, Data Analysis, And Strategic Positioning.",
+    description: "We identify high-potential opportunities through deep market research, data analysis, and strategic positioning.",
   },
   {
     number: "02",
+    icon: <ClipboardList className="w-7 h-7" strokeWidth={1.4} />,
     title: "Plan",
-    description:
-      "Every Project Is Guided By Detailed Planning, Financial Discipline, And A Clear Long-Term Vision.",
+    description: "Every project is guided by detailed planning, financial discipline, and a clear long-term vision.",
   },
   {
     number: "03",
+    icon: <Zap className="w-7 h-7" strokeWidth={1.4} />,
     title: "Execute",
-    description:
-      "We Deliver With Precision Through Strong Partnerships, Operational Excellence, And Hands-On Oversight.",
+    description: "We deliver with precision through strong partnerships, operational excellence, and hands-on oversight.",
   },
   {
     number: "04",
+    icon: <TrendingUp className="w-7 h-7" strokeWidth={1.4} />,
     title: "Optimize",
-    description:
-      "We Continuously Refine And Enhance Asset Performance To Maximize Long-Term Value.",
+    description: "We continuously refine and enhance asset performance to maximize long-term value and returns.",
   },
 ];
 
 export default function InvestmentApproach() {
   return (
-    <section className="bg-[#3A3A3A] py-24 md:py-36 overflow-hidden">
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
+    <section className="relative py-24 md:py-32 overflow-hidden">
+      <Image src="/division/philo.png" alt="" fill className="object-cover object-center" />
+
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14">
+
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <motion.p
-            className="text-orange text-xs font-bold tracking-[0.2em] uppercase mb-5"
+            className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-5"
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -44,99 +49,60 @@ export default function InvestmentApproach() {
           >
             Our Approach
           </motion.p>
-
-          <motion.div
-            className="w-14 h-[2px] bg-orange mx-auto mb-8"
-            initial={{ width: 0 }}
-            whileInView={{ width: 56 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-          />
-
           <motion.h2
-            className="text-3xl md:text-4xl lg:text-5xl font-sans text-white leading-[1.1] mb-6"
-            initial={{ opacity: 0, y: 30 }}
+            className="text-[2.4rem] sm:text-[3.2rem] lg:text-[4rem] font-bold text-[#1d1d1f] leading-[1.08] tracking-[-0.025em] mb-5"
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.15 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
           >
-            A Structured
-            <br />
-            <span className="font-light">Investment Process</span>
+            A Structured Investment Process
           </motion.h2>
-
           <motion.p
-            className="text-white/70 text-xl leading-[1.8] max-w-2xl mx-auto font-medium"
-            initial={{ opacity: 0, y: 20 }}
+            className="text-[#6e6e73] text-[17px] leading-[1.8] max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Our Investment Strategy Is Built On Disciplined Research, Strategic
-            Execution, And Long-Term Value Creation Across Every Stage Of The
-            Lifecycle.
+            Our strategy is built on disciplined research, strategic execution, and long-term value creation across every stage of the development lifecycle.
           </motion.p>
         </div>
 
-        {/* Timeline */}
+        {/* Steps grid */}
         <div className="relative">
-          {/* Horizontal line */}
-          <motion.div
-            className="hidden md:block absolute top-0 left-0 right-0 h-[2px] bg-white/15"
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.3 }}
-            style={{ transformOrigin: "left" }}
-          />
 
-          {/* Orange dots on the line */}
-          <div className="hidden md:flex absolute top-0 left-0 right-0 justify-between">
-            {steps.map((_, i) => (
-              <motion.div
-                key={i}
-                className="relative -top-[5px] w-3 h-3 bg-orange rounded-full"
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.4,
-                  delay: 0.6 + i * 0.15,
-                  type: "spring",
-                  stiffness: 300,
-                }}
-              >
-                {/* Pulse ring */}
-                <div className="absolute inset-0 rounded-full border border-orange/30 animate-ping" />
-              </motion.div>
-            ))}
-          </div>
+          {/* Connector line — desktop only */}
+          <div className="hidden lg:block absolute top-[52px] left-[12.5%] right-[12.5%] h-[1.5px] bg-[#e8e8ed] z-0" />
 
-          {/* Step columns */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 relative z-10">
             {steps.map((step, i) => (
               <motion.div
                 key={step.title}
-                className="relative"
+                className="group bg-white border border-[#e8e8ed] rounded-2xl p-7 shadow-sm hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 + i * 0.12 }}
+                transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
               >
-                {/* Step number */}
-                <span className="text-orange/30 text-5xl font-bold absolute -top-2 right-0 select-none hidden md:block">
-                  {step.number}
+                {/* Icon circle */}
+                <div className="w-[52px] h-[52px] rounded-xl bg-[#0F1C3F] flex items-center justify-center text-white mx-auto mb-5 group-hover:bg-orange transition-colors duration-300">
+                  {step.icon}
+                </div>
+
+                {/* Step number badge */}
+                <span className="inline-block text-[11px] font-bold tracking-[0.2em] text-orange bg-orange/10 rounded-full px-3 py-1 mb-4">
+                  STEP {step.number}
                 </span>
-                <h3 className="text-white text-xl font-bold mb-4">
-                  {step.title}
-                </h3>
-                <p className="text-white/70 text-base leading-[1.8] font-medium">
-                  {step.description}
-                </p>
+
+                <h3 className="text-[#1d1d1f] text-[18px] font-bold leading-snug mb-3">{step.title}</h3>
+                <div className="w-6 h-[2px] bg-orange mx-auto mb-4" />
+                <p className="text-[#6e6e73] text-[14px] leading-[1.75]">{step.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );

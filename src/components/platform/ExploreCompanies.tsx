@@ -3,96 +3,151 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 const companies = [
   {
-    image: "/images/avrancecorp.jpg",
-    name: "AvranceCorp",
+    logo: "/images/home/logo-avrancecorp.png",
+    logoW: 140, logoH: 48,
+    name: "AvranceCorp Developments",
     description: "Real estate development focused on delivering high-quality residential and commercial projects.",
     link: "https://avrancecorp.com/",
+    external: true,
   },
   {
-    image: "/images/traderea.png",
+    logo: "/images/TradeREA-Light-Logo.png",
+    logoW: 160, logoH: 48,
     name: "TradeREA",
     description: "A digital investment platform providing access to real estate opportunities through innovative solutions.",
     link: "https://traderea.com/",
+    external: true,
   },
   {
-    image: "/images/avrancecapital.jpg",
-    name: "AvranceCapital",
+    logo: "/images/home/logo-avrance-capital.png",
+    logoW: 140, logoH: 48,
+    name: "Avrance Capital",
     description: "Investment management focused on structuring and managing opportunities for long-term value creation.",
     link: "/platform/avrancecapital",
+    external: false,
   },
   {
-    image: "/images/metadata.jpg",
+    logo: "/images/metada.png",
+    logoW: 220, logoH: 72,
     name: "Metadata & Research",
-    description: "Research-driven insights and strategic intelligence supporting informed decisions across investment and development.",
+    description: "Research-driven insights and strategic intelligence supporting informed decision-making and development.",
     link: "/platform/metadata",
+    external: false,
+  },
+  {
+    logo: "/images/mining-logo.png",
+    logoW: 150, logoH: 48,
+    name: "Avrance Mining",
+    description: "Mining operations and resource development focused on responsible growth and sustainable value.",
+    link: "/platform/avrancemining",
+    external: false,
   },
 ];
 
 export default function ExploreCompanies() {
   return (
-    <section className="bg-white py-24 md:py-32">
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-12">
+    <section className="relative py-24 sm:py-32 overflow-hidden">
+      {/* Background */}
+      <Image
+        src="/division/explore1.png"
+        alt="Explore Our Companies"
+        fill
+        className="object-cover object-center"
+        sizes="100vw"
+        quality={100}
+        priority
+      />
+
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10">
+
+        {/* Eyebrow */}
+        <motion.div
+          className="flex items-center justify-center mb-5"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <span className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase">Our Operating Network</span>
+        </motion.div>
+
+        {/* Heading */}
         <motion.h2
-          className="text-center text-3xl md:text-4xl lg:text-5xl font-sans text-navy mb-6"
+          className="text-center text-[2.6rem] sm:text-[3.4rem] lg:text-[4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] mb-5"
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
         >
           Explore Our Companies
         </motion.h2>
 
+        {/* Description */}
         <motion.p
-          className="text-center text-navy/70 text-xl leading-[1.7] max-w-2xl mx-auto mb-16 font-medium"
+          className="text-center text-[#4a5568] text-[17px] leading-[1.75] max-w-2xl mx-auto mb-16 font-medium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
         >
-          Each Company Within Egolia Group Plays A Unique Role In Delivering Integrated Solutions Across Real Estate, Investment, And Innovation.
+          Each company within Egolia Group plays a unique role in delivering integrated solutions across real estate, investment, and innovation.
         </motion.p>
 
-        {/* 2x2 grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* 5-column cards — scroll on mobile */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {companies.map((company, i) => (
             <motion.div
-              key={company.name}
-              className="group overflow-hidden"
-              initial={{ opacity: 0, y: 25 }}
+              key={i}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
+              transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
+              className="group bg-white border border-[#e8e8ed] rounded-2xl p-7 flex flex-col hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] transition-all duration-300"
             >
-              {/* Image */}
-              <div className="relative w-full aspect-[16/10] overflow-hidden">
-                <Image
-                  src={company.image}
-                  alt={company.name}
-                  fill
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              {/* Logo */}
+              <div className="h-16 flex items-center mb-5">
+                {company.logo ? (
+                  <Image
+                    src={company.logo}
+                    alt={company.name}
+                    width={company.logoW}
+                    height={company.logoH}
+                    className={`object-contain object-left w-auto ${company.name === "Metadata & Research" ? "max-h-16" : "max-h-10"}`}
+                    quality={100}
+                  />
+                ) : (
+                  <div className="w-14 h-14 rounded-xl bg-[#0F1C3F] flex items-center justify-center text-white text-[10px] font-bold tracking-wide">
+                    AM
+                  </div>
+                )}
               </div>
 
-              {/* Content */}
-              <div className="pt-5">
-                <h3 className="text-navy text-xl font-bold mb-2">{company.name}</h3>
-                <p className="text-navy/70 text-base leading-[1.7] mb-4 font-medium">{company.description}</p>
-                <Link
-                  href={company.link}
-                  target={company.link.startsWith("http") ? "_blank" : undefined}
-                  className="text-navy text-base font-semibold border-b-2 border-orange pb-0.5 hover:text-orange transition-colors duration-300"
-                >
-                  View Company
-                </Link>
-              </div>
+              {/* Name */}
+              <h3 className="text-[#0F1C3F] font-bold text-[17px] leading-snug mb-3">{company.name}</h3>
+
+              {/* Underline */}
+              <div className="w-7 h-[2px] bg-orange mb-4" />
+
+              {/* Description */}
+              <p className="text-[#6e6e73] text-[13px] leading-[1.75] flex-1 mb-6">{company.description}</p>
+
+              {/* Link */}
+              <Link
+                href={company.link}
+                target={company.link.startsWith("http") ? "_blank" : undefined}
+                className="inline-flex items-center gap-2 text-[#0F1C3F] text-[13px] font-bold group-hover:text-orange transition-colors duration-300"
+              >
+                View Company
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" strokeWidth={2} />
+              </Link>
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );
