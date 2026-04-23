@@ -49,7 +49,7 @@ export default function TeamSection({ title, members }: TeamSectionProps) {
                 onClick={() => setSelected(member)}
               >
                 {/* Circle photo */}
-                <div className="relative w-[170px] h-[170px] md:w-[220px] md:h-[220px] rounded-full overflow-hidden mb-4 bg-[#eaeaed] shadow-[0_4px_20px_rgba(0,0,0,0.06)] ring-[3px] ring-[#eaeaed] group-hover:shadow-[0_6px_28px_rgba(232,121,43,0.15)] group-hover:ring-orange/30 transition-all duration-300">
+                <div className="relative w-[140px] h-[140px] sm:w-[170px] sm:h-[170px] md:w-[200px] md:h-[200px] lg:w-[220px] lg:h-[220px] rounded-full overflow-hidden mb-4 bg-[#eaeaed] shadow-[0_4px_20px_rgba(0,0,0,0.06)] ring-[3px] ring-[#eaeaed] group-hover:shadow-[0_6px_28px_rgba(232,121,43,0.15)] group-hover:ring-orange/30 transition-all duration-300">
                   <Image
                     src={member.image}
                     alt={member.name}

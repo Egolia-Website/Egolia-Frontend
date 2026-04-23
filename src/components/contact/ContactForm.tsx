@@ -64,7 +64,7 @@ export default function ContactForm() {
 
         {/* Map — full width within container */}
         <motion.div
-          className="w-full h-[420px] rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.1)] mb-8"
+          className="w-full h-[220px] sm:h-[320px] md:h-[420px] rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.1)] mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}

@@ -44,7 +44,7 @@ export default function AboutHero() {
                 initial={{ y: "110%", opacity: 0 }}
                 animate={{ y: "0%", opacity: 1 }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 + i * 0.1 }}
-                className={`block text-[clamp(3.2rem,6vw,5.5rem)] font-bold leading-[1.08] tracking-[-0.03em] ${line.color}`}
+                className={`block text-[clamp(2.4rem,4.5vw,4rem)] font-bold leading-[1.08] tracking-[-0.03em] ${line.color}`}
               >
                 {line.text}
               </motion.h1>
@@ -62,7 +62,7 @@ export default function AboutHero() {
         </motion.p>
 
         <motion.div
-          className="flex items-center gap-8"
+          className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
@@ -76,7 +76,7 @@ export default function AboutHero() {
           </Link>
           <Link
             href="/investor"
-            className="text-white/70 hover:text-white text-[15px] font-semibold transition-colors duration-300 flex items-center gap-2"
+            className="border border-white/40 hover:border-white hover:bg-white/10 text-white text-[15px] font-semibold px-7 py-4 rounded-lg transition-all duration-300 flex items-center gap-2"
           >
             Our Platform
             <ArrowRight className="w-4 h-4" strokeWidth={1.8} />

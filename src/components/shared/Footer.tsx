@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="bg-[#f5f5f7] border-t border-[#0F1C3F]/[0.06]">
 
       {/* ── Main footer grid ── */}
-      <div className="max-w-[1280px] mx-auto px-8 lg:px-14 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-14 py-14 md:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 lg:gap-14">
 
         {/* Col 1 — Brand */}
         <div>
@@ -112,11 +112,8 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} Egolia Group. All rights reserved.
         </p>
 <div className="flex gap-6">
-          {["Privacy Policy", "Terms of Use"].map((item) => (
-            <Link key={item} href="#" className="text-[#6e6e73] text-[13px] hover:text-orange transition-colors duration-200">
-              {item}
-            </Link>
-          ))}
+          <Link href="/privacy" className="text-[#6e6e73] text-[13px] hover:text-orange transition-colors duration-200">Privacy Policy</Link>
+          <Link href="/terms" className="text-[#6e6e73] text-[13px] hover:text-orange transition-colors duration-200">Terms of Use</Link>
         </div>
       </div>
 

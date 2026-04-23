@@ -10,7 +10,7 @@ export default function PlatformHero() {
 
       <div className="absolute inset-0">
         <Image
-          src="/division/div-hero.png"
+          src="/images/companyy.png"
           alt="Egolia Group — Our Companies"
           fill
           className="object-cover object-center"
@@ -53,7 +53,7 @@ export default function PlatformHero() {
           initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ delay: 0.55, duration: 0.9 }}
-          className="text-white/80 text-[18px] leading-[1.8] max-w-[560px] mx-auto mb-12"
+          className="text-white/80 text-[15px] sm:text-[17px] md:text-[18px] leading-[1.8] max-w-[560px] mx-auto mb-12"
         >
           Explore the businesses that form Egolia Group&apos;s integrated platform across development, investment, and innovation.
         </motion.p>
@@ -62,7 +62,7 @@ export default function PlatformHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="flex items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Link
             href="/investor"

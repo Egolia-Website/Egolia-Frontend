@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Wrench, Link2, FlaskConical, Zap } from "lucide-react";
 
@@ -32,8 +33,10 @@ const reasons = [
 
 export default function WhyInvest() {
   return (
-    <section className="bg-white py-24 md:py-32">
-      <div className="max-w-[1200px] mx-auto px-6 lg:px-14">
+    <section className="relative bg-white py-24 md:py-32 overflow-hidden">
+      <Image src="/images/backImage.png" alt="" fill className="object-cover object-center" />
+      <div className="absolute inset-0 bg-white/92" />
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-14 relative z-10">
 
         {/* Top header row */}
         <div className="mb-14">

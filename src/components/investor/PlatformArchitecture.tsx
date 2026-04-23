@@ -13,6 +13,13 @@ const companies = [
     href: "/platform/avrancecorp",
   },
   {
+    icon: <ArrowLeftRight className="w-7 h-7" strokeWidth={1.4} />,
+    label: "TradeREA",
+    title: "The access and liquidity layer for private markets.",
+    description: "TradeREA is being developed to expand investor access to real assets through digital issuance, structured participation, and future secondary market connectivity through regulated partnerships.",
+    href: "/platform/traderea",
+  },
+  {
     icon: <DollarSign className="w-7 h-7" strokeWidth={1.4} />,
     label: "Avrance Capital",
     title: "Private capital, deployed with precision.",
@@ -25,13 +32,6 @@ const companies = [
     title: "Intelligence that strengthens every decision.",
     description: "Research, market data, analytics, and whitepaper production are core to how Egolia underwrites, communicates, and builds strategic advantage — not peripheral functions.",
     href: "/platform/metadata",
-  },
-  {
-    icon: <ArrowLeftRight className="w-7 h-7" strokeWidth={1.4} />,
-    label: "TradeREA",
-    title: "The access and liquidity layer for private markets.",
-    description: "TradeREA is being developed to expand investor access to real assets through digital issuance, structured participation, and future secondary market connectivity through regulated partnerships.",
-    href: "/platform/traderea",
   },
 ];
 

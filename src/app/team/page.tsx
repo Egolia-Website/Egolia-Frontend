@@ -9,18 +9,6 @@ import TeamSection from "@/components/team/TeamSection";
 
 const executiveTeam = [
   {
-    name: "Wole Olapoju",
-    role: "Chief Technology Officer",
-    fullTitle: "Chief Technology Officer",
-    bio: "Visionary leader driving Egolia Group's strategic direction and long-term growth across real estate, capital markets, and digital infrastructure.",
-    image: "https://ui-avatars.com/api/?name=Wole+Olapoju&background=0F1C3F&color=fff&size=400&font-size=0.35",
-    experience: [
-      "Senior executive with a proven track record in leading high-growth organizations across multiple sectors.",
-      "Deep expertise in capital allocation, organizational strategy, and cross-sector partnership development.",
-      "Recognized for his ability to align vision with execution, building institutions positioned for long-term market leadership.",
-    ],
-  },
-  {
     name: "Jason R. Macintosh",
     role: "Chief Financial Officer",
     fullTitle: "Chief Financial Officer",
@@ -45,15 +33,27 @@ const executiveTeam = [
     ],
   },
   {
-    name: "Rounak S. Langhe",
-    role: "Chief Investment Officer",
-    fullTitle: "Chief Investment Officer",
-    bio: "14 years of comprehensive experience in portfolio construction, risk management, and client relationship management.",
-    image: "/images/Board Member/rounak.png",
+    name: "Michael Spencley",
+    role: "Director",
+    fullTitle: "Board Of Director",
+    image: "/images/Board Member/michael-spencley.png",
+    bio: "Senior executive with more than 30 years of CEO experience providing fiscal, strategic, and operational leadership.",
     experience: [
-      "Chief Investment Officer and Portfolio Manager at Durham Asset Management, Inc.",
-      "Expert in asset-liability management, credit markets, structured products, and fixed-income trading.",
-      "CFA charterholder and Chartered Investment Manager with MBA from University of Iowa; maintained first-quartile performance.",
+      "Dynamic, results-oriented leader who has consistently translated complex challenges into clear, actionable solutions that drive organizational improvement and long-term value creation.",
+      "Leadership style combines accountability, team development, and execution, enabling management teams to achieve high performance and implement best practices across the organization.",
+      "Board-level experience with both private and public companies. Expertise includes strategy, finance, budgeting, profit management, sales and marketing leadership, corporate development, strategic alliances, governance, contract negotiations, regulatory relations, and performance improvement.",
+    ],
+  },
+  {
+    name: "Wole Olapoju",
+    role: "Chief Technology Officer",
+    fullTitle: "Chief Technology Officer",
+    bio: "Technology leader driving Egolia Group's platform architecture, digital infrastructure, and operational systems.",
+    image: "/images/Board Member/wole.png",
+    experience: [
+      "Senior executive with a proven track record in leading high-growth organizations across multiple sectors.",
+      "Deep expertise in capital allocation, organizational strategy, and cross-sector partnership development.",
+      "Recognized for his ability to align vision with execution, building institutions positioned for long-term market leadership.",
     ],
   },
 ];
@@ -61,26 +61,26 @@ const executiveTeam = [
 const advisoryTeam = [
   {
     name: "Eric Stevenson",
-    role: "Senior Advisor",
-    fullTitle: "Senior Strategic Advisor",
-    bio: "Seasoned executive with decades of experience advising growth-stage companies on capital formation, governance, and strategic positioning.",
-    image: "https://ui-avatars.com/api/?name=Eric+Stevenson&background=0F1C3F&color=fff&size=400&font-size=0.35",
+    role: "Senior Capital Markets Advisor",
+    fullTitle: "Senior Capital Markets Advisor",
+    bio: "Capital markets veteran with over 50 years of experience, having taken 76 companies public and raised more than $500 million throughout his career.",
+    image: "/images/Board Member/Eric Stevenson.png",
     experience: [
-      "Extensive background in corporate advisory across real estate, finance, and technology sectors.",
-      "Recognized for bringing institutional discipline to emerging organizations navigating complex markets.",
-      "Trusted advisor to senior leadership teams on matters of governance, expansion, and stakeholder relations.",
+      "Recognized by the Wall Street Journal as one of the top management analysts in the United States, with a cross-disciplinary background in securities law, public company strategy, and financial communications.",
+      "Founder of Price Target Media — the only QMO-designated agency recognized by SEDAR and the SEC for micro-cap public company communications — and previously founded World City Press, one of North America's earliest and largest online news networks.",
+      "Extensive experience in corporate development, valuation, regulatory strategy, and public-market readiness supports Egolia's long-term capital-raise initiatives and future listing strategy.",
     ],
   },
   {
-    name: "John Farraci",
-    role: "Advisor",
-    fullTitle: "Strategic Advisor",
-    bio: "Senior business leader and advisor with a strong record of value creation across North American markets.",
-    image: "https://ui-avatars.com/api/?name=John+Farraci&background=0F1C3F&color=fff&size=400&font-size=0.35",
+    name: "John Faraci",
+    role: "Senior Legal Advisor",
+    fullTitle: "Senior Legal Advisor",
+    bio: "One of Ontario's most strategic legal minds in development, with a proven track record navigating complex municipal, planning, and regulatory challenges on large-scale construction projects.",
+    image: "/images/Board Member/john-faraci.png",
     experience: [
-      "Multi-decade career spanning operations, finance, and strategic development in competitive industries.",
-      "Brings deep operational insight and network leverage to portfolio companies at key inflection points.",
-      "Known for pragmatic leadership and the ability to accelerate organizational momentum.",
+      "Expertise spans zoning, entitlement strategy, municipal negotiations, and development approvals — playing a pivotal role in turning around major AvranceCorp projects by navigating municipal processes and securing critical planning outcomes.",
+      "Proven ability to work effectively with municipal governments and planning departments in high-stakes development environments.",
+      "Provides senior legal oversight at Egolia across development approvals, municipal engagement, regulatory compliance, and strategic structuring for major projects.",
     ],
   },
   {
@@ -103,11 +103,23 @@ const nonExecutiveTeam = [
     role: "Product Designer",
     fullTitle: "Product Designer",
     bio: "Technology strategist and digital infrastructure lead contributing to Egolia Group's platform architecture and operational systems.",
-    image: "https://ui-avatars.com/api/?name=Tahran+Chowdhury&background=0F1C3F&color=fff&size=400&font-size=0.35",
+    image: "/images/Board Member/tehran.png",
     experience: [
       "Leads technology development and digital product initiatives for Egolia Group's platform ecosystem.",
       "Expert in full-stack engineering, financial systems integration, and scalable web infrastructure.",
       "Focused on building institutional-grade digital tools that support the organization's long-term growth.",
+    ],
+  },
+  {
+    name: "Pauline",
+    role: "Non-Executive Director",
+    fullTitle: "Non-Executive Director",
+    bio: "Senior professional and non-executive contributor providing independent governance insight and strategic counsel to Egolia Group.",
+    image: "/images/Board Member/pauline.png",
+    experience: [
+      "Extensive background in organizational leadership and stakeholder engagement.",
+      "Brings a disciplined, outcomes-focused approach to governance and advisory responsibilities.",
+      "Committed to fostering inclusive, accountable, and forward-thinking institutional culture.",
     ],
   },
   {
@@ -120,18 +132,6 @@ const nonExecutiveTeam = [
       "Broad experience across financial services and real estate advisory.",
       "Contributes independent oversight and strategic perspective to organizational decision-making.",
       "Recognized for balanced judgment and commitment to long-term stakeholder value.",
-    ],
-  },
-  {
-    name: "Pauline",
-    role: "Non-Executive Director",
-    fullTitle: "Non-Executive Director",
-    bio: "Senior professional and non-executive contributor providing independent governance insight and strategic counsel to Egolia Group.",
-    image: "https://ui-avatars.com/api/?name=Pauline&background=0F1C3F&color=fff&size=400&font-size=0.35",
-    experience: [
-      "Extensive background in organizational leadership and stakeholder engagement.",
-      "Brings a disciplined, outcomes-focused approach to governance and advisory responsibilities.",
-      "Committed to fostering inclusive, accountable, and forward-thinking institutional culture.",
     ],
   },
 ];

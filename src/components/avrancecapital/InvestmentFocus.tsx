@@ -6,27 +6,27 @@ import { Handshake, LayoutGrid, Globe, Building2 } from "lucide-react";
 const sectors = [
   {
     icon: Handshake,
-    number: "01",
     title: "Strategic Partnerships",
-    description: "Collaborations with experienced operators and developers to unlock long-term value.",
+    description: "Collaborations with experienced operators and developers to unlock long-term value across real estate and private markets.",
+    accent: "from-orange/20 to-transparent",
   },
   {
     icon: LayoutGrid,
-    number: "02",
     title: "Structured Investments",
-    description: "Strategically designed investment vehicles focused on stability and risk-adjusted returns.",
+    description: "Strategically designed investment vehicles focused on stability and risk-adjusted returns over the long term.",
+    accent: "from-orange/15 to-transparent",
   },
   {
     icon: Globe,
-    number: "03",
     title: "Private Markets",
-    description: "Access to high-growth opportunities across private equity and emerging sectors.",
+    description: "Access to high-growth opportunities across private equity and emerging sectors with disciplined underwriting.",
+    accent: "from-orange/20 to-transparent",
   },
   {
     icon: Building2,
-    number: "04",
     title: "Real Estate",
-    description: "Institutional-quality investments across residential, commercial, and mixed-use assets in key markets.",
+    description: "Institutional-quality investments across residential, commercial, and mixed-use assets in key growth markets.",
+    accent: "from-orange/15 to-transparent",
   },
 ];
 
@@ -35,8 +35,8 @@ export default function InvestmentFocus() {
     <section className="bg-white py-24 md:py-32">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-14">
 
-        {/* Header — left aligned */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+        {/* Header */}
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
           <div>
             <motion.p
               className="text-orange text-[13px] font-bold tracking-[0.3em] uppercase mb-5"
@@ -69,33 +69,34 @@ export default function InvestmentFocus() {
           </motion.p>
         </div>
 
-        {/* Horizontal row list */}
-        <div className="border-t border-[#e8e8ed]">
+        {/* 2x2 bento grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {sectors.map((sector, i) => (
             <motion.div
               key={sector.title}
-              className="group flex items-center gap-6 sm:gap-10 py-7 border-b border-[#e8e8ed] hover:bg-[#fafafa] transition-colors duration-300 px-3 -mx-3 rounded-xl"
-              initial={{ opacity: 0, y: 20 }}
+              className="group relative overflow-hidden rounded-2xl border border-[#e8e8ed] bg-[#f5f5f7] p-8 hover:border-orange/30 hover:shadow-[0_8px_32px_rgba(0,0,0,0.07)] hover:-translate-y-1 transition-all duration-400"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              {/* Faded number */}
-              <span className="text-[2.5rem] font-bold text-[#0F1C3F]/10 leading-none w-12 shrink-0 group-hover:text-orange/20 transition-colors duration-300 hidden sm:block">
-                {sector.number}
-              </span>
+              {/* Left accent bar */}
+              <div className="absolute left-0 top-6 bottom-6 w-[3px] rounded-full bg-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-              {/* Icon */}
-              <div className="w-12 h-12 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center shrink-0 shadow-[0_4px_16px_rgba(232,121,43,0.15)] group-hover:bg-orange transition-all duration-300">
+              {/* Watermark icon — top right */}
+              <div className="absolute top-5 right-5 opacity-[0.06] group-hover:opacity-[0.1] transition-opacity duration-300">
+                <sector.icon className="w-20 h-20 text-[#0F1C3F]" strokeWidth={1} />
+              </div>
+
+              {/* Premium icon */}
+              <div className="w-12 h-12 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center shadow-[0_4px_16px_rgba(232,121,43,0.18)] group-hover:bg-orange transition-all duration-300 mb-6">
                 <sector.icon className="w-5 h-5 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={2} />
               </div>
 
               {/* Content */}
-              <div className="flex-1 min-w-0">
-                <h3 className="text-[#1d1d1f] text-[18px] font-bold leading-snug mb-1">{sector.title}</h3>
-                <p className="text-[#6e6e73] text-[14px] leading-[1.7]">{sector.description}</p>
-              </div>
-
+              <h3 className="text-[#1d1d1f] text-[20px] font-bold leading-snug mb-3">{sector.title}</h3>
+              <div className="w-8 h-[2px] bg-orange mb-4 group-hover:w-14 transition-all duration-300" />
+              <p className="text-[#6e6e73] text-[14px] leading-[1.8]">{sector.description}</p>
             </motion.div>
           ))}
         </div>

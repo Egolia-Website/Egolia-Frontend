@@ -214,6 +214,8 @@ export default function Home() {
           2 — OUR PHILOSOPHY
       ══════════════════════════════════════ */}
       <section className="relative bg-white py-24 sm:py-32 lg:py-44 px-6 overflow-hidden">
+        <Image src="/images/backImage.png" alt="" fill className="object-cover object-center" />
+        <div className="absolute inset-0 bg-white/92" />
 
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none" aria-hidden>
           <span className="text-[20vw] font-black text-[#1d1d1f]/[0.03] leading-none tracking-tighter whitespace-nowrap">
@@ -524,7 +526,6 @@ export default function Home() {
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 pointer-events-none lg:hidden" style={{ background: "linear-gradient(to bottom, transparent 50%, #f5f5f7 100%)" }} />
           </FadeUp>
 
           <div className="lg:w-[50%] flex flex-col justify-center px-6 sm:px-12 lg:px-20 xl:px-24 py-14 sm:py-20 lg:py-0">
@@ -566,6 +567,8 @@ export default function Home() {
           6 — BY THE NUMBERS
       ══════════════════════════════════════ */}
       <section className="relative py-16 sm:py-20 lg:py-28 px-6 lg:px-14 overflow-hidden bg-white">
+        <Image src="/images/backImage.png" alt="" fill className="object-cover object-center" />
+        <div className="absolute inset-0 bg-white/92" />
 
         <div className="absolute top-[-20%] left-[-10%] w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] rounded-full bg-orange/6 blur-[150px] pointer-events-none" />
         <div className="absolute bottom-[-20%] right-[-10%] w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] rounded-full bg-blue/6 blur-[130px] pointer-events-none" />

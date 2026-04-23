@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const frameworkRows = [
@@ -17,8 +18,10 @@ const perspectiveRows = [
 
 export default function InstitutionalFramework() {
   return (
-    <section className="bg-white py-24 md:py-32">
-      <div className="max-w-[1200px] mx-auto px-6 lg:px-14">
+    <section className="relative bg-white py-24 md:py-32 overflow-hidden">
+      <Image src="/images/backImage.png" alt="" fill className="object-cover object-center" />
+      <div className="absolute inset-0 bg-white/92" />
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-14 relative z-10">
 
         <div className="text-center mb-16">
           <motion.p
@@ -62,7 +65,7 @@ export default function InstitutionalFramework() {
               {frameworkRows.map((row, i) => (
                 <motion.div
                   key={row.label}
-                  className="py-5 first:pt-0 last:pb-0 grid grid-cols-[100px_1fr] gap-4"
+                  className="py-5 first:pt-0 last:pb-0 grid grid-cols-[80px_1fr] sm:grid-cols-[100px_1fr] gap-4"
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -97,7 +100,7 @@ export default function InstitutionalFramework() {
               {perspectiveRows.map((row, i) => (
                 <motion.div
                   key={row.label}
-                  className="py-4 first:pt-0 last:pb-0 grid grid-cols-[90px_1fr] gap-4"
+                  className="py-4 first:pt-0 last:pb-0 grid grid-cols-[80px_1fr] sm:grid-cols-[90px_1fr] gap-4"
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}

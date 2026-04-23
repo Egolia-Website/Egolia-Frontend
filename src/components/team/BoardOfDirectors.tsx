@@ -20,8 +20,8 @@ const boardMembers: TeamMemberDetail[] = [
   },
   {
     name: "Ravi Thakur",
-    role: "Founder & Vice Chairman",
-    fullTitle: "Founder & Vice Chairman, Acting CEO",
+    role: "Vice Chairman",
+    fullTitle: "Vice Chairman, Acting CEO",
     image: "/images/Board Member/ravi-thakur.png",
     bio: "Senior executive with more than 30 years of leadership experience across real estate development and investment strategy.",
     experience: [
@@ -47,11 +47,11 @@ const boardMembers: TeamMemberDetail[] = [
     role: "Director",
     fullTitle: "Board Of Director",
     image: "/images/Board Member/sergio.png",
-    bio: "Experienced executive and board member bringing strategic leadership and deep industry expertise to the Egolia Group.",
+    bio: "Co-founder of Eringate Homes with over two decades of expertise in residential development across Ontario.",
     experience: [
-      "Brings a strong track record of executive leadership and governance experience across multiple industries and organizational stages.",
-      "Recognized for strategic clarity, operational discipline, and the ability to guide organizations through periods of growth and transformation.",
-      "Trusted board advisor with expertise in capital strategy, corporate development, and building long-term institutional value.",
+      "Co-founded Eringate Homes in 2016, bringing together individual expertise in construction and home building to deliver state-of-the-art residential developments across major Ontario urban growth areas including Georgetown, Mississauga, Aurora, and Peterborough.",
+      "Oversaw a portfolio of featured projects generating combined revenues exceeding $170 million, including Heights of Trafalgar, The Grand Chateaus, Burnham Meadows, and Ravines of Olde Meadowvale — demonstrating a consistent track record of high-quality development and delivery.",
+      "Recognized for integrating all facets of the housing and development industry — including land use planning, construction, design, and financing — into a cohesive boutique development model focused on quality, sustainability, and exceptional client service.",
     ],
   },
   {
@@ -115,7 +115,7 @@ function BoardCard({ member, i, onClick }: { member: TeamMemberDetail; i: number
       onClick={onClick}
     >
       {/* Circle photo */}
-      <div className="relative w-[140px] h-[140px] rounded-full overflow-hidden mb-5 bg-[#eaeaed] shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
+      <div className="relative w-[110px] h-[110px] sm:w-[130px] sm:h-[130px] md:w-[140px] md:h-[140px] rounded-full overflow-hidden mb-5 bg-[#eaeaed] shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
         <Image
           src={member.image}
           alt={member.name}
@@ -139,11 +139,6 @@ function BoardCard({ member, i, onClick }: { member: TeamMemberDetail; i: number
         <span className="text-[#6e6e73]/40 hover:text-orange transition-colors duration-200" onClick={(e) => e.stopPropagation()}>
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-          </svg>
-        </span>
-        <span className="text-[#6e6e73]/40 hover:text-orange transition-colors duration-200" onClick={(e) => e.stopPropagation()}>
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
           </svg>
         </span>
       </div>

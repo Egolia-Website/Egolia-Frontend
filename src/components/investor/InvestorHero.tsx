@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+const titleLines = ["Invest With", "Confidence"];
+
 export default function InvestorHero() {
   return (
     <section className="relative w-full min-h-[92vh] pt-[84px] overflow-hidden">
@@ -22,22 +24,28 @@ export default function InvestorHero() {
       {/* Content */}
       <div className="relative z-10 h-full max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-12 flex items-center pt-28 sm:pt-16 md:pt-20 lg:pt-12">
         <div className="max-w-[560px]">
-          <motion.h1
-            className="text-[#0F1C3F] text-[42px] sm:text-5xl md:text-6xl lg:text-[72px] font-bold tracking-[-0.03em] leading-[1.02] md:leading-[1.08] mb-5 md:mb-6"
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            Invest With{" "}
-            <br />
-            <span className="text-orange">Confidence</span>
-          </motion.h1>
+
+          {/* Title — line by line reveal */}
+          <h1 className="text-[#0F1C3F] text-[42px] sm:text-5xl md:text-6xl lg:text-[72px] font-bold tracking-[-0.03em] leading-[1.02] md:leading-[1.08] mb-5 md:mb-6">
+            {titleLines.map((line, i) => (
+              <div key={i} className="overflow-hidden">
+                <motion.span
+                  className={`block ${i === 1 ? "text-orange" : ""}`}
+                  initial={{ y: "110%", opacity: 0, filter: "blur(6px)" }}
+                  animate={{ y: "0%", opacity: 1, filter: "blur(0px)" }}
+                  transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.1 + i * 0.14 }}
+                >
+                  {line}
+                </motion.span>
+              </div>
+            ))}
+          </h1>
 
           <motion.p
             className="text-[#3a3a3f] text-[18px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-[1.75] max-w-[460px] mb-8 md:mb-10"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
+            initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, delay: 0.45 }}
           >
             Egolia Group is a vertically integrated investment and development firm focused on delivering enduring value across real estate, finance, and emerging markets through disciplined strategy and execution.
           </motion.p>
@@ -45,7 +53,7 @@ export default function InvestorHero() {
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.25 }}
+            transition={{ duration: 0.6, delay: 0.65 }}
           >
             <Link
               href="/contact"
@@ -57,6 +65,7 @@ export default function InvestorHero() {
               </svg>
             </Link>
           </motion.div>
+
         </div>
       </div>
     </section>

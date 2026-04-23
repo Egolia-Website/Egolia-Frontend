@@ -172,9 +172,9 @@ export default function DisciplineSection() {
           {/* Bento: 1 wide left + 2 stacked right */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
 
-            {/* Wide left card */}
+            {/* First card — full width on mobile, left col on desktop */}
             <motion.div
-              className="group lg:col-span-1 bg-white border border-[#e8e8ed] rounded-2xl p-8 flex flex-col justify-between min-h-[320px] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
+              className="group col-span-1 bg-white border border-[#e8e8ed] rounded-2xl p-8 flex flex-col justify-between lg:min-h-[320px] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -185,20 +185,19 @@ export default function DisciplineSection() {
                   <div className="w-12 h-12 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center shadow-[0_4px_16px_rgba(232,121,43,0.15)] group-hover:bg-orange transition-all duration-300">
                     <TrendingUp className="w-5 h-5 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={2} />
                   </div>
-                  <span className="text-[3rem] font-bold text-[#0F1C3F]/10 leading-none group-hover:text-orange/15 transition-colors duration-300">01</span>
                 </div>
                 <h3 className="text-[#1d1d1f] text-[20px] font-bold leading-snug mb-4">Strategic Market Selection</h3>
-                <div className="w-8 h-[2px] bg-orange mb-4" />
+                <div className="w-8 h-[2px] bg-orange mb-4 group-hover:w-14 transition-all duration-300" />
                 <p className="text-[#6e6e73] text-[15px] leading-[1.75]">Identifying high-quality opportunities across real estate and private markets through rigorous research and market insight.</p>
               </div>
             </motion.div>
 
-            {/* Right column — 2 stacked */}
-            <div className="lg:col-span-2 flex flex-col gap-5">
+            {/* Right column — side by side on mobile, stacked on desktop */}
+            <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-5">
               {strategies.slice(1).map((item, i) => (
                 <motion.div
                   key={item.title}
-                  className="group bg-white border border-[#e8e8ed] rounded-2xl p-7 flex items-start gap-6 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
+                  className="group bg-white border border-[#e8e8ed] rounded-2xl p-7 flex items-start gap-5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -208,10 +207,7 @@ export default function DisciplineSection() {
                     <item.icon className="w-5 h-5 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={2} />
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-[#1d1d1f] text-[18px] font-bold leading-snug">{item.title}</h3>
-                      <span className="text-[2rem] font-bold text-[#0F1C3F]/10 leading-none group-hover:text-orange/15 transition-colors duration-300 hidden sm:block">{item.number}</span>
-                    </div>
+                    <h3 className="text-[#1d1d1f] text-[17px] font-bold leading-snug mb-2">{item.title}</h3>
                     <p className="text-[#6e6e73] text-[14px] leading-[1.75]">{item.description}</p>
                   </div>
                 </motion.div>
