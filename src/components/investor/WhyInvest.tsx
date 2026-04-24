@@ -85,8 +85,8 @@ export default function WhyInvest() {
               transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
             >
               <div className="flex items-center justify-between mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center shadow-[0_4px_16px_rgba(232,121,43,0.18)] group-hover:bg-orange transition-all duration-300">
-                  <item.icon className="w-5 h-5 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={2} />
+                <div className="w-12 h-12 rounded-xl bg-[#0F1C3F] flex items-center justify-center group-hover:bg-orange transition-all duration-300">
+                  <item.icon className="w-5 h-5 text-white" strokeWidth={2} />
                 </div>
                 <span className="text-[#0F1C3F]/15 text-[2.5rem] font-bold leading-none select-none group-hover:text-orange/20 transition-colors duration-300">{item.number}</span>
               </div>

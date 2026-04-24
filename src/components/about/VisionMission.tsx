@@ -50,7 +50,7 @@ export default function VisionMission() {
               {/* Top accent */}
               <div className="w-12 h-[3px] bg-orange mb-10 mx-auto" />
 
-              <div className="w-14 h-14 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center shadow-[0_4px_20px_rgba(232,121,43,0.18)] mb-8 group-hover:bg-orange transition-all duration-300 mx-auto">
+              <div className="w-14 h-14 rounded-full bg-orange/10 border border-orange/30 flex items-center justify-center mb-8 mx-auto group-hover:bg-orange transition-all duration-300">
                 <Eye className="w-6 h-6 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
               </div>
 
@@ -80,7 +80,7 @@ export default function VisionMission() {
               {/* Top accent */}
               <div className="w-12 h-[3px] bg-orange mb-10 mx-auto" />
 
-              <div className="w-14 h-14 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center shadow-[0_4px_20px_rgba(232,121,43,0.25)] mb-8 group-hover:bg-orange transition-all duration-300 mx-auto">
+              <div className="w-14 h-14 rounded-full bg-orange/10 border border-orange/30 flex items-center justify-center mb-8 mx-auto group-hover:bg-orange transition-all duration-300">
                 <Compass className="w-6 h-6 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
               </div>
 

@@ -81,8 +81,8 @@ export default function CoreCapabilities() {
               transition={{ duration: 0.6, delay: i * 0.1 }}
             >
               {/* Icon */}
-              <div className="w-14 h-14 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center shadow-[0_4px_20px_rgba(232,121,43,0.15)] mb-6 group-hover:bg-orange transition-all duration-300">
-                <item.icon className="w-6 h-6 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange to-[#d4691e] flex items-center justify-center mb-6 shadow-[0_6px_24px_rgba(232,121,43,0.3)] group-hover:scale-110 transition-transform duration-300">
+                <item.icon className="w-6 h-6 text-white" strokeWidth={1.8} />
               </div>
 
               {/* Number label */}
