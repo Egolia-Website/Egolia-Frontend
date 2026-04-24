@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Eye, Compass } from "lucide-react";
+import { Globe, Flag } from "lucide-react";
 
 export default function VisionMission() {
   return (
     <section className="overflow-hidden relative bg-[#f5f5f7]">
       <Image src="/images/companyy.png" alt="" fill className="object-cover object-center" />
-      <div className="absolute inset-0 bg-white/80" />
+      <div className="absolute inset-0 bg-black/70" />
 <div className="relative z-10 max-w-[1060px] mx-auto px-4 sm:px-6 lg:px-14 py-16 md:py-28">
 
         <motion.p
@@ -21,7 +21,7 @@ export default function VisionMission() {
           Our Direction
         </motion.p>
         <motion.h2
-          className="text-[2rem] sm:text-[2.6rem] font-bold text-[#0F1C3F] leading-[1.06] tracking-[-0.03em] mb-14 text-center"
+          className="text-[2rem] sm:text-[2.6rem] font-bold text-white leading-[1.06] tracking-[-0.03em] mb-14 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -51,13 +51,13 @@ export default function VisionMission() {
               <div className="w-12 h-[3px] bg-orange mb-10 mx-auto" />
 
               <div className="w-14 h-14 rounded-full bg-orange/10 border border-orange/30 flex items-center justify-center mb-8 mx-auto group-hover:bg-orange transition-all duration-300">
-                <Eye className="w-6 h-6 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
+                <Globe className="w-6 h-6 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
               </div>
 
               <p className="text-orange text-[13px] font-bold tracking-[0.35em] uppercase mb-4">Vision</p>
 
               <p className="text-[#1d1d1f] text-[16px] leading-[1.85]">
-                We envision a future where sophisticated investment infrastructure is not reserved for the few — built with the discipline, intelligence, and transparency that every investor deserves.
+                We envision a future where sophisticated investment infrastructure is not reserved for the few, built with the discipline, intelligence, and transparency that every investor deserves.
               </p>
             </div>
           </motion.div>
@@ -81,13 +81,13 @@ export default function VisionMission() {
               <div className="w-12 h-[3px] bg-orange mb-10 mx-auto" />
 
               <div className="w-14 h-14 rounded-full bg-orange/10 border border-orange/30 flex items-center justify-center mb-8 mx-auto group-hover:bg-orange transition-all duration-300">
-                <Compass className="w-6 h-6 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
+                <Flag className="w-6 h-6 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
               </div>
 
               <p className="text-orange text-[13px] font-bold tracking-[0.35em] uppercase mb-4">Mission</p>
 
               <p className="text-[#1d1d1f] text-[16px] leading-[1.85]">
-                Through an integrated platform of development, capital, research, and distribution — Egolia compounds advantage at every layer, creating durable outcomes for investors and communities alike.
+                Through an integrated platform of development, capital, research, and distribution, Egolia compounds advantage at every layer, creating durable outcomes for investors and communities alike.
               </p>
             </div>
           </motion.div>
