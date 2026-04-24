@@ -89,8 +89,8 @@ export default function InvestmentFocus() {
               </div>
 
               {/* Premium icon */}
-              <div className="w-12 h-12 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center shadow-[0_4px_16px_rgba(232,121,43,0.18)] group-hover:bg-orange transition-all duration-300 mb-6">
-                <sector.icon className="w-5 h-5 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={2} />
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-orange to-[#d4691e] flex items-center justify-center mb-6 shadow-[0_6px_20px_rgba(232,121,43,0.3)] group-hover:scale-110 transition-transform duration-300">
+                <sector.icon className="w-5 h-5 text-white" strokeWidth={2} />
               </div>
 
               {/* Content */}

@@ -84,7 +84,7 @@ export default function AboutAvrance() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
-                <div className="w-11 h-11 rounded-xl bg-orange/10 border-2 border-orange flex items-center justify-center text-orange shrink-0 group-hover:bg-orange group-hover:text-white transition-all duration-300 mt-0.5">
+                <div className="w-11 h-11 rounded-xl bg-[#0F1C3F] flex items-center justify-center text-orange shrink-0 group-hover:bg-orange group-hover:text-white transition-all duration-300 mt-0.5">
                   {feature.icon}
                 </div>
                 <div className="flex-1">

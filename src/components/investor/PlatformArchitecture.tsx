@@ -85,7 +85,7 @@ export default function PlatformArchitecture() {
               transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
             >
               <div className="flex items-start justify-between mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center text-orange group-hover:bg-orange group-hover:text-white transition-all duration-300 shadow-[0_4px_20px_rgba(232,121,43,0.15)]">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0F1C3F] to-[#1A2B5C] flex items-center justify-center text-orange group-hover:bg-orange group-hover:from-orange group-hover:to-[#d4691e] transition-all duration-300 shadow-[0_4px_20px_rgba(15,28,63,0.2)]">
                   {co.icon}
                 </div>
                 <span className="text-orange text-[11px] font-bold tracking-[0.2em] uppercase bg-orange/10 border border-orange/20 px-3 py-1 rounded-full">

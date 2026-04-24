@@ -67,8 +67,8 @@ export default function AboutIntro() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <div className="w-11 h-11 rounded-xl bg-orange/20 border-2 border-orange flex items-center justify-center shrink-0">
-                <Building2 className="w-5 h-5 text-orange" strokeWidth={1.8} />
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-orange to-[#d4691e] flex items-center justify-center shrink-0 shadow-[0_4px_16px_rgba(232,121,43,0.3)]">
+                <Building2 className="w-5 h-5 text-white" strokeWidth={1.8} />
               </div>
               <div>
                 <p className="text-[#0F1C3F] text-[14px] font-bold">Integrated. Disciplined. Future-Focused.</p>

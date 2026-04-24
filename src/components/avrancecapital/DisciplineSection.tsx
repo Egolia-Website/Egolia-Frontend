@@ -115,7 +115,7 @@ export default function DisciplineSection() {
                   transition={{ duration: 0.6, delay: i * 0.12 }}
                 >
                   {/* Icon */}
-                  <div className="w-12 h-12 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center shrink-0 shadow-[0_4px_20px_rgba(232,121,43,0.2)] group-hover:bg-orange transition-all duration-300 mt-1">
+                  <div className="w-12 h-12 rounded-full bg-[#f5f5f7] border border-[#e8e8ed] flex items-center justify-center shrink-0 group-hover:border-orange transition-all duration-300 mt-1">
                     <pillar.icon className="w-5 h-5 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={2} />
                   </div>
 
@@ -182,7 +182,7 @@ export default function DisciplineSection() {
             >
               <div>
                 <div className="flex items-center justify-between mb-8">
-                  <div className="w-12 h-12 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center shadow-[0_4px_16px_rgba(232,121,43,0.15)] group-hover:bg-orange transition-all duration-300">
+                  <div className="w-12 h-12 rounded-full bg-[#f5f5f7] border border-[#e8e8ed] flex items-center justify-center group-hover:border-orange transition-all duration-300">
                     <TrendingUp className="w-5 h-5 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={2} />
                   </div>
                 </div>
@@ -203,7 +203,7 @@ export default function DisciplineSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center shrink-0 shadow-[0_4px_16px_rgba(232,121,43,0.15)] group-hover:bg-orange transition-all duration-300 mt-0.5">
+                  <div className="w-12 h-12 rounded-full bg-[#f5f5f7] border border-[#e8e8ed] flex items-center justify-center shrink-0 group-hover:border-orange transition-all duration-300 mt-0.5">
                     <item.icon className="w-5 h-5 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={2} />
                   </div>
                   <div className="flex-1">

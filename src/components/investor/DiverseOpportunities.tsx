@@ -66,8 +66,8 @@ export default function DiverseOpportunities() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.1 + i * 0.08 }}
                 >
-                  <div className="w-9 h-9 rounded-xl bg-orange/10 border-2 border-orange flex items-center justify-center mb-3 shadow-[0_2px_10px_rgba(232,121,43,0.15)]">
-                    <m.icon className="w-4 h-4 text-orange" strokeWidth={2} />
+                  <div className="w-9 h-9 rounded-full bg-orange flex items-center justify-center mb-3 shadow-[0_4px_12px_rgba(232,121,43,0.35)]">
+                    <m.icon className="w-4 h-4 text-white" strokeWidth={2} />
                   </div>
                   <div className="text-[2rem] font-bold text-[#0F1C3F] leading-none mb-2 group-hover:text-orange transition-colors duration-300">{m.value}</div>
                   <p className="text-[#6e6e73] text-[13px] leading-[1.6]">{m.label}</p>
@@ -104,7 +104,7 @@ export default function DiverseOpportunities() {
                   transition={{ duration: 0.4, delay: 0.15 + i * 0.08 }}
                 >
                   <div className="flex items-start gap-3 mb-2">
-                    <div className="w-8 h-8 rounded-lg bg-orange/10 border-2 border-orange flex items-center justify-center shrink-0 shadow-[0_2px_10px_rgba(232,121,43,0.12)]">
+                    <div className="w-8 h-8 rounded-lg bg-[#0F1C3F] flex items-center justify-center shrink-0">
                       <row.icon className="w-3.5 h-3.5 text-orange" strokeWidth={2} />
                     </div>
                     <span className="text-[#1d1d1f] text-[15px] font-bold mt-1">{row.focus}</span>
