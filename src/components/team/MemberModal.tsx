@@ -95,13 +95,22 @@ export default function MemberModal({ member, onClose }: MemberModalProps) {
                 <p className="text-[11px] font-semibold uppercase tracking-widest text-orange mb-5">
                   Experience
                 </p>
-                <ul className="space-y-4">
-                  {member.experience.map((item, i) => (
-                    <li key={i} className="flex gap-3 text-[#1d1d1f]/75 text-[14px] leading-[1.65]">
-                      <span className="w-1.5 h-1.5 rounded-full bg-orange flex-shrink-0 mt-[6px]" />
-                      {item}
-                    </li>
-                  ))}
+                <ul className="space-y-5">
+                  {member.experience.map((item, i) => {
+                    const [heading, ...rest] = item.split(" — ");
+                    const description = rest.join(" — ");
+                    return (
+                      <li key={i} className="flex gap-3">
+                        <span className="w-1.5 h-1.5 rounded-full bg-orange flex-shrink-0 mt-[6px]" />
+                        <div>
+                          <p className="text-[#0F1C3F] text-[15px] font-semibold leading-snug mb-1">{heading}</p>
+                          {description && (
+                            <p className="text-[#6e6e73] text-[13px] leading-[1.65]">{description}</p>
+                          )}
+                        </div>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </div>

@@ -80,7 +80,7 @@ export default function DisciplinedValue() {
             className="w-full lg:w-[48%]"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <svg viewBox="0 0 380 280" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,7 +114,7 @@ export default function DisciplinedValue() {
                   fill="url(#barGrad)"
                   initial={{ scaleY: 0 }}
                   whileInView={{ scaleY: 1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, amount: 0 }}
                   transition={{ duration: 0.65, delay: 0.15 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                   style={{ transformOrigin: `${bar.x + 23}px 242px` }}
                 />
@@ -129,7 +129,7 @@ export default function DisciplinedValue() {
                 stroke="#E8792B" strokeWidth="3" strokeLinecap="round" fill="none"
                 initial={{ pathLength: 0 }}
                 whileInView={{ pathLength: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0 }}
                 transition={{ duration: 1.3, delay: 0.6, ease: "easeOut" }}
               />
 
@@ -139,7 +139,7 @@ export default function DisciplinedValue() {
                 fill="#E8792B"
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0 }}
                 transition={{ duration: 0.3, delay: 1.85 }}
                 style={{ transformOrigin: "284px 18px" }}
               />
