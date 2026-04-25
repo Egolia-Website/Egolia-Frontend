@@ -9,7 +9,7 @@ export default function TeamHero() {
 
         <motion.h1
           className="text-[#1d1d1f] text-4xl md:text-5xl font-bold tracking-[-0.02em] leading-[1.15] mb-5"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >

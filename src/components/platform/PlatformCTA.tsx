@@ -32,7 +32,7 @@ export default function PlatformCTA() {
 
         <motion.h2
           className="text-[2.2rem] sm:text-[2.8rem] lg:text-[3.4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] mb-5 max-w-2xl"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
@@ -50,7 +50,7 @@ export default function PlatformCTA() {
 
         <motion.p
           className="text-[#4a5568] max-w-xl text-[15px] sm:text-[16px] leading-[1.8] mb-10 font-medium"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.25 }}
@@ -60,7 +60,7 @@ export default function PlatformCTA() {
 
         <motion.div
           className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6"
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.35 }}

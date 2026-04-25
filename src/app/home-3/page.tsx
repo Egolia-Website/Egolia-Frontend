@@ -20,7 +20,7 @@ import {
 function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.7, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -42,7 +42,7 @@ export default function Home3() {
       <section className="relative pt-20 pb-28 flex flex-col items-center text-center px-6 mt-[84px]">
 
         <motion.h1
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
           className="text-6xl md:text-8xl font-semibold tracking-tight text-gray-900 max-w-5xl mb-8 leading-[1.05]"
@@ -55,7 +55,7 @@ export default function Home3() {
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-xl md:text-2xl text-gray-500 max-w-3xl mb-12 leading-relaxed"
@@ -183,11 +183,11 @@ export default function Home3() {
             ].map((company, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 24 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.6, delay: i * 0.08 }}
-                className="group bg-white border border-[#e8e8ed] rounded-2xl p-7 flex flex-col hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-all duration-300"
+                className="group bg-white border border-[#e8e8ed] rounded-2xl p-7 flex flex-col hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-shadow duration-300"
               >
                 {/* Icon */}
                 <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${company.iconBg}`}>
@@ -263,7 +263,7 @@ export default function Home3() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.55, delay: i * 0.1 }}

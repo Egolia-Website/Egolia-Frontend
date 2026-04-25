@@ -37,14 +37,14 @@ const companies = [
 
 export default function PlatformArchitecture() {
   return (
-    <section className="bg-white py-24 md:py-32">
+    <section className="bg-white py-16 md:py-24">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-14">
 
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
           <div>
             <motion.p
-              className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-5"
-              initial={{ opacity: 0, y: 15 }}
+              className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-5 text-center lg:text-left"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
@@ -52,8 +52,8 @@ export default function PlatformArchitecture() {
               Platform Architecture
             </motion.p>
             <motion.h2
-              className="text-[2.4rem] sm:text-[3rem] lg:text-[3.6rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.03em]"
-              initial={{ opacity: 0, y: 25 }}
+              className="text-[2.4rem] sm:text-[3rem] lg:text-[3.6rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.03em] text-center lg:text-left"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
@@ -64,8 +64,8 @@ export default function PlatformArchitecture() {
             </motion.h2>
           </div>
           <motion.p
-            className="text-[#6e6e73] text-[16px] leading-[1.8] max-w-sm lg:text-right"
-            initial={{ opacity: 0, y: 15 }}
+            className="text-[#6e6e73] text-[16px] leading-[1.8] max-w-sm text-center lg:text-right"
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -78,19 +78,19 @@ export default function PlatformArchitecture() {
           {companies.map((co, i) => (
             <motion.div
               key={co.label}
-              className="group bg-[#f5f5f7] border border-[#e8e8ed] rounded-2xl p-8 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
-              initial={{ opacity: 0, y: 30 }}
+              className="group bg-[#f5f5f7] border border-[#e8e8ed] rounded-2xl p-8 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-shadow duration-300"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+              transition={{ duration: 0.6, delay: i * 0.08 }}
             >
-              <div className="flex items-start justify-between mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0F1C3F] to-[#1A2B5C] flex items-center justify-center transition-all duration-300 shadow-[0_4px_20px_rgba(15,28,63,0.2)] group-hover:shadow-[0_6px_24px_rgba(232,121,43,0.25)] group-hover:scale-105">
-                  <span className="text-orange">{co.icon}</span>
-                </div>
-                <span className="text-orange text-[11px] font-bold tracking-[0.2em] uppercase bg-orange/10 border border-orange/20 px-3 py-1 rounded-full">
+              <div className="relative mb-5">
+                <span className="absolute top-0 right-0 text-white text-[9px] font-bold tracking-[0.08em] uppercase bg-[#0F1C3F] px-2.5 py-1 rounded-full whitespace-nowrap">
                   {co.label}
                 </span>
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0F1C3F] to-[#1A2B5C] flex items-center justify-center transition-shadow duration-300 shadow-[0_4px_20px_rgba(15,28,63,0.2)] group-hover:shadow-[0_6px_24px_rgba(232,121,43,0.25)]">
+                  <span className="text-orange">{co.icon}</span>
+                </div>
               </div>
               <h3 className="text-[#1d1d1f] text-[22px] font-bold leading-snug mb-3">{co.title}</h3>
               <div className="w-6 h-[2px] bg-orange mb-4" />

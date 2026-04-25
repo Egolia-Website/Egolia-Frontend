@@ -37,8 +37,8 @@ export default function AboutAvrance() {
           {/* LEFT — sticky heading block */}
           <div className="w-full lg:w-[42%] lg:sticky lg:top-28 self-start">
             <motion.p
-              className="text-orange text-[13px] font-bold tracking-[0.3em] uppercase mb-5"
-              initial={{ opacity: 0, y: 15 }}
+              className="text-orange text-[13px] font-bold tracking-[0.3em] uppercase mb-5 text-center lg:text-left"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
@@ -46,8 +46,8 @@ export default function AboutAvrance() {
               About AvranceCorp
             </motion.p>
             <motion.h2
-              className="text-[2.4rem] sm:text-[3rem] lg:text-[3.4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] mb-6"
-              initial={{ opacity: 0, y: 25 }}
+              className="text-[2.4rem] sm:text-[3rem] lg:text-[3.4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] mb-6 text-center lg:text-left"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
@@ -56,15 +56,15 @@ export default function AboutAvrance() {
               <span className="text-orange">On Precision.</span>
             </motion.h2>
             <motion.div
-              className="w-12 h-[2px] bg-orange mb-7"
+              className="w-12 h-[2px] bg-orange mb-7 mx-auto lg:mx-0"
               initial={{ width: 0 }}
               whileInView={{ width: 48 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             />
             <motion.p
-              className="text-[#6e6e73] text-[16px] sm:text-[17px] leading-[1.85]"
-              initial={{ opacity: 0, y: 20 }}
+              className="text-[#6e6e73] text-[16px] sm:text-[17px] leading-[1.85] text-center lg:text-left"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -84,7 +84,7 @@ export default function AboutAvrance() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
-                <div className="w-11 h-11 rounded-xl bg-[#0F1C3F] flex items-center justify-center text-orange shrink-0 group-hover:bg-orange group-hover:text-white transition-all duration-300 mt-0.5">
+                <div className="w-11 h-11 rounded-xl bg-[#0F1C3F] flex items-center justify-center text-orange shrink-0 group-hover:bg-orange group-hover:text-white transition-colors duration-300 mt-0.5">
                   {feature.icon}
                 </div>
                 <div className="flex-1">

@@ -50,11 +50,3 @@ a {
   color: var(--color-text);
 }
 
-/* Fix Framer Motion + Tailwind hover:-translate-y jitter on mobile */
-[style*="transform"],
-[style*="opacity"] {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-}

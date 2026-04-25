@@ -36,7 +36,7 @@ export default function BuiltForValue() {
             </motion.span>
             <motion.h2
               className="text-4xl md:text-5xl lg:text-6xl font-sans text-white leading-[1.05] mb-7"
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
@@ -47,7 +47,7 @@ export default function BuiltForValue() {
             </motion.h2>
             <motion.p
               className="text-white/45 text-base leading-[1.8] max-w-md"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -59,8 +59,8 @@ export default function BuiltForValue() {
           {/* Right image in a premium rounded frame */}
           <motion.div
             className="relative rounded-2xl overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.5)]"
-            initial={{ opacity: 0, scale: 0.97 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
@@ -82,8 +82,8 @@ export default function BuiltForValue() {
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}
-              className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-7 md:p-8 hover:bg-white/[0.08] hover:border-orange/20 transition-all duration-400 group"
-              initial={{ opacity: 0, y: 25 }}
+              className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-7 md:p-8 hover:bg-white/[0.08] hover:border-orange/20 transition-[background-color,border-color] duration-300 group"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}

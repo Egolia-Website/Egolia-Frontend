@@ -60,7 +60,7 @@ export default function HomeTestimonials() {
           </motion.span>
           <motion.h2
             className="text-4xl md:text-5xl font-sans text-navy leading-[1.1]"
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
@@ -76,11 +76,11 @@ export default function HomeTestimonials() {
           {quotes.map((q, i) => (
             <motion.div
               key={q.name}
-              className="bg-white rounded-2xl p-8 flex flex-col shadow-[0_4px_24px_rgba(15,28,63,0.06)] hover:shadow-[0_16px_48px_rgba(15,28,63,0.10)] hover:-translate-y-1 transition-all duration-500"
-              initial={{ opacity: 0, y: 25 }}
+              className="bg-white rounded-2xl p-8 flex flex-col shadow-[0_4px_24px_rgba(15,28,63,0.06)] hover:shadow-[0_16px_48px_rgba(15,28,63,0.10)] transition-shadow duration-500"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.12 }}
+              transition={{ duration: 0.6, delay: i * 0.08 }}
             >
               {/* Quote mark */}
               <div className="text-orange/20 mb-4">

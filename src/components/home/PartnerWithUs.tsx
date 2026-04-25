@@ -22,7 +22,7 @@ export default function PartnerWithUs() {
           {/* Badge */}
           <motion.div
             className="inline-flex items-center gap-2.5 mb-10 px-5 py-2.5 bg-white/[0.06] backdrop-blur-sm border border-white/[0.12] rounded-full"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
@@ -35,7 +35,7 @@ export default function PartnerWithUs() {
 
           <motion.h2
             className="text-5xl md:text-6xl lg:text-7xl font-sans text-white leading-[1.0] tracking-[-0.02em] mb-8"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -46,7 +46,7 @@ export default function PartnerWithUs() {
 
           <motion.p
             className="text-white/45 text-base md:text-xl leading-[1.8] mb-12 max-w-xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.25 }}
@@ -56,7 +56,7 @@ export default function PartnerWithUs() {
 
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}

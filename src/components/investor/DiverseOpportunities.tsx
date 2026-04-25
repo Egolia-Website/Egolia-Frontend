@@ -43,34 +43,34 @@ export default function DiverseOpportunities() {
           {/* Left — metrics */}
           <motion.div
             className="bg-white border border-[#e8e8ed] rounded-2xl p-8 shadow-sm"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
           >
-            <p className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-4">Track Record</p>
-            <h2 className="text-[1.8rem] sm:text-[2.2rem] font-bold text-[#0F1C3F] leading-[1.1] tracking-[-0.025em] mb-4">
+            <p className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-4 text-center lg:text-left">Track Record</p>
+            <h2 className="text-[1.8rem] sm:text-[2.2rem] font-bold text-[#0F1C3F] leading-[1.1] tracking-[-0.025em] mb-4 text-center lg:text-left">
               Scale Supported By Active Operating Experience.
             </h2>
-            <p className="text-[#6e6e73] text-[17px] leading-[1.8] mb-8">
+            <p className="text-[#6e6e73] text-[17px] leading-[1.8] mb-8 text-center lg:text-left">
               Egolia&apos;s investor proposition is strengthened by an underlying development and operating platform rather than a purely theoretical technology narrative.
             </p>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3">
               {metrics.map((m, i) => (
                 <motion.div
                   key={m.value}
-                  className="group bg-[#f5f5f7] rounded-xl p-5 border border-[#e8e8ed] hover:border-orange/30 transition-colors duration-300"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  className="group bg-[#f5f5f7] rounded-xl p-4 border border-[#e8e8ed] hover:border-orange/30 transition-colors duration-300"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.1 + i * 0.08 }}
+                  transition={{ duration: 0.6, delay: i * 0.1 }}
                 >
-                  <div className="w-9 h-9 rounded-full bg-orange flex items-center justify-center mb-3 shadow-[0_4px_12px_rgba(232,121,43,0.35)]">
-                    <m.icon className="w-4 h-4 text-white" strokeWidth={2} />
+                  <div className="w-8 h-8 rounded-full bg-orange flex items-center justify-center mb-2.5 shadow-[0_4px_12px_rgba(232,121,43,0.35)]">
+                    <m.icon className="w-3.5 h-3.5 text-white" strokeWidth={2} />
                   </div>
-                  <div className="text-[2rem] font-bold text-[#0F1C3F] leading-none mb-2 group-hover:text-orange transition-colors duration-300">{m.value}</div>
-                  <p className="text-[#6e6e73] text-[13px] leading-[1.6]">{m.label}</p>
+                  <div className="text-[1.6rem] sm:text-[2rem] font-bold text-[#0F1C3F] leading-none mb-2 group-hover:text-orange transition-colors duration-300">{m.value}</div>
+                  <p className="text-[#6e6e73] text-[11px] sm:text-[13px] leading-[1.5]">{m.label}</p>
                 </motion.div>
               ))}
             </div>
@@ -83,13 +83,13 @@ export default function DiverseOpportunities() {
           {/* Right — table */}
           <motion.div
             className="bg-white border border-[#e8e8ed] rounded-2xl p-8 shadow-sm"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <p className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-4">Current Platform Focus</p>
-            <h3 className="text-[1.8rem] sm:text-[2rem] font-bold text-[#0F1C3F] leading-[1.1] tracking-[-0.025em] mb-8">
+            <p className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-4 text-center lg:text-left">Current Platform Focus</p>
+            <h3 className="text-[1.8rem] sm:text-[2rem] font-bold text-[#0F1C3F] leading-[1.1] tracking-[-0.025em] mb-8 text-center lg:text-left">
               What Investors Are Evaluating Today.
             </h3>
 
@@ -98,7 +98,7 @@ export default function DiverseOpportunities() {
                 <motion.div
                   key={row.focus}
                   className="py-5 first:pt-0"
-                  initial={{ opacity: 0, y: 15 }}
+                  initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.15 + i * 0.08 }}

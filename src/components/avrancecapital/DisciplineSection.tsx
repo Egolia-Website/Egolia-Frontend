@@ -41,8 +41,8 @@ export default function DisciplineSection() {
             {/* LEFT — Bold statement */}
             <div className="w-full lg:w-[38%] flex flex-col justify-start lg:sticky lg:top-6 self-start">
               <motion.p
-                className="text-orange text-[13px] font-bold tracking-[0.3em] uppercase mb-6"
-                initial={{ opacity: 0, y: 15 }}
+                className="text-orange text-[13px] font-bold tracking-[0.3em] uppercase mb-6 text-center lg:text-left"
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
@@ -51,8 +51,8 @@ export default function DisciplineSection() {
               </motion.p>
 
               <motion.h2
-                className="text-[2.6rem] sm:text-[3.2rem] font-bold text-[#0F1C3F] leading-[1.06] tracking-[-0.03em] mb-6"
-                initial={{ opacity: 0, y: 25 }}
+                className="text-[2.6rem] sm:text-[3.2rem] font-bold text-[#0F1C3F] leading-[1.06] tracking-[-0.03em] mb-6 text-center lg:text-left"
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.1 }}
@@ -61,11 +61,11 @@ export default function DisciplineSection() {
                 <span className="text-orange">Investment.</span>
               </motion.h2>
 
-              <motion.div className="w-12 h-[2px] bg-orange mb-7" initial={{ width: 0 }} whileInView={{ width: 48 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} />
+              <motion.div className="w-12 h-[2px] bg-orange mb-7 mx-auto lg:mx-0" initial={{ width: 0 }} whileInView={{ width: 48 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} />
 
               <motion.p
-                className="text-[#6e6e73] text-[16px] leading-[1.85] mb-10"
-                initial={{ opacity: 0, y: 20 }}
+                className="text-[#6e6e73] text-[16px] leading-[1.85] mb-10 text-center lg:text-left"
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
@@ -73,7 +73,7 @@ export default function DisciplineSection() {
                 We deploy capital with precision — guided by research, structured execution, and a long-term investment perspective designed to perform across every market cycle.
               </motion.p>
 
-              <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.4 }}>
+              <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.4 }} className="flex justify-center lg:justify-start">
                 <Link
                   href="/investor"
                   className="group inline-flex items-center gap-3 rounded-lg bg-orange hover:bg-[#d4691e] px-7 py-3.5 text-[14px] font-bold text-white transition-colors duration-300"
@@ -109,13 +109,13 @@ export default function DisciplineSection() {
                 <motion.div
                   key={pillar.title}
                   className="group relative py-10 flex items-start gap-6 hover:bg-white transition-colors duration-300 px-4 -mx-4 rounded-2xl"
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: i * 0.12 }}
+                  transition={{ duration: 0.6, delay: i * 0.1 }}
                 >
                   {/* Icon */}
-                  <div className="w-12 h-12 rounded-full bg-[#f5f5f7] border border-[#e8e8ed] flex items-center justify-center shrink-0 group-hover:border-orange transition-all duration-300 mt-1">
+                  <div className="w-12 h-12 rounded-full bg-[#f5f5f7] border border-[#e8e8ed] flex items-center justify-center shrink-0 group-hover:border-orange transition-colors duration-300 mt-1">
                     <pillar.icon className="w-5 h-5 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={2} />
                   </div>
 
@@ -139,8 +139,8 @@ export default function DisciplineSection() {
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
             <div>
               <motion.p
-                className="text-orange text-[13px] font-bold tracking-[0.3em] uppercase mb-5"
-                initial={{ opacity: 0, y: 15 }}
+                className="text-orange text-[13px] font-bold tracking-[0.3em] uppercase mb-5 text-center lg:text-left"
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
@@ -148,8 +148,8 @@ export default function DisciplineSection() {
                 Investment Strategy
               </motion.p>
               <motion.h2
-                className="text-[2.4rem] sm:text-[3rem] lg:text-[3.4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em]"
-                initial={{ opacity: 0, y: 25 }}
+                className="text-[2.4rem] sm:text-[3rem] lg:text-[3.4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] text-center lg:text-left"
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.1 }}
@@ -159,7 +159,7 @@ export default function DisciplineSection() {
               </motion.h2>
             </div>
             <motion.p
-              className="text-[#6e6e73] text-[16px] leading-[1.8] max-w-xs lg:text-right"
+              className="text-[#6e6e73] text-[16px] leading-[1.8] max-w-xs text-center lg:text-right"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -174,15 +174,15 @@ export default function DisciplineSection() {
 
             {/* First card — full width on mobile, left col on desktop */}
             <motion.div
-              className="group col-span-1 bg-white border border-[#e8e8ed] rounded-2xl p-8 flex flex-col justify-between lg:min-h-[320px] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              className="group col-span-1 bg-white border border-[#e8e8ed] rounded-2xl p-8 flex flex-col justify-between lg:min-h-[320px] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-shadow duration-300"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6, delay: 0 }}
             >
               <div>
                 <div className="flex items-center justify-between mb-8">
-                  <div className="w-12 h-12 rounded-full bg-[#f5f5f7] border border-[#e8e8ed] flex items-center justify-center group-hover:border-orange transition-all duration-300">
+                  <div className="w-12 h-12 rounded-full bg-[#f5f5f7] border border-[#e8e8ed] flex items-center justify-center group-hover:border-orange transition-colors duration-300">
                     <TrendingUp className="w-5 h-5 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={2} />
                   </div>
                 </div>
@@ -197,13 +197,13 @@ export default function DisciplineSection() {
               {strategies.slice(1).map((item, i) => (
                 <motion.div
                   key={item.title}
-                  className="group bg-white border border-[#e8e8ed] rounded-2xl p-7 flex items-start gap-5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  className="group bg-white border border-[#e8e8ed] rounded-2xl p-7 flex items-start gap-5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-shadow duration-300"
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
+                  transition={{ duration: 0.6, delay: i * 0.08 }}
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#f5f5f7] border border-[#e8e8ed] flex items-center justify-center shrink-0 group-hover:border-orange transition-all duration-300 mt-0.5">
+                  <div className="w-12 h-12 rounded-full bg-[#f5f5f7] border border-[#e8e8ed] flex items-center justify-center shrink-0 group-hover:border-orange transition-colors duration-300 mt-0.5">
                     <item.icon className="w-5 h-5 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={2} />
                   </div>
                   <div className="flex-1">

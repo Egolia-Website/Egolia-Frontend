@@ -40,7 +40,7 @@ export default function Footer() {
               href="mailto:info@avrancecorp.com"
               className="inline-flex items-center gap-2.5 text-[#0F1C3F] hover:text-orange transition-colors duration-300 group"
             >
-              <span className="flex items-center justify-center w-8 h-8 rounded-full border border-[#0F1C3F]/20 group-hover:border-orange group-hover:bg-orange/5 transition-all duration-300">
+              <span className="flex items-center justify-center w-8 h-8 rounded-full border border-[#0F1C3F]/20 group-hover:border-orange group-hover:bg-orange/5 transition-colors duration-300">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
@@ -52,7 +52,7 @@ export default function Footer() {
               aria-label="X"
               className="inline-flex items-center gap-2.5 text-[#0F1C3F] hover:text-orange transition-colors duration-300 group"
             >
-              <span className="flex items-center justify-center w-8 h-8 rounded-full border border-[#0F1C3F]/20 group-hover:border-orange group-hover:bg-orange/5 transition-all duration-300">
+              <span className="flex items-center justify-center w-8 h-8 rounded-full border border-[#0F1C3F]/20 group-hover:border-orange group-hover:bg-orange/5 transition-colors duration-300">
                 <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L2.06 2.25h6.638l4.262 5.632 5.284-5.632Zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>

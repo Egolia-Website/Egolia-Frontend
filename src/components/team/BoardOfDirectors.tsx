@@ -97,6 +97,18 @@ const boardMembers: TeamMemberDetail[] = [
     ],
   },
   {
+    name: "Emmeline Braun",
+    role: "Director",
+    fullTitle: "Board Of Director",
+    image: "/images/Board Member/emmeline-braun.png",
+    bio: "Seasoned executive and board director with deep expertise in corporate governance, strategic advisory, and organizational leadership.",
+    experience: [
+      "Board Leadership — Brings extensive board-level experience and governance expertise to Egolia Group's strategic direction.",
+      "Strategic Advisory — Recognized for delivering independent oversight and sound strategic counsel across complex organizational environments.",
+      "Executive Background — Track record of guiding organizations through growth, restructuring, and value-creation phases with integrity and discipline.",
+    ],
+  },
+  {
     name: "Neil Wolfson",
     role: "Director",
     fullTitle: "Board Of Director",
@@ -114,11 +126,11 @@ const boardMembers: TeamMemberDetail[] = [
 function BoardCard({ member, i, onClick }: { member: TeamMemberDetail; i: number; onClick: () => void }) {
   return (
     <motion.div
-      className="bg-[#f5f5f7] rounded-2xl border border-[#1d1d1f]/[0.06] p-8 flex flex-col items-center text-center cursor-pointer group hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:border-orange/20 transition-all duration-300"
-      initial={{ opacity: 0, y: 24 }}
+      className="bg-[#f5f5f7] rounded-2xl border border-[#1d1d1f]/[0.06] p-8 flex flex-col items-center text-center cursor-pointer group hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:border-orange/20 transition-[box-shadow,border-color] duration-300"
+      initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: 0.06 * i }}
+      transition={{ duration: 0.6, delay: i * 0.08 }}
       onClick={onClick}
     >
       {/* Circle photo */}
@@ -179,17 +191,10 @@ export default function BoardOfDirectors() {
             transition={{ duration: 0.4, delay: 0.1 }}
           />
 
-          {/* Row 1 — 4 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mb-5">
-            {boardMembers.slice(0, 4).map((member, i) => (
+          {/* 3 per row */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+            {boardMembers.map((member, i) => (
               <BoardCard key={member.name} member={member} i={i} onClick={() => setSelected(member)} />
-            ))}
-          </div>
-
-          {/* Row 2 — 4 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
-            {boardMembers.slice(4).map((member, i) => (
-              <BoardCard key={member.name} member={member} i={i + 4} onClick={() => setSelected(member)} />
             ))}
           </div>
 

@@ -18,15 +18,16 @@ export default function InvestorHero() {
         className="object-cover object-center"
       />
 
-      {/* Localized white overlay behind the content area */}
-      <div className="absolute inset-y-0 left-0 w-full md:w-[58%] bg-[radial-gradient(circle_at_34%_34%,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.84)_30%,rgba(255,255,255,0.46)_58%,rgba(255,255,255,0.10)_78%,rgba(255,255,255,0)_100%)] md:bg-[radial-gradient(circle_at_28%_40%,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.76)_32%,rgba(255,255,255,0.36)_58%,rgba(255,255,255,0)_82%)] pointer-events-none" />
+      {/* Overlay — full on mobile, left-side on desktop */}
+      <div className="absolute inset-0 bg-white/80 sm:bg-transparent pointer-events-none" />
+      <div className="absolute inset-y-0 left-0 w-full md:w-[58%] hidden sm:block bg-[radial-gradient(circle_at_34%_34%,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.84)_30%,rgba(255,255,255,0.46)_58%,rgba(255,255,255,0.10)_78%,rgba(255,255,255,0)_100%)] md:bg-[radial-gradient(circle_at_28%_40%,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.76)_32%,rgba(255,255,255,0.36)_58%,rgba(255,255,255,0)_82%)] pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 h-full max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-12 flex items-center pt-28 sm:pt-16 md:pt-20 lg:pt-12">
-        <div className="max-w-[560px]">
+      <div className="relative z-10 h-full max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-12 flex items-start sm:items-center pt-8 sm:pt-16 md:pt-20 lg:pt-12">
+        <div className="w-full sm:max-w-[560px] text-center sm:text-left">
 
-          {/* Title — line by line reveal */}
-          <h1 className="text-[#0F1C3F] text-[42px] sm:text-5xl md:text-6xl lg:text-[72px] font-bold tracking-[-0.03em] leading-[1.02] md:leading-[1.08] mb-5 md:mb-6">
+          {/* Title */}
+          <h1 className="text-[#0F1C3F] text-[38px] sm:text-5xl md:text-6xl lg:text-[72px] font-bold tracking-[-0.03em] leading-[1.02] md:leading-[1.08] mb-5 md:mb-6">
             {titleLines.map((line, i) => (
               <div key={i} className="overflow-hidden">
                 <motion.span
@@ -42,7 +43,7 @@ export default function InvestorHero() {
           </h1>
 
           <motion.p
-            className="text-[#3a3a3f] text-[18px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-[1.75] max-w-[460px] mb-8 md:mb-10"
+            className="text-[#3a3a3f] text-[15px] sm:text-[18px] md:text-[19px] lg:text-[20px] leading-[1.75] max-w-[460px] mb-8 md:mb-10 mx-auto sm:mx-0"
             initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.8, delay: 0.45 }}
@@ -51,18 +52,25 @@ export default function InvestorHero() {
           </motion.p>
 
           <motion.div
+            className="flex flex-col sm:flex-row items-center sm:items-start gap-3"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.65 }}
           >
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 bg-[#0F1C3F] text-white text-[14px] font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg hover:bg-[#1A2B5C] transition-colors duration-300"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#0F1C3F] text-white text-[14px] font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg hover:bg-[#1A2B5C] transition-colors duration-300"
             >
               Get In Touch
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
+            </Link>
+            <Link
+              href="/platform"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-[#0F1C3F]/30 text-[#0F1C3F] text-[14px] font-semibold px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg hover:border-[#0F1C3F] hover:bg-[#0F1C3F]/5 transition-all duration-300"
+            >
+              Our Platform
             </Link>
           </motion.div>
 

@@ -13,7 +13,7 @@ export default function VisionMission() {
 
         <motion.p
           className="text-orange text-[13px] font-bold tracking-[0.3em] uppercase mb-5 text-center"
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
@@ -22,7 +22,7 @@ export default function VisionMission() {
         </motion.p>
         <motion.h2
           className="text-[2rem] sm:text-[2.6rem] font-bold text-white leading-[1.06] tracking-[-0.03em] mb-14 text-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -34,8 +34,8 @@ export default function VisionMission() {
 
           {/* Vision card */}
           <motion.div
-            className="relative w-full lg:w-1/2 bg-white border border-[#e8e8ed] rounded-2xl px-8 sm:px-10 py-10 overflow-hidden group hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition-all duration-500"
-            initial={{ opacity: 0, y: 30 }}
+            className="relative w-full lg:w-1/2 bg-white border border-[#e8e8ed] rounded-2xl px-8 sm:px-10 py-10 overflow-hidden group hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] transition-shadow duration-500"
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -50,8 +50,10 @@ export default function VisionMission() {
               {/* Top accent */}
               <div className="w-12 h-[3px] bg-orange mb-10 mx-auto" />
 
-              <div className="w-14 h-14 rounded-full bg-orange/10 border border-orange/30 flex items-center justify-center mb-8 mx-auto group-hover:bg-orange transition-all duration-300">
-                <Globe className="w-6 h-6 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
+              <div className="w-24 h-24 p-[2px] bg-gradient-to-br from-orange via-amber-400 to-[#0F1C3F] rounded-2xl mb-8 mx-auto shadow-[0_8px_32px_rgba(232,121,43,0.25)]">
+                <div className="w-full h-full rounded-[14px] bg-white flex items-center justify-center">
+                  <Globe className="w-11 h-11 text-orange" strokeWidth={1.5} />
+                </div>
               </div>
 
               <p className="text-orange text-[13px] font-bold tracking-[0.35em] uppercase mb-4">Vision</p>
@@ -64,8 +66,8 @@ export default function VisionMission() {
 
           {/* Mission card */}
           <motion.div
-            className="relative w-full lg:w-1/2 bg-white border border-[#e8e8ed] rounded-2xl px-8 sm:px-10 py-10 overflow-hidden group hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition-all duration-500"
-            initial={{ opacity: 0, y: 30 }}
+            className="relative w-full lg:w-1/2 bg-white border border-[#e8e8ed] rounded-2xl px-8 sm:px-10 py-10 overflow-hidden group hover:shadow-[0_16px_48px_rgba(0,0,0,0.3)] transition-shadow duration-500"
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.12 }}
@@ -80,8 +82,10 @@ export default function VisionMission() {
               {/* Top accent */}
               <div className="w-12 h-[3px] bg-orange mb-10 mx-auto" />
 
-              <div className="w-14 h-14 rounded-full bg-orange/10 border border-orange/30 flex items-center justify-center mb-8 mx-auto group-hover:bg-orange transition-all duration-300">
-                <Flag className="w-6 h-6 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
+              <div className="w-24 h-24 p-[2px] bg-gradient-to-br from-[#0F1C3F] via-blue-500 to-orange rounded-2xl mb-8 mx-auto shadow-[0_8px_32px_rgba(15,28,63,0.25)]">
+                <div className="w-full h-full rounded-[14px] bg-white flex items-center justify-center">
+                  <Flag className="w-11 h-11 text-[#0F1C3F]" strokeWidth={1.5} />
+                </div>
               </div>
 
               <p className="text-orange text-[13px] font-bold tracking-[0.35em] uppercase mb-4">Mission</p>

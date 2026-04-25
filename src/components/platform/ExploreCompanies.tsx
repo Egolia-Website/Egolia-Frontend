@@ -78,7 +78,7 @@ export default function ExploreCompanies() {
         {/* Heading */}
         <motion.h2
           className="text-center text-[2.6rem] sm:text-[3.4rem] lg:text-[4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] mb-5"
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
@@ -89,7 +89,7 @@ export default function ExploreCompanies() {
         {/* Description */}
         <motion.p
           className="text-center text-[#4a5568] text-[17px] leading-[1.75] max-w-2xl mx-auto mb-16 font-medium"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15 }}
@@ -102,11 +102,11 @@ export default function ExploreCompanies() {
           {companies.map((company, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
-              className="group bg-white border border-[#e8e8ed] rounded-2xl p-7 flex flex-col hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] transition-all duration-300"
+              className="group bg-white border border-[#e8e8ed] rounded-2xl p-7 flex flex-col hover:shadow-[0_12px_40px_rgba(0,0,0,0.1)] transition-shadow duration-300"
             >
               {/* Logo */}
               <div className="h-16 flex items-center mb-5">

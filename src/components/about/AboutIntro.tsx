@@ -34,8 +34,8 @@ export default function AboutIntro() {
             </motion.div>
 
             <motion.h2
-              className="text-[2.4rem] sm:text-[3.2rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] mb-6"
-              initial={{ opacity: 0, y: 20 }}
+              className="text-[2.4rem] sm:text-[3.2rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] mb-6 text-balance"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
@@ -45,7 +45,7 @@ export default function AboutIntro() {
 
             <motion.div
               className="space-y-4 mb-10"
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}

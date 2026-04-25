@@ -10,24 +10,21 @@ export default function AboutHero() {
     <section className="relative min-h-[calc(100vh-84px)] flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Toronto_skyline%2C_2024_%2852592814618%29.jpg/3840px-Toronto_skyline%2C_2024_%2852592814618%29.jpg"
-          alt="Toronto skyline"
+          src="/images/wh.png"
+          alt="Who We Are"
           fill
           className="object-cover object-center"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
       </div>
-
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14 w-full py-24">
 
         <motion.p
           className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-8"
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
@@ -54,7 +51,7 @@ export default function AboutHero() {
 
         <motion.p
           className="text-white/75 text-[17px] sm:text-[18px] leading-[1.8] max-w-[500px] mb-12"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45 }}
         >
@@ -62,21 +59,21 @@ export default function AboutHero() {
         </motion.p>
 
         <motion.div
-          className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8"
-          initial={{ opacity: 0, y: 15 }}
+          className="flex flex-col sm:flex-row gap-4"
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-3 rounded-lg bg-orange hover:bg-[#d4691e] px-8 py-4 text-[15px] font-bold text-white transition-colors duration-300"
+            className="w-full sm:w-auto group inline-flex items-center justify-center gap-3 rounded-lg bg-orange hover:bg-[#d4691e] px-8 py-4 text-[15px] font-bold text-white transition-colors duration-300"
           >
             Partner With Us
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.8} />
           </Link>
           <Link
             href="/investor"
-            className="border border-white/40 hover:border-white hover:bg-white/10 text-white text-[15px] font-semibold px-7 py-4 rounded-lg transition-all duration-300 flex items-center gap-2"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/40 hover:border-white hover:bg-white/10 text-white text-[15px] font-semibold px-7 py-4 rounded-lg transition-colors duration-300"
           >
             Our Platform
             <ArrowRight className="w-4 h-4" strokeWidth={1.8} />

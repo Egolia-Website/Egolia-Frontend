@@ -34,7 +34,7 @@ export default function IntelligenceProcess() {
           <div>
             <motion.p
               className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-5"
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
@@ -43,7 +43,7 @@ export default function IntelligenceProcess() {
             </motion.p>
             <motion.h2
               className="text-[2.4rem] sm:text-[3.2rem] lg:text-[4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em]"
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
@@ -61,7 +61,7 @@ export default function IntelligenceProcess() {
             <motion.div
               key={step.title}
               className="group grid grid-cols-[80px_1fr] lg:grid-cols-[120px_1fr_1fr] items-start gap-6 lg:gap-12 py-10"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}

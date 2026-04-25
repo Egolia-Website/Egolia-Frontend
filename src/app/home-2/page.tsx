@@ -24,7 +24,7 @@ const NAVY = "#0F1C3F";
 function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 22 }}
+      initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.75, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -75,7 +75,7 @@ export default function Home2() {
           />
 
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
             className="text-[clamp(3rem,7vw,6rem)] font-bold leading-[1.07] tracking-[-0.03em] text-[#0F1C3F] mb-7"
@@ -84,7 +84,7 @@ export default function Home2() {
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-[18px] text-slate-600 leading-[1.85] max-w-[400px] mb-10"
@@ -152,11 +152,11 @@ export default function Home2() {
             ].map((card, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="group relative flex overflow-hidden bg-white border border-slate-200 rounded-2xl hover:shadow-lg transition-all duration-300"
+                className="group relative flex overflow-hidden bg-white border border-slate-200 rounded-2xl hover:shadow-lg transition-shadow duration-300"
                 style={{ minHeight: 240 }}
               >
                 {/* Content left */}
@@ -274,11 +274,11 @@ export default function Home2() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="p-8 border border-slate-200 rounded-2xl hover:shadow-md hover:border-slate-300 transition-all duration-300"
+                className="p-8 border border-slate-200 rounded-2xl hover:shadow-md hover:border-slate-300 transition-[box-shadow,border-color] duration-300"
               >
                 {/* Circle icon */}
                 <div className="w-16 h-16 rounded-full border-2 flex items-center justify-center mb-5" style={{ color: GOLD, borderColor: GOLD + "55", backgroundColor: GOLD + "10" }}>
@@ -332,7 +332,7 @@ export default function Home2() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}

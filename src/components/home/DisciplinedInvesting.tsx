@@ -56,7 +56,7 @@ export default function DisciplinedInvesting() {
 
           <motion.h2
             className="text-3xl md:text-4xl lg:text-5xl font-sans text-navy mb-4"
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
@@ -66,7 +66,7 @@ export default function DisciplinedInvesting() {
 
           <motion.p
             className="text-navy/55 max-w-xl mx-auto text-base md:text-lg leading-[1.7]"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -81,7 +81,7 @@ export default function DisciplinedInvesting() {
             <motion.div
               key={item.title}
               className="bg-white p-8 md:p-10 group hover:bg-navy transition-colors duration-300"
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}

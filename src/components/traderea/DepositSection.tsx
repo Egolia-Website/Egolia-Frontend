@@ -36,7 +36,7 @@ export default function DepositSection() {
           <div>
             <motion.h2
               className="text-3xl md:text-4xl font-sans text-navy mb-4"
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
@@ -46,7 +46,7 @@ export default function DepositSection() {
 
             <motion.p
               className="text-navy/70 text-xl leading-[1.7] mb-12 font-medium"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -100,7 +100,7 @@ export default function DepositSection() {
           {/* Right - Wire transfer preview */}
           <motion.div
             className="bg-gray-light p-8 md:p-10 border border-navy/5"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}

@@ -13,7 +13,7 @@ export default function AvranceCTA() {
 
         <motion.p
           className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-5"
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
@@ -23,7 +23,7 @@ export default function AvranceCTA() {
 
         <motion.h2
           className="text-[2.2rem] sm:text-[3rem] lg:text-[3.6rem] font-bold text-[#1d1d1f] leading-[1.08] tracking-[-0.025em] mb-6 max-w-2xl mx-auto"
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
@@ -34,7 +34,7 @@ export default function AvranceCTA() {
 
         <motion.p
           className="text-[#6e6e73] max-w-xl mx-auto text-[16px] sm:text-[17px] leading-[1.8] mb-10"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -44,7 +44,7 @@ export default function AvranceCTA() {
 
         <motion.div
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}

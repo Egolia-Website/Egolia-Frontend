@@ -18,7 +18,7 @@ export default function PartnerCTA() {
 
           <motion.p
             className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-6"
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
@@ -41,7 +41,7 @@ export default function PartnerCTA() {
 
           <motion.p
             className="text-[#4a4a4a] text-[17px] sm:text-[18px] leading-[1.8] mb-12 max-w-lg"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.25 }}
@@ -51,7 +51,7 @@ export default function PartnerCTA() {
 
           <motion.div
             className="flex flex-col sm:flex-row gap-4"
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.35 }}

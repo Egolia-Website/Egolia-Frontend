@@ -39,7 +39,7 @@ export default function Advantage() {
         <div className="text-center mb-16">
           <motion.p
             className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-5"
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
@@ -48,7 +48,7 @@ export default function Advantage() {
           </motion.p>
           <motion.h2
             className="text-[2.4rem] sm:text-[3.2rem] lg:text-[4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] mb-5"
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
@@ -57,7 +57,7 @@ export default function Advantage() {
           </motion.h2>
           <motion.p
             className="text-[#6e6e73] text-[17px] sm:text-[18px] leading-[1.8] font-medium max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -72,11 +72,11 @@ export default function Advantage() {
             <motion.div
               key={item.title}
               className={[
-                "group relative p-8 overflow-hidden transition-all duration-300 hover:bg-[#0F1C3F]",
+                "group relative p-8 overflow-hidden transition-colors duration-300 hover:bg-[#0F1C3F]",
                 i < 3 ? "border-r border-[#e8e8ed] lg:border-r" : "",
                 i < 2 ? "sm:border-b sm:border-[#e8e8ed] lg:border-b-0" : "",
               ].join(" ")}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}

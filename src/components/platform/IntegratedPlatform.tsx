@@ -68,7 +68,7 @@ export default function IntegratedPlatform() {
           {/* LEFT — heading + description */}
           <motion.div
             className="w-full lg:w-[35%] shrink-0"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -114,7 +114,7 @@ export default function IntegratedPlatform() {
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.15 + i * 0.1 }}
                   className="flex flex-col items-center gap-3 z-10 w-[25%]"
@@ -134,7 +134,7 @@ export default function IntegratedPlatform() {
               {pillars.map((item, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}

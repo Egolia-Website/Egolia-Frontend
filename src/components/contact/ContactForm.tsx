@@ -46,7 +46,7 @@ export default function ContactForm() {
         <div className="text-center mb-12">
           <motion.p
             className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-4"
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
@@ -54,7 +54,7 @@ export default function ContactForm() {
           </motion.p>
           <motion.h1
             className="text-[2.4rem] sm:text-[3.2rem] lg:text-[4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.03em]"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
@@ -65,7 +65,7 @@ export default function ContactForm() {
         {/* Map — full width */}
         <motion.div
           className="w-full h-[220px] sm:h-[320px] md:h-[420px] rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.1)] mb-8"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
         >
@@ -86,7 +86,7 @@ export default function ContactForm() {
           {/* Form */}
           <motion.div
             className="bg-white rounded-3xl p-8 sm:p-10 shadow-[0_4px_30px_rgba(0,0,0,0.06)]"
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25 }}
           >
@@ -174,7 +174,7 @@ export default function ContactForm() {
           {/* Our Location */}
           <motion.div
             className="bg-[#0F1C3F] rounded-3xl p-8 shadow-[0_4px_30px_rgba(0,0,0,0.1)] flex flex-col"
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >

@@ -31,7 +31,7 @@ export default function HowItWorks() {
         <div className="text-center mb-16">
           <motion.p
             className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-5"
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
@@ -40,7 +40,7 @@ export default function HowItWorks() {
           </motion.p>
           <motion.h2
             className="text-[2.4rem] sm:text-[3.2rem] lg:text-[4rem] font-bold text-[#1d1d1f] leading-[1.08] tracking-[-0.025em] mb-5"
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
@@ -49,7 +49,7 @@ export default function HowItWorks() {
           </motion.h2>
           <motion.p
             className="text-[#6e6e73] text-[17px] leading-[1.8] max-w-xl mx-auto"
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -62,11 +62,11 @@ export default function HowItWorks() {
           {steps.map((step, i) => (
             <motion.div
               key={step.title}
-              className="group bg-white border border-[#e8e8ed] rounded-2xl p-7 shadow-sm hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 text-center"
-              initial={{ opacity: 0, y: 30 }}
+              className="group bg-white border border-[#e8e8ed] rounded-2xl p-7 shadow-sm hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-shadow duration-300 text-center"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+              transition={{ duration: 0.6, delay: i * 0.08 }}
             >
               <div className="w-14 h-14 rounded-xl bg-[#0F1C3F] flex items-center justify-center text-white mx-auto mb-6 group-hover:bg-orange transition-colors duration-300">
                 {step.icon}

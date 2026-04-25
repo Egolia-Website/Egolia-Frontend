@@ -32,13 +32,13 @@ export default function Contact() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/investor"
-                className="inline-flex items-center gap-2 bg-orange hover:bg-[#d4691e] text-white text-[14px] font-semibold px-8 py-4 rounded-lg transition-colors duration-300"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-orange hover:bg-[#d4691e] text-white text-[14px] font-semibold px-8 py-4 rounded-lg transition-colors duration-300"
               >
                 Investor Relations
               </Link>
               <Link
                 href="/platform"
-                className="inline-flex items-center gap-2 border border-[#0F1C3F]/20 hover:border-orange hover:text-orange text-[#0F1C3F] text-[14px] font-semibold px-8 py-4 rounded-lg transition-all duration-300"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-[#0F1C3F]/20 hover:border-orange hover:text-orange text-[#0F1C3F] text-[14px] font-semibold px-8 py-4 rounded-lg transition-colors duration-300"
               >
                 Our Platform
               </Link>

@@ -39,8 +39,8 @@ export default function InvestmentFocus() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
           <div>
             <motion.p
-              className="text-orange text-[13px] font-bold tracking-[0.3em] uppercase mb-5"
-              initial={{ opacity: 0, y: 15 }}
+              className="text-orange text-[13px] font-bold tracking-[0.3em] uppercase mb-5 text-center lg:text-left"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
@@ -48,8 +48,8 @@ export default function InvestmentFocus() {
               Investment Focus
             </motion.p>
             <motion.h2
-              className="text-[2.4rem] sm:text-[3rem] lg:text-[3.6rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em]"
-              initial={{ opacity: 0, y: 25 }}
+              className="text-[2.4rem] sm:text-[3rem] lg:text-[3.6rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] text-center lg:text-left"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
@@ -59,7 +59,7 @@ export default function InvestmentFocus() {
             </motion.h2>
           </div>
           <motion.p
-            className="text-[#6e6e73] text-[16px] leading-[1.8] max-w-xs lg:text-right"
+            className="text-[#6e6e73] text-[16px] leading-[1.8] max-w-xs text-center lg:text-right"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -74,11 +74,11 @@ export default function InvestmentFocus() {
           {sectors.map((sector, i) => (
             <motion.div
               key={sector.title}
-              className="group relative overflow-hidden rounded-2xl border border-[#e8e8ed] bg-[#f5f5f7] p-8 hover:border-orange/30 hover:shadow-[0_8px_32px_rgba(0,0,0,0.07)] hover:-translate-y-1 transition-all duration-400"
-              initial={{ opacity: 0, y: 30 }}
+              className="group relative overflow-hidden rounded-2xl border border-[#e8e8ed] bg-[#f5f5f7] p-8 hover:border-orange/30 hover:shadow-[0_8px_32px_rgba(0,0,0,0.07)] transition-[box-shadow,border-color] duration-300"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.6, delay: i * 0.08 }}
             >
               {/* Left accent bar */}
               <div className="absolute left-0 top-6 bottom-6 w-[3px] rounded-full bg-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

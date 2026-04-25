@@ -33,7 +33,7 @@ export default function IntelligencePlatform() {
           <div className="lg:w-[40%] lg:sticky lg:top-32 lg:self-start">
             <motion.p
               className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-5"
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
@@ -42,7 +42,7 @@ export default function IntelligencePlatform() {
             </motion.p>
             <motion.h2
               className="text-[2.4rem] sm:text-[3rem] lg:text-[3.4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.03em] mb-6"
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
@@ -62,7 +62,7 @@ export default function IntelligencePlatform() {
             />
             <motion.p
               className="text-[#6e6e73] text-[16px] leading-[1.8]"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}

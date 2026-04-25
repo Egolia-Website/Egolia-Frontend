@@ -33,7 +33,7 @@ const reasons = [
 
 export default function WhyInvest() {
   return (
-    <section className="relative bg-white py-24 md:py-32 overflow-hidden">
+    <section className="relative bg-white pt-10 pb-16 md:pt-14 md:pb-24 overflow-hidden">
       <Image src="/images/backImage.png" alt="" fill className="object-cover object-center" />
       <div className="absolute inset-0 bg-white/92" />
       <div className="max-w-[1200px] mx-auto px-6 lg:px-14 relative z-10">
@@ -41,8 +41,8 @@ export default function WhyInvest() {
         {/* Top header row */}
         <div className="mb-14">
           <motion.p
-            className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-10"
-            initial={{ opacity: 0, y: 15 }}
+            className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-10 text-center lg:text-left"
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
@@ -52,8 +52,8 @@ export default function WhyInvest() {
 
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
             <motion.h2
-              className="text-[#0F1C3F] text-[2.8rem] sm:text-[3.6rem] lg:text-[4.2rem] font-bold leading-[1.0] tracking-[-0.04em] max-w-[560px]"
-              initial={{ opacity: 0, y: 25 }}
+              className="text-[#0F1C3F] text-[2.8rem] sm:text-[3.6rem] lg:text-[4.2rem] font-bold leading-[1.0] tracking-[-0.04em] max-w-[560px] text-center lg:text-left"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
@@ -62,8 +62,8 @@ export default function WhyInvest() {
             </motion.h2>
 
             <motion.p
-              className="text-[#6e6e73] text-[17px] leading-[1.8] max-w-[480px] lg:pt-3"
-              initial={{ opacity: 0, y: 20 }}
+              className="text-[#6e6e73] text-[17px] leading-[1.8] max-w-[480px] lg:pt-3 text-center lg:text-left"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -78,14 +78,14 @@ export default function WhyInvest() {
           {reasons.map((item, i) => (
             <motion.div
               key={item.number}
-              className="group bg-[#f5f5f7] border border-[#e8e8ed] rounded-2xl p-8 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
-              initial={{ opacity: 0, y: 30 }}
+              className="group bg-[#f5f5f7] border border-[#e8e8ed] rounded-2xl p-8 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-shadow duration-300"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+              transition={{ duration: 0.6, delay: i * 0.08 }}
             >
               <div className="flex items-center justify-between mb-6">
-                <div className="w-12 h-12 rounded-xl bg-[#0F1C3F] flex items-center justify-center group-hover:bg-orange transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-[#0F1C3F] flex items-center justify-center group-hover:bg-orange transition-colors duration-300">
                   <item.icon className="w-5 h-5 text-white" strokeWidth={2} />
                 </div>
                 <span className="text-[#0F1C3F]/15 text-[2.5rem] font-bold leading-none select-none group-hover:text-orange/20 transition-colors duration-300">{item.number}</span>

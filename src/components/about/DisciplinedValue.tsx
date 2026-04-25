@@ -35,7 +35,7 @@ export default function DisciplinedValue() {
 
             <motion.p
               className="text-orange text-[13px] font-bold tracking-[0.3em] uppercase mb-4"
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
@@ -45,7 +45,7 @@ export default function DisciplinedValue() {
 
             <motion.h2
               className="text-[2.4rem] sm:text-[3.2rem] font-bold text-[#0F1C3F] leading-[1.1] tracking-[-0.03em] mb-7"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
@@ -59,7 +59,7 @@ export default function DisciplinedValue() {
                 <motion.div
                   key={item.title}
                   className="py-4 flex items-start gap-4"
-                  initial={{ opacity: 0, y: 15 }}
+                  initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
@@ -78,10 +78,10 @@ export default function DisciplinedValue() {
           {/* RIGHT — chart */}
           <motion.div
             className="w-full lg:w-[48%]"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
             <svg viewBox="0 0 380 280" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -108,15 +108,10 @@ export default function DisciplinedValue() {
 
               {/* Bars */}
               {bars.map((bar, i) => (
-                <motion.rect
+                <rect
                   key={i}
                   x={bar.x} y={bar.y} width={46} height={bar.h} rx={7}
                   fill="url(#barGrad)"
-                  initial={{ scaleY: 0 }}
-                  whileInView={{ scaleY: 1 }}
-                  viewport={{ once: true, amount: 0 }}
-                  transition={{ duration: 0.65, delay: 0.15 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  style={{ transformOrigin: `${bar.x + 23}px 242px` }}
                 />
               ))}
 
@@ -137,11 +132,10 @@ export default function DisciplinedValue() {
               <motion.path
                 d="M 286 8 L 276 24 L 293 26 Z"
                 fill="#E8792B"
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true, amount: 0 }}
                 transition={{ duration: 0.3, delay: 1.85 }}
-                style={{ transformOrigin: "284px 18px" }}
               />
             </svg>
 
@@ -151,7 +145,7 @@ export default function DisciplinedValue() {
                 <motion.div
                   key={stat.label}
                   className="bg-white px-5 py-4 text-center"
-                  initial={{ opacity: 0, y: 15 }}
+                  initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}

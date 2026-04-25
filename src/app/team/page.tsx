@@ -9,32 +9,6 @@ import TeamSection from "@/components/team/TeamSection";
 
 const executiveTeam = [
   {
-    name: "Jason R. Macintosh",
-    role: "Chief Financial Officer",
-    fullTitle: "Chief Financial Officer",
-    bio: "25+ years of leadership across public and private companies in exploration, development, and operating environments, bringing deep expertise in capital markets and financial management.",
-    image: "/images/Board Member/jason-macintosh.png",
-    experience: [
-      "Financial Stewardship — 25+ years of leadership across public and private companies in exploration, development, and operating environments, bringing deep expertise in capital markets and financial management.",
-      "Executive Leadership — Served as CFO, Corporate Secretary, and Interim CEO for TSX and TSXV-listed mining companies, demonstrating versatility and strategic acumen.",
-      "Core Expertise — Capital markets, financial stewardship, governance, strategic execution, financing, M&A, continuous disclosure, and risk management.",
-      "Trusted Advisor — Guides boards, investors, regulators, and government stakeholders through transformation and value-creation phases with integrity and accountability.",
-    ],
-  },
-  {
-    name: "Elaine Galley",
-    role: "Chief Operating Officer",
-    fullTitle: "Chief Operating Officer",
-    bio: "20+ years driving brand growth and market positioning in Canada's competitive real estate sector with proven results.",
-    image: "/images/Board Member/ellen.png",
-    experience: [
-      "Marketing Expertise — 20+ years driving brand growth and market positioning in Canada's competitive real estate sector with proven results.",
-      "Leadership Track Record — Former Marketing Director for leading Canadian real estate company with proven ability to elevate developments and accelerate sales.",
-      "Strategic Execution — Led high-impact marketing initiatives across residential and mixed-use developments, translating vision into measurable business outcomes.",
-      "Core Competencies — Brand strategy, digital transformation, sales enablement, stakeholder engagement, and deep buyer behavior insights in evolving real estate landscape.",
-    ],
-  },
-  {
     name: "Michael Spencley",
     role: "Chief Executive Officer",
     fullTitle: "Chief Executive Officer",
@@ -48,6 +22,19 @@ const executiveTeam = [
     ],
   },
   {
+    name: "Jason R. Macintosh",
+    role: "Chief Financial Officer",
+    fullTitle: "Chief Financial Officer",
+    bio: "25+ years of leadership across public and private companies in exploration, development, and operating environments, bringing deep expertise in capital markets and financial management.",
+    image: "/images/Board Member/jason-macintosh.png",
+    experience: [
+      "Financial Stewardship — 25+ years of leadership across public and private companies in exploration, development, and operating environments, bringing deep expertise in capital markets and financial management.",
+      "Executive Leadership — Served as CFO, Corporate Secretary, and Interim CEO for TSX and TSXV-listed mining companies, demonstrating versatility and strategic acumen.",
+      "Core Expertise — Capital markets, financial stewardship, governance, strategic execution, financing, M&A, continuous disclosure, and risk management.",
+      "Trusted Advisor — Guides boards, investors, regulators, and government stakeholders through transformation and value-creation phases with integrity and accountability.",
+    ],
+  },
+  {
     name: "Wole Olapoju",
     role: "Chief Technology Officer",
     fullTitle: "Chief Technology Officer",
@@ -58,6 +45,19 @@ const executiveTeam = [
       "Platform Architecture — Drives Egolia Group's platform architecture, digital infrastructure, and operational systems.",
       "Core Expertise — Deep expertise in capital allocation, organizational strategy, and cross-sector partnership development.",
       "Vision & Execution — Recognized for aligning vision with execution, building institutions positioned for long-term market leadership.",
+    ],
+  },
+  {
+    name: "Elaine Galley",
+    role: "Chief Operating Officer",
+    fullTitle: "Chief Operating Officer",
+    bio: "20+ years driving brand growth and market positioning in Canada's competitive real estate sector with proven results.",
+    image: "/images/Board Member/ellen.png",
+    experience: [
+      "Marketing Expertise — 20+ years driving brand growth and market positioning in Canada's competitive real estate sector with proven results.",
+      "Leadership Track Record — Former Marketing Director for leading Canadian real estate company with proven ability to elevate developments and accelerate sales.",
+      "Strategic Execution — Led high-impact marketing initiatives across residential and mixed-use developments, translating vision into measurable business outcomes.",
+      "Core Competencies — Brand strategy, digital transformation, sales enablement, stakeholder engagement, and deep buyer behavior insights in evolving real estate landscape.",
     ],
   },
 ];
@@ -88,15 +88,29 @@ const advisoryTeam = [
     ],
   },
   {
-    name: "Abdallah",
-    role: "Advisor",
-    fullTitle: "Strategic Advisor",
-    bio: "Experienced advisor and investor with a strong foundation in emerging markets, capital strategy, and cross-border partnerships.",
-    image: "https://ui-avatars.com/api/?name=Abdallah&background=0F1C3F&color=fff&size=400&font-size=0.35",
+    name: "Thomas Braun",
+    role: "Senior Security Lawyer Advisor",
+    fullTitle: "Senior Security Lawyer Advisor",
+    bio: "Experienced securities and corporate lawyer with deep expertise in capital markets, regulatory compliance, and governance for public and private companies.",
+    image: "/images/Board Member/thomas.png",
     experience: [
-      "Global Advisory — Broad experience in international business development and strategic advisory.",
-      "Cross-Cultural Expertise — Brings cross-cultural fluency and investor relations expertise to Egolia Group.",
-      "Strategic Focus — Focused on expanding the organization's reach into global capital networks.",
+      "Securities Law — Specialized expertise in securities law, capital markets regulation, and compliance frameworks for public and private issuers.",
+      "Corporate Governance — Advises boards and executive leadership on governance best practices, regulatory obligations, and risk mitigation strategies.",
+      "Capital Markets — Extensive experience structuring and executing financing transactions, public offerings, and M&A in highly regulated environments.",
+      "Strategic Advisory — Provides senior legal counsel to Egolia Group on securities compliance, investor relations structuring, and regulatory strategy.",
+    ],
+  },
+  {
+    name: "Abdalla Ali",
+    role: "In-House Counsel",
+    fullTitle: "In-House Counsel",
+    bio: "Founder and Managing Partner of AAA Law LLP, called to the Ontario bar in 2018 and the British Columbia bar in 2025, with practice areas spanning corporate law, litigation, and immigration.",
+    image: "/images/Board Member/abdalla-ali.png",
+    experience: [
+      "Legal Expertise — Founder and Managing Partner of AAA Law LLP, with practice areas spanning trial and litigation, corporate and business law, family law, and Canadian immigration law.",
+      "Called to Bar — Called to the Ontario bar in 2018 and the British Columbia bar in 2025; member of the Law Society of Ontario and the Law Society of British Columbia.",
+      "Academic Background — Holds a B.A. in Economics and International Development Studies from the University of Toronto and a Law degree from the University of Birmingham (UK).",
+      "Community Engagement — Member of the Canadian Association of Black Lawyers and the Toronto Lawyers Association; recognized for commitment to community leadership and access to justice.",
     ],
   },
 ];
@@ -116,8 +130,8 @@ const nonExecutiveTeam = [
   },
   {
     name: "Pauline",
-    role: "Non-Executive Director",
-    fullTitle: "Non-Executive Director",
+    role: "Executive Personal Assistant",
+    fullTitle: "Executive Personal Assistant",
     bio: "Senior professional and non-executive contributor providing independent governance insight and strategic counsel to Egolia Group.",
     image: "/images/Board Member/pauline.png",
     experience: [
@@ -128,8 +142,8 @@ const nonExecutiveTeam = [
   },
   {
     name: "Matthew",
-    role: "Non-Executive Director",
-    fullTitle: "Non-Executive Director",
+    role: "Business Analyst",
+    fullTitle: "Business Analyst",
     bio: "Experienced professional bringing operational and strategic expertise to Egolia Group's governance and advisory structure.",
     image: "https://ui-avatars.com/api/?name=Matthew&background=0F1C3F&color=fff&size=400&font-size=0.35",
     experience: [

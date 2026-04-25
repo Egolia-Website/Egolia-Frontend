@@ -26,7 +26,7 @@ export default function InstitutionalFramework() {
         <div className="text-center mb-16">
           <motion.p
             className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-5"
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
@@ -35,7 +35,7 @@ export default function InstitutionalFramework() {
           </motion.p>
           <motion.h2
             className="text-[2.4rem] sm:text-[3.2rem] lg:text-[4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em]"
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
@@ -51,10 +51,10 @@ export default function InstitutionalFramework() {
           {/* Left — Institutional Framework table */}
           <motion.div
             className="bg-[#f5f5f7] border border-[#e8e8ed] rounded-2xl p-8"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
           >
             <p className="text-orange text-[11px] font-bold tracking-[0.2em] uppercase mb-2">Institutional Framework</p>
             <h3 className="text-[#1d1d1f] text-[22px] font-bold mb-8 leading-snug">
@@ -66,7 +66,7 @@ export default function InstitutionalFramework() {
                 <motion.div
                   key={row.label}
                   className="py-5 first:pt-0 last:pb-0 grid grid-cols-[80px_1fr] sm:grid-cols-[100px_1fr] gap-4"
-                  initial={{ opacity: 0, y: 15 }}
+                  initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.1 + i * 0.08 }}
@@ -81,10 +81,10 @@ export default function InstitutionalFramework() {
           {/* Right — Investor Perspective */}
           <motion.div
             className="bg-[#f5f5f7] border border-[#e8e8ed] rounded-2xl p-8 flex flex-col"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
             <p className="text-orange text-[11px] font-bold tracking-[0.2em] uppercase mb-6">Investor Perspective</p>
 
@@ -101,7 +101,7 @@ export default function InstitutionalFramework() {
                 <motion.div
                   key={row.label}
                   className="py-4 first:pt-0 last:pb-0 grid grid-cols-[80px_1fr] sm:grid-cols-[90px_1fr] gap-4"
-                  initial={{ opacity: 0, y: 15 }}
+                  initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.2 + i * 0.08 }}

@@ -36,7 +36,7 @@ export default function Philosophy() {
         {/* Eyebrow */}
         <motion.p
           className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-6"
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
@@ -47,7 +47,7 @@ export default function Philosophy() {
         {/* Heading */}
         <motion.h2
           className="text-[2.4rem] sm:text-[3.2rem] lg:text-[4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.025em] mb-6"
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
@@ -69,7 +69,7 @@ export default function Philosophy() {
         {/* Description */}
         <motion.p
           className="text-[#4a5568] text-[17px] sm:text-[18px] leading-[1.8] max-w-2xl mx-auto mb-14 font-medium"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.25 }}
@@ -80,7 +80,7 @@ export default function Philosophy() {
         {/* 3 icon pills */}
         <motion.div
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.35 }}

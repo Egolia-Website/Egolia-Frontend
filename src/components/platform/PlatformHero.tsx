@@ -59,20 +59,20 @@ export default function PlatformHero() {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-4 w-full max-w-sm mx-auto sm:max-w-none"
         >
           <Link
             href="/investor"
-            className="bg-orange hover:bg-[#d4691e] text-white text-[14px] font-semibold tracking-wide px-9 py-4 rounded-lg transition-colors duration-300"
+            className="w-full sm:w-auto inline-flex items-center justify-center bg-orange hover:bg-[#d4691e] text-white text-[14px] font-semibold tracking-wide px-9 py-4 rounded-lg transition-colors duration-300"
           >
             Explore Investments
           </Link>
           <Link
             href="/contact"
-            className="bg-transparent border border-white/30 text-white hover:border-white hover:bg-white/10 text-[14px] font-semibold tracking-wide px-9 py-4 rounded-lg transition-all duration-300"
+            className="w-full sm:w-auto inline-flex items-center justify-center border border-white/30 text-white hover:border-white hover:bg-white/10 text-[14px] font-semibold tracking-wide px-9 py-4 rounded-lg transition-colors duration-300"
           >
             Get In Touch
           </Link>

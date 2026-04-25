@@ -42,7 +42,7 @@ export default function CoreCapabilities() {
         <div className="text-center mb-16">
           <motion.p
             className="text-orange text-[13px] font-bold tracking-[0.3em] uppercase mb-5"
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
@@ -51,7 +51,7 @@ export default function CoreCapabilities() {
           </motion.p>
           <motion.h2
             className="text-[2rem] sm:text-[2.6rem] lg:text-[3.2rem] font-bold text-[#0F1C3F] leading-[1.06] tracking-[-0.03em] mb-5"
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
@@ -74,11 +74,11 @@ export default function CoreCapabilities() {
           {capabilities.map((item, i) => (
             <motion.div
               key={item.title}
-              className="group bg-[#f5f5f7] border border-[#e8e8ed] rounded-2xl p-8 flex flex-col hover:bg-white hover:border-orange/20 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-400"
-              initial={{ opacity: 0, y: 30 }}
+              className="group bg-[#f5f5f7] border border-[#e8e8ed] rounded-2xl p-8 flex flex-col hover:bg-white hover:border-orange/20 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] transition-[box-shadow,background-color,border-color] duration-300"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
+              transition={{ duration: 0.6, delay: i * 0.08 }}
             >
               {/* Icon */}
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange to-[#d4691e] flex items-center justify-center mb-6 shadow-[0_6px_24px_rgba(232,121,43,0.3)] group-hover:scale-110 transition-transform duration-300">

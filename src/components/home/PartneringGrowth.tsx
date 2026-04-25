@@ -101,7 +101,7 @@ export default function PartneringGrowth() {
             </motion.span>
             <motion.h2
               className="text-4xl md:text-5xl font-sans text-navy mb-10 leading-[1.1]"
-              initial={{ opacity: 0, y: 25 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
@@ -116,13 +116,13 @@ export default function PartneringGrowth() {
               {features.map((feature, i) => (
                 <motion.div
                   key={feature.title}
-                  className="bg-white rounded-xl p-6 shadow-[0_2px_16px_rgba(15,28,63,0.06)] hover:shadow-[0_8px_32px_rgba(15,28,63,0.10)] hover:-translate-y-0.5 transition-all duration-400 group"
-                  initial={{ opacity: 0, y: 20 }}
+                  className="bg-white rounded-xl p-6 shadow-[0_2px_16px_rgba(15,28,63,0.06)] hover:shadow-[0_8px_32px_rgba(15,28,63,0.10)] transition-all duration-400 group"
+                  initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+                  transition={{ duration: 0.6, delay: i * 0.08 }}
                 >
-                  <div className="w-9 h-9 rounded-lg bg-orange/10 text-orange flex items-center justify-center mb-4 group-hover:bg-orange group-hover:text-white transition-all duration-300">
+                  <div className="w-9 h-9 rounded-lg bg-orange/10 text-orange flex items-center justify-center mb-4 group-hover:bg-orange group-hover:text-white transition-colors duration-300">
                     {feature.icon}
                   </div>
                   <h3 className="text-navy font-bold text-sm mb-2">{feature.title}</h3>

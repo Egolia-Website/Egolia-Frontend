@@ -18,10 +18,10 @@ export default function Performance() {
       <div className="max-w-[1200px] mx-auto px-6 lg:px-14 relative z-10">
 
         {/* Header — left aligned */}
-        <div className="mb-16 max-w-xl">
+        <div className="mb-16 max-w-xl mx-auto lg:mx-0">
           <motion.p
-            className="text-orange text-[13px] font-bold tracking-[0.3em] uppercase mb-5"
-            initial={{ opacity: 0, y: 15 }}
+            className="text-orange text-[13px] font-bold tracking-[0.3em] uppercase mb-5 text-center lg:text-left"
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
@@ -29,8 +29,8 @@ export default function Performance() {
             Our Track Record
           </motion.p>
           <motion.h2
-            className="text-[2.4rem] sm:text-[3.2rem] lg:text-[3.8rem] font-bold text-[#1d1d1f] leading-[1.06] tracking-[-0.025em]"
-            initial={{ opacity: 0, y: 25 }}
+            className="text-[2.4rem] sm:text-[3.2rem] lg:text-[3.8rem] font-bold text-[#1d1d1f] leading-[1.06] tracking-[-0.025em] text-center lg:text-left"
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
@@ -41,17 +41,17 @@ export default function Performance() {
         </div>
 
         {/* Stats — horizontal with vertical dividers */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-[#e8e8ed] border border-[#e8e8ed] rounded-2xl overflow-hidden bg-white/70 backdrop-blur-sm">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-[#e8e8ed] border border-[#e8e8ed] rounded-2xl overflow-hidden bg-white/70 backdrop-blur-sm">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}
-              className="group px-8 py-10 hover:bg-white transition-colors duration-300"
-              initial={{ opacity: 0, y: 20 }}
+              className="group px-6 py-8 sm:px-8 sm:py-10 hover:bg-white transition-colors duration-300"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <div className="text-[3.2rem] sm:text-[3.8rem] font-bold text-[#0F1C3F] leading-none tracking-[-0.03em] mb-3 group-hover:text-orange transition-colors duration-300">
+              <div className="text-[2.6rem] sm:text-[3.2rem] lg:text-[3.8rem] font-bold text-[#0F1C3F] leading-none tracking-[-0.03em] mb-3 group-hover:text-orange transition-colors duration-300">
                 {stat.value}
               </div>
               <div className="w-8 h-[2px] bg-orange mb-4" />

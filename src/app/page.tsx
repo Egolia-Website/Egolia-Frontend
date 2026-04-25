@@ -19,7 +19,7 @@ function FadeUp({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 32 }}
+      initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.9, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -195,7 +195,7 @@ export default function Home() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="flex items-center gap-4"
@@ -322,7 +322,7 @@ export default function Home() {
           ].map((card: { image: string; logo: string; logoAlt: string; title: string; desc: string; href: string; logoWidth: number; logoHeight: number; bigLogo?: boolean; useBlend: boolean }, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.8, delay: i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -477,13 +477,13 @@ export default function Home() {
                 ].map((pillar, i) => (
                   <motion.div
                     key={i}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 16 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-40px" }}
                     transition={{ duration: 0.6, delay: 0.1 + i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
                     className="group flex items-start gap-4"
                   >
-                    <div className="shrink-0 w-12 h-12 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center group-hover:bg-orange group-hover:border-orange transition-all duration-300 mt-0.5 shadow-[0_4px_16px_rgba(232,121,43,0.15)]">
+                    <div className="shrink-0 w-12 h-12 rounded-2xl bg-orange/10 border-2 border-orange flex items-center justify-center group-hover:bg-orange group-hover:border-orange transition-colors duration-300 mt-0.5 shadow-[0_4px_16px_rgba(232,121,43,0.15)]">
                       <pillar.icon className="w-5 h-5 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={2} />
                     </div>
                     <div>
@@ -600,11 +600,10 @@ export default function Home() {
             ].map((stat, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.8, delay: i * 0.12, ease: [0.25, 0.46, 0.45, 0.94] }}
-                whileHover={{ y: -4, transition: { duration: 0.3 } }}
                 className="group relative rounded-2xl overflow-hidden py-8 sm:py-12 px-4 sm:px-6 text-center"
                 style={{
                   background: "linear-gradient(135deg, rgba(245,245,247,0.9) 0%, rgba(245,245,247,0.6) 100%)",
@@ -647,7 +646,7 @@ export default function Home() {
             <motion.div
               key={i}
               initial={{ opacity: 0, scale: 0.6 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1.5, delay: 0.15 + i * 0.15, ease: [0.16, 1, 0.3, 1] }}
               className="absolute rounded-full"
@@ -729,7 +728,7 @@ export default function Home() {
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"

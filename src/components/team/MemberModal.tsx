@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export interface TeamMemberDetail {
@@ -19,6 +20,15 @@ interface MemberModalProps {
 }
 
 export default function MemberModal({ member, onClose }: MemberModalProps) {
+  useEffect(() => {
+    if (member) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [member]);
+
   return (
     <AnimatePresence>
       {member && (

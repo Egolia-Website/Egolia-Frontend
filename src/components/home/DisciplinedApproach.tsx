@@ -43,7 +43,7 @@ export default function DisciplinedApproach() {
           </motion.span>
           <motion.h2
             className="text-4xl md:text-5xl font-sans text-navy leading-[1.1]"
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
@@ -58,14 +58,14 @@ export default function DisciplinedApproach() {
           {pillars.map((pillar, i) => (
             <motion.div
               key={pillar.number}
-              className="bg-white rounded-2xl p-10 shadow-[0_4px_24px_rgba(15,28,63,0.06)] hover:shadow-[0_20px_60px_rgba(15,28,63,0.12)] hover:-translate-y-1.5 transition-all duration-500 group"
-              initial={{ opacity: 0, y: 30 }}
+              className="bg-white rounded-2xl p-10 shadow-[0_4px_24px_rgba(15,28,63,0.06)] hover:shadow-[0_20px_60px_rgba(15,28,63,0.12)] transition-shadow duration-500 group"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.12 }}
+              transition={{ duration: 0.6, delay: i * 0.08 }}
             >
               {/* Number badge */}
-              <div className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-orange/10 text-orange font-bold text-base mb-8 font-sans group-hover:bg-orange group-hover:text-white transition-all duration-300">
+              <div className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-orange/10 text-orange font-bold text-base mb-8 font-sans group-hover:bg-orange group-hover:text-white transition-colors duration-300">
                 {pillar.number}
               </div>
               <h3 className="text-navy text-xl font-bold mb-4">{pillar.title}</h3>

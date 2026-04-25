@@ -84,7 +84,7 @@ export default function OurPlatform() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
           <div>
             <motion.span
-              className="inline-block text-orange text-[11px] font-bold tracking-[0.22em] uppercase mb-5"
+              className="block text-orange text-[11px] font-bold tracking-[0.22em] uppercase mb-5 text-center lg:text-left"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -93,8 +93,8 @@ export default function OurPlatform() {
               Our Platform
             </motion.span>
             <motion.h2
-              className="text-4xl md:text-5xl lg:text-6xl font-sans text-white leading-[1.05]"
-              initial={{ opacity: 0, y: 25 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-sans text-white leading-[1.05] text-center lg:text-left"
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
@@ -128,10 +128,10 @@ export default function OurPlatform() {
               key={company.name}
               className="group relative overflow-hidden rounded-3xl border border-white/[0.08] p-8 md:p-10 hover:border-white/[0.16] transition-all duration-500"
               style={{ background: "rgba(255,255,255,0.04)" }}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
+              transition={{ duration: 0.6, delay: i * 0.08 }}
             >
               {/* Background image (AvranceCorp only) */}
               {company.image && (
