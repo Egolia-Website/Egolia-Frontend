@@ -53,8 +53,8 @@ export default function MemberModal({ member, onClose }: MemberModalProps) {
 
             <div className="p-7 sm:p-10">
               {/* Top: photo + name */}
-              <div className="flex flex-col sm:flex-row gap-7 items-start mb-8">
-                <div className="relative w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] flex-shrink-0 rounded-full overflow-hidden ring-2 ring-orange/20 bg-[#e8e8ed]">
+              <div className="flex flex-col sm:flex-row gap-5 items-center sm:items-start mb-8">
+                <div className="relative w-[90px] h-[90px] sm:w-[120px] sm:h-[120px] flex-shrink-0 rounded-full overflow-hidden ring-2 ring-orange/20 bg-[#e8e8ed]">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -64,19 +64,19 @@ export default function MemberModal({ member, onClose }: MemberModalProps) {
                   />
                 </div>
 
-                <div className="pt-1">
-                  <h2 className="text-[#1d1d1f] text-2xl sm:text-3xl font-bold tracking-[-0.01em]">
+                <div className="pt-0 sm:pt-1 text-center sm:text-left">
+                  <h2 className="text-[#1d1d1f] text-xl sm:text-3xl font-bold tracking-[-0.01em]">
                     {member.name}
                   </h2>
-                  <p className="text-orange text-[14px] font-semibold mt-1">{member.fullTitle}</p>
+                  <p className="text-orange text-[13px] sm:text-[14px] font-semibold mt-1">{member.fullTitle}</p>
 
-                  <p className="text-[#6e6e73] text-[14px] leading-[1.7] mt-4 max-w-md">
+                  <p className="text-[#6e6e73] text-[13px] sm:text-[14px] leading-[1.7] mt-3 max-w-md">
                     {member.bio}
                   </p>
 
                   <Link
                     href="#"
-                    className="inline-flex items-center gap-2 mt-5 text-[13px] font-medium text-[#0F1C3F] hover:text-orange transition-colors duration-200"
+                    className="inline-flex items-center gap-2 mt-4 text-[13px] font-medium text-[#0F1C3F] hover:text-orange transition-colors duration-200"
                     aria-label="LinkedIn"
                   >
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
