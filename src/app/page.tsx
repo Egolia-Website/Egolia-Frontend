@@ -69,6 +69,8 @@ function AnimatedNumber({
 }
 
 export default function Home() {
+  const [miningModal, setMiningModal] = useState(false);
+
   return (
     <div className="bg-white text-[#1d1d1f] font-sans overflow-x-hidden">
       <Navbar />
@@ -276,7 +278,7 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5">
           {[
             {
-              image: "/images/toronto.png",
+              image: "/images/tower.png",
               logo: "/images/home/logo-avrancecorp.png",
               logoAlt: "AvranceCorp",
               title: "Real estate development focused on building lasting communities.",
@@ -322,20 +324,39 @@ export default function Home() {
               useBlend: true,
               wideMobile: true,
             },
-          ].map((card: { image: string; logo: string; logoAlt: string; title: string; desc: string; href: string; logoWidth: number; logoHeight: number; bigLogo?: boolean; useBlend: boolean; wideMobile?: boolean; imageContain?: boolean }, i) => (
+            {
+              image: "/images/mining.png",
+              logo: "/images/home/egoliaMining.png",
+              logoAlt: "Egolia Mining",
+              title: "Resource development built on responsible growth.",
+              desc: "Mining operations and resource development focused on sustainable extraction and long-term value creation.",
+              href: "/platform/avrancemining",
+              logoWidth: 200,
+              logoHeight: 50,
+              useBlend: false,
+              wideMobile: true,
+              span: false,
+            },
+          ].map((card: { image: string; logo: string; logoAlt: string; title: string; desc: string; href: string; logoWidth: number; logoHeight: number; bigLogo?: boolean; useBlend: boolean; wideMobile?: boolean; imageContain?: boolean; span?: boolean }, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.8, delay: i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="group relative overflow-hidden bg-[#1d1d1f] aspect-[4/3] flex flex-col justify-end rounded-2xl"
+              className={`group relative overflow-hidden bg-[#1d1d1f] aspect-[4/3] flex flex-col justify-end rounded-2xl${card.span ? " lg:col-span-2" : ""}`}
             >
-              <Link href={card.href} className="absolute inset-0 z-20" />
+              {card.logoAlt === "Egolia Mining" ? (
+                <button onClick={() => setMiningModal(true)} className="absolute inset-0 z-20 cursor-pointer" />
+              ) : (
+                <Link href={card.href} className="absolute inset-0 z-20" />
+              )}
 
-              <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]">
-                <Image src={card.image} alt={card.logoAlt} fill className="object-cover object-center" />
-              </div>
+              {card.image && (
+                <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]">
+                  <Image src={card.image} alt={card.logoAlt} fill className="object-cover object-center" />
+                </div>
+              )}
 
               <div
                 className="absolute inset-0 pointer-events-none"
@@ -348,16 +369,18 @@ export default function Home() {
               />
 
               <div className="relative z-10 px-5 pb-7 sm:px-8 sm:pb-8 lg:px-10 lg:pb-10 flex flex-col">
-                <div className={`flex items-center mb-3 sm:mb-4 ${card.bigLogo ? "h-8 sm:h-16" : "h-5 sm:h-8"}`}>
-                  <Image
-                    src={card.logo}
-                    alt={card.logoAlt}
-                    width={card.logoWidth}
-                    height={card.logoHeight}
-                    className={`object-contain object-left w-auto ${card.bigLogo ? `max-h-8 sm:max-h-16 ${card.wideMobile ? "max-w-[160px]" : "max-w-[100px]"} sm:max-w-none` : `max-h-5 sm:max-h-8 ${card.wideMobile ? "max-w-[130px]" : "max-w-[80px]"} sm:max-w-none`}`}
-                    style={{ filter: "brightness(0) invert(1)" }}
-                  />
-                </div>
+                {card.logo && (
+                  <div className={`flex items-center mb-3 sm:mb-4 ${card.bigLogo ? "h-8 sm:h-16" : "h-5 sm:h-8"}`}>
+                    <Image
+                      src={card.logo}
+                      alt={card.logoAlt}
+                      width={card.logoWidth}
+                      height={card.logoHeight}
+                      className={`object-contain object-left w-auto ${card.bigLogo ? `max-h-8 sm:max-h-16 ${card.wideMobile ? "max-w-[160px]" : "max-w-[100px]"} sm:max-w-none` : `max-h-5 sm:max-h-8 ${card.wideMobile ? "max-w-[130px]" : "max-w-[80px]"} sm:max-w-none`}`}
+                      style={{ filter: "brightness(0) invert(1)" }}
+                    />
+                  </div>
+                )}
 
                 <h3 className="text-[14px] sm:text-[20px] md:text-[22px] font-semibold sm:font-bold text-white leading-[1.2] tracking-[-0.02em] mb-2 sm:mb-4">
                   {card.title}
@@ -750,6 +773,36 @@ export default function Home() {
       </section>
 
       <Footer />
+
+      {/* Egolia Mining Modal */}
+      {miningModal && (
+        <div className="fixed inset-0 z-[999] flex items-center justify-center px-4" onClick={() => setMiningModal(false)}>
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 16 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md mx-auto p-8 sm:p-10"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close */}
+            <button
+              onClick={() => setMiningModal(false)}
+              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-[#f5f5f7] hover:bg-[#e8e8ed] transition-colors"
+            >
+              <svg className="w-4 h-4 text-[#1d1d1f]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <div className="text-center">
+              <p className="text-orange text-[12px] font-bold tracking-[0.25em] uppercase mb-2">Coming Soon</p>
+              <h2 className="text-[#1d1d1f] text-[1.5rem] font-bold tracking-[-0.02em] leading-[1.15]">Egolia Mining</h2>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </div>
   );
 }

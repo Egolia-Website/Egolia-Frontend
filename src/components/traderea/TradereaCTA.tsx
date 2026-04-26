@@ -49,13 +49,15 @@ export default function TradereaCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <Link
-            href="/contact"
+          <a
+            href="https://traderea.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex w-full items-center justify-center gap-3 rounded-lg bg-orange hover:bg-[#d4691e] px-8 py-4 text-[15px] font-bold text-white transition-colors duration-300 sm:w-auto"
           >
             Explore Platform
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.8} />
-          </Link>
+          </a>
           <Link
             href="/contact"
             className="group inline-flex w-full items-center justify-center gap-3 rounded-lg border border-[#1d1d1f]/15 hover:border-orange hover:text-orange px-8 py-4 text-[15px] font-bold text-[#1d1d1f] transition-all duration-300 sm:w-auto"

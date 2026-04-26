@@ -49,15 +49,15 @@ export default function InvestorCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <Link
+          <a
             href="mailto:info@egolia.com?subject=Egolia%20Investor%20Deck%20Request"
             className="group inline-flex w-full items-center justify-center gap-3 rounded-lg bg-orange hover:bg-[#d4691e] px-8 py-4 text-[15px] font-bold text-white transition-colors duration-300 sm:w-auto"
           >
             Request Investor Deck
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.8} />
-          </Link>
+          </a>
           <Link
-            href="mailto:info@egolia.com?subject=Egolia%20Investor%20Call"
+            href="/contact"
             className="group inline-flex w-full items-center justify-center gap-3 rounded-lg border border-[#1d1d1f]/15 hover:border-orange hover:text-orange px-8 py-4 text-[15px] font-bold text-[#1d1d1f] transition-all duration-300 sm:w-auto"
           >
             Get In Touch

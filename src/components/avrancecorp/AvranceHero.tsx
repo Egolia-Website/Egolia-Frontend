@@ -10,14 +10,23 @@ export default function AvranceHero() {
     <section className="relative min-h-[calc(100vh-84px)] flex items-start sm:items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/toronto.png"
+          src="/images/towerHero.png"
           alt="AvranceCorp real estate development"
           fill
-          className="object-cover object-center"
+          className="object-cover object-center hidden sm:block"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
+        <Image
+          src="/images/heroMobile.png"
+          alt="AvranceCorp real estate development"
+          fill
+          className="object-cover object-center sm:hidden"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent hidden sm:block" />
+        <div className="absolute inset-0 bg-black/60 sm:hidden" />
       </div>
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14 w-full pt-16 pb-10 sm:py-24">
@@ -66,7 +75,7 @@ export default function AvranceHero() {
         </div>
 
         <motion.p
-          className="text-white/80 text-[15px] sm:text-[18px] leading-[1.7] max-w-[520px] mb-7 sm:mb-10"
+          className="text-white text-[15px] sm:text-[18px] leading-[1.7] max-w-[520px] mb-7 sm:mb-10"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45 }}

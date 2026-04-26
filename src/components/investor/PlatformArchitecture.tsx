@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Building2, DollarSign, Database, ArrowLeftRight, ArrowRight } from "lucide-react";
+import { Building2, DollarSign, Database, ArrowLeftRight, ArrowRight, Mountain } from "lucide-react";
+import { useState } from "react";
 
 const companies = [
   {
@@ -33,9 +34,18 @@ const companies = [
     description: "Research, market data, analytics, and whitepaper production are core to how Egolia underwrites, communicates, and builds strategic advantage — not peripheral functions.",
     href: "/platform/metadata",
   },
+  {
+    icon: <Mountain className="w-7 h-7" strokeWidth={1.4} />,
+    label: "Egolia Mining",
+    title: "Resource development built on responsible growth.",
+    description: "Egolia Mining focuses on mining operations and resource development through sustainable extraction, disciplined capital deployment, and long-term value creation across resource markets.",
+    href: "",
+  },
 ];
 
 export default function PlatformArchitecture() {
+  const [miningModal, setMiningModal] = useState(false);
+
   return (
     <section className="bg-white py-16 md:py-24">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-14">
@@ -95,18 +105,54 @@ export default function PlatformArchitecture() {
               <h3 className="text-[#1d1d1f] text-[22px] font-bold leading-snug mb-3">{co.title}</h3>
               <div className="w-6 h-[2px] bg-orange mb-4" />
               <p className="text-[#6e6e73] text-[16px] leading-[1.75] mb-6">{co.description}</p>
-              <Link
-                href={co.href}
-                className="inline-flex items-center gap-2 text-[#0F1C3F] text-[15px] font-bold group-hover:text-orange transition-colors duration-300"
-              >
-                View Details
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
-              </Link>
+              {co.label === "Egolia Mining" ? (
+                <button
+                  onClick={() => setMiningModal(true)}
+                  className="inline-flex items-center gap-2 text-[#0F1C3F] text-[15px] font-bold group-hover:text-orange transition-colors duration-300"
+                >
+                  View Details
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
+                </button>
+              ) : (
+                <Link
+                  href={co.href}
+                  className="inline-flex items-center gap-2 text-[#0F1C3F] text-[15px] font-bold group-hover:text-orange transition-colors duration-300"
+                >
+                  View Details
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>
 
       </div>
+
+      {miningModal && (
+        <div className="fixed inset-0 z-[999] flex items-center justify-center px-4" onClick={() => setMiningModal(false)}>
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 16 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md mx-auto p-8 sm:p-10"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setMiningModal(false)}
+              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-[#f5f5f7] hover:bg-[#e8e8ed] transition-colors"
+            >
+              <svg className="w-4 h-4 text-[#1d1d1f]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="text-center">
+              <p className="text-orange text-[12px] font-bold tracking-[0.25em] uppercase mb-2">Coming Soon</p>
+              <h2 className="text-[#1d1d1f] text-[1.5rem] font-bold tracking-[-0.02em] leading-[1.15]">Egolia Mining</h2>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </section>
   );
 }

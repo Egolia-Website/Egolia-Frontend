@@ -68,10 +68,11 @@ export default function Footer() {
           <p className="text-[#0F1C3F] font-semibold text-[16px] mb-7">Our Divisions</p>
           <ul className="space-y-4">
             {[
-              { label: "AvranceCorp", href: "/platform/avrancecorp" },
-              { label: "Avrance Capital", href: "/platform/avrancecapital" },
-              { label: "Metadata & Research", href: "/platform/metadata" },
-              { label: "TradeREA", href: "/platform/traderea" },
+              { label: "AvranceCorp Developments", href: "/platform/avrancecorp" },
+              { label: "TradeREA Xchange Technology", href: "/platform/traderea" },
+              { label: "Avrance Capital Management", href: "/platform/avrancecapital" },
+              { label: "Meta Data Research", href: "/platform/metadata" },
+              { label: "Egolia Mining", href: "/platform/avrancemining" },
             ].map((link) => (
               <li key={link.label}>
                 <Link

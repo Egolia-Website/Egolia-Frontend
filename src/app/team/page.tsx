@@ -89,8 +89,8 @@ const advisoryTeam = [
   },
   {
     name: "Thomas Braun",
-    role: "Senior Security Lawyer Advisor",
-    fullTitle: "Senior Security Lawyer Advisor",
+    role: "Senior Securities Legal Counsel",
+    fullTitle: "Senior Securities Legal Counsel",
     bio: "Experienced securities and corporate lawyer with deep expertise in capital markets, regulatory compliance, and governance for public and private companies.",
     image: "/images/Board Member/thomas.png",
     experience: [
@@ -138,6 +138,17 @@ const nonExecutiveTeam = [
       "Governance & Leadership — Extensive background in organizational leadership and stakeholder engagement.",
       "Advisory Role — Brings a disciplined, outcomes-focused approach to governance and advisory responsibilities.",
       "Institutional Culture — Committed to fostering inclusive, accountable, and forward-thinking institutional culture.",
+    ],
+  },
+  {
+    name: "Edmund Hall",
+    role: "Project Liaison & Research Analyst",
+    fullTitle: "Project Liaison & Research Analyst",
+    bio: "Project Liaison and Research Analyst with over five years of experience spanning financial services, research support, and cross-functional project coordination.",
+    image: "/images/Board Member/edmundHall.png",
+    experience: [
+      "Financial Services — Over five years of experience spanning financial services, research support, and cross-functional project coordination.",
+      "Analytical Foundation — Brings a strong analytical foundation combined with a collaborative communication style that bridges technical teams, stakeholders, and external partners.",
     ],
   },
   {

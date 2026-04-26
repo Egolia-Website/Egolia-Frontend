@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const stats = [
   { value: "50+", label: "Years of Experience", description: "Delivering high-quality real estate projects across North America." },
-  { value: "50+", label: "Projects Delivered", description: "Residential and commercial developments built to last." },
+  { value: "5+", label: "Projects Delivered", description: "Residential and commercial developments built to last." },
   { value: "$5B+", label: "Development Portfolio", description: "Capital deployed across strategic growth markets." },
   { value: "100%", label: "Long-Term Focus", description: "Every decision guided by sustainable value creation." },
 ];

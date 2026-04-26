@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useState } from "react";
 
 const companies = [
   {
@@ -39,16 +40,18 @@ const companies = [
     external: false,
   },
   {
-    logo: "/images/mining-logo.png",
+    logo: "/images/home/egoliaMining.png",
     logoW: 150, logoH: 48,
-    name: "Avrance Mining",
+    name: "Egolia Mining",
     description: "Mining operations and resource development focused on responsible growth and sustainable value.",
-    link: "/platform/avrancemining",
+    link: "",
     external: false,
   },
 ];
 
 export default function ExploreCompanies() {
+  const [miningModal, setMiningModal] = useState(false);
+
   return (
     <section className="relative py-24 sm:py-32 overflow-hidden">
       {/* Background */}
@@ -136,19 +139,56 @@ export default function ExploreCompanies() {
               <p className="text-[#6e6e73] text-[13px] leading-[1.75] flex-1 mb-6">{company.description}</p>
 
               {/* Link */}
-              <Link
-                href={company.link}
-                target={company.link.startsWith("http") ? "_blank" : undefined}
-                className="inline-flex items-center gap-2 text-[#0F1C3F] text-[13px] font-bold group-hover:text-orange transition-colors duration-300"
-              >
-                View Company
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" strokeWidth={2} />
-              </Link>
+              {company.name === "Egolia Mining" ? (
+                <button
+                  onClick={() => setMiningModal(true)}
+                  className="inline-flex items-center gap-2 text-[#0F1C3F] text-[13px] font-bold group-hover:text-orange transition-colors duration-300"
+                >
+                  View Company
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" strokeWidth={2} />
+                </button>
+              ) : (
+                <Link
+                  href={company.link}
+                  target={company.link.startsWith("http") ? "_blank" : undefined}
+                  className="inline-flex items-center gap-2 text-[#0F1C3F] text-[13px] font-bold group-hover:text-orange transition-colors duration-300"
+                >
+                  View Company
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" strokeWidth={2} />
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>
 
       </div>
+
+      {/* Egolia Mining Modal */}
+      {miningModal && (
+        <div className="fixed inset-0 z-[999] flex items-center justify-center px-4" onClick={() => setMiningModal(false)}>
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 16 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md mx-auto p-8 sm:p-10"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setMiningModal(false)}
+              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-[#f5f5f7] hover:bg-[#e8e8ed] transition-colors"
+            >
+              <svg className="w-4 h-4 text-[#1d1d1f]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="text-center">
+              <p className="text-orange text-[12px] font-bold tracking-[0.25em] uppercase mb-2">Coming Soon</p>
+              <h2 className="text-[#1d1d1f] text-[1.5rem] font-bold tracking-[-0.02em] leading-[1.15]">Egolia Mining</h2>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </section>
   );
 }
