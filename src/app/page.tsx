@@ -263,7 +263,7 @@ export default function Home() {
               Our Platform
             </p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1d1d1f] leading-[1.1] tracking-[-0.025em] max-w-2xl mx-auto">
-              Four companies.{" "}
+              Five companies.{" "}
               <span className="text-orange">One unified vision.</span>
             </h2>
             <p className="text-[#6e6e73] text-[16px] sm:text-[17px] leading-[1.8] max-w-xl mx-auto mt-5">
@@ -272,7 +272,8 @@ export default function Home() {
           </FadeUp>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[7px] px-[7px]">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5">
           {[
             {
               image: "/images/toronto.png",
@@ -295,6 +296,7 @@ export default function Home() {
               logoWidth: 180,
               logoHeight: 48,
               useBlend: true,
+              wideMobile: true,
             },
             {
               image: "/images/home/private-capital.png",
@@ -318,15 +320,16 @@ export default function Home() {
               logoHeight: 60,
               bigLogo: true,
               useBlend: true,
+              wideMobile: true,
             },
-          ].map((card: { image: string; logo: string; logoAlt: string; title: string; desc: string; href: string; logoWidth: number; logoHeight: number; bigLogo?: boolean; useBlend: boolean }, i) => (
+          ].map((card: { image: string; logo: string; logoAlt: string; title: string; desc: string; href: string; logoWidth: number; logoHeight: number; bigLogo?: boolean; useBlend: boolean; wideMobile?: boolean; imageContain?: boolean }, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.8, delay: i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="group relative overflow-hidden bg-[#1d1d1f] aspect-[4/3] sm:aspect-[16/10] flex flex-col justify-end rounded-[3px]"
+              className="group relative overflow-hidden bg-[#1d1d1f] aspect-[4/3] flex flex-col justify-end rounded-2xl"
             >
               <Link href={card.href} className="absolute inset-0 z-20" />
 
@@ -344,37 +347,34 @@ export default function Home() {
                 }}
               />
 
-              <div className="relative z-10 px-5 pb-5 sm:px-8 sm:pb-8 lg:px-10 lg:pb-10 flex items-end justify-between gap-4">
-                <div className="min-w-0">
-                  <div className={`flex items-center mb-3 sm:mb-4 ${card.bigLogo ? "h-12 sm:h-16" : "h-7 sm:h-8"}`}>
-                    <Image
-                      src={card.logo}
-                      alt={card.logoAlt}
-                      width={card.logoWidth}
-                      height={card.logoHeight}
-                      className={`object-contain object-left w-auto ${card.bigLogo ? "max-h-12 sm:max-h-16" : "max-h-7 sm:max-h-8"}`}
-                      style={
-                        card.useBlend
-                          ? { filter: "brightness(20) saturate(0)", mixBlendMode: "screen" }
-                          : { filter: "brightness(0) invert(1)" }
-                      }
-                    />
-                  </div>
-
-                  <h3 className="text-[16px] sm:text-[20px] md:text-[22px] font-bold text-white leading-[1.2] tracking-[-0.02em] mb-1.5">
-                    {card.title}
-                  </h3>
-                  <p className="text-white/80 text-[13px] sm:text-[14px] leading-[1.55] hidden sm:block max-w-[300px]">
-                    {card.desc}
-                  </p>
+              <div className="relative z-10 px-5 pb-7 sm:px-8 sm:pb-8 lg:px-10 lg:pb-10 flex flex-col">
+                <div className={`flex items-center mb-3 sm:mb-4 ${card.bigLogo ? "h-8 sm:h-16" : "h-5 sm:h-8"}`}>
+                  <Image
+                    src={card.logo}
+                    alt={card.logoAlt}
+                    width={card.logoWidth}
+                    height={card.logoHeight}
+                    className={`object-contain object-left w-auto ${card.bigLogo ? `max-h-8 sm:max-h-16 ${card.wideMobile ? "max-w-[160px]" : "max-w-[100px]"} sm:max-w-none` : `max-h-5 sm:max-h-8 ${card.wideMobile ? "max-w-[130px]" : "max-w-[80px]"} sm:max-w-none`}`}
+                    style={{ filter: "brightness(0) invert(1)" }}
+                  />
                 </div>
 
-                <span className="bg-white text-[#1d1d1f] text-[11px] sm:text-[12px] font-semibold tracking-wide px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-lg shrink-0 group-hover:bg-white/90 transition-colors duration-300">
+                <h3 className="text-[14px] sm:text-[20px] md:text-[22px] font-semibold sm:font-bold text-white leading-[1.2] tracking-[-0.02em] mb-2 sm:mb-4">
+                  {card.title}
+                </h3>
+                <p className="text-white/90 text-[13px] sm:text-[15px] leading-[1.6] max-w-[300px] mb-4 hidden sm:block">
+                  {card.desc}
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-orange text-[11px] sm:text-[12px] font-semibold tracking-[0.08em] uppercase">
                   View Details
+                  <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
                 </span>
               </div>
             </motion.div>
           ))}
+        </div>
         </div>
       </section>
 
@@ -593,10 +593,10 @@ export default function Home() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {[
-              { target: 4, prefix: "", suffix: "", label: "Operating Companies" },
+              { target: 5, prefix: "", suffix: "", label: "Operating Companies" },
               { target: 2, prefix: "$", suffix: "B+", label: "Assets Under Management" },
               { target: 7000, prefix: "", suffix: "+", label: "Units Under Development" },
-              { target: 3, prefix: "", suffix: "M+", label: "Platform Users & Growing" },
+              { target: 2, prefix: "", suffix: "K+", label: "Investors" },
             ].map((stat, i) => (
               <motion.div
                 key={i}

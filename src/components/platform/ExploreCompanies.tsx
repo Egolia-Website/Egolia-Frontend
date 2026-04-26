@@ -116,7 +116,7 @@ export default function ExploreCompanies() {
                     alt={company.name}
                     width={company.logoW}
                     height={company.logoH}
-                    className={`object-contain object-left w-auto ${company.name === "Metadata & Research" ? "max-h-16" : "max-h-10"}`}
+                    className={`object-contain object-left w-auto ${company.name === "Metadata & Research" ? "max-h-10 sm:max-h-16" : "max-h-10"}`}
                     quality={100}
                   />
                 ) : (

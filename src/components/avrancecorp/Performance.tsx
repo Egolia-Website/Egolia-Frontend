@@ -4,15 +4,15 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "10+", label: "Years of Experience", description: "Delivering high-quality real estate projects across North America." },
+  { value: "50+", label: "Years of Experience", description: "Delivering high-quality real estate projects across North America." },
   { value: "50+", label: "Projects Delivered", description: "Residential and commercial developments built to last." },
-  { value: "$10M+", label: "Development Value", description: "Capital deployed across strategic growth markets." },
+  { value: "$5B+", label: "Development Portfolio", description: "Capital deployed across strategic growth markets." },
   { value: "100%", label: "Long-Term Focus", description: "Every decision guided by sustainable value creation." },
 ];
 
 export default function Performance() {
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden">
+    <section className="relative py-16 md:py-20 overflow-hidden">
       <Image src="/division/whatwedo.png" alt="" fill className="object-cover object-center" />
 
       <div className="max-w-[1200px] mx-auto px-6 lg:px-14 relative z-10">

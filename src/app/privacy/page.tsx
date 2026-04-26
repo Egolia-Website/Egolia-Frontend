@@ -53,7 +53,7 @@ const sections = [
 • Request deletion of your personal information, subject to applicable legal obligations.
 • Withdraw consent where processing is based on consent.
 
-To exercise any of these rights, please contact us at info@avrancecorp.com.`,
+To exercise any of these rights, please contact us at info@egolia.com.`,
   },
   {
     title: "8. Retention",
@@ -68,7 +68,7 @@ To exercise any of these rights, please contact us at info@avrancecorp.com.`,
     content: `If you have questions or concerns about this Privacy Policy or our data practices, please contact us:
 
 **Egolia Group**
-Email: info@avrancecorp.com
+Email: info@egolia.com
 Phone: +1 (800) 555-0192`,
   },
 ];

@@ -53,7 +53,7 @@ export default function ContactForm() {
             Contact Us
           </motion.p>
           <motion.h1
-            className="text-[2.4rem] sm:text-[3.2rem] lg:text-[4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.03em]"
+            className="text-[2.4rem] sm:text-[3.2rem] lg:text-[4rem] font-bold text-[#0F1C3F] leading-[1.08] tracking-[-0.03em] text-balance"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -64,7 +64,7 @@ export default function ContactForm() {
 
         {/* Map — full width */}
         <motion.div
-          className="w-full h-[220px] sm:h-[320px] md:h-[420px] rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.1)] mb-8"
+          className="w-full h-[260px] sm:h-[320px] md:h-[420px] rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.1)] mb-8"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
@@ -85,7 +85,7 @@ export default function ContactForm() {
 
           {/* Form */}
           <motion.div
-            className="bg-white rounded-3xl p-8 sm:p-10 shadow-[0_4px_30px_rgba(0,0,0,0.06)]"
+            className="bg-white rounded-3xl p-6 sm:p-10 shadow-[0_4px_30px_rgba(0,0,0,0.06)]"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25 }}
@@ -187,7 +187,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <p className="text-white text-[14px] font-bold mb-1">Mississauga Office</p>
-                  <p className="text-white/50 text-[14px] leading-[1.7]">2810 Matheson Blvd E<br />Mississauga, ON, L4W 4X7</p>
+                  <p className="text-white/50 text-[14px] leading-[1.7]">Unit 800 – 2810 Matheson Blvd E<br />Mississauga, ON, L4W 4X7<br />Canada</p>
                 </div>
               </div>
 
@@ -197,7 +197,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <p className="text-white text-[14px] font-bold mb-1">Phone</p>
-                  <a href="tel:4166500192" className="text-white/50 text-[14px] hover:text-orange transition-colors duration-300">+1 (416) 650-0192</a>
+                  <a href="tel:4165550192" className="text-white/50 text-[14px] hover:text-orange transition-colors duration-300">+1 (416) 555-0192</a>
                 </div>
               </div>
 
@@ -207,7 +207,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <p className="text-white text-[14px] font-bold mb-1">Email</p>
-                  <a href="mailto:info@avrancecorp.com" className="text-white/50 text-[14px] hover:text-orange transition-colors duration-300 break-all">info@avrancecorp.com</a>
+                  <a href="mailto:info@egolia.com" className="text-white/50 text-[14px] hover:text-orange transition-colors duration-300 break-all">info@egolia.com</a>
                 </div>
               </div>
 

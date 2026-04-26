@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function MetadataHero() {
   return (
-    <section className="relative min-h-[calc(100vh-84px)] flex items-center overflow-hidden">
+    <section className="relative min-h-[calc(100vh-84px)] flex items-start sm:items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src="/images/data-abstract.jpg"
@@ -20,16 +20,16 @@ export default function MetadataHero() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/35" />
       </div>
 
-      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14 w-full py-24">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14 w-full pt-16 pb-10 sm:py-24">
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-8"
+          className="mb-5 sm:mb-8"
         >
           <Image
-            src="/images/metada.png"
+            src="/images/home/logo-metadata.png"
             alt="Metadata & Research"
             width={220}
             height={50}
@@ -39,7 +39,7 @@ export default function MetadataHero() {
         </motion.div>
 
         <motion.p
-          className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-6"
+          className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-4 sm:mb-6"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -66,7 +66,7 @@ export default function MetadataHero() {
         </div>
 
         <motion.p
-          className="text-white/80 text-[17px] sm:text-[18px] leading-[1.8] max-w-[520px] mb-10"
+          className="text-white/80 text-[15px] sm:text-[18px] leading-[1.7] max-w-[520px] mb-7 sm:mb-10"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45 }}
@@ -81,10 +81,17 @@ export default function MetadataHero() {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <Link
-            href="/contact"
+            href="/platform/metadata"
             className="w-full sm:w-auto group inline-flex items-center justify-center gap-3 rounded-lg bg-orange hover:bg-[#d4691e] px-8 py-4 text-[15px] font-bold text-white transition-colors duration-300"
           >
-            Get In Touch
+            Visit Website
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.8} />
+          </Link>
+          <Link
+            href="/investor"
+            className="w-full sm:w-auto group inline-flex items-center justify-center gap-3 rounded-lg border border-white/30 hover:border-orange hover:text-orange px-8 py-4 text-[15px] font-bold text-white transition-colors duration-300"
+          >
+            Investor Relations
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.8} />
           </Link>
         </motion.div>

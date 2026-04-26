@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 const stats = [
   { value: "$5B+", label: "Development Pipeline", sub: "Across active projects" },
   { value: "7,000+", label: "Units In Portfolio", sub: "Residential & mixed-use" },
-  { value: "150+", label: "Years Combined Experience", sub: "Across all leadership" },
-  { value: "4", label: "Integrated Companies", sub: "One unified platform" },
+  { value: "50+", label: "Years Combined Experience", sub: "Across all leadership" },
+  { value: "5", label: "Integrated Companies", sub: "One unified platform" },
 ];
 
 export default function BuiltForValue() {

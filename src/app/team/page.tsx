@@ -141,15 +141,16 @@ const nonExecutiveTeam = [
     ],
   },
   {
-    name: "Matthew",
+    name: "Matthew Chan",
     role: "Business Analyst",
     fullTitle: "Business Analyst",
-    bio: "Experienced professional bringing operational and strategic expertise to Egolia Group's governance and advisory structure.",
-    image: "https://ui-avatars.com/api/?name=Matthew&background=0F1C3F&color=fff&size=400&font-size=0.35",
+    bio: "Project Manager at AvranceCorp Developments supporting strategic initiatives across business strategy, market intelligence, and project execution.",
+    image: "/images/Board Member/Matthew_Chan.png",
     experience: [
-      "Industry Background — Broad experience across financial services and real estate advisory.",
-      "Independent Oversight — Contributes independent oversight and strategic perspective to organizational decision-making.",
-      "Stakeholder Value — Recognized for balanced judgment and commitment to long-term stakeholder value.",
+      "Project Management — Supports strategic initiatives across business strategy, market intelligence, and project execution, working closely with leadership and cross-functional teams.",
+      "Academic Background — Honours Bachelor of Commerce from McMaster University with a minor in Sustainability; foundation in finance, operations, and strategic analysis.",
+      "Core Competencies — Adaptability, communication, and results-oriented thinking shaped through both analytical and client-facing environments.",
+      "Strategic Focus — Passionate about business growth, strategic planning, and intelligence-led decision-making with a focus on innovation, development, and long-term value creation.",
     ],
   },
 ];

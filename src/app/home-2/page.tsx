@@ -216,7 +216,7 @@ export default function Home2() {
         <div className="relative z-10 max-w-[1100px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
             {[
-              { icon: <Building2 className="w-9 h-9" strokeWidth={1.2} />, value: "4", label: "Core Businesses" },
+              { icon: <Building2 className="w-9 h-9" strokeWidth={1.2} />, value: "5", label: "Core Businesses" },
               { icon: <Layers className="w-9 h-9" strokeWidth={1.2} />, value: "1", label: "Integrated Platform" },
               { icon: <Target className="w-9 h-9" strokeWidth={1.2} />, value: "Long-Term", label: "Investment Focus" },
               { icon: <BarChart3 className="w-9 h-9" strokeWidth={1.2} />, value: "Data-Driven", label: "Decision Making" },

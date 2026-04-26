@@ -1,12 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const stats = [
   { value: "$5B+", label: "Development Pipeline" },
   { value: "7,000+", label: "Units In Portfolio" },
-  { value: "4", label: "Integrated Companies" },
-  { value: "150+", label: "Combined Experience" },
+  { value: "5", label: "Integrated Companies" },
+  { value: "50+", label: "Combined Experience" },
 ];
 
 const checkpoints = [
@@ -24,11 +25,14 @@ const bars = [
 ];
 
 export default function DisciplinedValue() {
+  const svgRef = useRef(null);
+  const isInView = useInView(svgRef, { once: true, margin: "-50px 0px" });
+
   return (
     <section className="bg-[#f5f5f7] py-16 md:py-20 overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-14">
 
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 items-center">
 
           {/* LEFT — eyebrow + title + checkpoints */}
           <div className="w-full lg:w-[52%]">
@@ -83,7 +87,7 @@ export default function DisciplinedValue() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <svg viewBox="0 0 380 280" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg ref={svgRef} viewBox="0 0 380 280" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="0%" stopColor="#c2cfe8" stopOpacity="0.9" />
@@ -122,20 +126,18 @@ export default function DisciplinedValue() {
               <motion.path
                 d="M 20 242 C 100 240, 268 140, 284 18"
                 stroke="#E8792B" strokeWidth="3" strokeLinecap="round" fill="none"
-                initial={{ pathLength: 0 }}
-                whileInView={{ pathLength: 1 }}
-                viewport={{ once: true, amount: 0 }}
-                transition={{ duration: 1.3, delay: 0.6, ease: "easeOut" }}
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 40 }}
+                transition={{ duration: 1.0, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
               />
 
               {/* Arrow head — 45° up-right */}
               <motion.path
                 d="M 286 8 L 276 24 L 293 26 Z"
                 fill="#E8792B"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0 }}
-                transition={{ duration: 0.3, delay: 1.85 }}
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 40 }}
+                transition={{ duration: 1.0, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
               />
             </svg>
 

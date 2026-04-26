@@ -61,7 +61,6 @@ export default function DisciplineSection() {
                 <span className="text-orange">Investment.</span>
               </motion.h2>
 
-              <motion.div className="w-12 h-[2px] bg-orange mb-7 mx-auto lg:mx-0" initial={{ width: 0 }} whileInView={{ width: 48 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} />
 
               <motion.p
                 className="text-[#6e6e73] text-[16px] leading-[1.85] mb-10 text-center lg:text-left"
@@ -115,7 +114,7 @@ export default function DisciplineSection() {
                   transition={{ duration: 0.6, delay: i * 0.1 }}
                 >
                   {/* Icon */}
-                  <div className="w-12 h-12 rounded-full bg-[#f5f5f7] border border-[#e8e8ed] flex items-center justify-center shrink-0 group-hover:border-orange transition-colors duration-300 mt-1">
+                  <div className="w-12 h-12 rounded-full bg-[#f5f5f7] border border-[#e8e8ed] flex items-center justify-center shrink-0 group-hover:bg-orange group-hover:border-orange transition-colors duration-300 mt-1">
                     <pillar.icon className="w-5 h-5 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={2} />
                   </div>
 
@@ -182,7 +181,7 @@ export default function DisciplineSection() {
             >
               <div>
                 <div className="flex items-center justify-between mb-8">
-                  <div className="w-12 h-12 rounded-full bg-[#f5f5f7] border border-[#e8e8ed] flex items-center justify-center group-hover:border-orange transition-colors duration-300">
+                  <div className="w-12 h-12 rounded-full bg-[#f5f5f7] border border-[#e8e8ed] flex items-center justify-center group-hover:bg-orange group-hover:border-orange transition-colors duration-300">
                     <TrendingUp className="w-5 h-5 text-orange group-hover:text-white transition-colors duration-300" strokeWidth={2} />
                   </div>
                 </div>

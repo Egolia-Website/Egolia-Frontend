@@ -24,7 +24,7 @@ const investorPillars = [
 
 const proofPoints = [
   {
-    value: "4",
+    value: "5",
     label: "Core Businesses",
     detail: "Connected across development, capital, technology, and execution.",
   },

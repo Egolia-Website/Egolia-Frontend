@@ -15,7 +15,7 @@ const pillars = [
     number: "02",
     title: "Integrated Platform",
     description:
-      "Four interconnected companies operating as a unified ecosystem — spanning development, capital markets, digital trading, and data intelligence.",
+      "Five interconnected companies operating as a unified ecosystem — spanning development, capital markets, digital trading, and data intelligence.",
   },
   {
     number: "03",

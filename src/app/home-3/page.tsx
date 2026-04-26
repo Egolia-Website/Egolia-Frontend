@@ -137,7 +137,7 @@ export default function Home3() {
               Our Platform
             </p>
             <h2 className="text-[2.4rem] sm:text-[3rem] lg:text-[3.6rem] font-bold leading-[1.08] tracking-[-0.025em] text-[#1d1d1f]">
-              Four companies. One unified vision.
+              Five companies. One unified vision.
             </h2>
           </FadeUp>
 
@@ -298,7 +298,7 @@ export default function Home3() {
                 Built on conviction.<br />Defined by results.
               </h2>
               <p className="text-[#6e6e73] text-[16px] sm:text-[17px] leading-[1.85] mb-10">
-                Four companies working together as one system — data, capital, real estate, and platform all interconnected.
+                Five companies working together as one system — data, capital, real estate, and platform all interconnected.
               </p>
               <Link
                 href="/about"
@@ -312,10 +312,10 @@ export default function Home3() {
             {/* Right — Stats */}
             <div className="w-full lg:w-[55%] grid grid-cols-2 gap-x-12 gap-y-12">
               {[
-                { value: "4", label: "Operating Companies", color: "text-blue-600" },
-                { value: "$2B+", label: "Assets Under Management", color: "text-[#1d1d1f]" },
-                { value: "7k+", label: "Units Under Development", color: "text-[#1d1d1f]" },
-                { value: "3M+", label: "Platform Users", color: "text-orange-500" },
+                { value: "5", label: "Operating Companies", color: "text-blue-600" },
+                { value: "$5B+", label: "Development Portfolio", color: "text-[#1d1d1f]" },
+                { value: "7,000+", label: "Units Under Development", color: "text-[#1d1d1f]" },
+                { value: "2,000+", label: "Investors", color: "text-orange-500" },
               ].map((stat, i) => (
                 <motion.div
                   key={i}

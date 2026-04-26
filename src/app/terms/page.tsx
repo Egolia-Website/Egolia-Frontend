@@ -64,7 +64,7 @@ Egolia Group makes no representations or warranties regarding the accuracy, comp
     content: `If you have questions about these Terms of Use, please contact us:
 
 **Egolia Group**
-Email: info@avrancecorp.com
+Email: info@egolia.com
 Phone: +1 (800) 555-0192`,
   },
 ];

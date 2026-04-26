@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function AvranceHero() {
   return (
-    <section className="relative min-h-[calc(100vh-84px)] flex items-center overflow-hidden">
+    <section className="relative min-h-[calc(100vh-84px)] flex items-start sm:items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src="/images/toronto.png"
@@ -20,13 +20,13 @@ export default function AvranceHero() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
       </div>
 
-      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14 w-full py-24">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14 w-full pt-16 pb-10 sm:py-24">
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-8"
+          className="mb-5 sm:mb-8"
         >
           <Image
             src="/images/home/logo-avrancecorp.png"
@@ -39,7 +39,7 @@ export default function AvranceHero() {
         </motion.div>
 
         <motion.p
-          className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-6"
+          className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-4 sm:mb-6"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -66,7 +66,7 @@ export default function AvranceHero() {
         </div>
 
         <motion.p
-          className="text-white/80 text-[17px] sm:text-[18px] leading-[1.8] max-w-[520px] mb-10"
+          className="text-white/80 text-[15px] sm:text-[18px] leading-[1.7] max-w-[520px] mb-7 sm:mb-10"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45 }}
@@ -80,13 +80,15 @@ export default function AvranceHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <Link
-            href="/contact"
+          <a
+            href="https://avrancecorp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto group inline-flex items-center justify-center gap-3 rounded-lg bg-orange hover:bg-[#d4691e] px-8 py-4 text-[15px] font-bold text-white transition-colors duration-300"
           >
-            Partner With Us
+            Visit Website
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.8} />
-          </Link>
+          </a>
           <Link
             href="/investor"
             className="w-full sm:w-auto group inline-flex items-center justify-center gap-3 rounded-lg border border-white/30 hover:border-orange hover:text-orange px-8 py-4 text-[15px] font-bold text-white transition-colors duration-300"

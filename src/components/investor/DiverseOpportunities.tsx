@@ -6,7 +6,7 @@ import { Home, TrendingUp, Building2, MapPin, BarChart3, Cpu, Link2, Layers } fr
 const metrics = [
   { icon: Home, value: "7,000+", label: "Units under development across the broader AvranceCorp pipeline" },
   { icon: TrendingUp, value: "$5B+", label: "Approximate development pipeline revenue referenced across projects" },
-  { icon: Building2, value: "4", label: "Core operating companies inside the Egolia platform" },
+  { icon: Building2, value: "5", label: "Core operating companies inside the Egolia platform" },
   { icon: MapPin, value: "Toronto", label: "Launch base for management, strategy, and investor engagement" },
 ];
 
@@ -69,8 +69,8 @@ export default function DiverseOpportunities() {
                   <div className="w-8 h-8 rounded-full bg-orange flex items-center justify-center mb-2.5 shadow-[0_4px_12px_rgba(232,121,43,0.35)]">
                     <m.icon className="w-3.5 h-3.5 text-white" strokeWidth={2} />
                   </div>
-                  <div className="text-[1.6rem] sm:text-[2rem] font-bold text-[#0F1C3F] leading-none mb-2 group-hover:text-orange transition-colors duration-300">{m.value}</div>
-                  <p className="text-[#6e6e73] text-[11px] sm:text-[13px] leading-[1.5]">{m.label}</p>
+                  <div className="text-[1.4rem] sm:text-[2rem] font-bold text-[#0F1C3F] leading-none mb-2 group-hover:text-orange transition-colors duration-300">{m.value}</div>
+                  <p className="text-[#6e6e73] text-[10px] sm:text-[13px] leading-[1.5] line-clamp-3">{m.label}</p>
                 </motion.div>
               ))}
             </div>

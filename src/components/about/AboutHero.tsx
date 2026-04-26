@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function AboutHero() {
   return (
-    <section className="relative min-h-[calc(100vh-84px)] flex items-center overflow-hidden">
+    <section className="relative min-h-[calc(100vh-84px)] flex items-start sm:items-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src="/images/wh.png"
@@ -20,7 +20,7 @@ export default function AboutHero() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
       </div>
 
-      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14 w-full py-24">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14 w-full pt-20 pb-24 sm:py-24">
 
         <motion.p
           className="text-orange text-[14px] font-bold tracking-[0.3em] uppercase mb-8"
@@ -72,7 +72,7 @@ export default function AboutHero() {
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={1.8} />
           </Link>
           <Link
-            href="/investor"
+            href="/platform"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/40 hover:border-white hover:bg-white/10 text-white text-[15px] font-semibold px-7 py-4 rounded-lg transition-colors duration-300"
           >
             Our Platform

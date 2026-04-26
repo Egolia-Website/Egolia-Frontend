@@ -29,7 +29,7 @@ const features = [
 
 export default function AboutAvrance() {
   return (
-    <section className="relative py-24 md:py-32">
+    <section className="relative py-16 md:py-20">
       <Image src="/division/philo.png" alt="" fill className="object-cover object-center" />
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
@@ -55,13 +55,6 @@ export default function AboutAvrance() {
               A Development<br />Platform Built<br />
               <span className="text-orange">On Precision.</span>
             </motion.h2>
-            <motion.div
-              className="w-12 h-[2px] bg-orange mb-7 mx-auto lg:mx-0"
-              initial={{ width: 0 }}
-              whileInView={{ width: 48 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            />
             <motion.p
               className="text-[#6e6e73] text-[16px] sm:text-[17px] leading-[1.85] text-center lg:text-left"
               initial={{ opacity: 0, y: 16 }}

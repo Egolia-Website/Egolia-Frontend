@@ -6,10 +6,10 @@ import { Building2, TrendingUp, Search, Gem, Users, Target, BarChart3 } from "lu
 
 const flowItems = [
   {
-    icon: <Building2 className="w-8 h-8" strokeWidth={1.3} />,
-    label: "Development",
-    bg: "bg-[#0F1C3F]",
-    labelColor: "text-[#0F1C3F]",
+    icon: <Search className="w-8 h-8" strokeWidth={1.3} />,
+    label: "Research",
+    bg: "bg-[#1a56db]",
+    labelColor: "text-[#1a56db]",
   },
   {
     icon: <TrendingUp className="w-8 h-8" strokeWidth={1.3} />,
@@ -18,10 +18,10 @@ const flowItems = [
     labelColor: "text-[#0F1C3F]",
   },
   {
-    icon: <Search className="w-8 h-8" strokeWidth={1.3} />,
-    label: "Research",
-    bg: "bg-[#6e6e73]",
-    labelColor: "text-[#0F1C3F]",
+    icon: <Building2 className="w-8 h-8" strokeWidth={1.3} />,
+    label: "Development",
+    bg: "bg-[#1e3a5f]",
+    labelColor: "text-[#1e3a5f]",
   },
   {
     icon: <Gem className="w-8 h-8" strokeWidth={1.3} />,
@@ -55,12 +55,14 @@ const pillars = [
 export default function IntegratedPlatform() {
   return (
     <section className="relative py-20 sm:py-28 overflow-hidden">
-      <Image
-        src="/division/whatwedo.png"
-        alt="What We Do"
-        fill
-        className="object-cover object-center"
-      />
+      <div className="absolute inset-0 hidden sm:block">
+        <Image
+          src="/division/whatwedo.png"
+          alt="What We Do"
+          fill
+          className="object-cover object-center"
+        />
+      </div>
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-14">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
@@ -87,9 +89,8 @@ export default function IntegratedPlatform() {
           {/* RIGHT — flow circles top + 3 cards bottom */}
           <div className="w-full lg:w-[65%] flex flex-col gap-10">
 
-            {/* Flow circles with arrows */}
-            <div className="relative flex items-start justify-between gap-2">
-              {/* Absolute arrow lines between circles */}
+            {/* Flow circles with arrows — horizontal on sm+, vertical on mobile */}
+            <div className="hidden sm:relative sm:flex sm:items-start sm:justify-between sm:gap-2">
               {[0, 1, 2].map((i) => (
                 <motion.div
                   key={i}
@@ -98,10 +99,7 @@ export default function IntegratedPlatform() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
                   className="absolute top-[35px] flex items-center"
-                  style={{
-                    left: `calc(${(i + 1) * 25}% - 18px)`,
-                    transformOrigin: "left",
-                  }}
+                  style={{ left: `calc(${(i + 1) * 25}% - 18px)`, transformOrigin: "left" }}
                 >
                   <div className="w-10 h-[1.5px] bg-[#E8792B]/50" />
                   <svg className="w-2.5 h-2.5 text-[#E8792B] -ml-[1px]" fill="currentColor" viewBox="0 0 6 6">
@@ -109,7 +107,6 @@ export default function IntegratedPlatform() {
                   </svg>
                 </motion.div>
               ))}
-
               {flowItems.map((item, i) => (
                 <motion.div
                   key={i}
@@ -126,6 +123,64 @@ export default function IntegratedPlatform() {
                     {item.label}
                   </span>
                 </motion.div>
+              ))}
+            </div>
+
+            {/* Mobile — reference design */}
+            <div className="sm:hidden flex flex-col">
+              {[
+                { item: flowItems[0], step: "01", desc: "Identify opportunities and gather insights.", color: "#1a56db", lightBg: "#eff4ff", delay: 0.1 },
+                { item: flowItems[1], step: "02", desc: "Allocate resources and build strategic partnerships.", color: "#0F1C3F", lightBg: "#eef0f5", delay: 0.2 },
+                { item: flowItems[2], step: "03", desc: "Build, execute, and scale with excellence.", color: "#1e3a5f", lightBg: "#edf2f7", delay: 0.3 },
+                { item: flowItems[3], step: "04", desc: "Deliver impact and sustainable growth.", color: "#E8792B", lightBg: "#fff4ec", delay: 0.4 },
+              ].map(({ item, step, desc, color, lightBg, delay }, i, arr) => (
+                <div key={step}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay }}
+                    className="bg-white rounded-2xl shadow-sm border border-[#f0f0f0] overflow-hidden flex"
+                  >
+                    {/* Left colored bar */}
+                    <div className="w-[6px] shrink-0" style={{ backgroundColor: color }} />
+
+                    {/* Content */}
+                    <div className="flex items-center gap-3 px-4 py-4 flex-1">
+                      {/* Icon */}
+                      <div className="w-14 h-14 rounded-full flex items-center justify-center shrink-0" style={{ backgroundColor: lightBg }}>
+                        <div className="w-10 h-10 rounded-full flex items-center justify-center text-white" style={{ backgroundColor: color }}>
+                          <div className="scale-75">{item.icon}</div>
+                        </div>
+                      </div>
+
+                      {/* Text */}
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-[#0F1C3F] font-bold text-[15px] mb-0.5">{item.label}</h3>
+                        <p className="text-[#6e6e73] text-[11px] leading-[1.6]">{desc}</p>
+                      </div>
+
+                      {/* Step number + dot grid */}
+                      <div className="shrink-0 flex flex-col items-center gap-1.5">
+                        <span className="text-[22px] font-bold leading-none" style={{ color }}>{step}</span>
+                        <div className="grid grid-cols-4 gap-[3px]">
+                          {Array.from({ length: 12 }).map((_, j) => (
+                            <div key={j} className="w-[3px] h-[3px] rounded-full" style={{ backgroundColor: color, opacity: 0.25 }} />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Connector arrow — aligned to icon center: 6px bar + 16px padding + 28px (half of icon) = 50px */}
+                  {i < arr.length - 1 && (
+                    <div className="flex flex-col items-start pl-[50px]">
+                      <div className="w-2 h-2 rounded-full mt-1" style={{ backgroundColor: color }} />
+                      <div className="w-[2px] h-4 ml-[3px]" style={{ backgroundColor: color, opacity: 0.35 }} />
+                      <svg className="w-[10px] h-[10px] ml-[-1px]" fill={color} viewBox="0 0 10 10"><path d="M0 0h10L5 10z" /></svg>
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
 

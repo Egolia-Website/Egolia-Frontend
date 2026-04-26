@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const companies = [
   {
@@ -71,6 +72,8 @@ const companies = [
 ];
 
 export default function OurPlatform() {
+  const [active, setActive] = useState(0);
+
   return (
     <section className="bg-navy py-28 md:py-36 relative overflow-hidden">
 
@@ -99,7 +102,7 @@ export default function OurPlatform() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              Four integrated<br />
+              Five integrated<br />
               <span className="text-white/70">companies.</span>
             </motion.h2>
           </div>
@@ -110,7 +113,7 @@ export default function OurPlatform() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Link
-              href="/investor"
+              href="/platform"
               className="inline-flex items-center gap-2 text-white/60 text-sm font-semibold hover:text-orange transition-colors duration-300"
             >
               See All Companies
@@ -121,8 +124,64 @@ export default function OurPlatform() {
           </motion.div>
         </div>
 
-        {/* 2×2 company card grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        {/* Mobile carousel */}
+        <div className="sm:hidden">
+          <div className="relative overflow-hidden rounded-3xl border border-white/[0.08]" style={{ background: "rgba(255,255,255,0.04)" }}>
+            {companies[active].image && (
+              <>
+                <Image
+                  src={companies[active].image}
+                  alt={companies[active].name}
+                  fill
+                  className="object-cover object-center opacity-20"
+                  sizes="100vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/40" />
+              </>
+            )}
+            <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-orange/50 to-transparent" />
+            <div className="relative z-10 p-6">
+              <div className="text-orange mb-4">{companies[active].icon}</div>
+              <span className="inline-block text-white/35 text-[10px] font-bold tracking-[0.18em] uppercase mb-2">{companies[active].tag}</span>
+              <h3 className="text-white text-xl font-bold mb-3">{companies[active].name}</h3>
+              <p className="text-white/45 text-sm leading-[1.8] mb-5">{companies[active].description}</p>
+              <Link href={companies[active].href} className="inline-flex items-center gap-2 text-orange text-sm font-bold">
+                {companies[active].linkLabel}
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+
+          {/* Navigation */}
+          <div className="flex items-center justify-between mt-4 px-1">
+            {/* Dots */}
+            <div className="flex items-center gap-2">
+              {companies.map((_, i) => (
+                <button key={i} onClick={() => setActive(i)} className={`rounded-full transition-all duration-300 ${i === active ? "w-5 h-2 bg-orange" : "w-2 h-2 bg-white/20"}`} />
+              ))}
+            </div>
+            {/* Arrows */}
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setActive((prev) => (prev - 1 + companies.length) % companies.length)}
+                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:border-orange hover:text-orange transition-colors duration-300"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
+              </button>
+              <button
+                onClick={() => setActive((prev) => (prev + 1) % companies.length)}
+                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:border-orange hover:text-orange transition-colors duration-300"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop grid */}
+        <div className="hidden sm:grid sm:grid-cols-2 gap-5">
           {companies.map((company, i) => (
             <motion.div
               key={company.name}
@@ -133,7 +192,6 @@ export default function OurPlatform() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
             >
-              {/* Background image (AvranceCorp only) */}
               {company.image && (
                 <>
                   <Image
@@ -141,36 +199,18 @@ export default function OurPlatform() {
                     alt={company.name}
                     fill
                     className="object-cover object-center opacity-20 group-hover:opacity-30 transition-opacity duration-500"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="50vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/40" />
                 </>
               )}
-
-              {/* Top accent bar */}
               <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-orange/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
               <div className="relative z-10">
-                <div className="text-orange/50 mb-6 group-hover:text-orange transition-colors duration-400">
-                  {company.icon}
-                </div>
-
-                <span className="inline-block text-white/35 text-[10px] font-bold tracking-[0.18em] uppercase mb-3">
-                  {company.tag}
-                </span>
-
-                <h3 className="text-white text-xl md:text-2xl font-bold mb-4">
-                  {company.name}
-                </h3>
-
-                <p className="text-white/45 text-sm leading-[1.8] mb-8">
-                  {company.description}
-                </p>
-
-                <Link
-                  href={company.href}
-                  className="inline-flex items-center gap-2 text-orange text-sm font-bold group-hover:gap-3 transition-all duration-300"
-                >
+                <div className="text-orange/50 mb-6 group-hover:text-orange transition-colors duration-400">{company.icon}</div>
+                <span className="inline-block text-white/35 text-[10px] font-bold tracking-[0.18em] uppercase mb-3">{company.tag}</span>
+                <h3 className="text-white text-xl md:text-2xl font-bold mb-4">{company.name}</h3>
+                <p className="text-white/45 text-sm leading-[1.8] mb-8">{company.description}</p>
+                <Link href={company.href} className="inline-flex items-center gap-2 text-orange text-sm font-bold group-hover:gap-3 transition-all duration-300">
                   {company.linkLabel}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />

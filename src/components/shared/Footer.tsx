@@ -32,12 +32,13 @@ export default function Footer() {
         <div>
           <p className="text-[#0F1C3F] font-semibold text-[16px] mb-7">Get in Touch</p>
           <div className="space-y-1.5 text-[#6e6e73] text-[15px] leading-[1.8] mb-7">
-            <p>Toronto, Ontario,</p>
+            <p>Unit 800 – 2810 Matheson Blvd E</p>
+            <p>Mississauga, ON, L4W 4X7</p>
             <p>Canada</p>
           </div>
           <div className="flex flex-col gap-3">
             <a
-              href="mailto:info@avrancecorp.com"
+              href="mailto:info@egolia.com"
               className="inline-flex items-center gap-2.5 text-[#0F1C3F] hover:text-orange transition-colors duration-300 group"
             >
               <span className="flex items-center justify-center w-8 h-8 rounded-full border border-[#0F1C3F]/20 group-hover:border-orange group-hover:bg-orange/5 transition-colors duration-300">
@@ -45,7 +46,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </span>
-              <span className="text-[14px] font-medium">info@avrancecorp.com</span>
+              <span className="text-[14px] font-medium">info@egolia.com</span>
             </a>
             <Link
               href="#"

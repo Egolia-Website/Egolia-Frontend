@@ -33,9 +33,11 @@ const capabilities = [
 
 export default function CoreCapabilities() {
   return (
-    <section className="relative bg-white py-28 md:py-36 overflow-hidden">
-      <Image src="/images/backImage.png" alt="" fill className="object-cover object-center" />
-      <div className="absolute inset-0 bg-white/92" />
+    <section className="relative bg-white py-16 md:py-28 overflow-hidden">
+      <div className="absolute inset-0 hidden md:block">
+        <Image src="/images/backImage.png" alt="" fill className="object-cover object-center" />
+        <div className="absolute inset-0 bg-white/92" />
+      </div>
       <div className="max-w-[1200px] mx-auto px-6 lg:px-14 relative z-10">
 
         {/* Header */}
@@ -96,6 +98,7 @@ export default function CoreCapabilities() {
 
               {/* Description */}
               <p className="text-[#6e6e73] text-[14px] leading-[1.8]">{item.description}</p>
+
             </motion.div>
           ))}
         </div>

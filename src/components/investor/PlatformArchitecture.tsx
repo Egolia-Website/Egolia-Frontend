@@ -58,7 +58,7 @@ export default function PlatformArchitecture() {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              Four Companies.
+              Five Companies.
               <br />
               <span className="text-orange">One Investment System.</span>
             </motion.h2>
