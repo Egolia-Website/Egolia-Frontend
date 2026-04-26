@@ -278,7 +278,7 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5">
           {[
             {
-              image: "/images/tower.png",
+              image: "/images/towerr.png",
               logo: "/images/home/logo-avrancecorp.png",
               logoAlt: "AvranceCorp",
               title: "Real estate development focused on building lasting communities.",
