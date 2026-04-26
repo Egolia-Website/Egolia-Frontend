@@ -151,7 +151,7 @@ function BoardCard({ member, i, onClick }: { member: TeamMemberDetail; i: number
       <p className="text-orange text-[14px] font-semibold mt-1 mb-3">{member.role}</p>
 
       {/* Bio */}
-      <p className="text-[#6e6e73] text-[14px] leading-[1.65] mb-5">{member.bio}</p>
+      <p className="text-[#6e6e73] text-[14px] font-normal leading-[1.65] mb-5">{member.bio}</p>
 
       {/* Divider + icons */}
       <div className="mt-auto w-full border-t border-[#1d1d1f]/[0.06] pt-4 flex items-center justify-center gap-4">

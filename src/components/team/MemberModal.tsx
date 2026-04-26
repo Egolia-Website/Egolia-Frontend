@@ -80,7 +80,7 @@ export default function MemberModal({ member, onClose }: MemberModalProps) {
                   </h2>
                   <p className="text-orange text-[13px] sm:text-[14px] font-semibold mt-1">{member.fullTitle}</p>
 
-                  <p className="text-[#6e6e73] text-[13px] sm:text-[14px] leading-[1.7] mt-3 max-w-md">
+                  <p className="text-[#6e6e73] text-[13px] sm:text-[14px] font-normal leading-[1.7] mt-3 max-w-md">
                     {member.bio}
                   </p>
 
