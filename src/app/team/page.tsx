@@ -129,7 +129,7 @@ const nonExecutiveTeam = [
     ],
   },
   {
-    name: "Pauline",
+    name: "Pauline Lewis",
     role: "Executive Personal Assistant",
     fullTitle: "Executive Personal Assistant",
     bio: "Senior professional and non-executive contributor providing independent governance insight and strategic counsel to Egolia Group.",

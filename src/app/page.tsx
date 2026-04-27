@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import { motion, useInView, animate } from "framer-motion";
+import { motion, useInView, animate, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/shared/Navbar";
@@ -65,6 +65,247 @@ function AnimatedNumber({
     <span ref={ref}>
       {prefix}{display}{suffix}
     </span>
+  );
+}
+
+const platformCards = [
+  {
+    image: "/images/towerr.png",
+    logo: "/images/home/logo-avrancecorp.png",
+    logoAlt: "AvranceCorp",
+    title: "Real estate development focused on building lasting communities.",
+    desc: "Real estate development focused on building high-quality residential and mixed-use assets through capital and execution.",
+    href: "/platform/avrancecorp",
+    logoWidth: 130, logoHeight: 36,
+    bigLogo: false, wideMobile: false,
+  },
+  {
+    image: "/images/home/platform-traderea.png",
+    logo: "/images/home/logo-traderea.png",
+    logoAlt: "TradeREA",
+    title: "A digital marketplace for modern real estate trading.",
+    desc: "A digital marketplace platform focused on trading and investment opportunities powered by advanced technology.",
+    href: "/platform/traderea",
+    logoWidth: 180, logoHeight: 48,
+    bigLogo: false, wideMobile: true,
+  },
+  {
+    image: "/images/home/private-capital.png",
+    logo: "/images/home/logo-avrance-capital.png",
+    logoAlt: "Avrance Capital",
+    title: "Private capital, deployed with precision.",
+    desc: "Institutional-grade credit and equity strategies for durable businesses.",
+    href: "/platform/avrancecapital",
+    logoWidth: 130, logoHeight: 36,
+    bigLogo: false, wideMobile: false,
+  },
+  {
+    image: "/images/home/platform-metadata.png",
+    logo: "/images/home/logo-metadata.png",
+    logoAlt: "Metadata & Research",
+    title: "Intelligence that drives every decision.",
+    desc: "Proprietary data and research powering Egolia's investment edge.",
+    href: "/platform/metadata",
+    logoWidth: 240, logoHeight: 60,
+    bigLogo: true, wideMobile: true,
+  },
+  {
+    image: "/images/mining.png",
+    logo: "/images/home/egoliaMining.png",
+    logoAlt: "Egolia Mining",
+    title: "Resource development built on responsible growth.",
+    desc: "Mining operations and resource development focused on sustainable extraction and long-term value creation.",
+    href: "",
+    logoWidth: 200, logoHeight: 50,
+    bigLogo: false, wideMobile: true,
+  },
+];
+
+function PlatformCarousel({ setMiningModal }: { setMiningModal: (v: boolean) => void }) {
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(1);
+  const total = platformCards.length;
+  const gap = 20;
+
+  const prev = () => { setDirection(-1); setCurrent((c) => (c - 1 + total) % total); };
+  const next = () => { setDirection(1); setCurrent((c) => (c + 1) % total); };
+  const getVisible = () => [0, 1, 2].map(i => platformCards[(current + i) % total]);
+
+  const cardContent = (card: typeof platformCards[0], center = false, index = 0) => (
+    <>
+      {card.logoAlt === "Egolia Mining" ? (
+        <button onClick={() => setMiningModal(true)} className="absolute inset-0 z-20 cursor-pointer" />
+      ) : (
+        <Link href={card.href} className="absolute inset-0 z-20" />
+      )}
+      {card.image && (
+        <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]">
+          <Image src={card.image} alt={card.logoAlt} fill className="object-cover object-center" sizes="33vw" />
+        </div>
+      )}
+      <div className="absolute inset-0 pointer-events-none z-[1]" style={{ background: center ? "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 30%, rgba(0,0,0,0.1) 55%, transparent 75%)" : card.logoAlt === "Avrance Capital" ? "linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.2) 70%, transparent 100%)" : "linear-gradient(to top, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.2) 40%, transparent 70%)" }} />
+      <div className="absolute inset-0 pointer-events-none z-[1]" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, transparent 35%)" }} />
+      {/* Number — top left */}
+      <div className="absolute top-4 left-5 z-[2]">
+        <span className="font-black leading-none" style={{ fontSize: "clamp(3rem, 4.5vw, 4.5rem)", background: "linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.3) 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+          {index + 1}
+        </span>
+      </div>
+      <div className={`relative z-[2] px-6 flex flex-col items-center text-center ${center ? "pb-6" : "pb-4"}`}>
+        {card.logo && (
+          <div className={`flex items-center justify-center mb-3 ${card.bigLogo ? "h-12" : "h-7"}`}>
+            <Image src={card.logo} alt={card.logoAlt} width={card.logoWidth} height={card.logoHeight}
+              className={`object-contain w-auto ${card.bigLogo ? "max-h-12" : "max-h-7"}`}
+              style={{ filter: "brightness(0) invert(1)" }} />
+          </div>
+        )}
+        <h3 className="text-[22px] font-bold text-white leading-[1.2] tracking-[-0.02em] mb-3">{card.title}</h3>
+        <p className="text-white/90 text-[13px] leading-[1.6] max-w-[220px] mb-4">{card.desc}</p>
+        <span className="inline-flex items-center gap-1.5 text-orange text-[11px] font-semibold tracking-[0.08em] uppercase">
+          View Details
+          <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </span>
+      </div>
+    </>
+  );
+
+  return (
+    <div className="relative max-w-[1400px] mx-auto px-6 lg:px-16">
+      {/* Desktop: Netflix-style sliding track */}
+      <div className="hidden sm:block relative">
+        <button
+          onClick={prev}
+          className="absolute -left-14 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white shadow-lg border border-[#e8e8ed] flex items-center justify-center hover:border-orange hover:text-orange transition-colors duration-200"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <div className="overflow-hidden">
+          <AnimatePresence mode="popLayout" initial={false}>
+            <motion.div
+              key={current}
+              className="grid grid-cols-3 items-center"
+              style={{ gap: `${gap}px` }}
+              initial={{ x: direction * 100 + "%" }}
+              animate={{ x: "0%" }}
+              exit={{ x: direction * -100 + "%" }}
+              transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+            >
+              {getVisible().map((card, i) => {
+                const isCenter = i === 1;
+                const realIndex = platformCards.indexOf(card);
+                return (
+                  <motion.div
+                    key={card.logoAlt}
+                    animate={{ scale: isCenter ? 1 : 0.88, opacity: isCenter ? 1 : 0.55 }}
+                    transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    className="aspect-[3/4] rounded-2xl"
+                  >
+                    <div className="group relative overflow-hidden bg-[#1d1d1f] w-full h-full flex flex-col justify-end rounded-2xl">
+                      {cardContent(card, isCenter, realIndex)}
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        <button
+          onClick={next}
+          className="absolute -right-14 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white shadow-lg border border-[#e8e8ed] flex items-center justify-center hover:border-orange hover:text-orange transition-colors duration-200"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Mobile: Netflix-style sliding track */}
+      <div className="sm:hidden relative -mx-6">
+        <div
+          className="overflow-hidden pl-6"
+          onTouchStart={(e) => {
+            const touch = e.touches[0];
+            (e.currentTarget as HTMLDivElement).dataset.touchX = String(touch.clientX);
+          }}
+          onTouchEnd={(e) => {
+            const startX = Number((e.currentTarget as HTMLDivElement).dataset.touchX ?? 0);
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+            if (Math.abs(diff) > 40) {
+              if (diff > 0) next();
+              else prev();
+            }
+          }}
+        >
+          <motion.div
+            className="flex gap-3"
+            animate={{ x: `calc(-${current * 85}% - ${current * 12}px)` }}
+            transition={{ duration: 0.28, ease: [0.25, 0.46, 0.45, 0.94] }}
+          >
+            {platformCards.map((card, i) => (
+              <div
+                key={i}
+                className="group relative overflow-hidden bg-[#1d1d1f] aspect-[3/4] flex flex-col justify-end rounded-2xl flex-none w-[85%]"
+              >
+                {card.logoAlt === "Egolia Mining" ? (
+                  <button onClick={() => setMiningModal(true)} className="absolute inset-0 z-20 cursor-pointer" />
+                ) : (
+                  <Link href={card.href} className="absolute inset-0 z-20" />
+                )}
+                {card.image && (
+                  <div className="absolute inset-0">
+                    <Image src={card.image} alt={card.logoAlt} fill className="object-cover object-center" sizes="100vw" />
+                  </div>
+                )}
+                <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 30%, rgba(0,0,0,0.1) 55%, transparent 75%)" }} />
+                <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, transparent 35%)" }} />
+                <div className="absolute top-4 left-5 z-[2]">
+                  <span className="font-black leading-none" style={{ fontSize: "3.5rem", background: "linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.3) 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+                    {i + 1}
+                  </span>
+                </div>
+                <div className="relative z-10 px-5 pb-8 flex flex-col items-center text-center">
+                  {card.logo && (
+                    <div className={`flex items-center justify-center mb-3 ${card.bigLogo ? "h-9" : "h-6"}`}>
+                      <Image src={card.logo} alt={card.logoAlt} width={card.logoWidth} height={card.logoHeight}
+                        className={`object-contain w-auto ${card.bigLogo ? `max-h-9 ${card.wideMobile ? "max-w-[180px]" : "max-w-[110px]"}` : `max-h-6 ${card.wideMobile ? "max-w-[140px]" : "max-w-[90px]"}`}`}
+                        style={{ filter: "brightness(0) invert(1)" }} />
+                    </div>
+                  )}
+                  <h3 className="text-[22px] font-semibold text-white leading-[1.2] tracking-[-0.02em] mb-3">{card.title}</h3>
+                  <span className="inline-flex items-center gap-1.5 text-orange text-[12px] font-semibold tracking-[0.08em] uppercase">
+                    View Details
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Mobile dots */}
+        <div className="flex justify-center gap-2 mt-4 mx-6">
+          {platformCards.map((_, i) => (
+            <button key={i} onClick={() => { setDirection(i > current ? 1 : -1); setCurrent(i); }} className={`w-2 h-2 rounded-full transition-all duration-300 ${i === current ? "bg-orange w-5" : "bg-[#d1d1d6]"}`} />
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop dots */}
+      <div className="hidden sm:flex justify-center gap-2 mt-6">
+        {platformCards.map((_, i) => (
+          <button key={i} onClick={() => { setDirection(i > current ? 1 : -1); setCurrent(i); }} className={`h-2 rounded-full transition-all duration-300 ${i === current ? "bg-orange w-5" : "bg-[#d1d1d6] w-2"}`} />
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -274,131 +515,7 @@ export default function Home() {
           </FadeUp>
         </div>
 
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5">
-          {[
-            {
-              image: "/images/towerr.png",
-              logo: "/images/home/logo-avrancecorp.png",
-              logoAlt: "AvranceCorp",
-              title: "Real estate development focused on building lasting communities.",
-              desc: "Real estate development focused on building high-quality residential and mixed-use assets through capital and execution.",
-              href: "/platform/avrancecorp",
-              logoWidth: 130,
-              logoHeight: 36,
-              useBlend: false,
-            },
-            {
-              image: "/images/home/platform-traderea.png",
-              logo: "/images/home/logo-traderea.png",
-              logoAlt: "TradeREA",
-              title: "A digital marketplace for modern real estate trading.",
-              desc: "A digital marketplace platform focused on trading and investment opportunities powered by advanced technology.",
-              href: "/platform/traderea",
-              logoWidth: 180,
-              logoHeight: 48,
-              useBlend: true,
-              wideMobile: true,
-            },
-            {
-              image: "/images/home/private-capital.png",
-              logo: "/images/home/logo-avrance-capital.png",
-              logoAlt: "Avrance Capital",
-              title: "Private capital, deployed with precision.",
-              desc: "Institutional-grade credit and equity strategies for durable businesses.",
-              href: "/platform/avrancecapital",
-              logoWidth: 130,
-              logoHeight: 36,
-              useBlend: false,
-            },
-            {
-              image: "/images/home/platform-metadata.png",
-              logo: "/images/home/logo-metadata.png",
-              logoAlt: "Metadata & Research",
-              title: "Intelligence that drives every decision.",
-              desc: "Proprietary data and research powering Egolia's investment edge.",
-              href: "/platform/metadata",
-              logoWidth: 240,
-              logoHeight: 60,
-              bigLogo: true,
-              useBlend: true,
-              wideMobile: true,
-            },
-            {
-              image: "/images/mining.png",
-              logo: "/images/home/egoliaMining.png",
-              logoAlt: "Egolia Mining",
-              title: "Resource development built on responsible growth.",
-              desc: "Mining operations and resource development focused on sustainable extraction and long-term value creation.",
-              href: "/platform/avrancemining",
-              logoWidth: 200,
-              logoHeight: 50,
-              useBlend: false,
-              wideMobile: true,
-              span: false,
-            },
-          ].map((card: { image: string; logo: string; logoAlt: string; title: string; desc: string; href: string; logoWidth: number; logoHeight: number; bigLogo?: boolean; useBlend: boolean; wideMobile?: boolean; imageContain?: boolean; span?: boolean }, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.8, delay: i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className={`group relative overflow-hidden bg-[#1d1d1f] aspect-[4/3] flex flex-col justify-end rounded-2xl${card.span ? " lg:col-span-2" : ""}`}
-            >
-              {card.logoAlt === "Egolia Mining" ? (
-                <button onClick={() => setMiningModal(true)} className="absolute inset-0 z-20 cursor-pointer" />
-              ) : (
-                <Link href={card.href} className="absolute inset-0 z-20" />
-              )}
-
-              {card.image && (
-                <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]">
-                  <Image src={card.image} alt={card.logoAlt} fill className="object-cover object-center" />
-                </div>
-              )}
-
-              <div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                  background: `
-                    linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 30%, rgba(0,0,0,0.1) 55%, transparent 75%),
-                    linear-gradient(to right, rgba(0,0,0,0.18) 0%, transparent 45%)
-                  `,
-                }}
-              />
-
-              <div className="relative z-10 px-5 pb-7 sm:px-8 sm:pb-8 lg:px-10 lg:pb-10 flex flex-col">
-                {card.logo && (
-                  <div className={`flex items-center mb-3 sm:mb-4 ${card.bigLogo ? "h-8 sm:h-16" : "h-5 sm:h-8"}`}>
-                    <Image
-                      src={card.logo}
-                      alt={card.logoAlt}
-                      width={card.logoWidth}
-                      height={card.logoHeight}
-                      className={`object-contain object-left w-auto ${card.bigLogo ? `max-h-8 sm:max-h-16 ${card.wideMobile ? "max-w-[160px]" : "max-w-[100px]"} sm:max-w-none` : `max-h-5 sm:max-h-8 ${card.wideMobile ? "max-w-[130px]" : "max-w-[80px]"} sm:max-w-none`}`}
-                      style={{ filter: "brightness(0) invert(1)" }}
-                    />
-                  </div>
-                )}
-
-                <h3 className="text-[14px] sm:text-[20px] md:text-[22px] font-semibold sm:font-bold text-white leading-[1.2] tracking-[-0.02em] mb-2 sm:mb-4">
-                  {card.title}
-                </h3>
-                <p className="text-white/90 text-[13px] sm:text-[15px] leading-[1.6] max-w-[300px] mb-4 hidden sm:block">
-                  {card.desc}
-                </p>
-                <span className="inline-flex items-center gap-1.5 text-orange text-[11px] sm:text-[12px] font-semibold tracking-[0.08em] uppercase">
-                  View Details
-                  <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </span>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-        </div>
+        <PlatformCarousel setMiningModal={setMiningModal} />
       </section>
 
       {/* ══════════════════════════════════════
