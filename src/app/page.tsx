@@ -131,6 +131,12 @@ function PlatformCarousel({ setMiningModal }: { setMiningModal: (v: boolean) => 
   const next = () => { setDirection(1); setCurrent((c) => (c + 1) % total); };
   const getVisible = () => [0, 1, 2].map(i => platformCards[(current + i) % total]);
 
+  const slideVariants = {
+    initial: (dir: number) => ({ x: dir > 0 ? "100%" : "-100%" }),
+    animate: { x: "0%" },
+    exit: (dir: number) => ({ x: dir > 0 ? "-100%" : "100%" }),
+  };
+
   const cardContent = (card: typeof platformCards[0], center = false, index = 0) => (
     <>
       {card.logoAlt === "Egolia Mining" ? (
@@ -143,8 +149,8 @@ function PlatformCarousel({ setMiningModal }: { setMiningModal: (v: boolean) => 
           <Image src={card.image} alt={card.logoAlt} fill className="object-cover object-center" sizes="33vw" />
         </div>
       )}
-      <div className="absolute inset-0 pointer-events-none z-[1]" style={{ background: center ? "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 30%, rgba(0,0,0,0.1) 55%, transparent 75%)" : card.logoAlt === "Avrance Capital" ? "linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.2) 70%, transparent 100%)" : "linear-gradient(to top, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.2) 40%, transparent 70%)" }} />
-      <div className="absolute inset-0 pointer-events-none z-[1]" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, transparent 35%)" }} />
+      <div className="absolute inset-0 pointer-events-none z-[1]" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 30%, rgba(0,0,0,0.1) 55%, transparent 75%)" }} />
+      {center && <div className="absolute inset-0 pointer-events-none z-[1]" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, transparent 35%)" }} />}
       {/* Number — top left */}
       <div className="absolute top-4 left-5 z-[2]">
         <span className="font-black leading-none" style={{ fontSize: "clamp(3rem, 4.5vw, 4.5rem)", background: "linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.3) 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
@@ -185,34 +191,38 @@ function PlatformCarousel({ setMiningModal }: { setMiningModal: (v: boolean) => 
         </button>
 
         <div className="overflow-hidden">
-          <AnimatePresence mode="popLayout" initial={false}>
-            <motion.div
-              key={current}
-              className="grid grid-cols-3 items-center"
-              style={{ gap: `${gap}px` }}
-              initial={{ x: direction * 100 + "%" }}
-              animate={{ x: "0%" }}
-              exit={{ x: direction * -100 + "%" }}
-              transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-            >
-              {getVisible().map((card, i) => {
-                const isCenter = i === 1;
-                const realIndex = platformCards.indexOf(card);
-                return (
-                  <motion.div
-                    key={card.logoAlt}
-                    animate={{ scale: isCenter ? 1 : 0.88, opacity: isCenter ? 1 : 0.55 }}
-                    transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-                    className="aspect-[3/4] rounded-2xl"
-                  >
-                    <div className="group relative overflow-hidden bg-[#1d1d1f] w-full h-full flex flex-col justify-end rounded-2xl">
-                      {cardContent(card, isCenter, realIndex)}
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </motion.div>
-          </AnimatePresence>
+          <div className="relative w-full" style={{ paddingTop: "44.4%" }}>
+            <AnimatePresence initial={false} custom={direction}>
+              <motion.div
+                key={current}
+                custom={direction}
+                variants={slideVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                className="absolute inset-0 grid grid-cols-3 items-center"
+                style={{ gap: `${gap}px` }}
+                transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+              >
+                {getVisible().map((card, i) => {
+                  const isCenter = i === 1;
+                  const realIndex = platformCards.indexOf(card);
+                  return (
+                    <motion.div
+                      key={card.logoAlt}
+                      animate={{ scale: isCenter ? 1 : 0.88, opacity: 1 }}
+                      transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+                      className="aspect-[3/4] rounded-2xl"
+                    >
+                      <div className="group relative overflow-hidden bg-[#1d1d1f] w-full h-full flex flex-col justify-end rounded-2xl">
+                        {cardContent(card, isCenter, realIndex)}
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
 
         <button
