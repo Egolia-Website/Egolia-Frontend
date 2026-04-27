@@ -121,7 +121,7 @@ const nonExecutiveTeam = [
     role: "Product Designer",
     fullTitle: "Product Designer",
     bio: "Technology strategist and digital infrastructure lead contributing to Egolia Group's platform architecture and operational systems.",
-    image: "/images/Board Member/tehran.png",
+    image: "/images/Board Member/tahran-chowdhury.png",
     experience: [
       "Product & Design — Leads technology development and digital product initiatives for Egolia Group's platform ecosystem.",
       "Technical Expertise — Expert in full-stack engineering, financial systems integration, and scalable web infrastructure.",
