@@ -36,7 +36,7 @@ const boardMembers: TeamMemberDetail[] = [
     name: "Michael Spencley",
     role: "Director",
     fullTitle: "Chief Executive Officer & Board Director",
-    image: "/images/Board Member/michael-spencley.png",
+    image: "/images/Board Member/michael_spencley.png",
     bio: "30+ years of CEO experience across turnaround and start-up environments, driving transformational growth and operational excellence.",
     experience: [
       "CEO Experience — 30+ years of CEO experience across turnaround and start-up environments, driving transformational growth and operational excellence.",
