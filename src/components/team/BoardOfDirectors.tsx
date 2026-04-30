@@ -97,18 +97,6 @@ const boardMembers: TeamMemberDetail[] = [
     ],
   },
   {
-    name: "Emmeline Braun",
-    role: "Director",
-    fullTitle: "Board Of Director",
-    image: "/images/Board Member/emmeline-braun.png",
-    bio: "Seasoned executive and board director with deep expertise in corporate governance, strategic advisory, and organizational leadership.",
-    experience: [
-      "Board Leadership — Brings extensive board-level experience and governance expertise to Egolia Group's strategic direction.",
-      "Strategic Advisory — Recognized for delivering independent oversight and sound strategic counsel across complex organizational environments.",
-      "Executive Background — Track record of guiding organizations through growth, restructuring, and value-creation phases with integrity and discipline.",
-    ],
-  },
-  {
     name: "Neil Wolfson",
     role: "Director",
     fullTitle: "Board Of Director",
@@ -192,7 +180,7 @@ export default function BoardOfDirectors() {
           />
 
           {/* 3 per row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
             {boardMembers.map((member, i) => (
               <BoardCard key={member.name} member={member} i={i} onClick={() => setSelected(member)} />
             ))}

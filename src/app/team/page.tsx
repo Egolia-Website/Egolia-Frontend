@@ -12,7 +12,7 @@ const executiveTeam = [
     name: "Michael Spencley",
     role: "Chief Executive Officer",
     fullTitle: "Chief Executive Officer",
-    image: "/images/Board Member/michael-spencley.png",
+    image: "/images/Board Member/michael_spencley.png",
     bio: "30+ years of CEO experience across turnaround and start-up environments, driving transformational growth and operational excellence.",
     experience: [
       "CEO Experience — 30+ years of CEO experience across turnaround and start-up environments, driving transformational growth and operational excellence.",
@@ -88,19 +88,6 @@ const advisoryTeam = [
     ],
   },
   {
-    name: "Thomas Braun",
-    role: "Senior Securities Legal Counsel",
-    fullTitle: "Senior Securities Legal Counsel",
-    bio: "Experienced securities and corporate lawyer with deep expertise in capital markets, regulatory compliance, and governance for public and private companies.",
-    image: "/images/Board Member/thomas.png",
-    experience: [
-      "Securities Law — Specialized expertise in securities law, capital markets regulation, and compliance frameworks for public and private issuers.",
-      "Corporate Governance — Advises boards and executive leadership on governance best practices, regulatory obligations, and risk mitigation strategies.",
-      "Capital Markets — Extensive experience structuring and executing financing transactions, public offerings, and M&A in highly regulated environments.",
-      "Strategic Advisory — Provides senior legal counsel to Egolia Group on securities compliance, investor relations structuring, and regulatory strategy.",
-    ],
-  },
-  {
     name: "Abdalla Ali",
     role: "In-House Counsel",
     fullTitle: "In-House Counsel",
@@ -121,7 +108,7 @@ const nonExecutiveTeam = [
     role: "Product Designer",
     fullTitle: "Product Designer",
     bio: "Technology strategist and digital infrastructure lead contributing to Egolia Group's platform architecture and operational systems.",
-    image: "/images/Board Member/tahran-chowdhury.png",
+    image: "/images/Board Member/tahran_chowdhury.png",
     experience: [
       "Product & Design — Leads technology development and digital product initiatives for Egolia Group's platform ecosystem.",
       "Technical Expertise — Expert in full-stack engineering, financial systems integration, and scalable web infrastructure.",
