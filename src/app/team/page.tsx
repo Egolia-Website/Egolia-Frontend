@@ -9,16 +9,16 @@ import TeamSection from "@/components/team/TeamSection";
 
 const executiveTeam = [
   {
-    name: "Michael Spencley",
+    name: "Adrian Perry",
     role: "Chief Executive Officer",
     fullTitle: "Chief Executive Officer",
-    image: "/images/Board Member/michael_spencley.png",
-    bio: "30+ years of CEO experience across turnaround and start-up environments, driving transformational growth and operational excellence.",
+    image: "/images/Board Member/adrian.png",
+    bio: "A forward-thinking and enthusiastic leader with a proven track record of driving innovation across multiple industries, combining strategic vision with hands-on leadership to accelerate business growth and ensure long-term sustainability.",
     experience: [
-      "CEO Experience — 30+ years of CEO experience across turnaround and start-up environments, driving transformational growth and operational excellence.",
-      "Dynamic Leader — Results-oriented leader with a proven track record of improving organizational performance and delivering sustainable value creation.",
-      "Board Expertise — Extensive board-level experience with both private and public companies, navigating complex governance and strategic challenges.",
-      "Core Competencies — Deep expertise in strategy development, financial management, profit optimization, and robust corporate governance frameworks.",
+      "Strategic Leadership — Combines strategic vision with hands-on leadership to accelerate business growth and ensure long-term sustainability across multiple industries.",
+      "Core Expertise — Expertise spans strategic marketing, business development, capital markets, commercial and residential real estate, and finance.",
+      "Innovation & Growth — Excels at identifying emerging trends, seizing complex business opportunities, and forging strong alliances that foster innovation.",
+      "Operational Excellence — Distinctive blend of strategic insight, creativity, and operational competence, committed to helping forward-looking organizations navigate complexity and achieve lasting success.",
     ],
   },
   {
